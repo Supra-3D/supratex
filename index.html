@@ -57,12 +57,13 @@
   <link rel="stylesheet" href="comparison-compact-103.css?v=113">
   <link rel="stylesheet" href="comparison-reveal-105.css?v=110">
   <link rel="stylesheet" href="readability-111.css?v=119">
+  <link rel="stylesheet" href="texturing.css?v=131">
   <script defer src="asset-hosting.js?v=120"></script>
 <script defer src="asset-binaries.js?v=120"></script>
 <script defer src="asset-loader.js?v=120"></script>
 <script defer src="transitions.js"></script>
   <script defer src="app.js?v=interaction-74"></script>
-  <script defer src="experience.js?v=film-83"></script>
+  <script defer src="experience.js?v=texturing-131"></script>
   <script defer src="hero-motion.js"></script>
   <script defer src="hero-video-83.js?v=99"></script>
   <script defer src="observatory.bundle.js?v=110"></script>
@@ -86,7 +87,7 @@
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="SUPRA-Tex home"><span class="brand-mark" aria-hidden="true"><img src="assets/brand/supra-tex-mark.svg" alt="" width="36" height="36"></span>SUPRA<span class="wordmark-light">-Tex</span></a>
     <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="main-navigation" hidden><span>Menu</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 14h14"/></svg></button>
-    <nav id="main-navigation" aria-label="Main navigation"><a href="#competition">Comparisons</a><a href="#human-preference">Human preference</a><a href="#embodied">Real2Sim</a><a href="#materials">Materials</a><a href="#gallery">Gallery</a><a href="#method">Research</a><a href="#citation">Cite</a></nav>
+    <nav id="main-navigation" aria-label="Main navigation"><a href="#competition">Comparisons</a><a href="#human-preference">Human preference</a><a href="#texturing">Texturing</a><a href="#embodied">Real2Sim</a><a href="#materials">Materials</a><a href="#gallery">Gallery</a><a href="#method">Research</a><a href="#citation">Cite</a></nav>
   </header>
 
   <main>
@@ -288,8 +289,22 @@
   </div>
 </section>
 
+    <section id="texturing" class="texturing-section section-pad" aria-labelledby="texturing-heading">
+      <div class="section-index"><span>03</span> 3D TEXTURING</div>
+      <div class="texturing-heading chapter-heading">
+        <h2 id="texturing-heading">From image<br><span class="soft-gold">to textured 3D.</span></h2>
+        <p class="chapter-caption">Explore reference-guided textures, novel views and relighting across diverse objects.</p>
+      </div>
+      <figure class="texturing-film">
+        <video id="texturing-film" controls muted playsinline preload="none" poster="assets/texturing/multi-case-poster.jpg" width="1920" height="1080" aria-label="SUPRA-Tex multi-case demonstration: reference images, textured 3D objects, novel views and relighting" aria-describedby="texturing-caption" src="assets/texturing/multi-case.mp4">
+          <a href="assets/texturing/multi-case.mp4">Watch the SUPRA-Tex multi-case demonstration</a>
+        </video>
+        <figcaption id="texturing-caption"><span>Reference images · Textured results · Relighting</span><span>0:59</span></figcaption>
+      </figure>
+    </section>
+
     <section id="embodied" class="embodied-section section-pad" aria-labelledby="embodied-heading">
-      <div class="section-index"><span>03</span> REAL2SIM</div>
+      <div class="section-index"><span>04</span> REAL2SIM</div>
       <div class="embodied-heading chapter-heading">
         <h2 id="embodied-heading">Real<span class="soft-gold">2Sim.</span></h2>
         <p class="chapter-caption">Explore a 3D scene built from one image, with simulated robot interaction and relighting.</p>
@@ -317,7 +332,7 @@
     </section>
 
 <section id="details" class="details-section section-pad light-section">
-      <div class="section-index reveal"><span>04</span> REFERENCE ALIGNMENT</div>
+      <div class="section-index reveal"><span>05</span> REFERENCE ALIGNMENT</div>
       <div class="section-heading chapter-heading reveal"><h2>Even the small print.</h2><p class="chapter-caption">Compare lettering, symbols and fine markings.</p></div>
       <div class="comparison-toolbar">
         <div class="case-tabs" role="tablist" aria-label="Detail examples"><button role="tab" aria-selected="true" id="case-switch" data-case="switch">Wiring table</button><button role="tab" aria-selected="false" id="case-dial" data-case="dial" tabindex="-1">Dial markings</button><button role="tab" aria-selected="false" id="case-archive" data-case="archive" tabindex="-1">Serif lettering</button><button role="tab" aria-selected="false" id="case-aid" data-case="aid" tabindex="-1">Instructions</button><button role="tab" aria-selected="false" id="case-tea" data-case="tea" tabindex="-1" title="复古茶叶罐">Vintage tea tin</button><button role="tab" aria-selected="false" id="case-candle" data-case="candle" tabindex="-1" title="金工香氛蜡烛罐">Metal candle tin</button><button role="tab" aria-selected="false" id="case-apothecary" data-case="apothecary" tabindex="-1" title="陶瓷药罐">Apothecary jar</button></div>
@@ -331,7 +346,7 @@
     </section>
 
     <section id="materials" class="materials-section section-pad">
-      <div class="section-index reveal"><span>05</span> RELIGHTABLE MATERIALS</div>
+      <div class="section-index reveal"><span>06</span> RELIGHTABLE MATERIALS</div>
       <div class="section-heading chapter-heading reveal"><h2>Hold the shape.<br><span class="soft-gold">Change the light.</span></h2><p class="chapter-caption">Explore seven models under changing light.<br>Inspect their albedo, roughness and metallic maps.</p></div>
       <div class="observatory reveal" data-environment="sunset" data-channel="pbr" aria-busy="true">
         <div class="observatory-top"><span class="live-label"><i></i> LIVE 3D</span></div>
@@ -371,7 +386,7 @@
       </div>
     </section>
 <section id="control" class="control-section section-pad" aria-labelledby="control-title" data-editing-demo>
-  <div class="section-index"><span>06</span> IMAGE-BASED CONTROL</div>
+  <div class="section-index"><span>07</span> IMAGE-BASED CONTROL</div>
   <div class="control-heading chapter-heading">
     <h2 id="control-title">Make it yours.</h2>
     <p class="chapter-caption">Choose a back-view design, then inspect the corresponding result from three angles.</p>
@@ -421,7 +436,7 @@
     <section id="gallery" class="supra-gallery" aria-labelledby="gallery-heading">
   <div class="gallery-inner">
     <div class="gallery-heading chapter-heading">
-      <div><p class="gallery-kicker">07 / SELECTED RESULTS · 14 CASES</p><h2 id="gallery-heading">Look closer.</h2></div>
+      <div><p class="gallery-kicker">08 / SELECTED RESULTS · 14 CASES</p><h2 id="gallery-heading">Look closer.</h2></div>
       <p class="chapter-caption">Compare each result with its reference.<br>Rotate the model to inspect the full surface.</p>
     </div>
     <div class="gallery-grid" data-gallery-grid></div>
@@ -467,7 +482,7 @@
 </dialog>
 
 <section id="method" class="method-section section-pad research-refined research-method" aria-labelledby="method-heading">
-  <div class="section-index reveal"><span>08</span> THE RESEARCH</div>
+  <div class="section-index reveal"><span>09</span> THE RESEARCH</div>
   <div class="method-intro chapter-heading reveal">
     <h2 id="method-heading">Observe first.<br>Generate in 3D.</h2>
     <p class="body-copy chapter-caption">Estimate materials from the reference, align them to the mesh, then complete the texture in 3D.</p>
@@ -509,7 +524,7 @@
 </section>
 
 <section id="evaluation" class="evaluation-section section-pad research-refined research-evidence" aria-labelledby="evidence-heading">
-  <div class="section-index reveal"><span>09</span> MEASURED FIDELITY</div>
+  <div class="section-index reveal"><span>10</span> MEASURED FIDELITY</div>
   <div class="section-heading chapter-heading reveal">
     <h2 id="evidence-heading">Same geometry.<br>Higher fidelity.</h2>
     <p class="chapter-caption">SUPRA-Tex achieves lower perceptual error than Pixal3D* on both benchmarks, with geometry held fixed within each comparison.</p>
@@ -601,7 +616,7 @@
 </section>
 
     <section id="release" class="release-section section-pad">
-      <div class="section-index reveal"><span>10</span> OPEN SOURCE</div>
+      <div class="section-index reveal"><span>11</span> OPEN SOURCE</div>
       <div class="release-content reveal">
         <div class="release-story">
           <h2>Open by design.</h2>
