@@ -1,5 +1,5 @@
 window.SupraAssetHosting = {
-  "baseUrl": "https://huggingface.co/datasets/supra3d/supratex-web-assets/resolve/main/",
+  "baseUrl": "https://huggingface.co/datasets/supra3d/supratex-web-assets/resolve/e7de1fbbfaaa3cafcf2edbc02bf088734a3869cc/",
   "paths": {
     "assets/3d/bowl.js": {
       "callback": "SupraPayload",

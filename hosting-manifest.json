@@ -1,7 +1,7 @@
 {
   "website": "https://supra-3d.github.io/supratex/",
   "hf_repo": "supra3d/supratex-web-assets",
-  "hf_revision": "main",
+  "hf_revision": "e7de1fbbfaaa3cafcf2edbc02bf088734a3869cc",
   "external_payloads": 55,
   "files": [
     {
@@ -21,8 +21,8 @@
     },
     {
       "path": "asset-hosting.js",
-      "bytes": 6593,
-      "sha256": "4b31edca566a4f594bef1fabe2c4583a648194fdf1327d8d25868b4320b8fc28"
+      "bytes": 6629,
+      "sha256": "8742f80dab698386ab6e026b0a99ead90f47e9905ed312251c85af486fbfff72"
     },
     {
       "path": "asset-loader.js",
