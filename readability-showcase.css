@@ -1,0 +1,93 @@
+/* Readable case names, deliberate controls, and only the context needed to read a result. */
+.gallery-kicker,.gallery-dialog-head .gallery-kicker{font-size:var(--subchapter-label-size);line-height:1.5;letter-spacing:.07em}
+.gallery-heading .gallery-kicker{font-size:var(--chapter-label-size)}
+.gallery-heading>p{font-size:18px;line-height:1.65;max-width:370px}
+.gallery-card-caption strong,.gallery-feature-caption strong{font-size:18px;line-height:1.4}
+.gallery-card-caption small,.gallery-feature-caption small{font-size:16px;line-height:1.5;margin-top:6px}
+.gallery-card-caption{gap:10px}
+.gallery-note{font-size:16px;line-height:1.6;max-width:760px}
+.gallery-feature-caption .gallery-feature-evidence{font-size:14px;line-height:1.6;max-width:240px}
+.gallery-feature-label,.gallery-compare figcaption,.gallery-aligned-labels{font-size:14px;line-height:1.4;letter-spacing:.025em;text-transform:none}
+.gallery-feature-controls,.gallery-range{font-size:14px;line-height:1.5}
+.gallery-tabs button,.gallery-views button,.gallery-live,.gallery-orbit-toggle{font-size:16px;line-height:1.4;min-height:44px;padding:10px 14px}
+.gallery-description{font-size:16px;line-height:1.65}
+.gallery-status,.gallery-orbit-label{font-size:14px;line-height:1.5}
+.gallery-dialog-foot{gap:24px}
+.gallery-orbit-label{padding:5px 8px;background:rgba(14,16,17,.88);color:var(--g-ink)}
+
+#competition.comp-refined .comp-kicker,#competition.comp-refined .comp-study-kicker{font-size:var(--chapter-label-size);line-height:1.5;letter-spacing:.07em}
+#competition.comp-refined .comp-study-kicker{font-size:var(--subchapter-label-size)}
+#competition.comp-refined .comp-heading>p{font-size:18px;line-height:1.65;max-width:390px}
+#competition.comp-refined .comp-method-buttons button{font-size:16px;line-height:1.4;min-height:44px;padding:10px 14px}
+#competition.comp-refined .comp-input-note{font-size:14px;line-height:1.65;max-width:1060px}
+#competition.comp-refined .comp-card>figcaption{font-size:18px;line-height:1.45;min-height:54px}
+#competition.comp-refined .comp-card>figcaption>span:first-child{font:inherit;letter-spacing:0;color:var(--comp-chalk)}
+#competition.comp-refined .comp-card-nav button{font-size:16px;line-height:1.4;min-height:44px;white-space:normal;padding:9px 6px}
+#competition.comp-refined .comp-study-intro>p{font-size:18px;line-height:1.65;max-width:320px}
+/* Metric conclusions replace the introductory copy, with stable desktop spacing. */
+@media(min-width:960px){
+  #competition.comp-refined .comp-study-intro>.comp-study-summary{max-width:360px;min-height:4.95em}
+}
+@media(min-width:960px) and (max-width:1050px){
+  #competition.comp-refined .comp-study-intro>.comp-study-summary{max-width:480px;min-height:3.3em}
+}
+#competition.comp-refined .comp-study-scale{gap:30px}
+#competition.comp-refined .comp-study-scale strong{font-size:30px;line-height:1.2}
+#competition.comp-refined .comp-study-scale span{font-size:14px;line-height:1.5;max-width:160px;margin-top:8px}
+#competition.comp-refined .comp-study-link{font-size:16px;line-height:1.5;min-height:36px}
+#competition.comp-refined .comp-metric-tabs{gap:24px}
+#competition.comp-refined .comp-metric-tabs button{font-size:16px;line-height:1.4;min-height:46px}
+#competition.comp-refined .comp-chart-key{font-size:14px;line-height:1.5}
+#competition.comp-refined .preference-center>span{font-size:16px;line-height:1.4}
+#competition.comp-refined .preference-dial figcaption{font-size:14px;line-height:1.6}
+#competition.comp-refined .preference-list-head{font:14px/1.5 SupraSans,'Segoe UI',Arial,sans-serif;letter-spacing:.02em;gap:12px}
+#competition.comp-refined .preference-choice-name{font-size:16px;line-height:1.4}
+#competition.comp-refined .preference-choice{min-height:56px;padding:12px}
+#competition.comp-refined .preference-choice strong{font-size:18px;line-height:1.2}
+#competition.comp-refined .comp-chart-note{font-size:16px;line-height:1.65;min-height:46px}
+#competition.comp-refined .preference-denominator{font-size:14px;line-height:1.6;color:var(--comp-muted)}
+#competition.comp-refined .comp-switch-status{font-size:14px;line-height:1.6}
+
+/* Give larger study labels room on tablets instead of shrinking the controls. */
+@media(max-width:1050px){
+  #competition.comp-refined .comp-heading>p{max-width:340px}
+  #competition.comp-refined .comp-study{display:block}
+  #competition.comp-refined .comp-study-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 30px}
+  #competition.comp-refined .comp-study-kicker,#competition.comp-refined .comp-study-intro h3,#competition.comp-refined .comp-study-intro>p{grid-column:1}
+  #competition.comp-refined .comp-study-scale{grid-column:2;grid-row:1/4;align-self:center;margin:0;gap:30px}
+  #competition.comp-refined .comp-study-link{grid-column:1/-1;justify-self:start;margin-top:18px}
+  #competition.comp-refined .comp-study-data{margin-top:27px}
+  #competition.comp-refined .preference-explorer{grid-template-columns:minmax(170px,.85fr) minmax(245px,1.15fr);gap:30px}
+  #competition.comp-refined .preference-center strong{font-size:46px}
+}
+@media(max-width:720px){
+  #competition.comp-refined .comp-heading>p{font-size:18px;max-width:430px}
+  #competition.comp-refined .comp-method-buttons button{font-size:16px}
+  #competition.comp-refined .comp-card>figcaption{font-size:16px;min-height:52px}
+  #competition.comp-refined .comp-metric-tabs{gap:18px}
+}
+@media(max-width:600px){
+  .gallery-heading>p{font-size:18px}
+  .gallery-grid{gap:26px 14px}
+  .gallery-card-caption strong,.gallery-feature-caption strong{font-size:18px;line-height:1.4}
+  .gallery-card-caption small,.gallery-feature-caption small{font-size:16px;line-height:1.5}
+  .gallery-feature-caption{flex-wrap:wrap;gap:6px 14px}
+  .gallery-feature-caption .gallery-feature-evidence{font-size:14px;max-width:none;text-align:left;margin:0}
+  .gallery-feature-label,.gallery-compare figcaption,.gallery-aligned-labels{font-size:14px;letter-spacing:0}
+  .gallery-compare figcaption{left:6px;top:7px;padding:5px 6px}
+  .gallery-feature-controls,.gallery-range{font-size:14px}
+  .gallery-tabs button,.gallery-views button,.gallery-live,.gallery-orbit-toggle{font-size:16px;min-height:44px;padding:9px 11px}
+  .gallery-dialog-foot{padding-top:16px}
+  .gallery-description{font-size:16px}
+  .gallery-note{font-size:16px}
+  #competition.comp-refined .comp-study-intro{display:block}
+  #competition.comp-refined .comp-study-scale{margin-top:22px;gap:32px}
+  #competition.comp-refined .comp-study-intro>p{max-width:430px}
+  #competition.comp-refined .preference-explorer{grid-template-columns:1fr;gap:24px}
+  #competition.comp-refined .preference-ring{width:205px}
+  #competition.comp-refined .comp-metric-tabs{gap:16px;justify-content:space-between}
+  #competition.comp-refined .comp-metric-tabs button{font-size:16px;white-space:normal;text-align:left;min-width:0;flex:1;padding-bottom:12px;display:flex;align-items:flex-end}
+  #competition.comp-refined .preference-list-head{padding-inline:12px}
+  #competition.comp-refined .preference-choice-name{font-size:16px}
+  #competition.comp-refined .comp-chart-note{min-height:0}
+}

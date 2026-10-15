@@ -1,0 +1,248 @@
+/* One design rail, aligned reference and result, and two side views. Desktop only. */
+@media (min-width: 960px) {
+  #control {
+    --control-stage-height: clamp(300px, 26vw, 440px);
+  }
+
+  #control .control-heading {
+    grid-template-columns: minmax(0, 1fr) minmax(400px, 440px);
+    gap: 36px;
+    margin-bottom: 30px;
+  }
+
+  #control .control-workspace {
+    display: grid;
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr);
+    align-items: start;
+    gap: 22px 28px;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+
+  #control .control-editor { display: contents; }
+
+  #control .control-toolbar-label {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  #control .control-designs {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+    border: 0;
+  }
+
+  #control .control-designs button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 64px;
+    padding: 0;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  #control .control-designs button img {
+    flex: 0 0 clamp(44px, 4vw, 64px);
+    width: clamp(44px, 4vw, 64px);
+    height: 64px;
+    padding: 3px;
+    margin: 0;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  #control .control-designs button span {
+    min-height: 0;
+    padding: 6px 8px 6px 0;
+  }
+
+  #control .control-reference {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0;
+    margin: 0;
+  }
+
+  #control .control-output {
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+  }
+
+  #control .control-reference > figcaption,
+  #control .control-output-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: 42px;
+    margin: 0;
+    padding: 0 0 14px;
+    border: 0;
+  }
+
+  #control .control-reference > figcaption > span:first-child {
+    color: var(--muted);
+  }
+
+  #control .control-fixed-label {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: .07em;
+  }
+
+  #control .control-current-view,
+  #control .control-connector { display: none; }
+
+  #control .control-reference-image,
+  #control .control-main-view > img {
+    width: 100%;
+    height: var(--control-stage-height);
+    max-height: none;
+    aspect-ratio: auto;
+    margin: 0;
+    padding: 18px;
+    background: var(--paper);
+    border: 1px solid rgba(206, 188, 152, .18);
+    border-radius: 4px;
+  }
+
+  #control .control-viewer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(136px, 23%, 224px);
+    gap: 14px;
+    align-items: start;
+    position: relative;
+  }
+
+  #control .control-reference > p,
+  #control .control-main-view figcaption {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  #control .control-main-view figcaption {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  #control .control-main-view figcaption > [data-control-design-label] {
+    font-size: 15px;
+  }
+
+  /* Both side views fill the same height as the main image. */
+  #control .control-angles {
+    position: static;
+    height: var(--control-stage-height);
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0;
+  }
+
+  #control .control-back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 6px 10px;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+
+  #control .control-back-button:hover {
+    color: var(--text);
+    background: rgba(206, 188, 152, .04);
+  }
+
+  #control .control-back-button[aria-pressed="true"] {
+    color: var(--gold);
+    border-color: rgba(206, 188, 152, .32);
+    background: rgba(206, 188, 152, .07);
+  }
+
+  #control .control-angle-preview {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) 34px;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: rgba(206, 188, 152, .035);
+    color: var(--muted);
+  }
+
+  #control .control-angle-preview:hover,
+  #control .control-angle-preview[aria-pressed="true"] {
+    border-color: var(--gold);
+    background: rgba(206, 188, 152, .07);
+    color: var(--gold);
+  }
+
+  #control .control-angle-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    aspect-ratio: auto;
+    padding: 6px;
+    object-fit: contain;
+    background: var(--paper);
+  }
+
+  #control .control-angle-preview > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  #control .control-angle-preview > span > span {
+    display: inline;
+    color: var(--gold);
+  }
+
+  #control .control-back-button > span { display: none; }
+
+  #control .control-open-3d {
+    top: 14px;
+    right: 14px;
+    font-size: 14px;
+    min-height: 40px;
+    padding: 8px 13px;
+    gap: 14px;
+  }
+
+  #control .control-note {
+    margin-top: 8px;
+    padding-top: 16px;
+  }
+
+  #control .control-live-message.is-error {
+    grid-column: 2;
+    margin: 0;
+  }
+}

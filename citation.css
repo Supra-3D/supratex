@@ -1,0 +1,122 @@
+/* A directly usable citation alongside the release story and resource links. */
+#release .release-citation {
+  margin-top: 32px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #141717;
+}
+
+#release .citation-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 65px;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+#release .citation-heading h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -.02em;
+}
+
+#release .citation-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 142px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid rgba(199, 185, 149, .3);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--gold);
+  font-size: 14px;
+  line-height: 1.4;
+  transition: background 180ms, border-color 180ms, color 180ms;
+}
+
+#release .citation-copy[hidden] { display: none; }
+#release .citation-copy:hover {
+  background: rgba(199, 185, 149, .07);
+  border-color: rgba(199, 185, 149, .6);
+  color: var(--text);
+}
+
+#release .citation-copy svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.2;
+  flex: none;
+}
+
+#release .citation-source {
+  margin: 0;
+  padding: 20px 24px 23px;
+  color: #c7c6bf;
+  font: 14px/1.75 Consolas, 'Courier New', monospace;
+  tab-size: 2;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+#release .citation-source code { font: inherit; }
+#release .citation-copy:focus-visible,
+#release .citation-source:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: -3px;
+}
+
+.citation-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+#release .citation-status.is-error {
+  position: static;
+  width: auto;
+  height: auto;
+  clip-path: none;
+  white-space: normal;
+  margin: 0;
+  padding: 0 24px 18px;
+  color: var(--gold);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #release .citation-copy { transition: none; }
+}
+
+@media (min-width: 960px) {
+  #release .release-citation {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin-top: 0;
+  }
+  #release .citation-heading { min-height: 58px; gap: 16px; padding: 10px 20px; }
+  #release .citation-heading h3 { font-size: 20px; }
+  #release .citation-source {
+    display: grid;
+    align-content: center;
+    flex: 1;
+    min-width: 0;
+    padding: 18px 20px;
+    font-size: clamp(13px, .95vw, 14px);
+    line-height: 1.7;
+  }
+  #release .citation-source code { min-width: 0; }
+}

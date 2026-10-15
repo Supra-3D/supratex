@@ -1,0 +1,182 @@
+/* Readable controls and research copy, without changing the site's motion language. */
+#materials .section-heading>p,
+#control .control-heading>p,
+#control .control-reference>p,
+#method .method-intro .body-copy,
+#evaluation .section-heading>p,
+#release .release-content>p:not(.eyebrow){font-size:18px;line-height:1.75}
+
+/* Material controls are primary actions, not technical footnotes. */
+#materials .observatory-top{font-size:14px;letter-spacing:.045em;min-height:50px;height:auto;padding-block:15px;gap:18px}
+#materials .lab-title>span,
+#materials .lab-reference>span{font-size:14px;line-height:1.5;letter-spacing:.035em}
+#materials .lab-reference{width:135px}
+#materials .lab-reference>span:last-child{white-space:normal;max-width:135px}
+#materials .lab-gesture{font-size:14px;letter-spacing:.015em;left:auto;right:24px;transform:none;max-width:calc(100% - 205px);white-space:normal;text-align:right;line-height:1.5}
+#materials .observatory-body{grid-template-columns:minmax(0,1fr) 320px}
+#materials .lab-controls{padding:27px 24px 20px}
+#materials .lab-title{top:18px}
+#materials .lab-title h3{margin:0;line-height:1.15}
+#materials .control-index{font-size:14px;line-height:1.5;letter-spacing:.045em}
+#materials .channel-buttons button,
+#materials .environment-buttons button,
+#materials .sweep-button,
+#materials .light-range-label,
+#materials .light-range-label output,
+#materials .lab-bottom-controls button,
+#materials .lab-touch{font-size:16px;line-height:1.45}
+#materials .channel-buttons{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#materials .channel-buttons button{padding:10px 7px;min-height:44px}
+#materials .environment-buttons button{min-height:44px;gap:8px}
+#materials .environment-buttons i{flex-shrink:0}
+#materials .control-block p{font-size:16px;line-height:1.65;min-height:0}
+#materials .asset-choice-name{font-size:16px;line-height:1.45}
+#materials .asset-choice small{font-size:14px;line-height:1.5;letter-spacing:0}
+#materials .asset-number{font-size:14px}
+#materials .asset-choice img{grid-column:1/-1;width:94px;height:94px;max-width:100%;object-fit:contain;padding:0;border-radius:3px;filter:none;opacity:1}
+#materials .lab-reference img{width:112px;height:112px;object-fit:contain;padding:0}
+#materials .asset-rail{grid-template-columns:repeat(7,minmax(0,1fr))}
+#materials .asset-choice{padding-inline:14px}
+#materials .asset-choice-name{min-height:2.9em}
+@media(min-width:721px) and (max-width:1200px){
+ #materials .asset-rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#d3c19755 #131312}
+ #materials .asset-choice{flex:0 0 190px;scroll-snap-align:start}
+}
+#materials .observatory-context>p,
+#materials .observatory .demo-notes,
+#materials .observatory .demo-notes p,
+#materials .observatory-foot{font-size:14px;line-height:1.65}
+#materials .observatory .demo-notes summary,
+#materials .observatory-foot button{font-size:16px;line-height:1.6}
+#materials .lab-loading{font-size:16px;line-height:1.6}
+#materials #lab-status:empty{display:none}
+#materials .observatory-foot button{margin-left:auto;min-height:44px}
+
+/* Back-view design study. Labels identify actions, and remain legible on phones. */
+#control .control-label{font-size:14px;line-height:1.5;letter-spacing:.035em}
+#control .control-designs button{font-size:16px;line-height:1.5}
+#control .control-designs{gap:18px}
+#control .control-current-view,
+#control .control-back-button,
+#control .control-angle-preview>span{font-size:14px;line-height:1.5}
+#control .control-back-button,#control .control-angle-preview>span{font-size:16px}
+#control .control-main-view figcaption>span:first-child{font-size:16px;line-height:1.5}
+#control .control-open-3d{font-size:16px;line-height:1.5}
+#control .control-note{font-size:14px;line-height:1.75}
+#control .control-3d-header>div>span{font-size:14px;letter-spacing:.035em}
+#control .control-3d-header>button,
+#control .control-3d-designs button,
+#control .control-3d-tools button{font-size:16px;line-height:1.4}
+#control .control-3d-loading{font-size:16px;line-height:1.6}
+#control .control-3d-gesture{font-size:14px;line-height:1.5;letter-spacing:.015em;white-space:normal;text-align:center;width:calc(100% - 32px)}
+#control .control-3d-footer{font-size:14px;line-height:1.65}
+#control [data-control-3d-status]:empty{display:none}
+
+/* Method paragraphs carry the explanation; stage labels remain secondary. */
+#method .method-visual-top{font-size:14px;line-height:1.5;letter-spacing:.035em;flex-wrap:wrap;gap:7px 18px}
+#method .method-timeline{font-size:14px;line-height:1.5}
+#method .method-timeline span{width:29px;height:29px}
+#method .method-visual-caption{font-size:16px;line-height:1.65;min-height:0}
+#method .method-steps .step-number>span{font-size:14px;line-height:1.5;letter-spacing:.06em}
+#method .method-steps p{font-size:16px;line-height:1.7}
+#method .method-extension p{font-size:16px;line-height:1.7}
+
+/* Keep numerical evidence readable; wide tables scroll instead of shrinking. */
+#evaluation .metric-study-heading,
+#evaluation .metric-dataset{font-size:14px;line-height:1.5}
+#evaluation .metric-study-heading .metric-dataset{font-size:var(--subchapter-label-size);line-height:1.5}
+#evaluation .metrics-grid article h3{font-size:16px;line-height:1.5}
+#evaluation .metrics-grid article>p{font-size:16px;line-height:1.5}
+#evaluation .evidence-headline-protocol{font-size:14px;line-height:1.7}
+#evaluation .evidence-tabs{gap:28px}
+#evaluation .evidence-tabs button{font-size:16px;line-height:1.45;min-height:48px}
+#evaluation .evidence-panel-intro p{font-size:16px;line-height:1.7}
+#evaluation .evidence-details summary,
+#evaluation .research-protocol-details summary{font-size:16px;line-height:1.5}
+#evaluation .research-detail-title strong{font-size:16px;line-height:1.5}
+#evaluation .research-detail-title small{font-size:14px;line-height:1.5}
+#evaluation .evidence-protocol,
+#evaluation .evidence-table-key,
+#evaluation .evidence-result-note{font-size:14px;line-height:1.75}
+#evaluation .research-study-meta{font-size:14px;line-height:1.6}
+#evaluation .evidence-table-scroll{max-width:100%;overflow-x:auto}
+#evaluation .evidence-table{font-size:16px;min-width:550px}
+#evaluation .evidence-table-wide{font-size:16px;min-width:1600px}
+#evaluation .evidence-table caption,
+#evaluation .evidence-table caption span{font-size:14px;line-height:1.6}
+#evaluation .evidence-table caption strong{font-size:16px}
+#evaluation .evidence-table thead th{font-size:14px;line-height:1.5;white-space:nowrap}
+#evaluation .evidence-table sub{font-size:11px}
+#release .release-resources h3{font-size:18px;line-height:1.4}
+#release .release-resources h3 small{font-size:14px;line-height:1.5}
+#release .resource-status{font-size:14px;line-height:1.5;letter-spacing:.02em}
+
+@media(max-width:1000px){
+ #materials .observatory-body{display:block;min-height:0}
+ #materials .lab-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:24px 24px 20px;gap:24px 30px;border-left:0;border-top:1px solid var(--line)}
+ #materials .lab-bottom-controls{grid-column:1/-1}
+ #materials .lab-gesture{bottom:12px}
+ #control .control-workspace{grid-template-columns:minmax(0,.65fr) minmax(0,1.7fr);gap:30px}
+ #control .control-toolbar-label,#control .control-output-label{flex-wrap:wrap;gap:6px 14px}
+ #control .control-designs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+ #control .control-designs button{white-space:normal}
+ #control .control-viewer{grid-template-columns:minmax(0,1fr) 96px;gap:16px}
+ #control .control-angle-preview>span{font-size:16px;flex-wrap:wrap;gap:0}
+ #evaluation .metrics-grid{grid-template-columns:1fr}
+ #evaluation .metric-study,#evaluation .metric-study:first-child,#evaluation .metric-study:last-child{padding:18px 0 20px;border-right:0}
+ #evaluation .metric-study+.metric-study{border-top:1px solid var(--line)}
+}
+@media(max-width:720px){
+ #materials .section-heading>p,
+ #control .control-heading>p,
+ #control .control-reference>p,
+ #method .method-intro .body-copy,
+ #evaluation .section-heading>p,
+ #release .release-content>p:not(.eyebrow){font-size:16px;line-height:1.75}
+ #materials .observatory-top{padding:13px 17px;gap:12px}
+ #materials .observatory-body{display:block}
+ #materials .lab-reference{width:116px}
+ #materials .lab-reference img{width:80px;height:80px}
+ #materials .lab-reference>span:last-child{max-width:116px}
+ #materials .lab-controls{padding:23px 18px 18px;gap:24px}
+ #materials .lab-title>span{font-size:14px}
+ #materials .lab-title{top:12px}
+ #materials .asset-choice{flex-basis:42%;min-height:130px}
+ #materials .asset-choice-name{font-size:16px}
+ #materials .asset-choice small{font-size:14px}
+ #materials .observatory-foot button{white-space:normal;text-align:left}
+ #control .control-workspace{display:block}
+ #control .control-reference>figcaption{font-size:14px}
+ #control .control-designs{gap:12px}
+ #control .control-viewer{display:block}
+ #control .control-angle-preview>span{flex-wrap:nowrap}
+ #control .control-3d-designs{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ #control .control-3d-gesture{bottom:12px}
+ #control [data-control-3d-mount]{bottom:44px}
+ #method .method-steps article,#method .method-steps article:last-child{grid-template-columns:82px minmax(0,1fr);column-gap:17px}
+ #method .method-steps .method-picture{width:82px;height:105px}
+ #method .method-steps p{font-size:16px;line-height:1.7}
+ #method .method-extension p{font-size:16px;line-height:1.75}
+ #evaluation .evidence-tabs{gap:0;justify-content:space-between;flex-wrap:nowrap}
+ #evaluation .evidence-tabs button{font-size:16px;white-space:normal;text-align:left;max-width:33%;padding-right:10px}
+ #evaluation .evidence-tabs button:last-child{padding-right:0}
+ #evaluation .evidence-panel-intro p{font-size:16px}
+ #evaluation .metric-study-heading,#evaluation .metric-dataset{font-size:14px}
+ #evaluation .research-detail-title strong{font-size:16px}
+ #evaluation .research-detail-title small{font-size:14px}
+ #evaluation .evidence-table thead th{max-width:none}
+ #release .release-resources>div{gap:14px}
+ #release .release-resources h3{font-size:18px}
+}
+@media(max-width:520px){
+ #materials .lab-controls{grid-template-columns:1fr}
+ #materials .control-block{min-width:0}
+ #materials .channel-buttons{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ #materials .environment-buttons{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px}
+ #materials .control-block p{font-size:16px;min-height:0;margin-top:10px}
+ #materials .lab-bottom-controls{grid-column:1;padding-top:14px}
+ #materials .lab-title h3{font-size:28px;max-width:calc(100vw - 92px)}
+}
+/* Single captions retain the primary label styling after decorative metadata is removed. */
+#control .control-main-view figcaption>[data-control-design-label]{font-family:SupraSans,'Segoe UI',sans-serif;font-size:16px;font-weight:400;line-height:1.5;letter-spacing:0;color:var(--text);white-space:normal}
+#method .section-index,#evaluation .section-index{font-size:var(--chapter-label-size);line-height:1.5;letter-spacing:.07em}

@@ -1,0 +1,84 @@
+/* Keep the matched views on their native slate background. */
+#details .reference-panel,
+#details .compare-panel{
+  background:#252b30;
+  color:#dddcd5;
+  border:1px solid #c7b99524;
+  border-radius:5px;
+}
+#details .reference-image-wrap,
+#details .compare-stage,
+#details .compare-after{background:#252b30}
+#details .reference-image-wrap img,
+#details .compare-stage img{mix-blend-mode:normal}
+#details .reference-image-wrap,
+#details .compare-stage{height:360px}
+#details .reference-image-wrap{padding:18px}
+#details .compare-stage>img,
+#details .compare-after>img{padding:14px}
+#details .compare-stage:after{box-shadow:none}
+#details .reference-panel figcaption,
+#details .compare-caption{
+  min-height:55px;
+  height:auto;
+  padding:16px 22px;
+  color:#d1d1ca;
+  border-color:#c7b99524;
+  font-size:16px;
+  line-height:1.5;
+  letter-spacing:.01em;
+}
+#details .reference-panel figcaption span{font-size:14px;color:#d1d1ca}
+#details .compare-caption>span:last-child{color:#ded0ac;font-weight:500}
+#details .reference-caption,
+#details .comparison-instruction{
+  color:#babdbb;
+  border-color:#c7b99524;
+  font-size:16px;
+  line-height:1.6;
+  min-height:64px;
+  height:auto;
+  padding:16px 22px;
+}
+#details .reference-caption .micro,
+#details .comparison-instruction .micro{color:#b3b7b4;font-size:16px;letter-spacing:0}
+#details .case-tabs{min-width:0;gap:6px 26px;flex-wrap:wrap}
+#details .case-tabs button,
+#details .view-toggle{font-size:16px;line-height:1.5;min-height:44px}
+#details .case-tabs button{color:#aeb0aa;letter-spacing:0}
+#details .case-tabs button[aria-selected=true]{color:#e5dfd2}
+#details .view-toggle{flex-shrink:0;color:#d2d0c7}
+#details .compare-divider{background:#cbb98f;box-shadow:none}
+#details .compare-divider>span{
+  background:#282e32;
+  border-color:#cbb98f;
+  color:#e0d5bb;
+  box-shadow:0 3px 15px #0003;
+}
+#details .evidence-note{color:#b6b8b1;font-size:14px;line-height:1.7}
+@media(min-width:1700px){
+  #details .reference-image-wrap,#details .compare-stage{height:420px}
+}
+@media(max-width:1000px){
+  #details .comparison-toolbar{flex-wrap:wrap;gap:12px 20px}
+  #details .view-toggle{margin-left:auto}
+}
+@media(max-width:720px){
+  #details .case-tabs{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:0 20px}
+  #details .case-tabs button{text-align:left;justify-self:start}
+  #details .comparison-toolbar{gap:10px;margin-bottom:20px}
+  #details .reference-image-wrap{height:190px;padding:12px}
+  #details .compare-stage{height:340px;transition:height .28s cubic-bezier(.22,.68,.12,1)}
+  #details [data-detail-case="dial"][data-detail-view="detail"] .compare-stage{height:260px}
+  #details [data-detail-case="archive"][data-detail-view="detail"] .compare-stage{height:220px}
+  #details [data-detail-case="aid"][data-detail-view="detail"] .compare-stage{height:240px}
+  #details .compare-stage>img,#details .compare-after>img{padding:10px}
+  #details .reference-panel figcaption,#details .compare-caption{min-height:48px;padding:13px 16px}
+  #details .reference-caption,#details .comparison-instruction{padding:14px 16px;min-height:56px}
+  #details .reference-caption{border-left-color:#c7b99524}
+}
+.motion-paused #details .compare-stage{transition:none}
+@media(prefers-reduced-motion:reduce){#details .compare-stage{transition:none}}
+/* Geometric chevrons stay centered independently of font baselines. */
+#details .compare-divider>span{left:50%;padding:0;line-height:0;letter-spacing:0}
+#details .compare-divider>span>svg{display:block;width:24px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}

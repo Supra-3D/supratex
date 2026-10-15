@@ -1,0 +1,30 @@
+/* One desktop caption column for the visible chapter introductions. */
+@media (min-width: 960px) {
+  :is(#competition.comp-refined, #embodied, #details, #materials, #control, #gallery, #method, #evaluation) .chapter-heading {
+    --chapter-caption-width: clamp(420px, 34vw, 470px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--chapter-caption-width);
+    align-items: end;
+    column-gap: 32px;
+  }
+
+  :is(#competition.comp-refined, #embodied, #details, #materials, #control, #gallery, #method, #evaluation) .chapter-heading > .chapter-caption {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    justify-self: stretch;
+    align-self: end;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0;
+    text-align: right;
+    color: #b5b9b1;
+    text-wrap: balance;
+  }
+
+  .chapter-caption > span { display: block; }
+}

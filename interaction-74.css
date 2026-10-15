@@ -1,0 +1,158 @@
+/* Desktop actions: filled primary buttons, explicit selections, visible hover/focus. */
+@media (min-width: 960px) {
+  :root { --ui-gold: #d4bd85; --ui-gold-hover: #ead5a7; --ui-ink: #1c221c; }
+  :is(#competition, #embodied, #details, #materials) :is(button, summary) { cursor: pointer; }
+  :is(#competition, #embodied, #details, #materials) :is(button, summary, input):focus-visible {
+    outline: 2px solid var(--ui-gold-hover); outline-offset: 4px;
+  }
+  :is(#competition, #embodied, #details) button:disabled { cursor: wait; }
+
+  /* Films keep their native aspect ratio and stop growing on large monitors. */
+  .competition-film { max-width: 1360px; margin-inline: auto; border-radius: 6px; }
+  .comp-film-heading { padding: 16px 26px; font-size: 22px; }
+  .comp-film-controls { height: 58px; padding: 9px 18px; }
+  .comp-film-chapters { padding: 10px; gap: 8px; }
+  #competition.comp-refined .comp-film-chapters button {
+    min-height: 48px; padding: 10px 14px; gap: 10px; border: 1px solid #c7b99532;
+    border-radius: 3px; background: #222820; font-size: 15px;
+    transition: background .18s, border-color .18s, color .18s;
+  }
+  #competition.comp-refined .comp-film-chapters button:last-child { border-right: 1px solid #c7b99532; }
+  #competition.comp-refined .comp-film-chapters button:hover { border-color: var(--ui-gold); background: #34392c; }
+  #competition.comp-refined .comp-film-chapters button[aria-current=true] { color: #f6ead0; border-color: var(--ui-gold); background: #3d3929; }
+  #competition.comp-refined .comp-film-chapters button:after { height: 3px; }
+
+  #competition.comp-refined .comp-film-controls button,
+  #embodied .embodied-controls button {
+    display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; gap: 12px;
+    width: auto; min-width: 40px; min-height: 38px; height: 38px; padding: 8px 12px;
+    border: 1px solid var(--ui-gold); border-radius: 3px;
+    background: var(--ui-gold); color: var(--ui-ink); font: 14px/1.2 SupraSans, 'Segoe UI', sans-serif;
+    transition: background .18s, border-color .18s, box-shadow .18s;
+  }
+  #competition.comp-refined .comp-film-controls button:hover,
+  #embodied .embodied-controls button:hover { background: var(--ui-gold-hover); border-color: var(--ui-gold-hover); box-shadow: 0 2px 10px #0002; }
+  [data-fullscreen-label] { white-space: nowrap; }
+
+  /* One stage: method choices above, matched results beside the original image. */
+  #competition.comp-refined .comp-workbench { max-width: 1600px; margin-inline: auto; border-radius: 6px; }
+  #competition.comp-refined .comp-workbench-top { padding: 14px 22px; min-height: 74px; background: #1b211c; }
+  #competition.comp-refined .comp-mode-tabs { gap: 6px; padding: 0; border: 0; background: transparent; }
+  #competition.comp-refined .comp-mode-tabs button[data-comp-mode] {
+    min-width: 140px; min-height: 42px; padding: 10px 18px; border: 1px solid #c7b99560;
+    color: #d7d9cd; background: #293029; border-radius: 3px; box-shadow: none;
+  }
+  #competition.comp-refined .comp-mode-tabs button[data-comp-mode]:hover { background: #3c4031; border-color: var(--ui-gold); }
+  #competition.comp-refined .comp-mode-tabs button[data-comp-mode][aria-pressed=true] {
+    color: var(--ui-ink); background: var(--ui-gold); border-color: var(--ui-gold); box-shadow: inset 0 0 0 1px #ead5a740;
+  }
+  #competition.comp-refined .comp-mode-tabs button[data-comp-mode][aria-pressed=true]:hover { background: var(--ui-gold-hover); }
+  #competition.comp-refined .comp-system-rail {
+    display: grid; grid-template-columns: 110px repeat(5, minmax(0, 1fr)); gap: 8px;
+    align-items: center; min-height: 70px; padding: 12px 22px; border-bottom: 1px solid #c7b99530;
+    background: #161d17;
+  }
+  #competition.comp-refined .comp-system-label { margin: 0; font-size: 10px; }
+  #competition.comp-refined .comp-system-rail button { justify-content: center; min-height: 40px; gap: 7px; background: #252d25; border-color: #c7b99540; font-size: 15px; }
+  #competition.comp-refined .comp-system-rail button:hover { background: #343d30; border-color: var(--ui-gold); color: #f4edde; }
+  #competition.comp-refined .comp-system-rail button[aria-pressed=true] { color: var(--ui-ink); background: var(--ui-gold); border-color: var(--ui-gold); }
+  #competition.comp-refined .comp-workbench-body { grid-template-columns: minmax(0, 1fr) clamp(270px, 29%, 420px); }
+  #competition.comp-refined .comp-pair-heading>div { min-height: 56px; padding: 14px 22px; font-size: 20px; }
+  #competition.comp-refined .comp-pair { flex: none; height: clamp(360px, 34vw, 510px); min-height: 0; }
+  #competition.comp-refined .comp-reveal { padding: 10px 22px; min-height: 42px; }
+  #competition.comp-refined .comp-workbench-strip {
+    display: flex; flex-direction: column; align-items: stretch; justify-content: center;
+    gap: 9px; height: 112px; min-height: 112px; padding: 12px 18px;
+  }
+  #competition.comp-refined .comp-camera-tools { gap: 8px; justify-content: space-between; }
+  #competition.comp-refined .comp-surface-tools { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; }
+  #competition.comp-refined .comp-surface-tools>div { display: flex; flex-wrap: nowrap; align-items: center; gap: 4px; min-width: 0; }
+  #competition.comp-refined .comp-surface-tools>div>span { font: 9px SupraSans, sans-serif; letter-spacing: .06em; margin: 0 6px 0 0; }
+  #competition.comp-refined .comp-inline-tools button { min-height: 32px; padding: 6px 9px; border: 1px solid #c7b99536; background: #30382c; color: #c9cec1; font-size: 12px; }
+  #competition.comp-refined .comp-inline-tools button:hover:not(:disabled) { border-color: var(--ui-gold); background: #46503b; }
+  #competition.comp-refined .comp-inline-tools button[aria-pressed=true] { background: var(--ui-gold); color: var(--ui-ink); border-color: var(--ui-gold); }
+  #competition.comp-refined .comp-gesture { font-size: 11px; }
+  #competition.comp-refined .comp-render-caption { gap: 18px; font-size: 14px; }
+  #competition.comp-refined .comp-detail-toggle {
+    min-height: 40px; padding: 9px 14px; border-color: var(--ui-gold); background: var(--ui-gold); color: var(--ui-ink);
+  }
+  #competition.comp-refined .comp-detail-toggle:hover { background: var(--ui-gold-hover); color: var(--ui-ink); }
+  #competition.comp-refined .comp-detail-toggle[aria-pressed=true] { background: var(--ui-gold); color: var(--ui-ink); border-color: var(--ui-gold); }
+  #competition.comp-refined .comp-detail-toggle[aria-pressed=true]:hover { background: var(--ui-gold-hover); }
+  #competition.comp-refined .comp-sidebar { gap: 0; padding: 0; min-width: 0; background: #20271f; }
+  .comp-reference-heading { display: flex; align-items: center; justify-content: space-between; min-height: 56px; padding: 14px 22px; border-bottom: 1px solid #c7b99525; font-size: 16px; color: #dedfd5; }
+  .comp-reference-heading>span:last-child { font: 9px Consolas, monospace; letter-spacing: .09em; color: #c7b995; }
+  #competition.comp-refined .comp-source-card { display: flex; flex-direction: column; flex: 1; margin: 0; padding: 22px; border: 0; background: transparent; min-height: 0; }
+  #competition.comp-refined .comp-source-image { display: grid; place-items: center; flex: 1; width: 100%; height: auto; min-height: 0; position: relative; inset: auto; outline: 0; }
+  #competition.comp-refined .comp-source-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+  #competition.comp-refined .comp-source-caption { margin-top: 20px; flex: none; padding: 12px 15px; min-height: 42px; border: 1px solid var(--ui-gold); border-radius: 3px; background: var(--ui-gold); color: var(--ui-ink); font-size: 14px; transition: background .18s, box-shadow .18s; }
+  #competition.comp-refined .comp-source-card:hover .comp-source-caption { background: var(--ui-gold-hover); box-shadow: 0 2px 12px #0003; }
+  #competition.comp-refined .comp-source-card:hover .comp-source-image { outline: 0; }
+  #competition.comp-refined .comp-case-tabs { gap: 8px; padding: 12px; background: #161d17; }
+  #competition.comp-refined .comp-case-tabs button { min-height: 88px; padding: 10px 14px; border: 1px solid #c7b99532; border-radius: 3px; gap: 0 12px; background: #252d25; }
+  #competition.comp-refined .comp-case-tabs button:last-child { border-right: 1px solid #c7b99532; }
+  #competition.comp-refined .comp-case-tabs button:hover { border-color: #d4bd85b0; background: #343d30; }
+  #competition.comp-refined .comp-case-tabs button[aria-pressed=true] { border-color: var(--ui-gold); background: #3c3b2b; }
+  #competition.comp-refined .comp-case-tabs button:after { display: none; }
+  #competition.comp-refined .comp-workbench-context { max-width: 1600px; margin-inline: auto; }
+
+  /* Compact chapters retain the whole robot interaction frame. */
+  .embodied-workspace { max-width: 1320px; margin-inline: auto; grid-template-columns: minmax(0, 1fr) 264px; gap: 24px; align-items: center; }
+  .embodied-chapters { margin-bottom: 58px; gap: 9px; }
+  .embodied-chapter-label { margin-bottom: 5px; font-size: 10px; }
+  #embodied .embodied-chapters button { flex: none; padding: 14px 16px; min-height: 108px; border: 1px solid #c7b99540; border-radius: 4px; background: #1e261f; overflow: hidden; }
+  #embodied .embodied-chapters button::before { display: none; }
+  #embodied .embodied-chapters button::after { left: 0; right: 0; height: 3px; }
+  #embodied .embodied-chapters button:hover { background: #323b2e; border-color: var(--ui-gold); color: #f0e9da; }
+  #embodied .embodied-chapters button[aria-current=true] { background: #3b3a2a; border-color: var(--ui-gold); color: #f3dfb2; }
+  .embodied-chapter-meta { font-size: 10px; color: #b0b5a6; width: 100%; }
+  .embodied-chapter-title { font-size: 19px; margin-top: 5px; }
+  .embodied-chapter-note { font-size: 12px; margin-top: 5px; line-height: 1.4; }
+  .embodied-controls:not([hidden]) { gap: 12px; min-height: 58px; }
+
+  /* View switches name the destination; secondary entrances get a real boundary. */
+  #details .view-toggle { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; padding: 10px 18px; border: 1px solid var(--ui-gold); border-radius: 3px; color: var(--ui-ink); background: var(--ui-gold); font-size: 15px; transition: background .18s, box-shadow .18s; }
+  #details .view-toggle:hover { background: var(--ui-gold-hover); box-shadow: 0 2px 12px #0003; }
+  #details .view-toggle span { color: inherit; }
+  #details .view-toggle [data-detail-label] { font-size: inherit; }
+  #materials .observatory-context { column-gap: 14px; }
+  #materials .observatory-film-link, #materials .observatory-context .demo-notes summary,
+  #competition.comp-refined .comp-study-link {
+    display: inline-flex; align-items: center; justify-content: space-between; gap: 14px;
+    min-height: 42px; padding: 8px 14px; border: 1px solid #d4bd858c; border-radius: 3px;
+    background: #c7b99508; color: #ddc895; font-size: 14px; text-decoration: none;
+    transition: border-color .18s, background .18s, color .18s;
+  }
+  #materials .observatory-film-link:hover, #materials .observatory-context .demo-notes summary:hover,
+  #competition.comp-refined .comp-study-link:hover { border-color: var(--ui-gold); background: #c7b99520; color: #f3e3c0; }
+  #materials .observatory-context .demo-notes[open] summary { border-color: var(--ui-gold); background: #c7b99520; }
+  #materials .observatory-film-link span, #details .view-toggle span[aria-hidden] { transition: transform .18s; }
+  #materials .observatory-film-link:hover span, #details .view-toggle:hover span[aria-hidden] { transform: translate(2px, -2px); }
+  @media (max-width: 1180px) {
+    #competition.comp-refined .comp-system-rail { grid-template-columns: repeat(5,minmax(0,1fr)); gap: 6px; padding: 10px 14px; }
+    #competition.comp-refined .comp-system-label { grid-column: 1 / -1; }
+    #competition.comp-refined .comp-system-rail button { font-size: 13px; padding-inline: 8px; }
+    #competition.comp-refined .comp-workbench-body { grid-template-columns: minmax(0,1fr) 260px; }
+    #competition.comp-refined .comp-source-card { padding: 16px; }
+    #competition.comp-refined .comp-reference-heading { padding-inline: 16px; font-size: 14px; }
+    #competition.comp-refined .comp-pair-heading>div { font-size: 16px; padding-inline: 16px; }
+    #competition.comp-refined .comp-surface-tools { gap: 8px; }
+    #competition.comp-refined .comp-surface-tools>div>span { display: none; }
+    #competition.comp-refined .comp-inline-tools button { padding-inline: 8px; font-size: 11px; }
+    #competition.comp-refined .comp-render-caption { font-size: 12px; }
+    #competition.comp-refined .comp-film-chapters button { font-size: 12px; padding-inline: 9px; gap: 6px; }
+    .embodied-workspace { grid-template-columns: minmax(0,1fr) 230px; gap: 18px; }
+    .embodied-chapter-title { font-size: 18px; }
+    #embodied .embodied-chapters button { min-height: 98px; padding: 12px; }
+    #materials .observatory-context { grid-template-columns: minmax(0,1fr) auto; gap: 10px 14px; }
+    #materials .observatory-context > p { grid-column: 1 / -1; }
+    #materials .observatory-context .demo-notes summary { grid-column: 1; grid-row: 2; justify-self: start; }
+    #materials .observatory-film-link { grid-column: 2; grid-row: 2; }
+    #materials .observatory-context .demo-notes::details-content, #materials .observatory-context .demo-notes > p { grid-row: 3; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .comp-source-card, .comp-source-card svg, .comp-source-caption, .comp-mode-tabs button,
+  #competition.comp-refined .comp-film-chapters button, .embodied-chapters button, #detail-toggle, #detail-toggle span,
+  .observatory-film-link, .observatory-film-link span { transition: none !important; }
+}

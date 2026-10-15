@@ -1,0 +1,98 @@
+/* A quiet reference rail beside two equal, consistently lit result stages. */
+#competition.comp-refined .comp-workbench{--comp-stage:#e5e4df;--comp-stage-ink:#31352f;border:1px solid #edece524;background:#171a18;box-shadow:0 16px 48px #00000010}
+#competition.comp-refined .comp-workbench-top{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:66px;padding:0 24px;border-bottom:1px solid var(--comp-line)}
+#competition.comp-refined .comp-case-tabs{display:flex;align-items:center;gap:clamp(20px,2.3vw,38px);min-width:0}
+#competition.comp-refined .comp-case-tabs button{position:relative;display:flex;align-items:baseline;gap:9px;min-height:65px;padding:20px 0;color:#b5b8af;font-size:16px;white-space:nowrap;transition:color .2s}
+#competition.comp-refined .comp-case-tabs button>span{font:12px Consolas,monospace;color:#93998e;transition:color .2s}
+#competition.comp-refined .comp-case-tabs button:after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--comp-gold);transform:scaleX(0);transform-origin:left;transition:transform .24s}
+#competition.comp-refined .comp-case-tabs button:hover{color:var(--comp-chalk)}
+#competition.comp-refined .comp-case-tabs button[aria-pressed=true]{color:var(--comp-chalk)}
+#competition.comp-refined .comp-case-tabs button[aria-pressed=true]>span{color:var(--comp-gold)}
+#competition.comp-refined .comp-case-tabs button[aria-pressed=true]:after{transform:scaleX(1)}
+#competition.comp-refined .comp-mode-tabs{display:flex;flex:none;gap:2px;padding:3px;border:1px solid #edece51c;border-radius:5px;background:#0e12113d}
+#competition.comp-refined .comp-mode-tabs button{min-width:64px;min-height:34px;padding:6px 14px;border-radius:2px;font-size:14px;color:var(--comp-muted);transition:color .2s,background .2s}
+#competition.comp-refined .comp-mode-tabs button:hover{color:var(--comp-chalk)}
+#competition.comp-refined .comp-mode-tabs button[aria-pressed=true]{color:var(--comp-chalk);background:#edece51c;box-shadow:0 1px 3px #0003}
+#competition.comp-refined .comp-workbench-body{display:grid;grid-template-columns:clamp(240px,26%,420px) minmax(0,1fr)}
+#competition.comp-refined .comp-source-rail{display:grid;grid-template-rows:54px minmax(0,1fr);min-width:0;border-right:1px solid var(--comp-line);background:#1c1f1c}
+#competition.comp-refined .comp-source-heading{display:flex;align-items:center;padding:0 20px;border-bottom:1px solid var(--comp-line);font-size:14px;letter-spacing:.02em;color:var(--comp-muted)}
+#competition.comp-refined .comp-source-content{position:relative;min-height:0}
+#competition.comp-refined .comp-source-card{position:absolute;inset:55px 18px 0;display:block;padding:0;text-align:left}
+#competition.comp-refined .comp-source-image{position:absolute;inset:12px 0 36px;display:block;outline:1px solid transparent;outline-offset:4px;transition:outline-color .22s}
+#competition.comp-refined .comp-source-image img{width:100%;height:100%;object-fit:contain}
+#competition.comp-refined .comp-source-caption{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:30px;padding:4px 0 8px;font-size:13px;line-height:1.4;color:var(--comp-gold)}
+#competition.comp-refined .comp-source-caption svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.25;transition:transform .22s}
+#competition.comp-refined .comp-source-card:hover .comp-source-image{outline-color:#c7b99570}
+#competition.comp-refined .comp-source-card:hover svg{transform:translate(2px,-2px)}
+#competition.comp-refined .comp-results{min-width:0}
+#competition.comp-refined .comp-system-rail{min-height:54px;display:flex;align-items:stretch;justify-content:space-between;gap:clamp(10px,1.5vw,24px);padding:0 22px;border-bottom:1px solid var(--comp-line)}
+#competition.comp-refined .comp-system-label{display:flex;align-items:center;flex:none;font-size:12px;color:#969e94}
+#competition.comp-refined .comp-system-rail button{position:relative;display:flex;align-items:center;gap:6px;padding:0;min-height:53px;font-size:16px;white-space:nowrap;color:#b5b8af;transition:color .2s}
+#competition.comp-refined .comp-system-rail button>span{font-size:13px;color:#9bA293;transition:color .2s}
+#competition.comp-refined .comp-system-rail button:after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--comp-gold);transform:scaleX(0);transition:transform .22s}
+#competition.comp-refined .comp-system-rail button:hover,#competition.comp-refined .comp-system-rail button[aria-pressed=true]{color:var(--comp-chalk)}
+#competition.comp-refined .comp-system-rail button[aria-pressed=true]>span{color:var(--comp-gold)}
+#competition.comp-refined .comp-system-rail button[aria-pressed=true]:after{transform:scaleX(1)}
+#competition.comp-refined .comp-pair-heading{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:var(--comp-stage);color:var(--comp-stage-ink)}
+#competition.comp-refined .comp-pair-heading>div{display:flex;align-items:center;justify-content:space-between;gap:14px;min-width:0;min-height:55px;padding:14px 22px 8px;font-size:18px}
+#competition.comp-refined .comp-pair-heading>div:first-child{border-right:1px solid #343d301c}
+#competition.comp-refined .comp-pair-heading .comp-heading-meta{font-size:12px;letter-spacing:.025em;color:#565d55;white-space:nowrap}
+#competition.comp-refined .comp-pair-heading>div:first-child .comp-heading-meta{color:#62583f}
+#competition.comp-refined .comp-heading-identity{display:inline-flex;align-items:center;gap:9px}
+#competition.comp-refined .comp-heading-identity:before{content:'';display:block;width:2px;height:14px;background:#9a8656}
+#competition.comp-refined .comp-pair{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:var(--comp-stage)}
+#competition.comp-refined .comp-pair:after{content:'';position:absolute;inset:0 auto 0 50%;width:1px;background:#343d301c;z-index:2;pointer-events:none}
+#competition.comp-refined .comp-pane{position:relative;aspect-ratio:4/3;min-width:0;overflow:hidden}
+#competition.comp-refined .comp-render{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+#competition.comp-refined [data-detail=true] .comp-render{transform:scale(2);transform-origin:var(--comp-detail-x,50%) var(--comp-detail-y,50%);will-change:transform}
+#competition.comp-refined [data-detail=true] .comp-pane{cursor:crosshair}
+#competition.comp-refined [data-detail=true] .comp-pane:focus-visible{outline:2px solid #80704d;outline-offset:-3px}
+#competition.comp-refined .comp-live-mount{position:absolute;inset:0;touch-action:none;cursor:grab}
+#competition.comp-refined .comp-live-mount:active{cursor:grabbing}
+#competition.comp-refined .comp-live-mount:focus-visible{outline:2px solid #80704d;outline-offset:-3px}
+#competition.comp-refined [data-mode=render] .comp-live-mount{display:none}
+#competition.comp-refined [data-mode="3d"] [data-status=ready] .comp-render{visibility:hidden}
+#competition.comp-refined .comp-stage-status{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:var(--comp-stage);color:#44463e;font-size:16px;text-align:center;padding:24px}
+#competition.comp-refined .comp-stage-status button{border:1px solid #79705a;padding:8px 20px;font-size:14px;color:#39372f}
+#competition.comp-refined .comp-workbench-strip{min-height:72px;padding:12px 22px;display:flex;align-items:center;border-top:1px solid var(--comp-line)}
+#competition.comp-refined .comp-render-caption{display:flex;align-items:center;gap:20px;width:100%;font-size:15px;line-height:1.5;color:var(--comp-chalk)}
+#competition.comp-refined .comp-render-caption>p{display:flex;align-items:baseline;gap:12px;flex:1;min-width:0}
+#competition.comp-refined .comp-caption-label{font-size:12px;white-space:nowrap;color:#a8aea1}
+#competition.comp-refined .comp-render-condition{display:flex;align-items:center;gap:8px;flex:none;font-size:13px;color:#a7afa2;white-space:nowrap}
+#competition.comp-refined .comp-render-condition:before{content:'';width:5px;height:5px;border:1px solid #a79c7a;border-radius:50%}
+#competition.comp-refined .comp-detail-toggle{display:inline-flex;align-items:center;justify-content:center;flex:none;gap:8px;min-width:138px;min-height:38px;padding:7px 12px;border:1px solid #c7b99540;border-radius:2px;font-size:13px;line-height:1.4;color:var(--comp-gold);transition:color .2s,background .2s,border-color .2s}
+#competition.comp-refined .comp-detail-toggle svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.2}
+#competition.comp-refined .comp-detail-toggle:hover,#competition.comp-refined .comp-detail-toggle[aria-pressed=true]{border-color:#c7b99588;background:#c7b9950d;color:var(--comp-chalk)}
+#competition.comp-refined .comp-inline-tools{display:flex;align-items:center;gap:clamp(10px,1.5vw,24px);width:100%}
+#competition.comp-refined .comp-inline-tools>div{display:flex;align-items:center;gap:2px}
+#competition.comp-refined .comp-inline-tools>div+div{padding-left:clamp(10px,1.5vw,24px);border-left:1px solid var(--comp-line)}
+#competition.comp-refined .comp-inline-tools button{border:1px solid transparent;border-radius:2px;min-height:36px;padding:7px 10px;font-size:14px;color:var(--comp-muted);white-space:nowrap;transition:color .2s,background .2s,border-color .2s}
+#competition.comp-refined .comp-inline-tools button[aria-pressed=true]{border-color:#c7b99533;color:var(--comp-gold);background:#c7b9950a}
+#competition.comp-refined .comp-inline-tools button:hover{color:var(--comp-chalk);background:#edece50a}
+#competition.comp-refined .comp-inline-tools button:disabled{opacity:.4;cursor:wait}
+#competition.comp-refined .comp-inline-tools .comp-light-options{margin-left:auto}
+#competition.comp-refined .comp-light-options>span{font-size:12px;margin-right:9px;color:#969e94}
+#competition.comp-refined .comp-light-options button{padding-inline:9px;font-size:13px}
+#competition.comp-refined .comp-workbench-feedback{font-size:14px;color:#edc1a1;padding:10px 22px 14px;border-top:1px solid var(--comp-line)}
+#competition.comp-refined .comp-workbench-context{max-width:none;font-size:13px;line-height:1.6;margin:16px 0 0;color:var(--comp-muted)}
+#competition.comp-refined .comp-reference-dialog{width:fit-content;min-width:380px;max-width:calc(100vw - 120px);max-height:calc(100vh - 72px);border:1px solid #edece530;padding:0;background:#181c1a;color:var(--comp-chalk);box-shadow:0 24px 100px #0009}
+#competition.comp-refined .comp-reference-dialog::backdrop{background:#080b0cdf;backdrop-filter:blur(10px)}
+#competition.comp-refined .comp-reference-dialog>header{display:flex;align-items:center;justify-content:space-between;padding:20px 26px;gap:60px}
+#competition.comp-refined .comp-reference-dialog header p{font-size:12px;letter-spacing:.05em;color:var(--comp-gold);margin-bottom:7px}
+#competition.comp-refined .comp-reference-dialog h3{font-size:24px;font-weight:400;line-height:1.3;letter-spacing:-.02em}
+#competition.comp-refined .comp-reference-dialog button{display:grid;place-items:center;width:40px;height:40px;border:1px solid #edece522;border-radius:50%;color:var(--comp-muted);transition:color .2s,border-color .2s}
+#competition.comp-refined .comp-reference-dialog button:hover{color:var(--comp-chalk);border-color:#edece577}
+#competition.comp-refined .comp-reference-dialog button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.25}
+#competition.comp-refined .comp-reference-dialog>img{display:block;width:auto;height:calc(100vh - 212px);max-width:calc(100vw - 120px);max-height:850px;object-fit:contain;background:#e7e6e1}
+@media(min-width:960px) and (max-width:1180px){
+ #competition.comp-refined .comp-workbench-top{padding-inline:20px;gap:18px}
+ #competition.comp-refined .comp-case-tabs{gap:22px}
+ #competition.comp-refined .comp-system-rail{padding-inline:18px;gap:14px}
+ #competition.comp-refined .comp-system-label{display:none}
+ #competition.comp-refined .comp-system-rail button{font-size:15px;gap:5px}
+ #competition.comp-refined .comp-inline-tools{gap:10px}
+ #competition.comp-refined .comp-inline-tools>div+div{padding-left:10px}
+ #competition.comp-refined .comp-inline-tools button{padding-inline:8px}
+}
+@media(prefers-reduced-motion:reduce){#competition.comp-refined .comp-workbench button,#competition.comp-refined .comp-workbench button:after,#competition.comp-refined .comp-workbench button>span,#competition.comp-refined .comp-workbench svg,#competition.comp-refined .comp-reference-dialog button{transition:none}}
+.motion-paused #competition.comp-refined .comp-workbench button,.motion-paused #competition.comp-refined .comp-workbench button:after,.motion-paused #competition.comp-refined .comp-workbench button>span,.motion-paused #competition.comp-refined .comp-workbench svg{transition:none}

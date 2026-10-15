@@ -1,0 +1,4 @@
+.hero-paper .paper-authors a{color:inherit;text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:.22em;pointer-events:auto}
+.hero-paper .paper-authors a:hover{color:var(--gold);text-decoration-color:currentColor}
+.hero-paper .paper-authors a:focus-visible{color:var(--gold);text-decoration-color:currentColor;outline:1px solid var(--gold);outline-offset:4px;border-radius:1px}
+@font-face{font-family:InterVariable;src:url('assets/fonts/inter/InterVariable.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}

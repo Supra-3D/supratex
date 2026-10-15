@@ -1,0 +1,44 @@
+/* The comparison film is an optional stop from the cover; the section opens on the workbench. */
+#top.hero-video-only .hero-footer #hero-see-more { flex:none;white-space:nowrap;cursor:pointer; }
+#comparison-3d { scroll-margin-top:112px; }
+body.comparison-film-open { overflow:hidden; }
+#comparison-film-dialog {
+  width:min(1360px,calc(100vw - 64px),calc((100dvh - 300px) * 2.55319149));
+  max-width:calc(100vw - 32px);max-height:calc(100dvh - 48px);
+  padding:0;border:1px solid #d9c18a50;border-radius:8px;
+  background:#151916;color:#f2f0e9;box-shadow:0 26px 110px #000b;
+}
+#comparison-film-dialog::backdrop { background:#060908dc;backdrop-filter:blur(12px); }
+#comparison-film-dialog .comp-film-dialog-header {
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:12px 18px;border-bottom:1px solid #d9c18a26;
+}
+#competition #comparison-film-title { font:500 16px/1.35 SupraSans,sans-serif;letter-spacing:0;margin:0; }
+#competition #comparison-film-dialog [data-comp-film-close] {
+  display:grid;place-items:center;flex:none;width:34px;height:34px;
+  border:1px solid #d9c18a50;border-radius:4px;background:#d9c18a05;color:#d9c18a;
+}
+#competition #comparison-film-dialog [data-comp-film-close]:hover { background:#d9c18a18;border-color:#d9c18a; }
+#comparison-film-dialog [data-comp-film-close] svg { width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5; }
+#comparison-film-dialog .competition-film { border:0;border-radius:0;margin:0;max-width:none; }
+#comparison-film-dialog .comp-film-heading { padding:14px 22px;font-size:21px; }
+#comparison-film-dialog .comp-film-player video { max-height:none;background:#fff; }
+#comparison-film-dialog .comp-film-player:fullscreen video { max-height:calc(100dvh - 120px); }
+#comparison-film-dialog .comp-film-chapters { padding:10px;gap:8px; }
+#competition #comparison-film-dialog .comp-film-chapters button { white-space:nowrap;font-size:14px;gap:8px;padding:10px; }
+#comparison-film-dialog .comp-film-chapters button::after { left:10px;right:10px;bottom:4px;height:2px; }
+#comparison-film-dialog [data-comp-film-status] { color:#ecd4a6;background:#25291f; }
+#comparison-film-dialog :is(button,input):focus-visible { outline:2px solid #f0d8a4;outline-offset:3px; }
+@media (min-width:960px) and (max-width:1599px) {
+  #top.hero-video-only .hero-footer #hero-play-prompt { font-size:0;width:34px;padding-inline:0; }
+  #top.hero-video-only .hero-footer #hero-play-prompt svg { width:15px;height:15px; }
+}
+@media (max-height:700px) {
+  #comparison-film-dialog { width:min(1060px,calc(100vw - 48px)); }
+  #comparison-film-dialog .comp-film-player video { max-height:calc(100dvh - 282px); }
+  #competition #comparison-film-dialog .comp-film-chapters button { min-height:40px;font-size:12px; }
+}
+@media (prefers-reduced-motion:no-preference) {
+  #comparison-film-dialog[open] { animation:comparison-film-enter .2s ease-out; }
+  @keyframes comparison-film-enter { from { opacity:0;transform:translateY(8px); } to { opacity:1;transform:translateY(0); } }
+}

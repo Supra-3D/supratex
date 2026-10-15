@@ -1,0 +1,5 @@
+Inter Variable 4.1 — unmodified official web font
+Project: https://rsms.me/inter/
+Font: https://rsms.me/inter/font-files/InterVariable.woff2?v=4.1
+License: https://raw.githubusercontent.com/rsms/inter/v4.1/LICENSE.txt
+License copy included in LICENSE.txt.

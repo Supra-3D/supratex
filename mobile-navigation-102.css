@@ -1,0 +1,36 @@
+/* Mobile navigation is independent of the approved desktop header. */
+.mobile-menu-toggle { display:none; }
+@media (max-width:959.98px) {
+  :root { --page:20px; }
+  html { scroll-padding-top:80px; }
+  /* Keep decorative scene edges inside the page; content rails scroll locally. */
+  main { max-width:100%;overflow-x:clip; }
+  #comparison-3d:focus { outline:none; }
+  .site-header,.site-header.scrolled {
+    height:60px;padding:0 max(20px,env(safe-area-inset-right)) 0 max(20px,env(safe-area-inset-left));
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    background:#0e1011f2;backdrop-filter:blur(16px);border-bottom:1px solid #d9c18a24;z-index:30;
+  }
+  .site-header>.wordmark { font-size:21px;min-height:44px; }
+  .site-header .brand-mark { width:26px;height:28px;margin-right:8px; }
+  .mobile-menu-toggle:not([hidden]) {
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;flex:none;
+    min-height:44px;padding:8px 12px;border:1px solid #d9c18a55;border-radius:4px;
+    color:#e1d5bc;background:#d9c18a08;font:500 13px/1.3 SupraSans,sans-serif;
+  }
+  .mobile-menu-toggle svg { width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5; }
+  .site-header #main-navigation { display:none; }
+  .site-header[data-mobile-menu="open"] #main-navigation {
+    display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;position:absolute;
+    left:12px;right:12px;top:calc(100% + 8px);padding:12px;
+    max-height:calc(100svh - 84px);overflow-y:auto;overscroll-behavior:contain;
+    background:#141718;border:1px solid #d9c18a4d;border-radius:6px;box-shadow:0 18px 48px #0009;
+  }
+  .site-header #main-navigation a {
+    display:flex;align-items:center;min-height:48px;padding:10px 12px;
+    font-size:14px;line-height:1.3;color:#d5d6cf;border-radius:3px;
+  }
+  .site-header #main-navigation a:hover,.site-header #main-navigation a[aria-current="location"] { color:#ebd5a4;background:#d9c18a12; }
+  .site-header #main-navigation a::after { display:none; }
+  .site-header :is(a,button):focus-visible { outline-offset:2px; }
+}

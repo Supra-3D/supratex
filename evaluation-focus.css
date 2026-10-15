@@ -1,0 +1,77 @@
+/* State the finding before inviting readers into the complete research tables. */
+#evaluation .section-heading{align-items:flex-end;gap:48px;margin-bottom:32px}
+#evaluation .section-heading>p{max-width:415px;font-size:18px;line-height:1.65}
+#evaluation .fidelity-overview{border-top:1px solid #c7b99542}
+#evaluation .fidelity-comparison-key{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:66px;border-bottom:1px solid var(--line);font-size:15px;color:#cacdc1}
+#evaluation .fidelity-comparison-key p{display:flex;align-items:center;gap:13px}
+#evaluation .fidelity-comparison-key p>span:first-child{margin-right:14px;font-size:13px;color:#a1a89b}
+#evaluation .fidelity-comparison-key strong{font-weight:450;color:var(--gold)}
+#evaluation .fidelity-key-arrow{color:#989e91}
+#evaluation .fidelity-comparison-key>span{font-size:13px;color:#b3b8ac}
+#evaluation .fidelity-findings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+#evaluation .fidelity-finding{display:flex;flex-direction:column;min-width:0;padding:24px 32px 18px 0}
+#evaluation .fidelity-finding+article{padding:24px 0 18px 32px;border-left:1px solid var(--line)}
+#evaluation .fidelity-finding-index{font:12px/1.5 Consolas,monospace;letter-spacing:.065em;color:#b9ac8c;margin-bottom:13px}
+#evaluation .fidelity-finding h3{font-size:28px;line-height:1.2;font-weight:400;letter-spacing:-.028em;color:var(--text);margin:0 0 12px}
+#evaluation .fidelity-finding header p{font-size:16px;line-height:1.6;color:#b5bbaf;margin:0}
+#evaluation .fidelity-scores{margin:20px 0 0;border-top:1px solid var(--line)}
+#evaluation .fidelity-dataset{display:grid;grid-template-columns:minmax(110px,1fr) auto minmax(116px,.8fr);align-items:center;gap:22px;min-height:88px;border-bottom:1px solid var(--line)}
+#evaluation .fidelity-dataset-name{font-size:16px;line-height:1.5;color:#dcdfd2}
+#evaluation .fidelity-dataset-name small{display:block;font-size:12px;color:#939e8d;margin-top:4px}
+#evaluation .fidelity-score-pair{display:flex;align-items:center;gap:12px;font:17px/1.5 Consolas,monospace;color:#a4ad9b;font-variant-numeric:tabular-nums}
+#evaluation .fidelity-score-pair strong{color:#e1e4d6;font-weight:400}
+#evaluation .fidelity-score-arrow{font:14px SupraSans,'Segoe UI',sans-serif;color:#8c957f}
+#evaluation .fidelity-gain{text-align:right;font-variant-numeric:tabular-nums}
+#evaluation .fidelity-gain strong{display:block;font-size:42px;line-height:1.05;font-weight:350;letter-spacing:-.05em;color:var(--gold)}
+#evaluation .fidelity-gain strong>span{font-size:18px;letter-spacing:0;margin-left:3px}
+#evaluation .fidelity-gain small{display:block;font-size:12px;line-height:1.5;letter-spacing:.015em;color:#b1b9a6;margin-top:5px}
+#evaluation .fidelity-support{min-height:92px;margin:19px 0 0}
+#evaluation .fidelity-support>p{font-size:15px;line-height:1.5;color:#d2d7c7;margin:0 0 9px}
+#evaluation .fidelity-support>span{display:block;font-size:12px;line-height:1.5;color:#abb39e}
+#evaluation .fidelity-support dl{display:flex;flex-wrap:wrap;gap:8px 25px;margin:6px 0 0}
+#evaluation .fidelity-support dl>div{display:flex;align-items:baseline;gap:9px;font-size:14px;line-height:1.5}
+#evaluation .fidelity-support dt{color:#aab59d}
+#evaluation .fidelity-support dd{margin:0;color:#dedfd1;font-variant-numeric:tabular-nums}
+#evaluation .fidelity-support .fidelity-support-copy{font-size:14px;line-height:1.7;color:#aab59d;max-width:460px}
+#evaluation .fidelity-results-link{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:38px;width:100%;margin-top:auto;padding:6px 0;background:none;border:0;color:#ccbf9b;font:14px/1.5 SupraSans,'Segoe UI',sans-serif;text-align:left;cursor:pointer}
+#evaluation .fidelity-results-link:hover{color:#eee5d0}
+#evaluation .fidelity-results-link:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+#evaluation .fidelity-results-link>span{font-size:18px}
+#evaluation .fidelity-footnote{font-size:13px;line-height:1.7;color:#a5ae9a;margin:0;padding:14px 0;border-top:1px solid var(--line)}
+/* The qualitative film bridges the headline measurements and complete tables. */
+#evaluation .fidelity-film{margin:24px auto 0}
+#evaluation .fidelity-film-link{display:grid;grid-template-columns:clamp(224px,22vw,304px) minmax(0,1fr) auto;align-items:center;gap:clamp(24px,2.5vw,36px);width:100%;padding:18px 0;border-block:1px solid #c7b99530;text-align:left;background:transparent;transition:background 180ms,border-color 180ms}
+#evaluation .fidelity-film-poster{display:block;position:relative;overflow:hidden;border-radius:3px;border:1px solid #c7b99524;background:#fff}
+#evaluation .fidelity-film-poster img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
+#evaluation .fidelity-film-duration{position:absolute;bottom:8px;right:8px;padding:3px 7px;border-radius:2px;background:#101311e8;color:#e7e1d2;font-size:12px;line-height:1.5;font-variant-numeric:tabular-nums}
+#evaluation .fidelity-film-copy{display:flex;flex-direction:column;min-width:0}
+#evaluation .fidelity-film-kicker{font:12px/1.5 Consolas,monospace;letter-spacing:.065em;color:var(--gold)}
+#evaluation .fidelity-film-title{margin-top:9px;font-size:clamp(22px,1.8vw,28px);line-height:1.3;letter-spacing:-.025em;color:var(--text)}
+#evaluation .fidelity-film-description{margin-top:8px;font-size:15px;line-height:1.6;color:var(--muted)}
+#evaluation .fidelity-film-action{display:inline-flex;align-items:center;gap:10px;padding-right:14px;font-size:15px;line-height:1.5;color:var(--gold);white-space:nowrap}
+#evaluation .fidelity-film-action svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.3}
+#evaluation .fidelity-film-link:hover{background:#c7b99506;border-color:#c7b99565}
+#evaluation .fidelity-film-link:hover .fidelity-film-action{color:#eee5d0}
+#evaluation .fidelity-film-link:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+@media(prefers-reduced-motion:reduce){#evaluation .fidelity-film-link{transition:none}}
+#evaluation .fidelity-evidence-heading{display:flex;align-items:baseline;justify-content:space-between;gap:32px;margin-block:34px 10px;margin-inline:auto}
+#evaluation .fidelity-evidence-heading h3{font-size:23px;line-height:1.4;font-weight:400;letter-spacing:-.02em;color:#e2e1d6;margin:0}
+#evaluation .fidelity-evidence-heading p{font-size:14px;line-height:1.6;color:#9da991;margin:0}
+#evaluation .evidence-panel-intro h3{font-size:20px}
+#evaluation .evidence-panel-intro p{font-size:15px}
+#evaluation .evidence-details[id],#evaluation .evidence-details>summary,#evaluation [data-evidence-tab]{scroll-margin-top:15px}
+#evaluation .evidence-details>summary:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+@media(min-width:960px) and (max-width:1200px){
+ #evaluation .section-heading{gap:30px}
+ #evaluation .section-heading>p{max-width:340px}
+ #evaluation .fidelity-comparison-key{gap:18px}
+ #evaluation .fidelity-comparison-key p{gap:9px}
+ #evaluation .fidelity-comparison-key p>span:first-child{margin-right:3px}
+ #evaluation .fidelity-finding{padding-right:24px}
+ #evaluation .fidelity-finding+article{padding-left:24px}
+ #evaluation .fidelity-dataset{grid-template-columns:minmax(98px,1fr) auto 95px;gap:12px}
+ #evaluation .fidelity-score-pair{font-size:15px;gap:7px}
+ #evaluation .fidelity-gain strong{font-size:37px}
+ #evaluation .fidelity-dataset-name{font-size:15px}
+ #evaluation .fidelity-support{min-height:96px}
+}

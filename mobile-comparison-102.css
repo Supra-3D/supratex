@@ -1,0 +1,89 @@
+/* Mobile comparison keeps the same live models and shared camera, with room to see them. */
+.comp-touch-bar { display: none; }
+@media (max-width:959.98px) {
+  #competition.comp-refined .comp-workbench { width: 100%; min-width: 0; border-radius: 5px; }
+  #competition.comp-refined .comp-workbench-top { min-height: 72px; padding: 12px; gap: 12px; }
+  #competition.comp-refined .comp-case-summary { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+  #competition.comp-refined .comp-case-summary strong { color: #eeece2; font-size: 17px; line-height: 1.3; font-weight: 500; }
+  #competition.comp-refined [data-comp-input-label] { color: #d4bd85; font-size: 11px; line-height: 1.4; }
+  #competition.comp-refined .comp-back-flight { display: inline-flex; flex: none; align-items: center; gap: 7px; min-height: 44px; padding: 9px 11px; border: 1px solid #d4bd8570; border-radius: 3px; color: #dfc68e; font-size: 12px; white-space: nowrap; }
+  #competition.comp-refined .comp-system-rail { display: flex; flex-direction: row; align-items: stretch; justify-content: flex-start; gap: 7px; padding: 10px 12px 12px; max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #d4bd8550 transparent; scroll-padding-inline: 12px; }
+  #competition.comp-refined .comp-system-label { display: none; }
+  #competition.comp-refined .comp-system-rail button { flex: 0 0 auto; justify-content: center; gap: 5px; min-height: 44px; padding: 10px 12px; font-size: 14px; line-height: 1.3; background: #252d25; border: 1px solid #c7b99540; color: #dddcd2; }
+  #competition.comp-refined .comp-system-rail button > span { font-size: 12px; color: #adb4a5; }
+  #competition.comp-refined .comp-system-rail button[aria-pressed=true] { background: #d4bd85; color: #1c221c; border-color: #d4bd85; }
+  #competition.comp-refined .comp-workbench-body { display: grid; grid-template-columns: minmax(0,1fr); }
+  #competition.comp-refined .comp-results { min-width: 0; width: 100%; }
+  #competition.comp-refined .comp-pair-heading { display: none; }
+  #competition.comp-refined .comp-touch-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 64px; padding: 9px 12px; border-top: 1px solid #c7b99520; background: #22271f; color: #b8beae; }
+  #competition.comp-refined .comp-touch-bar p { max-width: 22em; font-size: 12px; line-height: 1.45; }
+  #competition.comp-refined .comp-touch-toggle { flex: none; min-width: 124px; min-height: 44px; padding: 9px 12px; border: 1px solid #d4bd85; border-radius: 3px; background: #d4bd85; color: #1c221c; font-size: 13px; font-weight: 500; }
+  #competition.comp-refined .comp-touch-toggle[aria-pressed=true] { background: #d4bd8510; color: #e9d5a6; }
+  #competition.comp-refined .comp-touch-toggle:disabled { opacity: .6; cursor: default; }
+  #competition.comp-refined .comp-pair { display: block; flex: none; width: 100%; height: clamp(300px,85vw,460px); min-height: 0; background: #e7e6e1; }
+  #competition.comp-refined .comp-pane { position: absolute; inset: 0; aspect-ratio: auto; }
+  #competition.comp-refined .comp-diagonal { z-index: 4; filter: none; }
+  #competition.comp-refined .comp-diagonal line,
+  #competition.comp-refined .comp-diagonal path { fill: none; stroke: #927841; stroke-width: 1.3; vector-effect: non-scaling-stroke; }
+  #competition.comp-refined .comp-diagonal path[data-comp-leader=right] { stroke: #7a817c; }
+  #competition.comp-refined .comp-stage-label { position: absolute; z-index: 5; pointer-events: none; padding: 7px 9px; border-radius: 3px; background: #18201be8; font-size: 13px; line-height: 1.3; font-weight: 600; }
+  #competition.comp-refined .comp-stage-label.is-supra { top: 12px; left: 12px; color: #e4c884; }
+  #competition.comp-refined .comp-stage-label.is-commercial { bottom: 12px; right: 12px; color: #f1f2ec; }
+  #competition.comp-refined [data-reveal=right] .comp-stage-label.is-supra,
+  #competition.comp-refined [data-reveal=left] .comp-stage-label.is-commercial { visibility: hidden; }
+  #competition.comp-refined [data-reveal=right] [data-comp-leader=left],
+  #competition.comp-refined [data-reveal=left] [data-comp-leader=right] { display: none; }
+  #competition.comp-refined .comp-split-handle { position: absolute; z-index: 6; left: clamp(25px,var(--split-center),calc(100% - 25px)); top: 50%; transform: translate(-50%,-50%); display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 1px solid #e4cf9a; border-radius: 50%; background: #20291ff0; color: #ecd7a6; box-shadow: 0 2px 12px #0003; cursor: ew-resize; touch-action: none; }
+  #competition.comp-refined .comp-split-handle svg { width: 24px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  #competition.comp-refined .comp-split-handle > span { display: none; }
+  #competition.comp-refined .comp-pair.comp-mobile-browse,
+  #competition.comp-refined .comp-pair.comp-mobile-browse * { touch-action: pan-y !important; }
+  #competition.comp-refined .comp-mobile-browse .comp-live-mount,
+  #competition.comp-refined .comp-mobile-browse .comp-split-handle { pointer-events: none; cursor: auto; }
+  #competition.comp-refined .comp-mobile-browse .comp-split-handle { opacity: 0; }
+  #competition.comp-refined .comp-stage-status { inset: auto auto 60px 10px; width: min(46%,190px); padding: 9px; gap: 7px; background: #1d261cec; border: 1px solid #c7b99550; border-radius: 3px; color: #e8e5d8; font-size: 12px; }
+  #competition.comp-refined [data-comp-pane=right] .comp-stage-status { inset: auto 10px 60px auto; }
+  #competition.comp-refined .comp-stage-status button { min-height: 44px; padding: 8px 11px; border-color: #d4bd8590; color: #ead4a3; }
+  #competition.comp-refined .comp-reveal { gap: 10px; padding: 4px 12px; min-height: 52px; font-size: 11px; background:#1b201b; color:#c4c8bc; }
+  #competition.comp-refined .comp-reveal > span { flex: none; }
+  #competition.comp-refined .comp-reveal input { flex: 1; min-width: 0; min-height: 44px; touch-action: pan-y; appearance:none; -webkit-appearance:none; background:transparent; }
+  #competition.comp-refined .comp-reveal input::-webkit-slider-runnable-track { height:2px; background:#d9c18a55; }
+  #competition.comp-refined .comp-reveal input::-webkit-slider-thumb { appearance:none; -webkit-appearance:none; width:16px; height:16px; margin-top:-7px; border:2px solid #22271f; border-radius:50%; background:#d9c18a; }
+  #competition.comp-refined .comp-reveal input::-moz-range-track { height:2px; background:#d9c18a55; }
+  #competition.comp-refined .comp-reveal input::-moz-range-thumb { width:12px; height:12px; border:2px solid #22271f; border-radius:50%; background:#d9c18a; }
+  #competition.comp-refined .comp-workbench-strip { display: flex; flex-direction: column; gap: 12px; padding: 12px; min-height: 0; }
+  #competition.comp-refined .comp-inline-tools { min-width: 0; gap: 8px; }
+  #competition.comp-refined .comp-inline-tools > div,
+  #competition.comp-refined .comp-inline-tools > div + div { gap: 5px; margin: 0; padding: 0; border: 0; }
+  #competition.comp-refined .comp-inline-tools button { min-width: 44px; min-height: 44px; padding: 9px 11px; border: 1px solid #c7b99540; background: #30382c; color: #d0d3c8; font-size: 13px; line-height: 1.3; }
+  #competition.comp-refined .comp-inline-tools button[aria-pressed=true] { background: #d4bd85; color: #1c221c; border-color: #d4bd85; }
+  #competition.comp-refined .comp-camera-tools { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+  #competition.comp-refined .comp-camera-tools > div { display: flex; }
+  #competition.comp-refined .comp-camera-tools .comp-gesture { display: none; }
+  #competition.comp-refined .comp-surface-tools { display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
+  #competition.comp-refined .comp-surface-tools > div { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); align-items: center; gap: 5px; }
+  #competition.comp-refined .comp-surface-tools > div > span { grid-column: 1/-1; margin: 0 0 2px; font: 10px/1.4 Consolas,monospace; letter-spacing: .08em; color: #a9b0a0; }
+  #competition.comp-refined .comp-surface-tools .comp-surface-options { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #competition.comp-refined .comp-surface-tools .comp-light-options button { padding-inline: 3px; font-size: 12px; }
+  #competition.comp-refined .comp-sidebar { display: block; min-width: 0; padding: 12px; border-left: 0; border-top: 1px solid #c7b99525; background: #1b201b; }
+  #competition.comp-refined .comp-reference-heading { display: none; }
+  #competition.comp-refined .comp-source-card { display: flex; align-items: center; gap: 16px; position: relative; inset: auto; margin: 0; width: 100%; min-height: 86px; padding: 9px 12px; border: 1px solid #d4bd8560; border-radius: 3px; background: #242a22; text-align: left; }
+  #competition.comp-refined .comp-source-image { position: relative; inset: auto; display: block; flex: 0 0 96px; height: 68px; }
+  #competition.comp-refined .comp-source-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+  #competition.comp-refined .comp-source-caption { position: static; display: flex; flex: 1; justify-content: space-between; gap: 8px; margin: 0; padding: 0; border: 0; min-height: 44px; background: transparent; color: #e4cd98; font-size: 13px; line-height: 1.4; }
+  #competition.comp-refined .comp-case-tabs { display: flex; align-items: stretch; gap: 8px; max-width: 100%; padding: 12px; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #d4bd8550 transparent; scroll-padding-inline: 12px; background: #161d17; }
+  #competition.comp-refined .comp-case-tabs button { flex: 0 0 136px; display: grid; grid-template-columns: 42px minmax(0,1fr); grid-template-rows: 16px 36px; align-items: center; gap: 0 8px; min-height: 76px; padding: 9px; border: 1px solid #c7b99540; border-radius: 3px; background: #252d25; color: #d9dbd0; }
+  #competition.comp-refined .comp-case-tabs button:last-child { border-right: 1px solid #c7b99540; }
+  #competition.comp-refined .comp-case-tabs button > img { grid-row: 1/3; width: 42px; height: 52px; padding: 2px; object-fit: contain; }
+  #competition.comp-refined .comp-case-tabs button > .comp-case-name { color: inherit; font-size: 12px; line-height: 1.35; font-family: inherit; white-space: normal; }
+  #competition.comp-refined .comp-case-tabs button > .comp-case-number { color: #aaa88f; font-size: 10px; }
+  #competition.comp-refined .comp-case-tabs button:after { display: none; }
+  #competition.comp-refined .comp-case-tabs button[aria-pressed=true] { border-color: #d4bd85; background: #3c3b2b; color: #eedbb2; }
+  #competition.comp-refined .comp-workbench button:focus-visible { outline: 2px solid #f0dbab; outline-offset: -3px; }
+  #competition.comp-refined .comp-workbench-context { font-size: 13px; line-height: 1.6; }
+  #competition.comp-refined .comp-reference-dialog { width: calc(100vw - 24px); min-width: 0; max-width: 600px; max-height: calc(100dvh - 32px); padding: 0; }
+  #competition.comp-refined .comp-reference-dialog > header { gap: 16px; padding: 16px; }
+  #competition.comp-refined .comp-reference-dialog h3 { font-size: 21px; }
+  #competition.comp-refined .comp-reference-dialog button { width: 44px; height: 44px; flex: none; }
+  #competition.comp-refined .comp-reference-dialog > img { width: 100%; height: auto; max-width: 100%; max-height: calc(100dvh - 150px); object-fit: contain; }
+}

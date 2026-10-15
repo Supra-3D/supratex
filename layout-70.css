@@ -1,0 +1,106 @@
+/* Desktop comparison narrative: film, interactive evidence, human preference. */
+.site-header nav{gap:clamp(14px,1.7vw,28px)}
+#competition.comp-refined{padding-top:76px;padding-bottom:80px}
+#competition.comp-refined .comp-heading{margin-bottom:36px}
+#competition.comp-refined .comp-heading h2{font-size:clamp(48px,5.1vw,76px)}
+.competition-film{border:1px solid #c7b99545;background:#191d1a;overflow:hidden}
+.comp-film-heading{display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:22px 30px;gap:30px;font-size:24px;letter-spacing:-.025em;background:#191d1a}
+.comp-film-heading>span:first-child{color:#dfc68c}
+.comp-film-heading small{font-size:12px;letter-spacing:.06em;margin-left:12px;color:#b8b7a8}
+.comp-film-player{position:relative;background:#fff}
+.comp-film-player video{display:block;width:100%;aspect-ratio:1920/752;object-fit:contain}
+.comp-film-controls{display:flex;align-items:center;gap:16px;height:56px;padding:8px 22px;background:#20241f;color:#e9e6dd;font:12px Consolas,monospace}
+.comp-film-controls button{display:grid;place-items:center;min-width:36px;height:36px;border:1px solid #c7b99550;border-radius:3px;font-size:20px}
+#competition.comp-refined .comp-film-controls .comp-film-play{background:#d4bd85;color:#171d1b;border-color:#d4bd85;font-size:14px}
+.comp-film-controls input{flex:1;min-width:0;accent-color:#d4bd85;cursor:pointer}
+.comp-film-player .pause-icon,.comp-film-player.is-playing .play-icon{display:none}
+.comp-film-player.is-playing .pause-icon{display:inline}
+.comp-film-player:fullscreen{display:flex;flex-direction:column;justify-content:center;background:#161a18}
+.comp-film-player:fullscreen video{max-height:calc(100vh - 140px)}
+.comp-film-player [role=status]{padding:18px;color:#6d351e}
+.comp-film-chapters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid #c7b99520}
+.comp-film-chapters button{position:relative;display:flex;align-items:center;gap:14px;min-height:64px;padding:16px 22px;color:#b6bbaf;font-size:16px;text-align:left;border-right:1px solid #c7b99520;transition:background .2s,color .2s}
+.comp-film-chapters button:last-child{border-right:0}
+.comp-film-chapters button>span{font:11px Consolas,monospace;color:#928f80}
+.comp-film-chapters button:after{content:'';position:absolute;inset:auto 0 0;height:2px;background:#dfc68c;transform:scaleX(0);transform-origin:left}
+.comp-film-chapters button[aria-current=true]{background:#d4bd8514;color:#f4eddb}
+.comp-film-chapters button[aria-current=true]>span{color:#dfc68c}
+.comp-film-chapters button[aria-current=true]:after{transform:scaleX(var(--chapter-progress,0))}
+.comp-film-chapters button:hover{background:#d4bd8520;color:#fff}
+#competition .comp-explore-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin:54px 0 22px}
+#competition .comp-explore-heading h3{font-size:clamp(26px,2.4vw,36px);font-weight:400;letter-spacing:-.035em}
+#competition .comp-explore-heading p{font-size:15px;color:#b1b8a9}
+#competition.comp-refined .comp-workbench{border-color:#c7b99540;overflow:hidden}
+#competition.comp-refined .comp-workbench-top{min-height:62px;padding:10px 24px}
+.comp-stage-eyebrow{font:11px Consolas,monospace;letter-spacing:.12em;color:#cab98f}
+#competition.comp-refined .comp-mode-tabs button[data-comp-mode="3d"]{color:#1c211b;background:#d4bd85}
+#competition.comp-refined .comp-mode-tabs button[data-comp-mode="3d"][aria-pressed=true]{background:#ebd6a4}
+#competition.comp-refined .comp-workbench-body{grid-template-columns:minmax(0,1fr) 232px}
+#competition.comp-refined .comp-results{display:flex;flex-direction:column;background:#e7e6e1}
+#competition.comp-refined .comp-pair-heading{background:#22271f;color:#f0eee6}
+#competition.comp-refined .comp-pair-heading>div{min-height:62px;padding:16px 26px;font-size:21px}
+#competition.comp-refined .comp-pair-heading>div:first-child{border:0;color:#dfc68c}
+#competition.comp-refined .comp-pair-heading .comp-heading-meta{color:#a8ae9f;font-size:11px}
+#competition.comp-refined .comp-pair-heading>div:first-child .comp-heading-meta{color:#c1ae7f}
+#competition.comp-refined .comp-heading-identity:before{display:none}
+#competition.comp-refined .comp-pair{display:block;flex:1;min-height:clamp(420px,39vw,610px);height:clamp(420px,39vw,610px);background:#e7e6e1;--split-top:58%;--split-bottom:42%}
+#competition.comp-refined .comp-pair:after{display:none}
+#competition.comp-refined .comp-pane{position:absolute;inset:0;aspect-ratio:auto;overflow:hidden}
+#competition.comp-refined .comp-pane[data-comp-pane=left]{clip-path:polygon(0 0,var(--split-top) 0,var(--split-bottom) 100%,0 100%)}
+#competition.comp-refined .comp-pane[data-comp-pane=right]{clip-path:polygon(var(--split-top) 0,100% 0,100% 100%,var(--split-bottom) 100%)}
+#competition.comp-refined .comp-render{object-fit:contain}
+#competition.comp-refined .comp-diagonal{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:4;overflow:visible;filter:drop-shadow(0 0 2px #fff8)}
+#competition.comp-refined .comp-diagonal line{stroke:#897344;stroke-width:1.5;vector-effect:non-scaling-stroke}
+#competition.comp-refined .comp-stage-status{background:transparent;inset:0 55% 0 0;font-size:15px;padding:20px;z-index:3}
+#competition.comp-refined [data-comp-pane=right] .comp-stage-status{inset:0 0 0 55%}
+#competition.comp-refined [data-mode="3d"] [data-status=loading] .comp-render,#competition.comp-refined [data-mode="3d"] [data-status=error] .comp-render{opacity:.12}
+#competition.comp-refined .comp-reveal{display:flex;align-items:center;gap:20px;padding:13px 26px;background:#dcdcd4;color:#4b5044;font-size:12px;border-top:1px solid #333d3015}
+.comp-reveal input{min-width:0;flex:1;accent-color:#857044;cursor:ew-resize}
+#competition.comp-refined .comp-workbench-strip{background:#22271f;padding:10px 20px;min-height:61px}
+#competition.comp-refined .comp-render-caption{font-size:13px;gap:12px}
+#competition.comp-refined .comp-render-condition{display:none}
+#competition.comp-refined .comp-camera-tools{justify-content:space-between;gap:12px}
+#competition.comp-refined .comp-camera-tools>div+div{border:0;padding:0}
+.comp-gesture{font-size:12px;color:#a9b0a0}
+#competition.comp-refined .comp-sidebar{background:#1b201b;border-left:1px solid #c7b99525;display:flex;flex-direction:column;padding:22px 20px;gap:22px}
+#competition.comp-refined .comp-system-rail{display:flex;flex-direction:column;gap:7px;padding:0;border:0;min-height:0}
+#competition.comp-refined .comp-system-label{display:block;letter-spacing:.1em;font:11px Consolas,monospace;color:#a9b0a0;margin-bottom:5px}
+#competition.comp-refined .comp-system-rail button{justify-content:space-between;min-height:42px;padding:9px 12px;border:1px solid #c7b99530;border-radius:3px;font-size:16px;transition:background .2s,border-color .2s}
+#competition.comp-refined .comp-system-rail button:after{display:none}
+#competition.comp-refined .comp-system-rail button[aria-pressed=true]{background:#d4bd85;color:#1c221c;border-color:#d4bd85}
+#competition.comp-refined .comp-system-rail button[aria-pressed=true]>span{color:#504934}
+#competition.comp-refined .comp-system-rail button:hover{border-color:#d4bd8590}
+#competition.comp-refined .comp-surface-tools{display:flex;flex-direction:column;gap:19px;align-items:stretch}
+#competition.comp-refined .comp-surface-tools>div{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:0;padding:0;border:0}
+#competition.comp-refined .comp-inline-tools.comp-surface-tools>div+div{margin:0;padding:0;border:0}
+#competition.comp-refined .comp-surface-tools>div>span{grid-column:1/-1;font:10px Consolas,monospace;letter-spacing:.1em;color:#a9b0a0;margin:0 0 5px}
+#competition.comp-refined .comp-surface-tools button{min-height:32px;padding:6px 3px;font-size:12px;border-color:#c7b99525}
+#competition.comp-refined .comp-source-card{display:block;position:relative;inset:auto;margin-top:auto;width:100%;border:1px solid #c7b99530;background:#151a16;padding:10px;text-align:left}
+#competition.comp-refined .comp-source-image{display:block;position:static;height:126px;outline:0}
+#competition.comp-refined .comp-source-image img{display:block;object-fit:contain}
+#competition.comp-refined .comp-source-caption{position:static;display:flex;min-height:0;padding:10px 0 0;font-size:12px}
+#competition.comp-refined .comp-case-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid #c7b99530}
+#competition.comp-refined .comp-case-tabs button{display:grid;grid-template-columns:66px minmax(0,1fr);grid-template-rows:20px 28px;align-items:center;gap:0 16px;padding:18px;min-height:104px;white-space:normal;text-align:left;border-right:1px solid #c7b99525;background:#1b201b}
+#competition.comp-refined .comp-case-tabs button:last-child{border-right:0}
+#competition.comp-refined .comp-case-tabs button>img{grid-row:1/3;width:66px;height:66px;object-fit:contain;background:#111813;padding:3px}
+#competition.comp-refined .comp-case-tabs button>.comp-case-number{font:10px Consolas,monospace;color:#aaa88f}
+#competition.comp-refined .comp-case-tabs button>.comp-case-name{font-size:15px;line-height:1.2;font-family:inherit;color:inherit}
+#competition.comp-refined .comp-case-tabs button[aria-pressed=true]{background:#d4bd8512}
+#competition.comp-refined .comp-case-tabs button:after{left:18px;right:18px;bottom:0}
+#competition.comp-refined .comp-workbench-context{margin-top:19px;font-size:12px;line-height:1.7;max-width:1140px}
+#competition.comp-refined .comp-study{margin-top:76px;padding-top:68px;scroll-margin-top:90px}
+#competition.comp-refined .comp-study-kicker{font-size:12px;margin-bottom:24px}
+#competition.comp-refined .comp-study h3{font-size:clamp(40px,4.3vw,62px);max-width:430px;line-height:1.02}
+@media(min-width:960px) and (max-width:1180px){
+ .site-header nav{gap:13px}.site-header nav a{font-size:12px}
+ #competition.comp-refined .comp-workbench-body{grid-template-columns:minmax(0,1fr) 200px}
+ #competition.comp-refined .comp-sidebar{padding:20px 15px;gap:18px}
+ #competition.comp-refined .comp-pair-heading>div{padding-inline:18px;font-size:18px;gap:8px}
+ #competition.comp-refined .comp-pair-heading .comp-heading-meta{display:none}
+ #competition.comp-refined .comp-case-tabs button{grid-template-columns:52px minmax(0,1fr);padding:14px 12px;gap:0 10px}
+ #competition.comp-refined .comp-case-tabs button>img{width:52px;height:58px}
+ #competition.comp-refined .comp-case-tabs button>.comp-case-name{font-size:13px}
+ .comp-film-chapters button{font-size:13px;padding:16px 15px;gap:9px}
+ .comp-gesture{display:none}
+}
+@media(prefers-reduced-motion:reduce){.comp-film-chapters button{transition:none}}

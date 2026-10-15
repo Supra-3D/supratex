@@ -1,0 +1,15 @@
+/* Give the changing narrative its own line below the three chapter controls. */
+#hero-play-prompt{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:0 8px;color:var(--gold);font:inherit;line-height:24px;cursor:pointer}
+#hero-play-prompt[hidden],#scene-phase[hidden]{display:none}
+#hero-play-prompt svg{width:17px;height:17px;fill:currentColor}
+#hero-play-prompt:hover{color:var(--text)}
+#hero-play-prompt:focus-visible{outline:1px solid var(--gold);outline-offset:5px;border-radius:2px}
+@media(min-width:960px){
+  #top .scene-chapters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding-top:5px;align-items:center}
+  #top .scene-chapters button{display:flex;flex-direction:row;align-items:center;justify-content:center;min-height:44px;padding:0;text-align:center}
+  #top .scene-chapters button:first-child{justify-self:start}
+  #top .scene-chapters button:nth-child(2){justify-self:center}
+  #top .scene-chapters button:last-child{justify-self:end}
+  #top .scene-chapters button span{min-height:0;white-space:nowrap}
+  #top .scene-caption{display:block;min-height:24px;margin:6px 0 0;text-align:center;font-size:15px;line-height:24px;color:var(--muted)}
+}

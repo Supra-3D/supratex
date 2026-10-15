@@ -1,0 +1,16 @@
+/* Small content changes share the page's quiet, interruptible rhythm. */
+.case-tabs button,.case-tabs button:after,.view-toggle,.control-designs button,.control-designs button:after,
+.control-back-button,.control-angle-preview,.evidence-tabs button,.evidence-tabs button:after{
+  transition-duration:280ms;
+  transition-timing-function:cubic-bezier(.22,.68,.12,1);
+  transition-property:color,background-color,border-color,opacity,transform;
+}
+.case-changing .reference-image-wrap img,.case-changing .compare-stage img,
+.control-output.switching .control-main-view>img,.control-output.switching .control-output-label:after{animation:none}
+.motion-paused .case-tabs button,.motion-paused .case-tabs button:after,.motion-paused .view-toggle,.motion-paused .control-designs button,
+.motion-paused .control-designs button:after,.motion-paused .control-back-button,.motion-paused .control-angle-preview,
+.motion-paused .evidence-tabs button,.motion-paused .evidence-tabs button:after{transition:none}
+@media(prefers-reduced-motion:reduce){
+  .case-tabs button,.case-tabs button:after,.view-toggle,.control-designs button,.control-designs button:after,
+  .control-back-button,.control-angle-preview,.evidence-tabs button,.evidence-tabs button:after{transition:none}
+}

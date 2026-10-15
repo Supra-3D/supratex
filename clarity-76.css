@@ -1,0 +1,59 @@
+/* Native pixels, a fast first comparison, and readable evidence. */
+@media(min-width:960px) {
+  #top .hero-compare-plane { transition: opacity .18s; }
+  #top .hero-compare-plane > img { image-rendering:auto; }
+  #top .hero-compare-hit-area { position:absolute; inset:0; pointer-events:auto; cursor:ew-resize; touch-action:pan-y; }
+  #top .hero-compare-overlay { z-index:5; }
+  #top .hero-compare-overlay .compare-divider { stroke:#dec48b; stroke-width:1.4; }
+  #top .hero-compare-overlay .labels-left { stroke:#dec48b; opacity:1; }
+  #top .hero-compare-overlay .labels-right { stroke:#e8e7e0; opacity:.85; }
+  #top .hero-compare-overlay .compare-roi { stroke:#dfc98f; stroke-width:1; opacity:.8; }
+  #top .hero-compare-overlay .zoom { opacity:.45; }
+  #top .hero-compare-label { padding:7px 10px; background:#101613e8; border-radius:3px; font-size:clamp(15px,1.25vw,23px); font-weight:500; }
+  #top .hero-compare-label.is-supra { top:4%; left:5%; }
+  #top .hero-compare-label.is-meshy { top:45%; right:5%; }
+  #top .hero-compare-handle {
+    position:absolute; z-index:6; width:42px; height:42px; padding:0; display:grid; place-items:center;
+    transform:translate(-50%,-50%); border:1px solid #e4cf9a; border-radius:50%;
+    background:#20291ff0; color:#ecd7a6; box-shadow:0 2px 12px #0003;
+    cursor:ew-resize; touch-action:none; pointer-events:auto; transition:background .16s,box-shadow .16s;
+  }
+  #top .hero-compare-handle svg { width:23px; height:18px; fill:none; stroke:currentColor; stroke-width:1.5; }
+  #top .hero-compare-handle:hover,#top .hero-compare-handle:focus-visible,#top.compare-interacting .hero-compare-handle {
+    background:#d4bd85; color:#1b231b; box-shadow:0 0 0 5px #d4bd8525;
+  }
+  #top .hero-compare-handle:focus-visible { outline:2px solid #f4e5bf; outline-offset:4px; }
+  #top .hero-compare-detail { left:5%; top:63%; width:90%; gap:16px; pointer-events:auto; }
+  #top .hero-detail-panel figcaption { font-size:14px; margin-bottom:7px; }
+  #top .hero-detail-crop { border-radius:4px; background:#18201c; }
+  #top .hero-detail-panel:not(.is-meshy) .hero-detail-crop { border-color:#d4bd8580; }
+  #top .hero-detail-panel.is-meshy .hero-detail-crop { border-color:#f0efeb40; }
+  #top .hero-compare-fallback { display:none; position:absolute; left:7%; right:7%; top:54%; padding:12px 16px; border:1px solid #d4bd8550; border-radius:3px; background:#141b16f0; color:#d4bd85; font-size:14px; line-height:1.5; }
+  #top.compare-requested:not(.compare-visible) .hero-compare-fallback { display:block; }
+  #top.compare-visible .hero-live-controls { top:54%; z-index:7; }
+  #top.compare-visible .hero-live-controls #hero-explore { padding:11px 17px; min-height:43px; }
+  #top.compare-visible .aircraft-shadow { opacity:0!important; }
+  #top.compare-visible .hero-compare-overlay { transition:opacity .18s; }
+  #top.compare-visible .hero-compare-detail { transition:opacity .18s; }
+}
+@media(prefers-reduced-motion:reduce) {
+  #top .hero-compare-plane,#top .hero-compare-overlay,#top .hero-compare-detail,#top .hero-compare-handle { transition:none!important; }
+}
+@media(min-width:960px) {
+  #top .hero-compare-detail { left:50%; width:min(90%,820px); transform:translateX(-50%); gap:10px 16px; }
+  #top .hero-compare-note { grid-column:1/-1; margin:0 0 1px; color:#e8dcc1; font-size:14px; line-height:1.35; }
+  #top .hero-compare-handle>span { position:absolute; bottom:calc(100% + 10px); left:50%; transform:translateX(-50%); white-space:nowrap; pointer-events:none; opacity:0; padding:6px 10px; border:1px solid #d4bd8570; border-radius:3px; background:#18201bf5; color:#e4d1a6; font:11px/1.4 SupraSans,sans-serif; }
+  #top .hero-compare-handle:hover>span,#top .hero-compare-handle:focus-visible>span { opacity:1; }
+}
+
+
+/* Anchor the evidence above the timeline even in shorter desktop windows. */
+@media(min-width:960px) {
+  #top .hero-compare-detail { top:auto; bottom:60px; }
+  #top.compare-visible .hero-live-controls { top:calc(var(--hero-evidence-top, 63%) - 60px); }
+  #top .hero-compare-label.is-meshy { top:calc(var(--hero-evidence-top, 63%) - 118px); }
+}
+/* Leave breathing room beside the three hero actions at narrow desktop widths. */
+@media(min-width:1101px) and (max-width:1350px) {
+  #top .hero-compare-detail { left:51%; width:86%; }
+}

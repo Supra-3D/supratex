@@ -1,0 +1,70 @@
+/* Desktop introductions retain each sentence as a line when space allows. */
+@media (min-width: 960px) {
+  #gallery .gallery-heading,
+  #materials .section-heading {
+    flex-wrap: wrap;
+    gap: 22px 36px;
+  }
+
+  #gallery .gallery-heading > p,
+  #materials .section-heading > p {
+    flex: 0 0 auto;
+    width: max-content;
+    max-width: 100%;
+  }
+
+  /* Grow the reference in place; the model and controls keep their layout. */
+  #materials .lab-reference {
+    width: clamp(144px, 10vw, 168px);
+    pointer-events: auto;
+    transition: width 240ms cubic-bezier(.2, .65, .3, 1);
+  }
+
+  #materials .lab-reference img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    padding: 0;
+    border: 1px solid rgba(206, 188, 152, .42);
+    border-radius: 4px;
+    background: #191c1b;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, .18);
+    transition: border-color 180ms, box-shadow 240ms;
+  }
+
+  #materials .lab-reference:hover,
+  #materials .lab-reference:focus-visible {
+    width: clamp(216px, 15vw, 252px);
+  }
+
+  #materials .lab-reference:hover img,
+  #materials .lab-reference:focus-visible img {
+    border-color: rgba(206, 188, 152, .72);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, .3);
+  }
+
+  #materials .lab-reference:focus-visible {
+    outline: 1px solid var(--gold);
+    outline-offset: 6px;
+    border-radius: 4px;
+  }
+
+  #materials .lab-gesture {
+    max-width: calc(100% - clamp(144px, 10vw, 168px) - 80px);
+    transition: opacity 160ms;
+  }
+
+  #materials .lab-viewport:has(.lab-reference:hover) .lab-gesture,
+  #materials .lab-viewport:has(.lab-reference:focus-visible) .lab-gesture {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 960px) and (prefers-reduced-motion: reduce) {
+  #materials .lab-reference,
+  #materials .lab-reference img,
+  #materials .lab-gesture {
+    transition: none;
+  }
+}

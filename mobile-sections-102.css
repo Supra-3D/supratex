@@ -1,0 +1,384 @@
+/* Mobile exhibition, v102. Every override is below the desktop boundary. */
+@media (max-width: 959.98px) {
+  :is(#embodied,#details,#materials,#control,#gallery,#method,#evaluation,#release) {
+    min-width: 0;
+    padding: 56px var(--page);
+    scroll-margin-top: 78px;
+  }
+  :is(#embodied,#details,#materials,#control,#gallery,#method,#evaluation,#release) > * { min-width: 0; }
+  :is(#embodied,#details,#materials,#control,#gallery,#method,#evaluation) .chapter-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin: 22px 0 28px;
+  }
+  :is(#embodied,#details,#materials,#control,#gallery,#method,#evaluation) .chapter-heading h2 {
+    margin: 0;
+    max-width: 100%;
+    font-size: clamp(34px, 8.7vw, 52px);
+    line-height: 1.08;
+    letter-spacing: -.045em;
+    text-wrap: balance;
+  }
+  :is(#embodied,#details,#materials,#control,#gallery,#method,#evaluation) .chapter-heading > p,
+  #method .method-intro .body-copy {
+    width: auto;
+    max-width: 45ch;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+    text-wrap: pretty;
+  }
+  :is(#embodied,#details,#materials,#control,#method,#evaluation,#release) .section-index,
+  #gallery .gallery-kicker {
+    font-size: 11px;
+    line-height: 1.5;
+    gap: 10px;
+    letter-spacing: .08em;
+  }
+  :is(#embodied,#details,#materials,#control,#gallery,#method,#evaluation,#release) :is(button,a,summary,input):focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+  #competition.comp-refined { padding-top: 56px; padding-bottom: 56px; }
+  #competition.comp-refined .comp-kicker { font-size: 11px; letter-spacing: .08em; }
+  #competition.comp-refined .comp-heading { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; margin: 22px 0 26px; }
+  #competition.comp-refined .comp-heading h2 { margin: 0; font-size: clamp(32px,8.3vw,50px); line-height: 1.1; letter-spacing: -.045em; }
+  #competition.comp-refined .comp-heading > p { max-width: 45ch; margin: 0; font-size: 15px; line-height: 1.6; text-align: left; }
+  #competition.comp-refined .comp-heading > p > span { display: block; }
+  #competition.comp-refined .comp-heading > p > span + span { margin-top: 4px; }
+
+  /* Keep every study result visible, with touch-sized rows rather than hover-only cues. */
+  #competition.comp-refined #human-preference {
+    display: block;
+    min-width: 0;
+    margin-top: 52px;
+    padding-top: 34px;
+    scroll-margin-top: 78px;
+  }
+  #competition.comp-refined .comp-study-intro { display: block; }
+  #competition.comp-refined .comp-study-kicker { font-size: 11px; letter-spacing: .08em; }
+  #competition.comp-refined .comp-study h3 { max-width: none; font-size: 36px; line-height: 1.08; margin: 18px 0 14px; }
+  #competition.comp-refined .comp-study-intro > p { max-width: 44ch; font-size: 16px; line-height: 1.6; margin: 0; }
+  #competition.comp-refined .comp-study-scale { display: flex; gap: 28px; margin: 20px 0 0; }
+  #competition.comp-refined .comp-study-scale strong { font-size: 28px; }
+  #competition.comp-refined .comp-study-scale span { font-size: 13px; line-height: 1.45; margin-top: 5px; }
+  #competition.comp-refined .comp-study-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 44px;
+    margin-top: 18px;
+    padding: 9px 13px;
+    border: 1px solid #c7b99566;
+    border-radius: 4px;
+    color: var(--comp-gold);
+    font-size: 14px;
+  }
+  #competition.comp-refined .comp-study-data { min-width: 0; margin-top: 26px; }
+  #competition.comp-refined .comp-metric-tabs { display: flex; gap: 16px; justify-content: space-between; }
+  #competition.comp-refined .comp-metric-tabs button { flex: 1; min-width: 0; min-height: 48px; padding: 8px 0; font-size: 14px; line-height: 1.4; white-space: normal; text-align: left; }
+  #competition.comp-refined .comp-chart { padding-top: 22px; }
+  #competition.comp-refined .comp-chart-key { font-size: 13px; margin-bottom: 14px; }
+  #competition.comp-refined .preference-explorer { grid-template-columns: minmax(0,1fr); gap: 22px; }
+  #competition.comp-refined .preference-dial { display: flex; align-items: center; justify-content: center; gap: 20px; }
+  #competition.comp-refined .preference-ring { flex: 0 0 165px; width: 165px; margin: 0; }
+  #competition.comp-refined .preference-center strong { font-size: 37px; }
+  #competition.comp-refined .preference-center > span { font-size: 12px; }
+  #competition.comp-refined .preference-dial figcaption { max-width: 130px; margin: 0; font-size: 13px; text-align: left; }
+  #competition.comp-refined .preference-list-head { font-size: 12px; }
+  #competition.comp-refined .preference-choice { min-height: 56px; padding: 10px 12px; }
+  #competition.comp-refined .preference-choice-name { font-size: 15px; }
+  #competition.comp-refined .preference-choice strong { font-size: 18px; }
+  #competition.comp-refined .preference-choice-arrow { opacity: .8; transform: none; }
+
+  /* A full-width application film with a compact horizontal chapter rail. */
+  #embodied .embodied-workspace { display: grid; grid-template-columns: minmax(0,1fr); gap: 18px; }
+  #embodied .embodied-player { min-width: 0; }
+  #embodied .embodied-controls:not([hidden]) { gap: 7px; flex-wrap: wrap; padding-top: 6px; }
+  #embodied .embodied-controls button { width: auto; min-width: 44px; min-height: 44px; }
+  #embodied [data-embodied-fullscreen] { display: flex; gap: 8px; padding: 8px 11px; border: 1px solid #c7b99555; border-radius: 4px; font-size: 13px; }
+  #embodied .embodied-time { font-size: 12px; }
+  #embodied [data-embodied-seek] { min-width: 40px; height: 44px; }
+  #embodied [data-embodied-seek]::-webkit-slider-thumb { width: 13px; height: 13px; }
+  #embodied .embodied-chapters { display: grid; grid-template-columns: repeat(3,minmax(164px,1fr)); gap: 8px; overflow-x: auto; margin: 0; padding-bottom: 8px; scrollbar-width: thin; scrollbar-color: #c7b99555 transparent; scroll-snap-type: x proximity; }
+  #embodied .embodied-chapter-label { grid-column: 1/-1; margin: 0; font-size: 11px; }
+  #embodied .embodied-chapters button { min-width: 0; min-height: 112px; padding: 12px; justify-content: flex-start; border: 1px solid #c7b99530; border-radius: 4px; scroll-snap-align: start; }
+  #embodied .embodied-chapters button[aria-current=true] { border-color: #c7b99599; }
+  #embodied .embodied-chapters button::before { display: none; }
+  #embodied .embodied-chapters button::after { left: 12px; right: 12px; }
+  #embodied .embodied-chapter-meta { font-size: 11px; }
+  #embodied .embodied-chapter-title { font-size: 17px; margin-top: 7px; }
+  #embodied .embodied-chapter-note { font-size: 13px; line-height: 1.4; margin-top: 5px; }
+
+  /* Case navigation does not consume a second screen above the evidence. */
+  #details .comparison-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding-top: 14px; margin-bottom: 18px; }
+  #details .case-tabs { display: flex; flex-wrap: nowrap; width: 100%; gap: 8px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: thin; scrollbar-color: #c7b99555 transparent; }
+  #details .case-tabs button { flex: none; min-height: 44px; padding: 9px 12px; font-size: 14px; border: 1px solid #c7b99540; border-radius: 4px; }
+  #details .case-tabs button[aria-selected=true] { color: #181b19; background: #d6c18b; border-color: #d6c18b; }
+  #details .case-tabs button::after { display: none; }
+  #details .view-toggle { display: inline-flex; justify-content: center; min-height: 44px; padding: 10px 14px; gap: 18px; background: #d6c18b; color: #181b19; border: 1px solid #d6c18b; border-radius: 4px; font-size: 14px; }
+  #details .view-toggle > span:first-child { font-size: inherit; }
+  #details .comparison-grid { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  #details .reference-panel { display: grid; grid-template-columns: 116px minmax(0,1fr); }
+  #details .reference-panel figcaption { grid-column: 1/-1; min-height: 42px; padding: 10px 14px; font-size: 13px; }
+  #details .reference-image-wrap { height: 124px; padding: 9px; }
+  #details .reference-caption { border-top: 0; border-left: 1px solid #c7b99524; min-height: 0; padding: 12px 14px; font-size: 14px; line-height: 1.5; display: flex; align-items: center; }
+  #details .compare-caption { padding: 11px 14px; min-height: 44px; font-size: 14px; }
+  #details #case-panel .compare-stage { height: clamp(250px,86vw,420px); }
+  #details .compare-stage > img,#details .compare-after > img { padding: 10px; }
+  #details .comparison-instruction { min-height: 44px; padding: 10px 14px; font-size: 13px; }
+  #details .evidence-note { font-size: 13px; line-height: 1.6; margin-top: 16px; }
+
+  /* Materials retains all channels, environments and light controls. */
+  #materials .observatory { margin: 0; border-radius: 5px; }
+  #materials .observatory-top { min-height: 40px; padding: 10px 14px; font-size: 11px; }
+  #materials .observatory-body { display: block; min-height: 0; }
+  #materials .lab-viewport { height: clamp(310px,89vw,450px); }
+  #materials .lab-title { top: 16px; left: 16px; right: 16px; }
+  #materials .lab-title h3 { max-width: 100%; font-size: 24px; line-height: 1.2; }
+  #materials .lab-reference { width: 72px; left: 14px; bottom: 14px; }
+  #materials .lab-reference img { width: 72px; height: 72px; padding: 0; }
+  #materials .lab-reference > span { display: none; }
+  #materials .lab-gesture { display: none; }
+  #materials .lab-touch { display: flex; align-items: center; justify-content: center; min-height: 44px; right: 14px; bottom: 16px; padding: 9px 13px; border-radius: 4px; background: #d6c18b; color: #181b19; border-color: #d6c18b; font-size: 14px; }
+  #materials .lab-viewport .model-mount { pointer-events: none; }
+  #materials .lab-viewport.exploring .model-mount { pointer-events: auto; }
+  #materials .lab-viewport:not(.exploring) { touch-action: pan-y; }
+  #materials .observatory.fallback3d .lab-touch { display: none; }
+  #materials .lab-controls { display: grid; grid-template-columns: minmax(0,1fr); padding: 18px 14px 10px; gap: 18px; border-left: 0; }
+  #materials .control-block { min-width: 0; }
+  #materials .control-index { font-size: 11px; line-height: 1.5; margin-bottom: 9px; }
+  #materials .channel-buttons { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 5px; }
+  #materials .channel-buttons button { min-width: 0; min-height: 44px; padding: 9px 2px; font-size: 12px; line-height: 1.4; }
+  #materials #channel-description { min-height: 0; max-width: none; margin-top: 9px; font-size: 13px; line-height: 1.5; }
+  #materials #lighting-controls { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 0 12px; align-items: center; }
+  #materials #lighting-controls > .control-index,#materials .environment-buttons { grid-column: 1/-1; }
+  #materials .environment-buttons { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 5px; }
+  #materials .environment-buttons button { min-height: 56px; display: flex; flex-direction: column; justify-content: center; gap: 5px; padding: 5px 0; font-size: 12px; text-align: center; }
+  #materials .environment-buttons i { width: 20px; height: 20px; }
+  #materials .sweep-button { grid-column: 2; grid-row: 3/5; min-height: 44px; width: auto; margin: 12px 0 0; padding: 8px 10px; font-size: 13px; gap: 10px; }
+  #materials .light-range-label { grid-column: 1; margin: 14px 0 0; font-size: 12px; }
+  #materials .light-range-label output { font-size: 12px; }
+  #materials #light-direction { grid-column: 1; height: 44px; margin: 0; }
+  #materials .lab-bottom-controls { grid-column: 1; margin: 0; padding: 7px 0 0; }
+  #materials .lab-bottom-controls button { min-height: 44px; font-size: 14px; }
+  #materials .asset-rail { display: flex; min-width: 0; overflow-x: auto; scroll-snap-type: x proximity; }
+  #materials .asset-choice { flex: 0 0 126px; min-height: 142px; padding: 12px 10px; }
+  #materials .asset-choice img { width: 74px; height: 74px; }
+  #materials .asset-choice-name { font-size: 13px; line-height: 1.4; min-height: 2.8em; margin-top: 8px; }
+  #materials .asset-rail-navigation { display: none; }
+  #materials .observatory-context { display: flex; flex-direction: column; gap: 12px; padding: 14px; }
+  #materials .observatory-context > p,#materials .observatory .demo-notes p { font-size: 13px; line-height: 1.6; }
+  #materials .observatory .demo-notes { flex: none; width: 100%; max-width: none; }
+  #materials .observatory .demo-notes summary,#materials .observatory-film-link { min-height: 44px; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; font-size: 14px; line-height: 1.5; border: 1px solid #c7b99555; border-radius: 4px; color: #d6c18b; }
+  #materials .observatory-foot { flex-wrap: wrap; padding: 12px 14px; font-size: 12px; line-height: 1.5; }
+  #materials .observatory-foot button { font-size: 14px; }
+  #materials .lab-loading { font-size: 14px; }
+
+  /* Back-design inputs form a local rail; generated output keeps the width. */
+  #control .control-workspace { display: block; }
+  #control .control-reference { display: grid; grid-template-columns: 100px minmax(0,1fr); align-items: center; gap: 12px 18px; margin: 0 0 24px; padding: 0 0 20px; }
+  #control .control-reference > figcaption { grid-column: 1/-1; padding: 0; border: 0; font-size: 11px; }
+  #control .control-reference-image { grid-column: 1; height: 100px; margin: 0; padding: 5px; aspect-ratio: 1; }
+  #control .control-reference > p { grid-column: 2; margin: 0; font-size: 14px; line-height: 1.6; }
+  #control .control-connector { display: none; }
+  #control .control-label { font-size: 11px; }
+  #control .control-designs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin: 12px 0 22px; scrollbar-width: thin; scrollbar-color: #c7b99555 transparent; }
+  #control .control-designs button { flex: 0 0 106px; min-width: 0; min-height: 116px; font-size: 13px; padding: 0 0 8px; }
+  #control .control-designs button img { width: 100%; height: 76px; padding: 5px; margin-bottom: 6px; aspect-ratio: auto; }
+  #control .control-designs button span { min-height: 0; padding: 0 6px; }
+  #control .control-output-label { margin-bottom: 12px; }
+  #control .control-current-view { font-size: 12px; }
+  #control .control-viewer { display: block; }
+  #control .control-main-view > img { width: 100%; height: clamp(280px,84vw,430px); padding: 16px; aspect-ratio: auto; }
+  #control .control-open-3d { font-size: 14px; min-height: 44px; gap: 12px; }
+  #control .control-main-view figcaption { min-height: 52px; gap: 12px; margin: 0; padding: 4px 0; flex-wrap: nowrap; align-items: center; }
+  #control .control-main-view figcaption > [data-control-design-label] { font-size: 14px; }
+  #control .control-back-button { min-height: 44px; font-size: 13px; margin: 0; padding: 8px; white-space: nowrap; }
+  #control .control-angles { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin: 12px 0 0; max-width: none; }
+  #control .control-angle-preview { padding: 0; }
+  #control .control-angle-preview img { width: 100%; height: 106px; aspect-ratio: auto; padding: 5px; }
+  #control .control-angle-preview > span { min-height: 36px; padding: 8px 10px; font-size: 13px; flex-wrap: nowrap; }
+  #control .control-note { font-size: 13px; line-height: 1.6; margin-top: 20px; padding-top: 14px; }
+
+  /* Preserve two generous lead comparisons; thumbnails remain a two-column collection. */
+  #gallery .gallery-inner { width: 100%; }
+  #gallery .gallery-heading { margin-top: 0; }
+  #gallery .gallery-kicker { margin-bottom: 16px; }
+  #gallery .gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 12px; }
+  #gallery .gallery-card,#gallery .gallery-card.is-spotlight,#gallery .gallery-card:nth-last-child(-n+3) { grid-column: auto; }
+  #gallery .gallery-card.is-featured { grid-column: 1/-1; }
+  #gallery .gallery-feature-stage { width: 100%; height: auto; aspect-ratio: 1.25; }
+  #gallery .gallery-card .gallery-card-media,#gallery .gallery-card.is-spotlight .gallery-card-media { height: auto; aspect-ratio: 1; }
+  #gallery .gallery-card-caption { gap: 6px; padding-top: 10px; }
+  #gallery .gallery-card-caption strong { font-size: 15px; line-height: 1.35; }
+  #gallery .gallery-card-caption small { font-size: 13px; line-height: 1.45; margin-top: 5px; }
+  #gallery .gallery-card-count { display: none; }
+  #gallery .gallery-card-corner { top: 8px; left: 8px; font-size: 10px; padding: 4px 6px; }
+  #gallery .gallery-card-action { width: 32px; height: 32px; right: 8px; bottom: 8px; font-size: 17px; }
+  #gallery .gallery-feature-label { font-size: 12px; top: 10px; left: 10px; }
+  #gallery .gallery-feature-label.is-result { right: 10px; left: auto; }
+  #gallery .gallery-feature-caption { flex-wrap: wrap; gap: 6px; }
+  #gallery .gallery-feature-caption strong { font-size: 16px; }
+  #gallery .gallery-feature-caption small,#gallery .gallery-feature-caption .gallery-feature-evidence { font-size: 13px; line-height: 1.5; text-align: left; max-width: none; }
+  #gallery .gallery-feature-caption button { min-height: 44px; padding:9px 12px; border:1px solid #d9c18a66; border-radius:4px; background:#d9c18a08; color:#e4cd98; }
+  #gallery .gallery-feature-controls { font-size: 12px; gap: 8px; }
+  #gallery .gallery-feature-controls input { height: 44px; }
+  #gallery .gallery-note { font-size: 13px; }
+
+  /* The research narrative stays readable; only tables scroll horizontally. */
+  #method .method-journey { display: block; margin-top: 26px; }
+  #method .method-visual { display: none; }
+  #method .method-steps { display: grid; gap: 0; margin: 0; padding: 0; }
+  #method .method-steps article,#method .method-steps article:last-child { display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 0 18px; min-height: 0; padding: 22px 0; border-top: 1px solid var(--line); }
+  #method .method-steps article::before { display: none; }
+  #method .method-steps .step-number { grid-column: 2; grid-row: 1; border: 0; padding: 0; margin: 0; font-size: 14px; }
+  #method .method-steps .step-number > span { font-size: 11px; }
+  #method .method-steps .method-picture { display: flex; grid-column: 1; grid-row: 1/4; width: 88px; height: 112px; align-self: start; margin: 0; padding: 6px; }
+  #method .method-steps h3 { grid-column: 2; grid-row: 2; margin: 8px 0; font-size: 21px; line-height: 1.2; }
+  #method .method-steps p { grid-column: 2; grid-row: 3; margin: 0; min-height: 0; max-width: none; font-size: 15px; line-height: 1.6; }
+  #method .method-extension { margin-top: 0; padding: 18px 0; gap: 14px; align-items: flex-start; }
+  #method .method-extension p { font-size: 14px; line-height: 1.6; }
+  #evaluation .fidelity-comparison-key { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 16px 0; }
+  #evaluation .fidelity-comparison-key p { flex-wrap: wrap; gap: 8px; font-size: 14px; }
+  #evaluation .fidelity-comparison-key p > span:first-child { flex-basis: 100%; margin-right: 0; font-size: 12px; }
+  #evaluation .fidelity-comparison-key > span { font-size: 12px; line-height: 1.5; }
+  #evaluation .fidelity-findings { grid-template-columns: minmax(0,1fr); }
+  #evaluation .fidelity-finding,#evaluation .fidelity-finding + article { padding: 24px 0; border-left: 0; }
+  #evaluation .fidelity-finding + article { border-top: 1px solid var(--line); }
+  #evaluation .fidelity-finding h3 { font-size: 26px; }
+  #evaluation .fidelity-finding header p { font-size: 15px; }
+  #evaluation .fidelity-dataset { grid-template-columns: minmax(0,1fr) auto; gap: 5px 12px; min-height: 102px; padding: 14px 0; }
+  #evaluation .fidelity-dataset-name { grid-column: 1; font-size: 15px; }
+  #evaluation .fidelity-score-pair { grid-column: 1; grid-row: 2; font-size: 14px; gap: 8px; }
+  #evaluation .fidelity-gain { grid-column: 2; grid-row: 1/3; }
+  #evaluation .fidelity-gain strong { font-size: 38px; }
+  #evaluation .fidelity-support { min-height: 0; margin-top: 16px; }
+  #evaluation .fidelity-results-link { min-height: 44px; margin-top: 16px; padding: 9px 12px; border: 1px solid #c7b99555; border-radius: 4px; }
+  #evaluation .fidelity-footnote { font-size: 12px; }
+  #evaluation .fidelity-film-link { grid-template-columns: 106px minmax(0,1fr); gap: 14px; }
+  #evaluation .fidelity-film-kicker { font-size: 10px; }
+  #evaluation .fidelity-film-title { font-size: 20px; margin-top: 5px; }
+  #evaluation .fidelity-film-description { font-size: 13px; }
+  #evaluation .fidelity-film-action { grid-column: 1/-1; justify-self: start; min-height: 44px; padding: 8px 12px; border: 1px solid #c7b99555; border-radius: 4px; font-size: 14px; }
+  #evaluation .fidelity-evidence-heading { margin-top: 28px; }
+  #evaluation .evidence-tabs { display: flex; gap: 16px; justify-content: flex-start; overflow-x: auto; }
+  #evaluation .evidence-tabs button { flex: 0 0 auto; max-width: none; font-size: 14px; min-height: 48px; padding: 10px 0; white-space: nowrap; }
+  #evaluation .evidence-panel-intro { display: block; }
+  #evaluation .evidence-panel-intro h3 { font-size: 23px; }
+  #evaluation .evidence-panel-intro p { font-size: 15px; line-height: 1.65; margin-top: 12px; }
+  #evaluation .evidence-details summary { min-height: 48px; gap: 12px; font-size: 15px; }
+  #evaluation .research-detail-title strong { font-size: 15px; }
+  #evaluation .research-detail-title small,#evaluation .evidence-protocol,#evaluation .evidence-table-key,#evaluation .evidence-result-note { font-size: 13px; }
+  #evaluation .evidence-table-scroll { min-width: 0; max-width: 100%; overscroll-behavior-x: contain; }
+  #evaluation .evidence-table { font-size: 14px; }
+  #evaluation .evidence-table thead th { font-size: 12px; }
+  #evaluation .evidence-table caption,#evaluation .evidence-table caption span { font-size: 12px; }
+
+  #release .release-content { display: block; margin-top: 24px; text-align: left; }
+  #release .release-content h2 { font-size: 42px; line-height: 1.05; margin: 18px 0; }
+  #release .release-statement { font-size: 16px; line-height: 1.7; }
+  #release .release-resources { margin-top: 24px; }
+  #release .release-resources > div { padding: 12px 0; }
+  #release .release-resources h3 { width: 100%; }
+  #release .release-resources h3 > a { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 44px; }
+  #release .release-resources h3 small { margin: 0; font-size: 13px; }
+  #release .release-resource-arrow { margin-left: auto; }
+  #release .release-support { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; font-size: 14px; line-height: 1.5; }
+  #release .release-star { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 9px 12px; border: 1px solid #c7b99555; border-radius: 4px; }
+  #release .release-star svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.4; }
+  #release .release-citation { margin-top: 30px; }
+  #release .citation-heading { padding: 10px 12px; gap: 10px; }
+  #release .citation-heading h3 { font-size: 20px; }
+  #release .citation-copy { min-width: 0; min-height: 44px; font-size: 13px; padding: 8px 10px; }
+  #release .citation-source { padding: 16px 12px; font-size: 12px; line-height: 1.7; }
+  .site-footer { padding: 24px var(--page); gap: 12px; flex-wrap: wrap; }
+  .site-footer > a:last-child { min-width: 44px; min-height: 44px; display: grid; place-items: center; }
+
+  /* Dialog controls stay reachable in portrait and short landscape viewports. */
+  #comparison-film-dialog,#comp-reference-dialog,#film-dialog,#gallery-dialog,#control .control-3d-dialog {
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
+    max-height: calc(100dvh - 24px);
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+  #comparison-film-dialog .comp-film-dialog-header { padding: 10px 12px; gap: 10px; }
+  #competition #comparison-film-title { font-size: 15px; }
+  #competition #comparison-film-dialog [data-comp-film-close] { width: 44px; height: 44px; }
+  #comparison-film-dialog .comp-film-heading { padding: 12px; font-size: 16px; gap: 12px; }
+  #comparison-film-dialog .comp-film-heading small { font-size: 11px; }
+  #comparison-film-dialog .comp-film-player video { max-height: none; }
+  #comparison-film-dialog .comp-film-controls:not([hidden]) { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 8px; padding: 10px 12px; height: auto; }
+  #comparison-film-dialog .comp-film-controls button { min-height: 44px; }
+  #comparison-film-dialog .comp-film-controls input { min-width: 0; height: 44px; }
+  #comparison-film-dialog [data-comp-film-play] { grid-column:1; }
+  #comparison-film-dialog [data-comp-film-current] { grid-column:2; }
+  #comparison-film-dialog [data-comp-film-seek] { grid-column:3/6; width:100%; }
+  #comparison-film-dialog [data-comp-film-duration] { grid-column:6; }
+  #comparison-film-dialog .comp-film-controls :is([data-comp-film-fullscreen],[data-comp-film-explore]) { display:flex; align-items:center; justify-content:center; gap:8px; width:auto; min-width:0; height:44px; padding:8px; font:500 13px/1.3 SupraSans,sans-serif; white-space:nowrap; border:1px solid #d9c18a66; border-radius:4px; }
+  #competition #comparison-film-dialog [data-comp-film-fullscreen] { grid-row:2; grid-column:1/4; color:#e4cd98; background:#d9c18a08; }
+  #competition #comparison-film-dialog [data-comp-film-explore] { grid-row:2; grid-column:4/7; color:#191a15; background:#d9c18a; }
+  #comparison-film-dialog .comp-film-chapters { display: flex; overflow-x: auto; padding: 8px 12px 12px; scrollbar-width:thin; scrollbar-color:#d9c18a55 transparent; }
+  #competition #comparison-film-dialog .comp-film-chapters button { flex: 0 0 auto; min-height: 44px; font-size: 13px; padding: 10px 12px; }
+  #comp-reference-dialog header,#film-dialog .film-dialog-header { padding: 10px 12px; gap: 12px; }
+  #comp-reference-dialog header button,#film-dialog #close-film { flex: none; min-width: 44px; min-height: 44px; }
+  #film-dialog .film-dialog-header h2 { font-size: 15px; line-height: 1.4; }
+  #film-dialog video { max-height: calc(100dvh - 100px); }
+  #gallery-dialog .gallery-dialog-head { padding: 14px; }
+  #gallery-dialog h3 { font-size: 23px; }
+  #gallery-dialog .gallery-toolbar { padding: 0 14px 14px; gap: 12px; }
+  #gallery-dialog .gallery-tabs,#gallery-dialog .gallery-views { gap: 6px; }
+  #gallery-dialog .gallery-tabs button,#gallery-dialog .gallery-views button,#gallery-dialog .gallery-live { min-height: 44px; padding: 9px 11px; font-size: 14px; }
+  #gallery-dialog .gallery-dialog-main { margin: 0 14px; }
+  #gallery-dialog .gallery-compare { gap: 8px; }
+  #gallery-dialog .gallery-compare img { height: 240px; max-height: 36dvh; }
+  #gallery-dialog .gallery-compare figcaption,#gallery-dialog .gallery-aligned-labels { font-size: 11px; }
+  #gallery-dialog .gallery-three-mount,#gallery-dialog .gallery-aligned,#gallery-dialog .gallery-orbit video,#gallery-dialog .gallery-orbit-frame { height: min(48dvh,400px); min-height: 230px; }
+  #gallery-dialog .gallery-three-controls { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 10px; gap: 8px; }
+  #gallery-dialog .gallery-three-controls button { min-width: 44px; min-height: 44px; padding: 8px; font-size: 14px; }
+  #gallery-dialog .gallery-three-hint { flex-basis: 100%; max-width: none; font-size: 12px; }
+  #gallery-dialog .gallery-light-controls { padding: 10px; gap: 8px; }
+  #gallery-dialog .gallery-light-label,#gallery-dialog .gallery-light-status { font-size: 12px; }
+  #gallery-dialog .gallery-light-options button { min-height: 44px; font-size: 13px; padding: 8px 10px; }
+  #gallery-dialog .gallery-range { font-size: 12px; gap: 8px; }
+  #gallery-dialog .gallery-range input { height: 44px; }
+  #gallery-dialog .gallery-dialog-foot { display: block; padding: 14px; }
+  #gallery-dialog .gallery-description { font-size: 14px; line-height: 1.6; }
+  #gallery-dialog .gallery-status { margin-top: 8px; font-size: 13px; }
+  #control .control-3d-header { padding: 14px; gap: 12px; }
+  #control .control-3d-header > div > span { font-size: 10px; }
+  #control .control-3d-header h3 { font-size: 23px; }
+  #control .control-3d-header > button { min-height: 44px; min-width: 60px; font-size: 13px; }
+  #control .control-3d-designs { display: flex; overflow-x: auto; padding: 12px 14px 0; gap: 6px; }
+  #control .control-3d-designs button { flex: none; min-height: 44px; padding: 8px 11px; font-size: 13px; }
+  #control .control-3d-stage { height: min(46dvh,430px); min-height: 260px; }
+  #control .control-3d-tools { padding: 10px 14px; gap: 8px; flex-wrap: wrap; }
+  #control .control-3d-tools button { min-height: 44px; min-width: 44px; font-size: 13px; padding: 8px 10px; }
+  #control .control-3d-gesture { font-size: 12px; }
+  #control .control-3d-footer { padding: 12px 14px; font-size: 13px; }
+}
+
+@media (min-width: 600px) and (max-width: 959.98px) {
+  #competition.comp-refined .preference-explorer { grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); }
+  #competition.comp-refined .preference-dial { flex-direction: column; gap: 14px; }
+  #competition.comp-refined .preference-dial figcaption { max-width: none; text-align: center; }
+  #materials .lab-controls { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px 24px; }
+  #materials .lab-bottom-controls { grid-column: 1/-1; }
+  #materials .environment-buttons { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  #materials .channel-buttons { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #gallery .gallery-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  #gallery .gallery-card.is-featured { grid-column: 1/-1; }
+  #method .method-steps article,#method .method-steps article:last-child { grid-template-columns: 150px minmax(0,1fr); column-gap: 24px; }
+  #method .method-steps .method-picture { width: 150px; height: 150px; }
+}
+
+@media (max-width: 959.98px) and (max-height: 540px) {
+  #comparison-film-dialog .comp-film-player video { max-height: 40dvh; }
+  #gallery-dialog .gallery-three-mount,#control .control-3d-stage { min-height: 180px; height: 55dvh; }
+}

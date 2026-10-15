@@ -1,0 +1,53 @@
+/* One shared legend; a selected split and all five comparisons stay visible. */
+#competition.comp-refined .comp-study{--preference-time:520ms;--preference-ease:cubic-bezier(.22,.68,.12,1);grid-template-columns:minmax(210px,.72fr) minmax(0,1.65fr);gap:clamp(28px,4.5vw,72px)}
+#competition.comp-refined .comp-study h3{max-width:300px;font-size:clamp(30px,2.8vw,40px)}
+#competition.comp-refined .comp-study-intro>p{max-width:280px}
+#competition.comp-refined .comp-chart-key{flex-wrap:wrap;gap:8px 20px;margin-bottom:20px}
+#competition.comp-refined .comp-chart-key>span:last-child{color:var(--comp-muted)}
+#competition.comp-refined .comp-chart-key .preference-rival-key{background:#50585a}
+#competition.comp-refined .preference-explorer{display:grid;grid-template-columns:minmax(170px,.85fr) minmax(220px,1.15fr);align-items:center;gap:clamp(22px,3vw,44px)}
+#competition.comp-refined .preference-dial{margin:0;text-align:center;min-width:0}
+#competition.comp-refined .preference-ring{position:relative;width:min(100%,230px);aspect-ratio:1;margin:auto}
+#competition.comp-refined .preference-ring svg{display:block;width:100%;height:100%;overflow:visible}
+#competition.comp-refined .preference-track{fill:none;stroke:#50585a;stroke-width:9}
+#competition.comp-refined .preference-arc{fill:none;stroke:var(--comp-gold);stroke-width:9;transform:rotate(-90deg);transform-origin:100px 100px;transition:stroke-dasharray var(--preference-time) var(--preference-ease)}
+#competition.comp-refined .preference-inner{fill:none;stroke:#c7b99522;stroke-width:.5}
+#competition.comp-refined .preference-tick{stroke:var(--comp-ink);stroke-width:1.5}
+#competition.comp-refined .preference-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:3px;pointer-events:none}
+#competition.comp-refined .preference-center strong{font-size:clamp(36px,3.6vw,53px);line-height:1.1;font-weight:350;letter-spacing:-.06em;font-variant-numeric:tabular-nums;color:var(--comp-chalk)}
+#competition.comp-refined .preference-center>span{font-size:11px;color:var(--comp-gold);margin-top:7px;letter-spacing:.025em}
+#competition.comp-refined .preference-dial figcaption{font-size:10px;line-height:1.65;color:var(--comp-muted);margin-top:16px;text-wrap:balance}
+#competition.comp-refined .preference-dial figcaption strong{font-weight:500;color:var(--comp-chalk);font-variant-numeric:tabular-nums}
+#competition.comp-refined .preference-list-head{display:flex;justify-content:space-between;gap:14px;font:9px Consolas,monospace;letter-spacing:.04em;color:var(--comp-muted);margin-bottom:8px}
+#competition.comp-refined .preference-list{list-style:none;display:grid;gap:4px;padding:0;margin:0}
+#competition.comp-refined .preference-choice{display:grid;grid-template-columns:minmax(0,1fr) auto 10px;align-items:center;gap:8px 10px;position:relative;text-align:left;width:100%;min-height:50px;padding:10px 12px;border:1px solid transparent;background:transparent;transition:background .2s,border-color .2s}
+#competition.comp-refined .preference-choice:before{content:'';position:absolute;inset:0;border:1px solid transparent;pointer-events:none;transition:border-color .2s}
+#competition.comp-refined .preference-choice:hover{background:#c7b99509}
+#competition.comp-refined .preference-choice[aria-pressed=true]{background:#c7b9950b}
+#competition.comp-refined .preference-choice[aria-pressed=true]:before{border-color:#c7b99555}
+#competition.comp-refined .preference-choice-name{font-size:12px;line-height:1.4;color:var(--comp-muted)}
+#competition.comp-refined .preference-choice[aria-pressed=true] .preference-choice-name{color:var(--comp-chalk)}
+#competition.comp-refined .preference-choice strong{font-size:16px;font-weight:400;letter-spacing:-.025em;color:var(--comp-gold);font-variant-numeric:tabular-nums}
+#competition.comp-refined .preference-choice-arrow{color:var(--comp-gold);font-size:12px;opacity:0;transform:translateX(-3px);transition:opacity .2s,transform .2s}
+#competition.comp-refined .preference-choice[aria-pressed=true] .preference-choice-arrow,#competition.comp-refined .preference-choice:hover .preference-choice-arrow{opacity:1;transform:none}
+#competition.comp-refined .preference-mini-track{grid-column:1/-1;height:2px;background:#50585a66;position:relative;overflow:hidden}
+#competition.comp-refined .preference-mini-track:before{content:'';position:absolute;inset:0 auto 0 0;width:var(--comp-score);background:var(--comp-gold);transition:width var(--preference-time) var(--preference-ease)}
+#competition.comp-refined .preference-mini-track:after{content:'';position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--comp-ink)}
+#competition.comp-refined .comp-chart-note{min-height:36px;margin-top:20px;font-size:11px}
+#competition.comp-refined .preference-denominator{font-size:10px;color:#949b94;margin-top:8px}
+#competition.comp-refined .comp-metric-tabs button{min-height:42px;padding-top:5px}
+/* Shared indicators move between choices instead of blinking into a new place. */
+#competition.comp-refined .preference-enhanced .comp-metric-tabs{position:relative}
+#competition.comp-refined .preference-enhanced .comp-metric-tabs button[aria-selected=true]:after{display:none}
+#competition.comp-refined .preference-metric-marker{position:absolute;left:0;bottom:0;height:2px;background:var(--comp-gold);pointer-events:none;transition:transform var(--preference-time) var(--preference-ease),width var(--preference-time) var(--preference-ease)}
+#competition.comp-refined .preference-list{position:relative;isolation:isolate}
+#competition.comp-refined .preference-list>li:not(.preference-selection){position:relative;z-index:1}
+#competition.comp-refined .preference-selection{position:absolute;z-index:0;left:0;top:0;width:100%;margin:0;padding:0;border:1px solid #c7b99555;background:#c7b9950b;pointer-events:none;transition:transform var(--preference-time) var(--preference-ease),height var(--preference-time) var(--preference-ease)}
+#competition.comp-refined .preference-enhanced .preference-choice[aria-pressed=true]{background:transparent}
+#competition.comp-refined .preference-enhanced .preference-choice[aria-pressed=true]:before{border-color:transparent}
+#competition.comp-refined .preference-choice-name{transition:color var(--preference-time) var(--preference-ease)}
+@media(max-width:1050px){#competition.comp-refined .comp-study{grid-template-columns:minmax(190px,.65fr) minmax(0,1.6fr);gap:26px}#competition.comp-refined .preference-explorer{grid-template-columns:minmax(145px,.8fr) minmax(180px,1.2fr);gap:17px}#competition.comp-refined .preference-choice{padding-inline:9px}#competition.comp-refined .preference-choice-name{font-size:11px}#competition.comp-refined .preference-center strong{font-size:38px}}
+@media(max-width:800px){#competition.comp-refined .comp-study{display:block}#competition.comp-refined .comp-study-intro>p{max-width:310px}#competition.comp-refined .preference-explorer{grid-template-columns:minmax(170px,.9fr) minmax(220px,1.1fr);gap:30px}#competition.comp-refined .preference-choice-name{font-size:12px}#competition.comp-refined .preference-center strong{font-size:46px}}
+@media(max-width:520px){#competition.comp-refined .comp-study h3{font-size:32px;max-width:290px}#competition.comp-refined .comp-study-scale{gap:40px}#competition.comp-refined .preference-explorer{grid-template-columns:1fr;gap:23px}#competition.comp-refined .preference-ring{width:190px}#competition.comp-refined .preference-dial figcaption{margin-top:12px}#competition.comp-refined .preference-list{gap:3px}#competition.comp-refined .preference-choice{min-height:49px;padding:9px 12px}#competition.comp-refined .preference-list-head{padding-inline:12px}#competition.comp-refined .comp-chart-key{margin-bottom:20px}#competition.comp-refined .comp-chart-note{min-height:54px}#competition.comp-refined .comp-metric-tabs{gap:0;justify-content:space-between}#competition.comp-refined .comp-metric-tabs button{font-size:11px}}
+@media(prefers-reduced-motion:reduce){#competition.comp-refined .comp-study *,#competition.comp-refined .comp-study *:before,#competition.comp-refined .comp-study *:after{transition:none!important}}
+.motion-paused #competition.comp-refined .comp-study *,.motion-paused #competition.comp-refined .comp-study *:before,.motion-paused #competition.comp-refined .comp-study *:after{transition:none!important}

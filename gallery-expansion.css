@@ -1,0 +1,72 @@
+/* Two lead comparisons, followed by the author's twelve selected cases. */
+@media(min-width:951px){
+  .supra-gallery .gallery-card:not(.is-featured):not(.is-spotlight){grid-column:span 3}
+  .supra-gallery .gallery-card:not(.is-featured):not(.is-spotlight) .gallery-card-media{height:auto;aspect-ratio:4/3}
+}
+.gallery-three-panel{position:relative;border:1px solid var(--g-line);background:#20272c;min-width:0}
+.supra-gallery [data-gallery-card^="D"] .gallery-card-media,
+.gallery-dialog[data-interactive="true"] .gallery-aligned{background:#252b30}
+.gallery-three-panel.is-preparing{position:absolute;inset:0;opacity:0;pointer-events:none}
+.gallery-three-mount{position:relative;width:100%;height:min(48vh,475px);min-height:260px;overflow:hidden;touch-action:none}
+.gallery-three-mount canvas{display:block;width:100%;height:100%;outline-offset:-4px}
+.gallery-three-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 14px;background:var(--g-bg);border-top:1px solid var(--g-line)}
+.gallery-three-modes,.gallery-three-camera{display:flex;align-items:center;gap:5px}
+.gallery-three-controls button{min-height:44px;padding:9px 12px;border:1px solid var(--g-line);background:transparent;color:var(--g-ink);font:inherit;font-size:16px;line-height:1.3;transition:color 280ms cubic-bezier(.22,.68,.12,1),background-color 280ms cubic-bezier(.22,.68,.12,1),border-color 280ms cubic-bezier(.22,.68,.12,1)}
+.gallery-three-controls button:hover{border-color:var(--g-gold)}
+.gallery-three-controls button[aria-pressed=true]{background:var(--g-gold);border-color:var(--g-gold);color:var(--g-bg)}
+.gallery-three-controls [data-gallery-zoom]{min-width:40px;padding-inline:10px;font-size:19px}
+.gallery-three-hint{font-size:14px;line-height:1.5;color:var(--g-muted);text-align:center}
+.gallery-light-controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;padding:11px 14px;border-top:1px solid var(--g-line);background:var(--g-bg)}
+.gallery-light-label,.gallery-light-status{font-size:14px;line-height:1.5;color:var(--g-muted)}
+.gallery-light-options{display:flex;flex-wrap:wrap;gap:6px}
+.gallery-light-options button{min-height:40px;padding:8px 11px;border:1px solid var(--g-line);background:transparent;color:var(--g-ink);font:inherit;font-size:16px;line-height:1.4}
+.gallery-light-options button:hover{border-color:var(--g-gold)}
+.gallery-light-options button[aria-pressed=true]{background:var(--g-gold);border-color:var(--g-gold);color:var(--g-bg)}
+.gallery-light-options button:disabled{opacity:.45;cursor:default}
+.gallery-light-status{margin-left:auto}
+.gallery-tabs .gallery-three-entry{min-width:115px}
+.gallery-tabs .gallery-three-entry:disabled{cursor:progress;opacity:.8}
+.gallery-dialog[data-interactive=true] .gallery-aligned.is-detail{height:min(48vh,475px)}
+.gallery-dialog[data-interactive=true] .gallery-dialog-foot{align-items:flex-start}
+.gallery-dialog[data-interactive=true] .gallery-status{max-width:340px}
+@media(max-width:950px){
+  .gallery-three-controls{gap:8px}
+  .gallery-three-hint{max-width:155px}
+}
+@media(max-width:600px){
+  .gallery-three-mount{height:43vh;min-height:250px;max-height:400px}
+  .gallery-three-controls{display:grid;grid-template-columns:auto 1fr;padding:10px;gap:10px 8px}
+  .gallery-three-camera{justify-content:flex-end}
+  .gallery-three-controls button{min-height:44px;font-size:16px;padding:8px 9px}
+  .gallery-three-controls [data-gallery-zoom]{min-width:44px;font-size:18px;padding-inline:8px}
+  .gallery-three-hint{grid-column:1/-1;grid-row:2;max-width:none;font-size:14px}
+  .gallery-three-modes{gap:3px}
+  .gallery-three-camera{gap:3px}
+  .gallery-dialog[data-interactive=true] .gallery-aligned.is-detail{height:43vh;min-height:240px;max-height:400px}
+  .gallery-dialog[data-interactive=true] .gallery-toolbar{align-items:flex-start}
+}
+@media(max-width:370px){
+  .gallery-three-controls{grid-template-columns:1fr}
+  .gallery-three-modes,.gallery-three-camera{justify-content:center}
+  .gallery-three-hint{grid-row:3}
+}
+@media(prefers-reduced-motion:reduce){.gallery-three-controls button{transition:none}}
+.motion-paused .gallery-three-controls button{transition:none}
+
+/* Desktop sections share a single content boundary, including ultrawide screens. */
+@media(min-width:1001px){
+  :root{--page:max(clamp(24px,5.2vw,104px),calc((100vw - 1760px)/2))}
+  /* The hero has a fixed text-column cap. Move that column with the page
+     gutter instead of consuming its readable width with ultrawide padding. */
+  .hero-content{padding-inline:clamp(24px,5.2vw,104px);margin-left:calc(var(--page) - clamp(24px,5.2vw,104px))}
+  #gallery{padding-inline:var(--page)}
+  #gallery .gallery-inner{width:100%;max-width:none}
+  #gallery .gallery-grid{gap:24px 18px}
+  #gallery .gallery-card.is-featured{grid-column:span 6}
+  #gallery .gallery-feature-stage{height:auto;aspect-ratio:1.25;background:#252b30}
+  #gallery .gallery-feature-caption{padding-top:12px;gap:20px}
+  #gallery .gallery-feature-caption small{max-width:390px}
+  #gallery .gallery-card:not(.is-featured):not(.is-spotlight){grid-column:span 3}
+  #gallery .gallery-card-caption{padding-top:12px}
+  #gallery .gallery-card:not(.is-featured):not(.is-spotlight) .gallery-card-media{height:auto;aspect-ratio:4/3;background:#252b30}
+}

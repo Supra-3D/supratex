@@ -1,0 +1,69 @@
+/* v68: one clear promise, actionable gold, and a real model comparison. */
+@media (min-width:960px) {
+  .site-header { grid-template-columns:auto 1fr; }
+  .site-header nav { justify-self:end; }
+  #top .hero-description { max-width:510px; }
+  #top .hero-description .hero-promise {
+    display:block;margin:0;color:var(--gold);font-size:clamp(25px,2.2vw,35px);
+    font-weight:500;line-height:1.25;letter-spacing:-.025em;
+  }
+  #top .hero-description .hero-invitation {
+    margin-top:12px;font-size:20px;line-height:1.4;font-style:italic;
+    font-family:Georgia,'Palatino Linotype','Times New Roman',serif;color:#d8ccba;
+  }
+  #top .hero-actions { gap:10px; }
+  #top .hero-actions .button { min-height:48px;padding:12px 13px;gap:8px;font-size:15px; }
+  #top .hero-actions .hero-competing-button { min-width:0; }
+  #top .hero-live-controls { top:53%;bottom:auto; }
+}
+@media (min-width:960px) and (max-width:1200px) {
+  #top .hero-actions { gap:8px; }
+  #top .hero-actions .button { padding-inline:9px;gap:6px;font-size:14px; }
+}
+#top .hero-actions .hero-competing-button,#top #hero-explore {
+  background:#d5bc7c;color:#151612;border:1px solid #d5bc7c;
+  box-shadow:0 3px 20px #d5bc7c16;transition:background .18s,box-shadow .18s,opacity .18s;
+}
+#top .hero-actions .hero-competing-button { min-width:158px; }
+#top .hero-actions .hero-competing-button:hover,#top #hero-explore:hover:not(:disabled) {
+  background:#e9d39e;border-color:#e9d39e;box-shadow:0 4px 25px #d5bc7c27;
+}
+#top #hero-explore:disabled { opacity:.4;cursor:default;box-shadow:none; }
+#top .hero-competing-button:focus-visible,#top #hero-explore:focus-visible {
+  outline:2px solid #f4e5bf;outline-offset:4px;
+}
+#top .flight-caption,#top #scene-phase { display:none; }
+#top .scene-caption { min-height:0;margin:0; }
+#top .scene-caption:has(#hero-play-prompt:not([hidden])) { margin-top:6px; }
+.hero-compare-plane { position:absolute;inset:0;z-index:3;opacity:0;visibility:hidden;pointer-events:none; }
+.hero-compare-plane > img { position:absolute;inset:0;width:100%;height:100%;object-fit:fill; }
+.hero-compare-supra { clip-path:polygon(0 0,69% 0,36% 100%,0 100%); }
+.hero-compare-meshy { clip-path:polygon(69% 0,100% 0,100% 100%,36% 100%); }
+.hero-compare-marker { position:absolute;width:0;height:0; }
+.hero-compare-overlay { position:absolute;inset:0;z-index:4;opacity:0;visibility:hidden;pointer-events:none; }
+.hero-compare-overlay > svg { position:absolute;inset:0;width:100%;height:100%;overflow:visible; }
+.hero-compare-overlay .compare-divider { fill:none;stroke:#e8dac0;stroke-width:1.4; }
+.hero-compare-overlay .compare-leader { fill:none;stroke:#bfb59a;stroke-width:1;opacity:.8; }
+.hero-compare-overlay .compare-roi { fill:none;stroke:#e8d4a4;stroke-width:1;opacity:.8; }
+.hero-compare-label { position:absolute;top:5%;font-size:clamp(17px,1.45vw,25px);font-weight:600;letter-spacing:-.02em;line-height:1.3; }
+.hero-compare-label.is-supra { left:12%;color:#dec48b; }
+.hero-compare-label.is-meshy { right:10%;color:#f0efeb; }
+.hero-compare-detail { position:absolute;left:10%;top:62%;width:76%;display:grid;grid-template-columns:1fr 1fr;gap:14px; }
+.hero-detail-panel { margin:0;min-width:0; }
+.hero-detail-panel figcaption { color:#d9c28d;font-size:12px;letter-spacing:.03em;margin:0 0 6px; }
+.hero-detail-panel.is-meshy figcaption { color:#e6e6e1; }
+.hero-detail-crop { position:relative;width:100%;aspect-ratio:2.25;overflow:hidden;border:1px solid #d0bd853f;background:#141818; }
+.hero-detail-panel.is-meshy .hero-detail-crop { border-color:#e6e6e138; }
+/* The identical crop and enlargement are applied to both complete 4K renders. */
+.hero-detail-crop img { position:absolute;width:533.333333%;max-width:none;height:auto;left:-220.833333%;top:-350%; }
+#top.compare-visible:not(.exploring):not(.live-loading):not(.returning-3d) .hero-compare-plane,
+#top.compare-visible:not(.exploring):not(.live-loading):not(.returning-3d) .hero-compare-overlay { visibility:visible;opacity:1; }
+#top.compare-visible:not(.exploring):not(.live-loading):not(.returning-3d) #hero-film,
+#top.compare-visible:not(.exploring):not(.live-loading):not(.returning-3d) .hero-film-still { opacity:0; }
+#top.compare-visible:not(.exploring):not(.live-loading):not(.returning-3d) .source-photo { opacity:0;transition:opacity .35s; }
+#top .source-photo { transition:opacity .25s; }
+@media (prefers-reduced-motion:no-preference) {
+  .hero-compare-overlay { transition:opacity .35s; }
+  .hero-compare-detail { transition:opacity .4s .35s;opacity:0; }
+  #top.compare-visible .hero-compare-detail { opacity:1; }
+}

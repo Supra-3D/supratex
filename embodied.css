@@ -1,0 +1,177 @@
+/* A cinematic application chapter, followed by the research behind it. */
+#embodied {
+  position: relative;
+  padding-block: 80px;
+  background: #101311;
+}
+#embodied::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--page);
+  right: var(--page);
+  height: 1px;
+  background: #c7b99529;
+}
+.embodied-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin: 32px 0;
+}
+.embodied-heading h2 {
+  margin: 0;
+  font-size: clamp(44px, 4.2vw, 66px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+.embodied-heading h2 em {
+  display: block;
+  margin-top: 5px;
+  color: var(--gold);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: .8em;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -.04em;
+  white-space: nowrap;
+}
+.embodied-heading > p {
+  max-width: 32ch;
+  margin: 0 0 3px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+.embodied-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(190px, 18vw, 260px);
+  gap: clamp(24px, 3vw, 48px);
+  align-items: stretch;
+}
+.embodied-player { min-width: 0; position: relative; }
+.embodied-player video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #0e1011;
+  border: 1px solid #c7b99530;
+  border-radius: 4px;
+}
+.embodied-controls:not([hidden]) {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 52px;
+}
+.embodied-controls button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  min-height: 44px;
+  padding: 0;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.embodied-controls svg { width: 20px; height: 20px; }
+.embodied-controls [hidden] { display: none; }
+[data-embodied-fullscreen] svg { fill: none; stroke: currentColor; stroke-width: 1.5; }
+[data-embodied-play] svg { fill: currentColor; }
+.embodied-pause-icon,
+.embodied-player.is-playing .embodied-play-icon { display: none; }
+.embodied-player.is-playing .embodied-pause-icon { display: block; }
+.embodied-time {
+  color: var(--muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  min-width: 3.4ch;
+}
+[data-embodied-seek] {
+  --played: 0%;
+  appearance: none;
+  flex: 1;
+  min-width: 30px;
+  height: 30px;
+  margin: 0;
+  cursor: pointer;
+  background: linear-gradient(to right, var(--gold) var(--played), #c7b99536 var(--played)) center / 100% 2px no-repeat;
+}
+[data-embodied-seek]::-webkit-slider-thumb {
+  appearance: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 0;
+}
+[data-embodied-seek]::-moz-range-thumb { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); border: 0; }
+.embodied-chapters { display: flex; flex-direction: column; margin-bottom: 52px; }
+.embodied-chapter-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 16px;
+  font: 12px/1.5 Consolas, monospace;
+  letter-spacing: .07em;
+  color: var(--muted);
+}
+.embodied-chapters button {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 0 18px 18px;
+  border-top: 1px solid #c7b99529;
+  text-align: left;
+  color: var(--muted);
+  transition: color 180ms, background 180ms;
+}
+.embodied-chapters button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 2px;
+  background: transparent;
+}
+.embodied-chapters button[aria-current="true"] { color: var(--gold); background: #c7b9950c; }
+.embodied-chapters button[aria-current="true"]::before { background: var(--gold); }
+.embodied-chapters button::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(var(--chapter-progress, 0));
+  transform-origin: left;
+  opacity: 0;
+}
+.embodied-chapters button[aria-current="true"]::after { opacity: .7; }
+.embodied-chapters button[aria-current="true"] .embodied-chapter-note { color: #cdc6b6; }
+.embodied-chapters button:not([aria-current="true"]):hover { color: var(--text); background: #c7b99506; }
+.embodied-chapter-meta { display: flex; justify-content: space-between; font: 12px/1.5 Consolas, monospace; }
+.embodied-chapter-title { margin-top: 8px; font-size: clamp(19px, 1.6vw, 24px); line-height: 1.3; letter-spacing: -.02em; }
+.embodied-chapter-note { margin-top: 7px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+#embodied button:focus-visible,
+[data-embodied-seek]:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+.embodied-status { color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 8px; }
+.embodied-player:fullscreen { display: flex; flex-direction: column; justify-content: center; background: #0e1011; padding: 16px; }
+.embodied-player:fullscreen video { flex: 1; min-height: 0; border: 0; }
+.embodied-player:fullscreen .embodied-controls { flex-shrink: 0; }
+/* Preserve comfortable navigation with the additional desktop chapter. */
+@media (min-width: 960px) and (max-width: 1200px) {
+  .site-header { grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 18px; }
+  .site-header nav { gap: 17px; font-size: 14px; }
+  .site-header .release-link { padding-inline: 12px; font-size: 14px; }
+  .embodied-heading { gap: 28px; }
+  .embodied-heading > p { max-width: 29ch; font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .embodied-chapters button { transition: none; } }
