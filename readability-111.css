@@ -2,6 +2,7 @@
 :root {
   --chapter-label-size:18px;
   --chapter-label-font:Consolas,'SFMono-Regular',Menlo,monospace;
+  --chapter-title-size:clamp(40px,3.5vw,56px);
   --reading-copy-size:18px;
   --reading-note-size:15px;
 }
@@ -22,7 +23,14 @@ body { font-optical-sizing:auto; }
 #top .title-project { font-weight:600; letter-spacing:-.045em; line-height:1.08; }
 #top .title-research { font-weight:400; letter-spacing:-.025em; line-height:1.2; }
 #top #paper .paper-authors li { font-family:SupraSans,'Segoe UI',sans-serif; font-size:17px; font-weight:400; line-height:1.65; }
-:is(#competition,#embodied,#details,#materials,#control,#gallery,#method,#evaluation) .chapter-heading h2 { font-weight:400; }
+:is(#competition.comp-refined,#texturing,#embodied,#details,#materials,#control,#gallery,#method,#evaluation) .chapter-heading h2,
+#competition.comp-refined .comp-study-intro > h3,
+#release .release-content h2 {
+  font-size:var(--chapter-title-size);
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:-.045em;
+}
 :is(#competition.comp-refined,#embodied,#details,#materials,#control,#gallery,#method,#evaluation) .chapter-heading > .chapter-caption {
   font-size:var(--reading-copy-size);
   line-height:1.65;
@@ -43,9 +51,34 @@ body { font-optical-sizing:auto; }
 #top .hero-actions .button { font-size:16px; }
 #top #paper .paper-kicker { font-size:12px; line-height:1.5; }
 #top #paper .paper-affiliations li { font-size:14px; line-height:1.6; }
+#top #paper .paper-corresponding-icon { display:inline-block; width:1.15em; height:.9em; margin-left:2px; vertical-align:baseline; fill:none; stroke:currentColor; stroke-width:1.2; stroke-linejoin:round; }
+#top #paper .paper-author-notes { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 16px; margin:10px 0 0; color:var(--cover-muted); font-size:14px; line-height:1.6; }
+#top #paper .paper-author-notes > span { white-space:nowrap; }
+#top #paper .paper-author-notes .paper-corresponding-icon { margin-left:0; vertical-align:-.05em; }
 #top #paper .paper-resource-name { font-size:15px; }
+@media (min-width:1360px) {
+  #top #paper .paper-resources { max-width:496px; }
+}
+@media (min-width:960px) and (max-width:1359.98px) {
+  #top #paper .paper-resources { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
 #top.hero-video-only .scene-chapters > span { font-size:14px; line-height:1.45; }
 #top.hero-video-only .hero-footer :is(.hero-replay,#motion-toggle,#hero-see-more,#hero-play-prompt,#hero-explore) { font-size:14px; }
+
+/* Featured comparisons have an explicit entry to the interactive model. */
+#gallery .gallery-feature-caption { align-items:center; }
+#gallery .gallery-feature-caption .gallery-feature-explore {
+  display:inline-flex; align-items:center; justify-content:center; flex:none; gap:12px;
+  min-height:44px; padding:10px 16px; border:1px solid var(--g-gold); border-radius:4px;
+  background:var(--g-gold); color:var(--g-bg); font:inherit; font-size:15px; line-height:1.4;
+  text-align:center; white-space:nowrap; cursor:pointer;
+  transition:background-color .18s,border-color .18s;
+}
+#gallery .gallery-feature-explore > span { font-size:18px; line-height:1; }
+#gallery .gallery-feature-explore:hover { background:#dfcfa7; border-color:#dfcfa7; }
+@media (max-width:600px) {
+  #gallery .gallery-feature-caption .gallery-feature-explore { padding-inline:12px; gap:8px; font-size:14px; }
+}
 
 /* The comparison toolbar must be legible without enlarging the entire viewer. */
 #competition.comp-refined .comp-case-tabs button > .comp-case-name { font-size:14px; }
@@ -83,18 +116,31 @@ body { font-optical-sizing:auto; }
 #release .citation-copy { font-size:14px; }
 #release .citation-source { font-size:14px; line-height:1.75; }
 
+/* Compact desktop comparisons share the intro's height without shrinking text. */
+@media (min-width:1200px) {
+  #competition.comp-refined .comp-study-data { display:flex; flex-direction:column; }
+  #competition.comp-refined .comp-metric-tabs { flex-shrink:0; }
+  #competition.comp-refined .comp-chart { display:grid; flex:1; }
+  #competition.comp-refined .preference-explorer { grid-template-columns:minmax(170px,.75fr) minmax(0,1.25fr); }
+  #competition.comp-refined .preference-comparisons { display:flex; flex-direction:column; align-self:stretch; }
+  #competition.comp-refined .preference-list { flex:1; }
+  #competition.comp-refined .preference-choice { height:100%; }
+  #competition.comp-refined .preference-choice-side { display:flex; align-items:baseline; gap:10px; }
+  #competition.comp-refined .preference-choice-rival { justify-content:flex-end; }
+  #competition.comp-refined .preference-choice-name { white-space:nowrap; }
+}
+
 @media (min-width:960px) and (max-width:1180px) {
   /* Preserve the complete navigation on smaller laptops. */
   .site-header #main-navigation a { font-size:15px; }
   .site-header #main-navigation { gap:12px; }
-  #top #paper .paper-resources { grid-template-columns:repeat(2,minmax(0,1fr)); }
   #control .control-designs button { flex-direction:column; gap:0; text-align:center; }
   #control .control-designs button span { padding:4px 3px; }
 }
 
 @media (max-width:959.98px) {
   /* Mobile acceptance target: iPhone 17 Pro portrait. */
-  :root { --chapter-label-size:16px; --reading-copy-size:16px; --reading-note-size:15px; }
+  :root { --chapter-label-size:16px; --chapter-title-size:clamp(32px,8.3vw,48px); --reading-copy-size:16px; --reading-note-size:15px; }
   #top #paper .paper-authors li { font-size:16px; }
   #method .method-steps p,
   #method .method-extension p { font-size:16px; }
@@ -114,8 +160,8 @@ body { font-optical-sizing:auto; }
   #competition.comp-refined .preference-list-head { font-size:14px; }
   #competition.comp-refined .preference-center > span { font-size:13px; }
 
-  #embodied .embodied-time { font-size:13px; }
-  #embodied [data-embodied-fullscreen],
+  :is(#embodied,#texturing) .embodied-time { font-size:13px; }
+  :is(#embodied,#texturing) [data-embodied-fullscreen],
   #details .reference-panel figcaption,
   #details .comparison-instruction,
   #details .evidence-note { font-size:14px; }

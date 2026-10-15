@@ -2,7 +2,7 @@
 .site-header nav{gap:clamp(14px,1.7vw,28px)}
 #competition.comp-refined{padding-top:76px;padding-bottom:80px}
 #competition.comp-refined .comp-heading{margin-bottom:36px}
-#competition.comp-refined .comp-heading h2{font-size:clamp(48px,5.1vw,76px)}
+#competition.comp-refined .comp-heading h2{font-size:clamp(44px,4.2vw,66px);line-height:1.08;letter-spacing:-.045em}
 .competition-film{border:1px solid #c7b99545;background:#191d1a;overflow:hidden}
 .comp-film-heading{display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:22px 30px;gap:30px;font-size:24px;letter-spacing:-.025em;background:#191d1a}
 .comp-film-heading>span:first-child{color:#dfc68c}

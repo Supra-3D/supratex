@@ -99,12 +99,12 @@
   /* A full-width application film with a compact horizontal chapter rail. */
   #embodied .embodied-workspace { display: grid; grid-template-columns: minmax(0,1fr); gap: 18px; }
   #embodied .embodied-player { min-width: 0; }
-  #embodied .embodied-controls:not([hidden]) { gap: 7px; flex-wrap: wrap; padding-top: 6px; }
-  #embodied .embodied-controls button { width: auto; min-width: 44px; min-height: 44px; }
-  #embodied [data-embodied-fullscreen] { display: flex; gap: 8px; padding: 8px 11px; border: 1px solid #c7b99555; border-radius: 4px; font-size: 13px; }
-  #embodied .embodied-time { font-size: 12px; }
-  #embodied [data-embodied-seek] { min-width: 40px; height: 44px; }
-  #embodied [data-embodied-seek]::-webkit-slider-thumb { width: 13px; height: 13px; }
+  :is(#embodied,#texturing) .embodied-controls:not([hidden]) { gap: 7px; flex-wrap: wrap; padding-top: 6px; }
+  :is(#embodied,#texturing) .embodied-controls button { width: auto; min-width: 44px; min-height: 44px; }
+  :is(#embodied,#texturing) [data-embodied-fullscreen] { display: flex; gap: 8px; padding: 8px 11px; border: 1px solid #c7b99555; border-radius: 4px; font-size: 13px; }
+  :is(#embodied,#texturing) .embodied-time { font-size: 12px; }
+  :is(#embodied,#texturing) [data-embodied-seek] { min-width: 40px; height: 44px; }
+  :is(#embodied,#texturing) [data-embodied-seek]::-webkit-slider-thumb { width: 13px; height: 13px; }
   #embodied .embodied-chapters { display: grid; grid-template-columns: repeat(3,minmax(164px,1fr)); gap: 8px; overflow-x: auto; margin: 0; padding-bottom: 8px; scrollbar-width: thin; scrollbar-color: #c7b99555 transparent; scroll-snap-type: x proximity; }
   #embodied .embodied-chapter-label { grid-column: 1/-1; margin: 0; font-size: 11px; }
   #embodied .embodied-chapters button { min-width: 0; min-height: 112px; padding: 12px; justify-content: flex-start; border: 1px solid #c7b99530; border-radius: 4px; scroll-snap-align: start; }

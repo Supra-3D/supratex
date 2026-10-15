@@ -1,11 +1,12 @@
-/* Group the story into exhibition, comparisons, live use, research, and release. */
+/* Keep the early content groups; give each later chapter an alternating surface. */
 #competition.comp-refined{--comp-ink:#191c1b;--comp-surface:#202321;background:var(--comp-ink);padding-top:96px;padding-bottom:76px;border-top:0}
 #details{background:#191c1b;border-top:0;padding-block:80px}
 #materials{background:radial-gradient(ellipse at 75% 20%,#c7b99508,transparent 55%),#0e1011;border-top:0}
-#control{background:#0e1011;border-top:0;padding-block:80px}
-#method{padding-top:88px;border-top:0}
-#evaluation{border-top:0}
-#release{padding-top:88px;border-top:0}
+#control{background:#191c1b;border-top:0;padding-block:80px}
+#gallery{background:#0e1011}
+#method{background:#191c1b;padding-top:88px;border-top:0}
+#evaluation{background:#0e1011;border-top:0}
+#release{background:#191c1b;padding-top:88px;border-top:0}
 /* A hairline with two precise returns echoes the reference image's corner frame. */
 #competition,#materials,#method,#release{position:relative}
 #competition::before,#materials::before,#method::before,#release::before{content:'';display:block;position:absolute;top:0;left:var(--page);right:var(--page);height:9px;border:1px solid #c7b99550;border-bottom:0;pointer-events:none;background:none;transform:none;opacity:1}

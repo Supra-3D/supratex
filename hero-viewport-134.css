@@ -1,0 +1,24 @@
+/* Compact vertical spacing when browser zoom leaves a short desktop viewport.
+   Keep text sizes and natural document flow so further zoom stays scrollable. */
+@media (min-width:960px) and (max-height:850px) {
+  #top.hero-layout-77.hero-video-only {
+    padding-top:104px;
+    padding-bottom:28px;
+  }
+  #top .supra-title { margin-bottom:18px; }
+  #top .title-research { margin-top:12px; }
+  #top .hero-actions { margin-top:16px; }
+  #top .hero-paper { margin-top:18px; padding-top:14px; }
+  #top .paper-authors { row-gap:4px; }
+  #top .paper-affiliations { margin-top:10px; }
+  #top #paper .paper-author-notes { margin-top:8px; }
+  #top #paper .paper-resources { margin-top:12px; }
+}
+
+@media (min-width:1240px) and (max-height:850px) {
+  #top #paper .paper-resources {
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    max-width:496px;
+  }
+  #top #paper .paper-resource { padding-inline:8px; }
+}

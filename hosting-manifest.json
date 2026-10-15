@@ -1286,6 +1286,16 @@
       "sha256": "c4091b88eb01bcfb76006339f56d3b10a093758ffd34a83a2014c1424b863319"
     },
     {
+      "path": "assets/texturing/multi-case-poster.jpg",
+      "bytes": 46844,
+      "sha256": "82ab1cfc4b85943b0623258ee5beb9d409b787c99dd56e179e0137f3bf5ce2d1"
+    },
+    {
+      "path": "assets/texturing/multi-case.mp4",
+      "bytes": 24076505,
+      "sha256": "18dd722802ada087e9e70e6c264da6f7002447a03f45f1817d1c582b4356b928"
+    },
+    {
       "path": "author-links.css",
       "bytes": 595,
       "sha256": "9f323e3e02015c58d2a6ed1a39355fcc30e6f2e234664808944a2d791c638e2e"
@@ -1297,8 +1307,8 @@
     },
     {
       "path": "chapter-rhythm.css",
-      "bytes": 1629,
-      "sha256": "11dffb38b02611e2778e4a40b12e24d09aeb06785fca863556622ce3e833230a"
+      "bytes": 1715,
+      "sha256": "897e9043a51f37f4613513639fdea2236adea8a5575ace9b30e7eccdd4a28267"
     },
     {
       "path": "citation.css",
@@ -1407,13 +1417,13 @@
     },
     {
       "path": "embodied.css",
-      "bytes": 5461,
-      "sha256": "2a0e98e6ceea3eb9843655639aef421fe86c253395c514e8640f220c83028bd6"
+      "bytes": 7074,
+      "sha256": "f56956f254742a754e185b5fa1b590a9db9cd961c3a4ce360742f5edda18f1e5"
     },
     {
       "path": "embodied.js",
-      "bytes": 6940,
-      "sha256": "1ac9147f2afc9a2d4f8ffbee4bf9956aedd060c951f796e649230c2d50013a03"
+      "bytes": 7724,
+      "sha256": "619c7a87adf960ab7aa58117a3d41d14cdf52b7db900aa323732bc30ce2252a8"
     },
     {
       "path": "emergence.css",
@@ -1432,8 +1442,8 @@
     },
     {
       "path": "experience.js",
-      "bytes": 10395,
-      "sha256": "8a0969fdac73c97402ad2ee0d1ac5b4789bde98508fd8e8a7430da062feb3131"
+      "bytes": 10418,
+      "sha256": "93e7d5cc9b8e35db7532c9f53b902300e4f290a1d59e4ae749f79679b9978706"
     },
     {
       "path": "favicon.svg",
@@ -1457,8 +1467,8 @@
     },
     {
       "path": "gallery.js",
-      "bytes": 34781,
-      "sha256": "2d5b94b420aa9b2ed1620fe1d1bd089e15ec5ff8b5786cf1acf16b3532fef9f1"
+      "bytes": 35153,
+      "sha256": "ac62120ed9595724621fd2e3ccba8d7b74e151c8bd99fce692ecf32c3728a0b2"
     },
     {
       "path": "hero-controls.css",
@@ -1496,19 +1506,24 @@
       "sha256": "96438cc9d36dedeaf3307ff78a633e63bc3079a08b2bd8c775bce16c4a230df6"
     },
     {
+      "path": "hero-viewport-134.css",
+      "bytes": 903,
+      "sha256": "69b144cb13f3ee2541d53a3e13b1582ade4b15e324bfed3838a43a42a49231da"
+    },
+    {
       "path": "index.html",
-      "bytes": 86385,
-      "sha256": "9af16b7ac9e99457764e106b69c7627fc51bbd35a16225f4e6741e8c71cc4522"
+      "bytes": 90285,
+      "sha256": "022b19f63e55b9c9dd1eb3aeffa880303374be9ca524c781f5da68be8dac0325"
     },
     {
       "path": "interaction-74.css",
-      "bytes": 13811,
-      "sha256": "58f247b1e8b8cf57903c77a47d3fa70a93c2999713e930aa529f312375f6307e"
+      "bytes": 13875,
+      "sha256": "1fc464393207c5b691e8b11aaf6dc63f587ae954405e5827fd8b266d5395a87d"
     },
     {
       "path": "layout-70.css",
-      "bytes": 10647,
-      "sha256": "326cab5e64281fdb33f4528521c335aa10e60475c4174e7e826c4ed1f1f4cd7d"
+      "bytes": 10687,
+      "sha256": "f3829338e501ba7a75197adcc810ea28af9749d35d50c3b843762de19b102669"
     },
     {
       "path": "materials-rail.js",
@@ -1537,8 +1552,8 @@
     },
     {
       "path": "mobile-sections-102.css",
-      "bytes": 30190,
-      "sha256": "2fd61be410b234596639fd78f3fc18536c3575801a3f581dac0e0da5609cae17"
+      "bytes": 30286,
+      "sha256": "a3d73c0990b4155ba826a53588731c40a565e9c816909c30395bcdb0b8c9989c"
     },
     {
       "path": "observatory.bundle.js",
@@ -1557,8 +1572,8 @@
     },
     {
       "path": "readability-111.css",
-      "bytes": 8659,
-      "sha256": "1b03142f798afdf4fc28f02e1f94db4ac0c43d98a04f7533e13dae853e1f5b5c"
+      "bytes": 11478,
+      "sha256": "99b66c0112d1972bc75fde0a263ee1644df6d2bd6668720df579ee06cd201d5a"
     },
     {
       "path": "readability-research.css",
@@ -1604,6 +1619,11 @@
       "path": "styles.css",
       "bytes": 21058,
       "sha256": "e41a35afb5fddead4e572e5a0cde3083cf46af0149a179a1a18d7e6ab24b0777"
+    },
+    {
+      "path": "texturing.css",
+      "bytes": 1936,
+      "sha256": "aee16fc053c7358cd8510a7643fc707591f0da3a3fedffa1d2df06c67c9bf840"
     },
     {
       "path": "transitions.js",

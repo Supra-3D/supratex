@@ -131,9 +131,9 @@
           <span class="gallery-feature-label">Reference image</span><span class="gallery-feature-label is-result">SUPRA-Tex result</span>
         </div>
         <label class="gallery-feature-controls"><input type="range" min="0" max="100" value="50" data-gallery-feature-range aria-label="Compare ${c.title.toLowerCase()} reference and SUPRA-Tex result"></label>
-        <div class="gallery-feature-caption"><button type="button" data-gallery-open="${c.id}" title="${c.name}" aria-label="Inspect ${c.title}"><strong>${c.title} ↗</strong></button><p class="gallery-feature-evidence">Drag to compare</p></div>
+        <div class="gallery-feature-caption"><strong title="${c.title}">${c.title}</strong><button class="gallery-feature-explore" type="button" data-gallery-open="${c.id}" data-gallery-start-mode="3d" aria-label="Explore ${c.title} in 3D" aria-haspopup="dialog" aria-controls="gallery-dialog">Explore in 3D <span aria-hidden="true">↗</span></button></div>
       </article>`:`
-      <article class="gallery-card" data-gallery-card="${c.id}"><button class="gallery-open" type="button" data-gallery-open="${c.id}" title="${c.name}" aria-label="Inspect ${c.title}: reference and SUPRA-Tex result">
+      <article class="gallery-card" data-gallery-card="${c.id}"><button class="gallery-open" type="button" data-gallery-open="${c.id}" title="${c.title}" aria-label="Inspect ${c.title}: reference and SUPRA-Tex result">
         <span class="gallery-card-media"><img src="${base+c.poster}" alt="SUPRA-Tex generated ${c.title.toLowerCase()}" loading="lazy" decoding="async"><video muted playsinline loop preload="none" poster="${base+c.poster}" aria-hidden="true" tabindex="-1" data-gallery-preview="${c.id}"></video><span class="gallery-card-action" aria-hidden="true">↗</span></span>
         <span class="gallery-card-caption"><span><strong>${c.title}</strong></span></span>
       </button></article>`).join('');
@@ -190,7 +190,7 @@
       cards.set(card.dataset.galleryCard,card);observer.observe(card);
       card.addEventListener('pointerenter',()=>{hovered=card;preview(card);},{passive:true});
       card.addEventListener('pointerleave',()=>{if(hovered===card)hovered=null;if(playing===card)stopPreview();},{passive:true});
-      card.querySelector('button').addEventListener('click',event=>open(card.dataset.galleryCard,event.currentTarget));
+      card.querySelector('button').addEventListener('click',event=>open(card.dataset.galleryCard,event.currentTarget,event.currentTarget.dataset.galleryStartMode));
     });
     function setStatus(text=''){$('[data-gallery-status]').textContent=text;}
     function loadViewerLibrary(){
@@ -354,7 +354,7 @@
       document.body.style.position='fixed';document.body.style.top=`-${savedScroll}px`;document.body.style.width='100%';document.body.style.overflow='hidden';
       if(gap)document.body.style.paddingRight=`${gap}px`;
     }
-    function open(id,trigger){
+    function open(id,trigger,initialMode='compare'){
       const item=cases.find(c=>c.id===id);if(!item||(dialog.open&&current===item))return;
       const wasOpen=dialog.open;
       ++renderVersion;cancelOrbitPreparation();settleTransition();shownMode=null;shownView=null;
@@ -383,7 +383,10 @@
       $('[data-gallery-orbit-label]').textContent=`${current.arc||24}° orbit`;
       $('[data-gallery-range]').value='50';updateRange();
       if(!wasOpen){lockScroll();dialog.showModal();}dialog.scrollTop=0;$('[data-gallery-close]').focus({preventScroll:true});
-      renderMedia({initial:true});
+      const initialMedia=renderMedia({initial:true}),openingVersion=renderVersion;
+      if(initialMode==='3d')initialMedia.then(()=>{
+        if(dialog.open&&current===item&&renderVersion===openingVersion)enter3D();
+      });
       window.dispatchEvent(new CustomEvent('supra:gallery',{detail:{open:true,caseId:id}}));
     }
     function close(){if(dialog.open)dialog.close();}
