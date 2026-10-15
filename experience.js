@@ -110,7 +110,7 @@
   window.addEventListener('resize',schedule,{passive:true});
   const navLinks=[...document.querySelectorAll('.site-header nav a')];
   const navSections=[...document.querySelectorAll('main > section,#human-preference,#citation')];
-  const sectionNavigation={gallery:'#gallery',competition:'#competition','human-preference':'#human-preference',materials:'#materials',control:'#materials',texturing:'#texturing',embodied:'#embodied',method:'#method',evaluation:'#method',release:'#citation',citation:'#citation'};
+  const sectionNavigation={gallery:'#gallery',competition:'#competition','human-preference':'#human-preference',materials:'#materials',control:'#materials',embodied:'#embodied',method:'#method',evaluation:'#method',release:'#citation',citation:'#citation'};
   function syncNavigation(){
     // Read the current section on every scroll, including sections without a nav link.
     // This clears stale highlights when returning home or reaching the release.

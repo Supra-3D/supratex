@@ -1286,16 +1286,6 @@
       "sha256": "c4091b88eb01bcfb76006339f56d3b10a093758ffd34a83a2014c1424b863319"
     },
     {
-      "path": "assets/texturing/multi-case-poster.jpg",
-      "bytes": 46844,
-      "sha256": "82ab1cfc4b85943b0623258ee5beb9d409b787c99dd56e179e0137f3bf5ce2d1"
-    },
-    {
-      "path": "assets/texturing/multi-case.mp4",
-      "bytes": 24076505,
-      "sha256": "18dd722802ada087e9e70e6c264da6f7002447a03f45f1817d1c582b4356b928"
-    },
-    {
       "path": "author-links.css",
       "bytes": 595,
       "sha256": "9f323e3e02015c58d2a6ed1a39355fcc30e6f2e234664808944a2d791c638e2e"
@@ -1442,8 +1432,8 @@
     },
     {
       "path": "experience.js",
-      "bytes": 10418,
-      "sha256": "93e7d5cc9b8e35db7532c9f53b902300e4f290a1d59e4ae749f79679b9978706"
+      "bytes": 10395,
+      "sha256": "8a0969fdac73c97402ad2ee0d1ac5b4789bde98508fd8e8a7430da062feb3131"
     },
     {
       "path": "favicon.svg",
@@ -1507,8 +1497,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 87610,
-      "sha256": "e984648b499786c9ecb5e5e34470547511d88d74b3b27758e3130c29382050c6"
+      "bytes": 86385,
+      "sha256": "9af16b7ac9e99457764e106b69c7627fc51bbd35a16225f4e6741e8c71cc4522"
     },
     {
       "path": "interaction-74.css",
@@ -1614,11 +1604,6 @@
       "path": "styles.css",
       "bytes": 21058,
       "sha256": "e41a35afb5fddead4e572e5a0cde3083cf46af0149a179a1a18d7e6ab24b0777"
-    },
-    {
-      "path": "texturing.css",
-      "bytes": 2034,
-      "sha256": "5c3420ba0086de94bd68a2216a4684f3849e57f5000d82ad44e08e50d0120ace"
     },
     {
       "path": "transitions.js",
