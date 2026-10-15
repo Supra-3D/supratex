@@ -6,7 +6,7 @@
     if (viewerBundle) return viewerBundle;
     viewerBundle = new Promise((resolve, reject) => {
       const script = document.createElement('script');
-      script.src = 'control-viewer.bundle.js?v=hosting-108';
+      script.src = 'control-viewer.bundle.js?v=110';
       script.onload = () => { script.remove(); window.SupraControl3D ? resolve() : reject(new Error('Viewer unavailable')); };
       script.onerror = () => { script.remove(); reject(new Error('Viewer unavailable')); };
       document.head.append(script);
@@ -120,7 +120,7 @@
         const message = dialog.querySelector('[data-control-3d-status]');
         const title = dialog.querySelector('[data-control-3d-title]');
         const designButtons = [...dialog.querySelectorAll('[data-control-3d-design]')];
-        let epoch = 0, lastTrigger = null, selection = 0, pendingDesign = activeDesign;
+        let epoch = 0, lastTrigger = null, selection = 0, pendingDesign = activeDesign, loadingDesign = null;
         function report(text, error = false, busy = false) {
           message.textContent = text; message.classList.toggle('is-error', error);
           mount.setAttribute('aria-busy', String(busy)); dialog.dataset.loading = String(busy);
@@ -134,11 +134,21 @@
             report(`Opening ${designs[design].label} in 3D…`, false, true);
             return;
           }
-          const token = ++selection, ready = await liveViewer.load(design);
-          if (!ready || !dialog.open || token !== selection) return;
-          designButtons.forEach(button => button.setAttribute('aria-pressed', String(button.getAttribute('data-control-3d-design') === design)));
-          title.textContent = designs[design].label;
-          show(design);
+          const state = liveViewer.state();
+          if (loadingDesign === design || (loadingDesign === null && state.design === design && !state.busy && !message.classList.contains('is-error'))) return;
+          const instance = liveViewer, token = ++selection;
+          loadingDesign = design;
+          try {
+            const ready = await instance.load(design);
+            if (!ready || !dialog.open || instance !== liveViewer || token !== selection) return;
+            designButtons.forEach(button => button.setAttribute('aria-pressed', String(button.getAttribute('data-control-3d-design') === design)));
+            title.textContent = designs[design].label;
+            show(design);
+          } catch (_) {
+            if (dialog.open && instance === liveViewer && token === selection) report('This 3D asset could not be loaded. Choose another design or try again.', true, false);
+          } finally {
+            if (instance === liveViewer && token === selection) loadingDesign = null;
+          }
         }
         async function openViewer(event) {
           if (dialog.open) return;
@@ -169,7 +179,7 @@
           if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close();
         });
         dialog.addEventListener('close', () => {
-          ++epoch; ++selection; liveViewer?.dispose(); liveViewer = null;
+          ++epoch; ++selection; liveViewer?.dispose(); liveViewer = null; loadingDesign = null;
           mount.replaceChildren(); report('', false, false);
           document.body.classList.remove('control-dialog-open');
           window.dispatchEvent(new CustomEvent('supra:gallery', {detail: {open: false, source: 'control'}}));

@@ -1,6 +1,12 @@
 /* Gold corner marks belong to loading only; finished images remain still. */
 #competition.comp-refined .comp-load-cover { position:absolute; inset:0; z-index:7; overflow:hidden; background:#e7e6e1; pointer-events:none; }
 #competition.comp-refined .comp-load-picture, #competition.comp-refined .comp-load-still { position:absolute; inset:0; display:block; width:100%; height:100%; }
+#competition.comp-refined .comp-load-preview { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:contain; }
+#competition.comp-refined .comp-load-preview[hidden] { display:none; }
+#competition.comp-refined .comp-load-preview.is-left { clip-path:polygon(0 0,var(--split-top) 0,var(--split-bottom) 100%,0 100%); }
+#competition.comp-refined .comp-load-preview.is-right { clip-path:polygon(var(--split-top) 0,100% 0,100% 100%,var(--split-bottom) 100%); }
+#competition.comp-refined .comp-preview-label { position:absolute; z-index:8; top:17px; right:17px; padding:5px 8px; border-radius:3px; background:#e7e6e1ed; color:#646354; font:400 11px/1.4 'Segoe UI',sans-serif; }
+#competition.comp-refined .has-preview > .comp-load-caption { opacity:1; }
 #competition.comp-refined .comp-load-caption { position:absolute; z-index:8; left:50%; bottom:17px; transform:translateX(-50%); max-width:calc(100% - 48px); padding:7px 13px; border:1px solid #b9a77366; border-radius:3px; background:#e7e6e1f2; color:#665635; font:400 12px/1.4 'Segoe UI',sans-serif; text-align:center; opacity:0; transition:opacity .18s ease; }
 #competition.comp-refined .comp-load-corners { position:absolute; inset:15px; z-index:8; pointer-events:none; opacity:0; transition:opacity .18s ease; }
 #competition.comp-refined .comp-load-corners i { position:absolute; width:19px; height:19px; border:0 solid #b59852; }
@@ -21,10 +27,19 @@
 #competition.comp-refined .comp-reference-ghost { pointer-events:none; }
 .motion-paused #competition .comp-load-corners i { animation:none; opacity:.75; }
 @media(max-width:959.98px) {
-  /* The existing mobile touch bar already announces Loading 3D. */
-  #competition.comp-refined .comp-load-caption { display:none; }
+  #competition.comp-refined .comp-load-caption { bottom:12px; max-width:calc(100% - 24px); width:calc(100% - 24px); font-size:11px; padding:8px; }
 }
 @media(prefers-reduced-motion:reduce) {
   #competition .comp-load-corners i { animation:none!important; opacity:.75; }
   #competition .comp-load-caption, #competition .comp-load-corners { transition:none!important; }
 }
+
+#competition.comp-refined .comp-load-caption.has-statuses { display:flex; gap:28px; width:max-content; }
+#competition.comp-refined .comp-load-model { display:flex; align-items:center; justify-content:center; gap:7px; flex:1; white-space:nowrap; }
+#competition.comp-refined .comp-load-model:before { content:''; flex:none; width:9px; height:9px; border:1.5px solid #b9a77366; border-top-color:#897344; border-radius:50%; animation:comp-load-spin .9s linear infinite; }
+#competition.comp-refined .comp-load-model[data-status=ready]:before { content:'✓'; width:auto; height:auto; border:0; color:#456c46; animation:none; }
+#competition.comp-refined .comp-load-model:is([data-status=error],[data-status=pending]):before { animation:none; border-color:#9d5b43; }
+@keyframes comp-load-spin { to { transform:rotate(360deg); } }
+@media(max-width:959.98px) { #competition.comp-refined .comp-load-caption.has-statuses { gap:8px; } #competition.comp-refined .comp-load-model { white-space:normal; } }
+@media(prefers-reduced-motion:reduce) { #competition.comp-refined .comp-load-model:before { animation:none; } }
+.motion-paused #competition .comp-load-model:before { animation:none; }

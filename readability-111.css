@@ -1,0 +1,172 @@
+/* One type scale owns chapter labels across all older section styles. */
+:root {
+  --chapter-label-size:18px;
+  --chapter-label-font:Consolas,'SFMono-Regular',Menlo,monospace;
+  --reading-copy-size:18px;
+  --reading-note-size:15px;
+}
+#competition.comp-refined :is(.comp-kicker,.comp-study-kicker),
+:is(#embodied,#details,#materials,#control,#method,#evaluation,#release) .section-index,
+#gallery .gallery-heading .gallery-kicker {
+  font-family:var(--chapter-label-font);
+  font-size:var(--chapter-label-size);
+  font-weight:400;
+  font-style:normal;
+  line-height:1.5;
+  letter-spacing:.07em;
+}
+.section-index > span { font:inherit; letter-spacing:inherit; }
+
+/* Inter is served locally as SupraSans, including real intermediate weights. */
+body { font-optical-sizing:auto; }
+#top .title-project { font-weight:600; letter-spacing:-.045em; line-height:1.08; }
+#top .title-research { font-weight:400; letter-spacing:-.025em; line-height:1.2; }
+#top #paper .paper-authors li { font-family:SupraSans,'Segoe UI',sans-serif; font-size:17px; font-weight:400; line-height:1.65; }
+:is(#competition,#embodied,#details,#materials,#control,#gallery,#method,#evaluation) .chapter-heading h2 { font-weight:400; }
+:is(#competition.comp-refined,#embodied,#details,#materials,#control,#gallery,#method,#evaluation) .chapter-heading > .chapter-caption {
+  font-size:var(--reading-copy-size);
+  line-height:1.65;
+}
+#method .method-steps p,
+#method .method-extension p { font-size:17px; line-height:1.7; }
+#materials .observatory-context > p,
+#materials .observatory .demo-notes p,
+#control .control-note,
+#details .evidence-note,
+#evaluation .evidence-protocol,
+#evaluation .evidence-table-key,
+#evaluation .evidence-result-note { font-size:var(--reading-note-size); line-height:1.7; }
+
+/* Supporting copy and compact controls. */
+.site-header #main-navigation a { font-size:16px; }
+.site-header .mobile-menu-toggle { font-size:14px; }
+#top .hero-actions .button { font-size:16px; }
+#top #paper .paper-kicker { font-size:12px; line-height:1.5; }
+#top #paper .paper-affiliations li { font-size:14px; line-height:1.6; }
+#top #paper .paper-resource-name { font-size:15px; }
+#top.hero-video-only .scene-chapters > span { font-size:14px; line-height:1.45; }
+#top.hero-video-only .hero-footer :is(.hero-replay,#motion-toggle,#hero-see-more,#hero-play-prompt,#hero-explore) { font-size:14px; }
+
+/* The comparison toolbar must be legible without enlarging the entire viewer. */
+#competition.comp-refined .comp-case-tabs button > .comp-case-name { font-size:14px; }
+#competition.comp-refined .comp-system-label { font-size:12px; }
+#competition.comp-refined .comp-system-rail button { font-size:16px; }
+#competition.comp-refined .comp-system-rail button > span { font-size:14px; }
+#competition.comp-refined .comp-camera-controls button,
+#competition.comp-refined .comp-select-control select,
+#competition.comp-refined .comp-source-caption,
+#competition.comp-refined .comp-input-details,
+#competition.comp-refined .comp-input-details summary,
+#competition.comp-refined .comp-input-details p,
+#competition.comp-refined .comp-back-flight { font-size:14px; }
+#competition.comp-refined .comp-input-details summary > span { font-size:inherit; }
+#competition.comp-refined .comp-select-control,
+#competition.comp-refined .comp-gesture,
+#competition.comp-refined .comp-load-caption { font-size:13px; }
+#competition.comp-refined .comp-preview-label { font-size:12px; }
+#competition.comp-refined :is(.comp-preview-label,.comp-load-caption) { font-family:SupraSans,'Segoe UI',sans-serif; }
+#competition.comp-refined .comp-reference-heading { flex-wrap:wrap; }
+
+/* Film chapter notes and research annotations carry useful information. */
+#embodied .embodied-chapter-label,
+#embodied .embodied-chapter-meta { font-size:12px; line-height:1.5; }
+#embodied .embodied-chapter-note { font-size:14px; line-height:1.5; }
+#evaluation .fidelity-comparison-key p > span:first-child,
+#evaluation .fidelity-comparison-key > span,
+#evaluation .fidelity-dataset-name small,
+#evaluation .fidelity-gain small,
+#evaluation .fidelity-support > span { font-size:14px; line-height:1.5; }
+#evaluation .fidelity-finding-index,
+#evaluation .fidelity-film-kicker { font-size:13px; }
+#evaluation .fidelity-footnote { font-size:15px; line-height:1.7; }
+#release .release-resources h3 small,
+#release .citation-copy { font-size:14px; }
+#release .citation-source { font-size:14px; line-height:1.75; }
+
+@media (min-width:960px) and (max-width:1180px) {
+  /* Preserve the complete navigation on smaller laptops. */
+  .site-header #main-navigation a { font-size:15px; }
+  .site-header #main-navigation { gap:12px; }
+  #top #paper .paper-resources { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  #control .control-designs button { flex-direction:column; gap:0; text-align:center; }
+  #control .control-designs button span { padding:4px 3px; }
+}
+
+@media (max-width:959.98px) {
+  /* Mobile acceptance target: iPhone 17 Pro portrait. */
+  :root { --chapter-label-size:16px; --reading-copy-size:16px; --reading-note-size:15px; }
+  #top #paper .paper-authors li { font-size:16px; }
+  #method .method-steps p,
+  #method .method-extension p { font-size:16px; }
+  #top .hero-actions .button { font-size:15px; }
+  #top #paper .paper-resource-name { font-size:14px; }
+  #top.hero-video-only .scene-chapters > span { font-size:13px; }
+  #competition.comp-refined .comp-case-tabs button > .comp-case-name { font-size:14px; }
+  #competition.comp-refined .comp-touch-hint { font-size:13px; }
+  #competition.comp-refined .comp-touch-toggle,
+  #competition.comp-refined .comp-stage-label,
+  #competition.comp-refined .comp-reference-heading { font-size:14px; }
+  #competition.comp-refined .comp-select-control { flex-direction:column; align-items:stretch; gap:5px; }
+  #competition.comp-refined .comp-select-control select { font-size:14px; }
+  #competition.comp-refined .comp-study-scale span,
+  #competition.comp-refined .comp-chart-key,
+  #competition.comp-refined .preference-dial figcaption,
+  #competition.comp-refined .preference-list-head { font-size:14px; }
+  #competition.comp-refined .preference-center > span { font-size:13px; }
+
+  #embodied .embodied-time { font-size:13px; }
+  #embodied [data-embodied-fullscreen],
+  #details .reference-panel figcaption,
+  #details .comparison-instruction,
+  #details .evidence-note { font-size:14px; }
+
+  #materials .observatory-top,
+  #materials .control-index { font-size:13px; }
+  #materials .channel-buttons { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  #materials .channel-buttons button { font-size:15px; }
+  #materials .environment-buttons button { font-size:14px; }
+  #materials #channel-description,
+  #materials .sweep-button,
+  #materials .light-range-label,
+  #materials .light-range-label output,
+  #materials .asset-choice-name,
+  #materials .observatory-context > p,
+  #materials .observatory .demo-notes p { font-size:14px; }
+  #materials .observatory-foot { font-size:13px; }
+
+  #control .control-reference > figcaption,
+  #control .control-fixed-label,
+  #control .control-label { font-size:13px; }
+  #control .control-designs button,
+  #control .control-current-view,
+  #control .control-back-button,
+  #control .control-note { font-size:14px; }
+  #control .control-3d-header > div > span,
+  #control .control-3d-gesture { font-size:14px; line-height:1.5; }
+  #gallery .gallery-feature-label,
+  #gallery .gallery-feature-evidence { font-size:14px; }
+  #gallery .gallery-feature-controls,
+  #gallery .gallery-card-caption small,
+  #gallery .gallery-feature-caption small,
+  #gallery .gallery-note { font-size:14px; line-height:1.5; }
+  #gallery-dialog .gallery-compare figcaption,
+  #gallery-dialog .gallery-aligned-labels { font-size:14px; }
+  #gallery-dialog .gallery-three-hint,
+  #gallery-dialog .gallery-light-label,
+  #gallery-dialog .gallery-light-status,
+  #gallery-dialog .gallery-range,
+  #gallery-dialog .gallery-light-options button { font-size:14px; }
+  #method .method-steps .step-number > span { font-size:13px; }
+  #comparison-film-dialog .comp-film-heading small { font-size:14px; line-height:1.5; }
+  #comparison-film-dialog :is(.comp-film-chapters button,.comp-film-fullscreen,.comp-film-explore) { font-size:14px; }
+
+  #evaluation .fidelity-footnote { font-size:14px; }
+  #evaluation .fidelity-film-description,
+  #evaluation .evidence-protocol,
+  #evaluation .evidence-table-key,
+  #evaluation .evidence-result-note { font-size:14px; line-height:1.65; }
+  #evaluation .evidence-table { font-size:15px; }
+  #evaluation .evidence-table thead th,
+  #evaluation .evidence-table caption,
+  #evaluation .evidence-table caption span { font-size:14px; }
+}

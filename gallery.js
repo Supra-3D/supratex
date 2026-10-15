@@ -37,7 +37,7 @@
     $('.gallery-tabs').append(threeButton);
     const threePanel=document.createElement('div');
     threePanel.className='gallery-three-panel';threePanel.hidden=true;
-    threePanel.innerHTML='<div class="gallery-three-mount" data-gallery-three-mount aria-label="Interactive 3D result"></div><div class="gallery-three-controls"><div class="gallery-three-modes" role="group" aria-label="3D material"><button type="button" data-gallery-material="pbr" aria-pressed="true">PBR</button><button type="button" data-gallery-material="albedo" aria-pressed="false">Albedo</button></div><span class="gallery-three-hint">Drag to rotate · scroll to zoom</span><div class="gallery-three-camera" role="group" aria-label="3D camera"><button type="button" data-gallery-zoom="0.85" aria-label="Zoom out">−</button><button type="button" data-gallery-reset>Reset</button><button type="button" data-gallery-zoom="1.18" aria-label="Zoom in">+</button></div></div>';
+    threePanel.innerHTML='<div class="gallery-three-mount" data-gallery-three-mount aria-label="Interactive 3D result"></div><div class="gallery-three-controls"><div class="gallery-three-modes" role="group" aria-label="3D material"><button type="button" data-gallery-material="pbr" aria-pressed="true">Material</button><button type="button" data-gallery-material="albedo" aria-pressed="false">Albedo</button></div><span class="gallery-three-hint">Drag to rotate · scroll to zoom</span><div class="gallery-three-camera" role="group" aria-label="3D camera"><button type="button" data-gallery-zoom="0.85" aria-label="Zoom out">−</button><button type="button" data-gallery-reset>Reset</button><button type="button" data-gallery-zoom="1.18" aria-label="Zoom in">+</button></div></div>';
     content.append(threePanel);
     const lightRow=document.createElement('div');lightRow.className='gallery-light-controls';
     lightRow.innerHTML='<span class="gallery-light-label">Light</span><div class="gallery-light-options" role="group" aria-label="Display lighting"></div><span class="gallery-light-status" aria-live="polite"></span>';
@@ -197,7 +197,7 @@
       if(window.SupraGallery3D?.create)return Promise.resolve();
       if(viewerLibrary)return viewerLibrary;
       viewerLibrary=new Promise((resolve,reject)=>{
-        const script=document.createElement('script');script.src='gallery-viewer.bundle.js?v=hosting-108';script.async=true;
+        const script=document.createElement('script');script.src='gallery-viewer.bundle.js?v=110';script.async=true;
         const timeout=setTimeout(()=>finish(new Error('3D viewer loading timed out.')),20000);
         function finish(error){
           clearTimeout(timeout);script.onload=null;script.onerror=null;
@@ -274,17 +274,17 @@
     function protocol(){
       if(!current)return;
       if(mode==='3d'){
-        $('#gallery-description').textContent='Original model and PBR maps, with lighting selected per case. Albedo shows unlit surface color.';
+        $('#gallery-description').textContent='Interactive model with PBR materials and case-specific lighting. Albedo shows surface color without lighting.';
       }else if(mode==='orbit'){
         $('#gallery-description').textContent=`A ${current.arc||24}° orbit with case-specific lighting. The camera differs from the reference.`;
       }else if(current.scenic&&view==='full'){
         $('#gallery-description').textContent='One reference image; matched camera. The background appears only in the reference.';
       }else if(current.aligned){
-        $('#gallery-description').textContent=current.views===2?'Two reference images; front reference and result share a camera.':'One reference image · matched camera.';
+        $('#gallery-description').textContent=current.views===2?'Front and back input images; front reference and result share a camera.':'One reference image · matched camera.';
       }else if(current.benchmark){
         $('#gallery-description').textContent='One reference image and provided geometry. Orbit previews use a different camera.';
       }else{
-        $('#gallery-description').textContent=`Reference and result use different viewpoints and lighting. ${current.views===2?'This asset was generated from front and back references; the front reference is shown. ':''}`;
+        $('#gallery-description').textContent=`Reference and result use different viewpoints and lighting. ${current.views===2?'This asset was generated from front and back input images; the front reference is shown. ':''}`;
       }
     }
     async function renderMedia({initial=false}={}){
@@ -317,7 +317,9 @@
         };
         await transitionContent(change,!initial);
         if(token!==renderVersion||!dialog.open)return;
-        disposeViewer();
+        // Keep the current model while this dialog shows its images or film.
+        // The viewer renders on demand; changing case or closing releases it.
+        threeButton.disabled=viewerPhase==='loading';
         if(initial)window.SupraTransitions?.reveal(content);
         if(nextMode==='orbit'){if(allowed())startOrbit();else syncPlay();}
       }catch{

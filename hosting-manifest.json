@@ -1,8 +1,9 @@
 {
   "website": "https://supra-3d.github.io/supratex/",
   "hf_repo": "supra3d/supratex-web-assets",
-  "hf_revision": "e7de1fbbfaaa3cafcf2edbc02bf088734a3869cc",
-  "external_payloads": 55,
+  "hf_revision": "f34bd049fa7fa4491bfa6ef2d35ca2df2116610e",
+  "external_payloads": 73,
+  "external_format": "gzip-glb-v1",
   "files": [
     {
       "path": ".nojekyll",
@@ -11,8 +12,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1171,
-      "sha256": "8f462afac11da6fa1c1af4afe048ec68b8b47b26eae6aa9bfa2e0e1701e7dd1e"
+      "bytes": 1364,
+      "sha256": "c190586a14c35ed8992127756a4ab14704b2952b47c2c983e4bec1af870c5571"
     },
     {
       "path": "app.js",
@@ -20,14 +21,19 @@
       "sha256": "51d0c667a3a5f041f271eb2d37d94ea486d4aa99397308abb4520e5815a07943"
     },
     {
+      "path": "asset-binaries.js",
+      "bytes": 30543,
+      "sha256": "4341537771d8197b5087d7d31507ca22a0c663d8f2de4663f3eff59a3c6551c3"
+    },
+    {
       "path": "asset-hosting.js",
-      "bytes": 6629,
-      "sha256": "8742f80dab698386ab6e026b0a99ead90f47e9905ed312251c85af486fbfff72"
+      "bytes": 9131,
+      "sha256": "4504a6979862ae1cb2bcf1cc5a864ad80fc7e2994504d473cc6fc6ebd2871bc4"
     },
     {
       "path": "asset-loader.js",
-      "bytes": 3234,
-      "sha256": "50cc2f06518477bd50ff378b408d8a99b6cb7621824037017db6d71f76872ac1"
+      "bytes": 8555,
+      "sha256": "22021fc055cb603160a105bf16b21043fa0fbbdf8d5b914c9c95baa0f0071cd9"
     },
     {
       "path": "assets/3d/HDRI-LICENSE.txt",
@@ -70,6 +76,11 @@
       "sha256": "18dd722802ada087e9e70e6c264da6f7002447a03f45f1817d1c582b4356b928"
     },
     {
+      "path": "assets/competition/aligned/carved-mask-reference.webp",
+      "bytes": 692038,
+      "sha256": "a7ca3a9f8cb987c37722407907fd83bc41828f0fc7acf4983f7314da65847d18"
+    },
+    {
       "path": "assets/competition/aligned/cinema-reference.webp",
       "bytes": 1786832,
       "sha256": "6c2a5909b95d1813fd14555b30e769f0f537a84d2ed0535c60bd70270c765c33"
@@ -83,6 +94,16 @@
       "path": "assets/competition/aligned/guanyu-reference.webp",
       "bytes": 912136,
       "sha256": "36403cd79a579a778bd98af9ae4aa3e33579049714e3fc8eea0aee6ab659e104"
+    },
+    {
+      "path": "assets/competition/aligned/portrait-reference.webp",
+      "bytes": 889270,
+      "sha256": "25e10e11624c9fa5943f6ad6b3a849a3fd18b5fc0b06fc470a3b04320491e3c1"
+    },
+    {
+      "path": "assets/competition/aligned/streetwear-reference.webp",
+      "bytes": 331966,
+      "sha256": "81516ab376994cacdeb0680f8f9d8cf3bc95fc68ea70b3b49358f78d527f9f05"
     },
     {
       "path": "assets/competition/aligned/suitcase-reference.webp",
@@ -123,6 +144,246 @@
       "path": "assets/competition/lights/room.js",
       "bytes": 1510071,
       "sha256": "59800dc2fda156eccc90735f1ab9361ea2d561c97730149e05c53740857a8645"
+    },
+    {
+      "path": "assets/competition/previews/carved-mask-hi3d.webp",
+      "bytes": 171430,
+      "sha256": "9a7668b8ab7ba72b5e6700f0aa3feef5033bce56090e9e508798fb5d8487492f"
+    },
+    {
+      "path": "assets/competition/previews/carved-mask-hunyuan.webp",
+      "bytes": 165808,
+      "sha256": "75ca583ff82f21e02c4d34726026173543c70eef9b382f24c084f63818155f51"
+    },
+    {
+      "path": "assets/competition/previews/carved-mask-meshy.webp",
+      "bytes": 142532,
+      "sha256": "8905f09df1259c3a06f79f3551819527fd2e9df18905c2c986944359b6e1b4c6"
+    },
+    {
+      "path": "assets/competition/previews/carved-mask-rodin.webp",
+      "bytes": 212070,
+      "sha256": "3e886d5e8fafe4c0f43c54ddc0dd2aabd80c17ab2a29a80abd9f8ae9e227caba"
+    },
+    {
+      "path": "assets/competition/previews/carved-mask-supra_tex.webp",
+      "bytes": 173308,
+      "sha256": "348749b24989efeb141e3ea409ef4408eefeacf0b0625f286008f1e5a1584b26"
+    },
+    {
+      "path": "assets/competition/previews/carved-mask-tripo.webp",
+      "bytes": 185578,
+      "sha256": "f1b075b080100f5efc21695a2ea8111bdf8eb741bf6b70c5289c0c8850b7a24f"
+    },
+    {
+      "path": "assets/competition/previews/cinema-hi3d.webp",
+      "bytes": 383018,
+      "sha256": "cf4f20a3e0d585a9ccb9d7a2ef54287bd73eeceb854211a12bbe3426e1a682c6"
+    },
+    {
+      "path": "assets/competition/previews/cinema-hunyuan.webp",
+      "bytes": 417650,
+      "sha256": "0df623bbd5212759e18f4e943f43df8d2a13c37a7b1d8b990c61c7cacc518723"
+    },
+    {
+      "path": "assets/competition/previews/cinema-meshy.webp",
+      "bytes": 433250,
+      "sha256": "fc1fc3b29c5245080b9f7d6f08db7734909c9f6d063b9e720e4338a80407d70a"
+    },
+    {
+      "path": "assets/competition/previews/cinema-rodin.webp",
+      "bytes": 455730,
+      "sha256": "0497173f0b73a3f06a66ae9344cb45b3b979a55ffa348193d19041d5e4bb722d"
+    },
+    {
+      "path": "assets/competition/previews/cinema-supra_tex.webp",
+      "bytes": 356846,
+      "sha256": "db56905171d0564c17dc8d3ad75f4c5a7a90c48c0c2bb69b4b32ee0f7c79dc53"
+    },
+    {
+      "path": "assets/competition/previews/cinema-tripo.webp",
+      "bytes": 402590,
+      "sha256": "e682fc159dcc0df0ed6335b982ceaa3ddd9b085501b1e5e3f315f2c24d1c3fcd"
+    },
+    {
+      "path": "assets/competition/previews/fighter-hi3d.webp",
+      "bytes": 256504,
+      "sha256": "00adbb9f6ddc44ee4a2c1623dc0dbb60ea24981553dd4a3921930a74d4336574"
+    },
+    {
+      "path": "assets/competition/previews/fighter-hunyuan.webp",
+      "bytes": 205116,
+      "sha256": "dc6f99112a3f2359835c6227c5d5a5344d368c62be0b9a4c9a74545121e53471"
+    },
+    {
+      "path": "assets/competition/previews/fighter-meshy.webp",
+      "bytes": 200606,
+      "sha256": "42bf181f8927c8ec51a6c42c2a862dd9028d27992095e2ce05a3ea315ab47245"
+    },
+    {
+      "path": "assets/competition/previews/fighter-rodin.webp",
+      "bytes": 231306,
+      "sha256": "7b8b66d8f420bbc5cb061a789b204ade21958843a82cf32c6e8a964894f47c5d"
+    },
+    {
+      "path": "assets/competition/previews/fighter-supra_tex.webp",
+      "bytes": 191698,
+      "sha256": "dfc420e37c649116327bd7a02d89aaf3d7af21f969857108900225dc28d3f299"
+    },
+    {
+      "path": "assets/competition/previews/fighter-tripo.webp",
+      "bytes": 234348,
+      "sha256": "96998423df8f3e91fc258d64365d754fa8f24872cad0aa4d6bd1ab1119643c89"
+    },
+    {
+      "path": "assets/competition/previews/guanyu-hi3d.webp",
+      "bytes": 214682,
+      "sha256": "618a38aeefb90f070d5ef9f41ff0511628b61fd69e826fb2b9d2ab03d4fa2594"
+    },
+    {
+      "path": "assets/competition/previews/guanyu-hunyuan.webp",
+      "bytes": 217244,
+      "sha256": "a1f395eec8d2094c4aa61825dcbee4bd7e81b1786abf8a7b384945d42de2bce2"
+    },
+    {
+      "path": "assets/competition/previews/guanyu-meshy.webp",
+      "bytes": 190156,
+      "sha256": "fd685530cb05ff0ca2ded5fbc43b9fcf33d57f3a8742e6be25f265ef17542d4a"
+    },
+    {
+      "path": "assets/competition/previews/guanyu-rodin.webp",
+      "bytes": 234380,
+      "sha256": "fe3b0df7e9c644b2196b57af2a8fb0fb26fd305c1251962feceb68086e1f5e0c"
+    },
+    {
+      "path": "assets/competition/previews/guanyu-supra_tex.webp",
+      "bytes": 211254,
+      "sha256": "28bf6bf98e59a7b2516c9ddfa76fcef115003676873276d220b3d15ba734c38e"
+    },
+    {
+      "path": "assets/competition/previews/guanyu-tripo.webp",
+      "bytes": 232372,
+      "sha256": "c029967ef0f4662f42050fb292eedb3a0f3a80a521c786fbd747424b02c4f7cb"
+    },
+    {
+      "path": "assets/competition/previews/portrait-hi3d.webp",
+      "bytes": 148846,
+      "sha256": "cb925b1c5d4da2c7fe4cd91a8220c14e66c0fbcf566e7c935f10beeb46eb59c3"
+    },
+    {
+      "path": "assets/competition/previews/portrait-hunyuan.webp",
+      "bytes": 109028,
+      "sha256": "4a93fc00a9d95b0e4f799727fd93931194b92cdf01bf97ffc32e5a891871e873"
+    },
+    {
+      "path": "assets/competition/previews/portrait-meshy.webp",
+      "bytes": 107480,
+      "sha256": "57cf36f180639ba80b1276991dcdaf7620ee51c5446e2800603f25bc99a6a265"
+    },
+    {
+      "path": "assets/competition/previews/portrait-rodin.webp",
+      "bytes": 144724,
+      "sha256": "923a619e33ad6e0c7bfc7c83de85264608194445cfabf674b7946463d5379a1f"
+    },
+    {
+      "path": "assets/competition/previews/portrait-supra_tex.webp",
+      "bytes": 124422,
+      "sha256": "657a65a2be97388f39f38cae5ee1e4d9aa98acdc4741330c89117037265cfb85"
+    },
+    {
+      "path": "assets/competition/previews/portrait-tripo.webp",
+      "bytes": 119262,
+      "sha256": "3711b8750edee631e2a0cdf28056d0a5f38ee7be3358c54590c7c9e322584e08"
+    },
+    {
+      "path": "assets/competition/previews/streetwear-hi3d.webp",
+      "bytes": 88924,
+      "sha256": "2b61b8f14429aad31db0d09b63d0ef52d1b9a78eb331fe2a5edc256ec85c6dd6"
+    },
+    {
+      "path": "assets/competition/previews/streetwear-hunyuan.webp",
+      "bytes": 85096,
+      "sha256": "a8279000180bdc020b182314e2c4e0070fb81a2d43262dfd92c002e7d5c8a71e"
+    },
+    {
+      "path": "assets/competition/previews/streetwear-meshy.webp",
+      "bytes": 80660,
+      "sha256": "19e0c23e54fa3f59d4e8b3f471f9d4bc9634f72c16612582d94d6e4e1d3b165c"
+    },
+    {
+      "path": "assets/competition/previews/streetwear-rodin.webp",
+      "bytes": 99768,
+      "sha256": "a7559a83bbd23545cf18538792508caca7748e8fab8b9fe82baf3204baa564a9"
+    },
+    {
+      "path": "assets/competition/previews/streetwear-supra_tex.webp",
+      "bytes": 99546,
+      "sha256": "19e19d81bfcd78a886e0d1b9e5cf9d25fc1a75d6bf9a4e8d41781fd86a8738a8"
+    },
+    {
+      "path": "assets/competition/previews/streetwear-tripo.webp",
+      "bytes": 90892,
+      "sha256": "52a2d3eb98ef966bd961b84218ac125d74f11f7ece3d9c6b5d3fc63a5cea96d4"
+    },
+    {
+      "path": "assets/competition/previews/suitcase-hi3d.webp",
+      "bytes": 313618,
+      "sha256": "dda966a31d1a1b93ccf8d1e1baa77bc4e037480cc21c1ec0fc11a94ced3b7df9"
+    },
+    {
+      "path": "assets/competition/previews/suitcase-hunyuan.webp",
+      "bytes": 338502,
+      "sha256": "9d68aa8f0aea828b41ec140a0bf8ad16a83667ea5e5a8b5b6f0e443d4cbedc91"
+    },
+    {
+      "path": "assets/competition/previews/suitcase-meshy.webp",
+      "bytes": 319634,
+      "sha256": "c85dc16fc86385a7c243b50de612971e27dcf9ccade71274f03cc32230d4010c"
+    },
+    {
+      "path": "assets/competition/previews/suitcase-rodin.webp",
+      "bytes": 316204,
+      "sha256": "c918c3e968d254e3c1e59460ea2b88298266b83a07ffdbd807efdd7e294eaaf5"
+    },
+    {
+      "path": "assets/competition/previews/suitcase-supra_tex.webp",
+      "bytes": 312340,
+      "sha256": "55a41bd27874aea229f06643523dc3b4ff3aa199c209cd9a8b5cfd03b70f0886"
+    },
+    {
+      "path": "assets/competition/previews/suitcase-tripo.webp",
+      "bytes": 353818,
+      "sha256": "ba70567b98e0abf18fb6b547f8fb1781f37252e9b59ef8f74a05bbd86aeb1ae7"
+    },
+    {
+      "path": "assets/competition/previews/tonic-hi3d.webp",
+      "bytes": 146062,
+      "sha256": "16ba192cf42b53e1099c4f1a837299f7167a1d023095ea6e1e61e3c2568aa621"
+    },
+    {
+      "path": "assets/competition/previews/tonic-hunyuan.webp",
+      "bytes": 166972,
+      "sha256": "3638aa59f156005377769a47d4eb19e5c370681ae46efc0926ef6f3083a8ed4e"
+    },
+    {
+      "path": "assets/competition/previews/tonic-meshy.webp",
+      "bytes": 146148,
+      "sha256": "2b06081cd9f0761024adb680e7f9f15506f57b258454725e01a8d5fa6da01007"
+    },
+    {
+      "path": "assets/competition/previews/tonic-rodin.webp",
+      "bytes": 186138,
+      "sha256": "797db0102042eadb62cfdc1df145781c7c5191a8ef7592caba8a3b1f52c59b0d"
+    },
+    {
+      "path": "assets/competition/previews/tonic-supra_tex.webp",
+      "bytes": 168030,
+      "sha256": "ca14cf68940823a486ea6fed0af3d3712111c29ddf4443beb1789e13d3556b65"
+    },
+    {
+      "path": "assets/competition/previews/tonic-tripo.webp",
+      "bytes": 199582,
+      "sha256": "28e9942912472fd9ef1488aaeb4e876c59e8d8e012b969a1eb22ea28d0764533"
     },
     {
       "path": "assets/editing/base-back-left.webp",
@@ -1056,8 +1317,8 @@
     },
     {
       "path": "comparison-compact-103.css",
-      "bytes": 10928,
-      "sha256": "b43ea04ccad65ac6080e88eea2f65b71f21e3ae39d7ee0edb06da537ed56df14"
+      "bytes": 11061,
+      "sha256": "0d493ebd661c8ad4a87db46b17239b57397a0e2e317f96fe1c2cea1fbf188d76"
     },
     {
       "path": "comparison-flow-99.css",
@@ -1066,13 +1327,13 @@
     },
     {
       "path": "comparison-reveal-105.css",
-      "bytes": 3019,
-      "sha256": "bd3905d6b8d9aad92f1d71423d66fdcde359f0ec15cdc5b70ecc5a6be3710728"
+      "bytes": 4980,
+      "sha256": "9796b0c39fb995e0a16b8fa41d73a047c6849235312bbe9fca6ed4088bf735ba"
     },
     {
       "path": "comparison-reveal-105.js",
-      "bytes": 5665,
-      "sha256": "16fd88ae69adcd87fcc739495563c432e6fc81e3dc7313b82face75c092a4645"
+      "bytes": 8531,
+      "sha256": "fab7d978df8c14d0106c26d5797b2af90435e717bbd1664dc064833606eff8b3"
     },
     {
       "path": "competition-film.js",
@@ -1081,13 +1342,13 @@
     },
     {
       "path": "competition-models.js",
-      "bytes": 8429,
-      "sha256": "5f67858ef5d6d1fc5367a08567b770c6de6192f919b321b43c2ff458442c24d7"
+      "bytes": 23354,
+      "sha256": "26c071e38909b3bd0d5d19b9b5c3f0103d794780fc0a73e1b8f66ae1a29cb57f"
     },
     {
       "path": "competition-viewer.bundle.js",
-      "bytes": 616064,
-      "sha256": "aac3a3d0684f380018f39e426e7ca3fe7e86d1cd2e6db7933913e59a143c6805"
+      "bytes": 615655,
+      "sha256": "a2d63aabca769782705b673e0f5c4a53f03e7008c90b05966e4c7c1ffd609c3b"
     },
     {
       "path": "competition-workbench.css",
@@ -1096,8 +1357,8 @@
     },
     {
       "path": "competition-workbench.js",
-      "bytes": 24362,
-      "sha256": "7efa0d901bdd210d0ae35dd11d1e4842612c783d94cc7fd12f65f24b471175fd"
+      "bytes": 25974,
+      "sha256": "198045d49d2e70b0fe0b513971c97fc0cbb0f69188b75eea79fff575cc7b2ef2"
     },
     {
       "path": "competition.css",
@@ -1106,8 +1367,8 @@
     },
     {
       "path": "competition.js",
-      "bytes": 8714,
-      "sha256": "69706cb83f22df034dc7111765f4c560faabe39654fb13b0d4acf4d1d699c213"
+      "bytes": 8696,
+      "sha256": "e57280855b37e9d3864b1daed7f2521ec55871f4d94e72edaa5cdbb9e4dfd34c"
     },
     {
       "path": "control-compact.css",
@@ -1116,8 +1377,8 @@
     },
     {
       "path": "control-viewer.bundle.js",
-      "bytes": 596400,
-      "sha256": "93677f418aea1ab242e9eef348848e098a2e05acfade8866159c05e706668ac7"
+      "bytes": 596058,
+      "sha256": "544d4567b2c405147727ebcfaad3fbac47afc5733b22144256e47bfe5508432d"
     },
     {
       "path": "control.css",
@@ -1126,8 +1387,8 @@
     },
     {
       "path": "control.js",
-      "bytes": 11332,
-      "sha256": "50e36b7a8168679d722e418de3e0dd84dafdacaced1b3ba811c232349782fc73"
+      "bytes": 12015,
+      "sha256": "c6db29839abc4e22ce009c73be944d45beb63f7997ec261794af985aeff8b060"
     },
     {
       "path": "desktop-layout-polish.css",
@@ -1186,8 +1447,8 @@
     },
     {
       "path": "gallery-viewer.bundle.js",
-      "bytes": 608664,
-      "sha256": "6e3ca6f3e2c38d5900211e0039033abd8761552a6d93a373b9f8d53857e858d3"
+      "bytes": 608039,
+      "sha256": "5bbbdb58f4298c6ab6d3c1e3ddb86608be9c8211b8f6ae74f390e86cfe7384ae"
     },
     {
       "path": "gallery.css",
@@ -1196,8 +1457,8 @@
     },
     {
       "path": "gallery.js",
-      "bytes": 34575,
-      "sha256": "2b582174ac4a18a96e2de8a403914defeb32422590be1daf85e71937ed867046"
+      "bytes": 34781,
+      "sha256": "2d5b94b420aa9b2ed1620fe1d1bd089e15ec5ff8b5786cf1acf16b3532fef9f1"
     },
     {
       "path": "hero-controls.css",
@@ -1236,8 +1497,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 84666,
-      "sha256": "5e044f7ba743b431ae617d2d6d743d5d7e8ced1f3ce9cbe7711915b81e55608a"
+      "bytes": 85733,
+      "sha256": "230fd1a0d87d5453b69eb636f4e37bd67e51ef22a1b793a1dc8f0cc4d7e668e4"
     },
     {
       "path": "interaction-74.css",
@@ -1281,8 +1542,8 @@
     },
     {
       "path": "observatory.bundle.js",
-      "bytes": 627664,
-      "sha256": "b0f74a6e6cfd6c00d438dc603e9b7c9a2a90be59e5215b9f712fbb0cb1496b20"
+      "bytes": 628036,
+      "sha256": "89001a01991d2aacd2658d6e0522b39e3feac51becac726e477d252e4baa99fb"
     },
     {
       "path": "observatory.css",
@@ -1293,6 +1554,11 @@
       "path": "preference.css",
       "bytes": 8381,
       "sha256": "4c3f3c308e068b554565ee61655a5d982f2e07fdaae8af0c0ecdde0ad6b7910e"
+    },
+    {
+      "path": "readability-111.css",
+      "bytes": 8659,
+      "sha256": "1b03142f798afdf4fc28f02e1f94db4ac0c43d98a04f7533e13dae853e1f5b5c"
     },
     {
       "path": "readability-research.css",
@@ -1336,8 +1602,8 @@
     },
     {
       "path": "styles.css",
-      "bytes": 21018,
-      "sha256": "cafca8c3ba22cdbd6bf0e2348a05d4c1f4a4caacc70be449dee8d2a8c76a6249"
+      "bytes": 21058,
+      "sha256": "e41a35afb5fddead4e572e5a0cde3083cf46af0149a179a1a18d7e6ab24b0777"
     },
     {
       "path": "transitions.js",

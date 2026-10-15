@@ -9,9 +9,12 @@
 
 GitHub Pages serves this repository directly from the `main` branch root.
 HTML, application scripts, images, videos, fonts, and small environment maps
-remain here. Only the 55 large model payloads are fetched from Hugging Face.
+remain here. The 73 large model payloads are fetched from Hugging Face.
 `asset-hosting.js` pins their repository revision and maps their model IDs.
-The payloads preserve the original geometry and textures without recompression.
+`asset-binaries.js` contains the matching binary model metadata.
+This release uses gzip-compressed GLB binaries.
+Binary delivery removes the Base64 wrapper without changing the model bytes.
+The new comparison cases use texture maps capped at 4K; geometry and UVs are preserved.
 
 For a local preview of this published checkout, use a static HTTP server and
 append `?assetSource=remote` to the URL so the viewer fetches the hosted models.

@@ -12,7 +12,8 @@
   <meta property="og:description" content="Reference-aligned 3D textures and relightable materials, built entirely on data from the open-source community.">
   <meta property="og:image" content="assets/hero-aircraft.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="assets/fonts/inter/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=112">
   <link rel="stylesheet" href="experience.css">
   <link rel="stylesheet" href="emergence.css">
   <link rel="stylesheet" href="observatory.css?v=101">
@@ -53,23 +54,25 @@
   <link rel="stylesheet" href="mobile-hero-102.css?v=resources-107">
   <link rel="stylesheet" href="mobile-comparison-102.css?v=102">
   <link rel="stylesheet" href="mobile-sections-102.css?v=102">
-  <link rel="stylesheet" href="comparison-compact-103.css?v=104">
-  <link rel="stylesheet" href="comparison-reveal-105.css?v=105">
-  <script defer src="asset-hosting.js?v=108"></script>
-<script defer src="asset-loader.js?v=108"></script>
+  <link rel="stylesheet" href="comparison-compact-103.css?v=113">
+  <link rel="stylesheet" href="comparison-reveal-105.css?v=110">
+  <link rel="stylesheet" href="readability-111.css?v=119">
+  <script defer src="asset-hosting.js?v=120"></script>
+<script defer src="asset-binaries.js?v=120"></script>
+<script defer src="asset-loader.js?v=120"></script>
 <script defer src="transitions.js"></script>
   <script defer src="app.js?v=interaction-74"></script>
   <script defer src="experience.js?v=film-83"></script>
   <script defer src="hero-motion.js"></script>
   <script defer src="hero-video-83.js?v=99"></script>
-  <script defer src="observatory.bundle.js?v=hosting-108"></script>
+  <script defer src="observatory.bundle.js?v=110"></script>
   <script defer src="editorial.js?v=fidelity-39"></script>
-  <script defer src="control.js?v=hosting-108"></script>
-  <script defer src="gallery.js?v=hosting-108"></script>
-  <script defer src="competition-models.js?v=fighter-75"></script>
-  <script defer src="competition.js?v=copy-50"></script>
-  <script defer src="comparison-reveal-105.js?v=105"></script>
-  <script defer src="competition-workbench.js?v=hosting-108"></script>
+  <script defer src="control.js?v=110"></script>
+  <script defer src="gallery.js?v=117"></script>
+  <script defer src="competition-models.js?v=115"></script>
+  <script defer src="competition.js?v=copy-119"></script>
+  <script defer src="comparison-reveal-105.js?v=110"></script>
+  <script defer src="competition-workbench.js?v=115"></script>
   <script defer src="competition-film.js?v=99"></script>
   <script defer src="v5.js"></script>
   <script defer src="citation.js?v=citation-44"></script>
@@ -83,7 +86,7 @@
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="SUPRA-Tex home"><span class="brand-mark" aria-hidden="true"><img src="assets/brand/supra-tex-mark.svg" alt="" width="36" height="36"></span>SUPRA<span class="wordmark-light">-Tex</span></a>
     <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="main-navigation" hidden><span>Menu</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 14h14"/></svg></button>
-    <nav id="main-navigation" aria-label="Main navigation"><a href="#competition">Comparisons</a><a href="#human-preference">Human preference</a><a href="#embodied">Embodied</a><a href="#materials">Materials</a><a href="#gallery">Gallery</a><a href="#method">Research</a><a href="#citation">Cite</a></nav>
+    <nav id="main-navigation" aria-label="Main navigation"><a href="#competition">Comparisons</a><a href="#human-preference">Human preference</a><a href="#embodied">Real2Sim</a><a href="#materials">Materials</a><a href="#gallery">Gallery</a><a href="#method">Research</a><a href="#citation">Cite</a></nav>
   </header>
 
   <main>
@@ -92,8 +95,8 @@
       <div class="hero-content">
         <div class="hero-intro">
         <h1 id="paper-title" class="reveal supra-title" aria-label="SUPRA-Tex: 3D Generation with Super-Aligned Texture"><span class="title-project">SUPRA-Tex</span><span class="title-research"><span>3D Generation with </span><span>Super-Aligned Texture</span></span></h1>
-        <p class="hero-description reveal"><strong class="hero-promise">Built entirely on<br> open-source data.</strong><em class="hero-invitation">let the image take flight.</em></p>
-        <div class="hero-actions reveal"><a class="button hero-competing-button" href="#competition">Commercial comparisons <span aria-hidden="true">↗</span></a><a class="button button-light hero-embodied-button" href="#embodied">Embodied applications <span aria-hidden="true">↗</span></a><a class="button button-light hero-gallery-button" href="#gallery">Gallery <span aria-hidden="true">↗</span></a></div>
+        <p class="hero-description reveal"><strong class="hero-promise">Built entirely on<br> open-source data.</strong><em class="hero-invitation">Let the image take flight.</em></p>
+        <div class="hero-actions reveal"><a class="button hero-competing-button" href="#competition">Commercial comparisons <span aria-hidden="true">↗</span></a><a class="button button-light hero-embodied-button" href="#embodied">Real2Sim <span aria-hidden="true">↗</span></a><a class="button button-light hero-gallery-button" href="#gallery">Gallery <span aria-hidden="true">↗</span></a></div>
         </div>
     <section id="paper" class="hero-paper" aria-labelledby="paper-resources-title" tabindex="-1">
       <div class="paper-identity">
@@ -111,7 +114,7 @@
       </div>
       <ol class="paper-affiliations" aria-label="Author affiliations">
           <li><sup>1</sup><span>Huawei Inc.</span></li>
-        <li><sup>2</sup><span>Shanghai Jiaotong University</span></li>
+        <li><sup>2</sup><span>Shanghai Jiao Tong University</span></li>
         <li><sup>3</sup><span>Huazhong University of Science and Technology</span></li>
       </ol>
       <div class="paper-resources" role="group" aria-label="Research resources">
@@ -156,15 +159,17 @@
   <div class="comp-kicker">01 / COMMERCIAL COMPARISONS</div>
   <div class="comp-heading chapter-heading" id="comparison-3d" tabindex="-1">
     <h2 id="competition-title">Competitive with<br>commercial models.</h2>
-    <p class="chapter-caption"><span>Trained entirely on public data.</span><span>Compare alignment and fine detail in 3D.</span></p>
+    <p class="chapter-caption"><span>Trained entirely on open-source data.</span><span>Compare alignment and fine detail in 3D.</span></p>
   </div>
 
   <div class="comp-workbench" data-comp-workbench data-mode="3d" data-comp-case="fighter" aria-label="Diagonal 3D comparison">
     <div class="comp-case-tabs" role="group" aria-label="Comparison case">
       <button type="button" data-competition-case="fighter" aria-pressed="true"><img src="assets/competition/aligned/fighter-reference.webp" alt="" width="80" height="80" loading="lazy"><span class="comp-case-name">Fighter</span></button>
-      <button type="button" data-competition-case="cinema" aria-pressed="false"><img src="assets/competition/aligned/cinema-reference.webp" alt="" width="80" height="80" loading="lazy"><span class="comp-case-name">Cinema signage</span></button>
+      <button type="button" data-competition-case="portrait" aria-pressed="false"><img src="assets/competition/aligned/portrait-reference.webp" alt="" width="80" height="80" loading="lazy"><span class="comp-case-name">Monochrome portrait</span></button>
+      <button type="button" data-competition-case="carved-mask" aria-pressed="false"><img src="assets/competition/aligned/carved-mask-reference.webp" alt="" width="80" height="80" loading="lazy"><span class="comp-case-name">Carved mask</span></button>
       <button type="button" data-competition-case="tonic" aria-pressed="false"><img src="assets/competition/aligned/tonic-reference.webp" alt="" width="80" height="80" loading="lazy"><span class="comp-case-name">Bottle label</span></button>
-      <button type="button" data-competition-case="suitcase" aria-pressed="false"><img src="assets/competition/aligned/suitcase-reference.webp" alt="" width="80" height="80" loading="lazy"><span class="comp-case-name">Vintage suitcase</span></button>
+      <button type="button" data-competition-case="cinema" aria-pressed="false"><img src="assets/competition/aligned/cinema-reference.webp" alt="" width="80" height="80" loading="lazy"><span class="comp-case-name">Cinema signage</span></button>
+      <button type="button" data-competition-case="streetwear" aria-pressed="false"><img src="assets/competition/aligned/streetwear-reference.webp" alt="" width="80" height="80" loading="lazy"><span class="comp-case-name">Streetwear portrait</span></button>
       <button type="button" data-competition-case="guanyu" aria-pressed="false"><img src="assets/competition/aligned/guanyu-reference.webp" alt="" width="80" height="80" loading="lazy"><span class="comp-case-name">Guan Yu</span></button>
     </div>
         <div class="comp-system-rail" role="group" aria-label="Commercial method"><span class="comp-system-label">COMPARE WITH</span>
@@ -191,8 +196,8 @@
         <div class="comp-workbench-strip" data-comp-tools aria-label="Comparison controls">
           <div class="comp-camera-controls"><div role="group" aria-label="Shared view"><button type="button" data-comp-view="front" aria-pressed="true">Front</button><button type="button" data-comp-view="back" aria-pressed="false">Back</button><button type="button" data-comp-reset>Reset</button></div><div role="group" aria-label="Zoom both models"><button type="button" data-comp-zoom="0.88" aria-label="Zoom out">−</button><button type="button" data-comp-zoom="1.13" aria-label="Zoom in">+</button></div></div>
           <div class="comp-display-controls">
-            <label class="comp-select-control"><span>Surface</span><select data-comp-surface-select aria-label="Surface"><option value="pbr">Material</option><option value="albedo">Base color</option></select></label>
-            <label class="comp-select-control"><span>Light</span><select data-comp-light-select aria-label="Light"><option value="hall" data-comp-light="hall">Gallery</option><option value="room" data-comp-light="room" selected>Window</option><option value="neutral" data-comp-light="neutral">Neutral</option><option value="product" data-comp-light="product">Studio</option></select></label>
+            <label class="comp-select-control"><span>Surface</span><select data-comp-surface-select aria-label="Surface"><option value="pbr">Material</option><option value="albedo">Albedo</option></select></label>
+            <label class="comp-select-control"><span>Light</span><select data-comp-light-select aria-label="Light"><option value="hall" data-comp-light="hall" selected>Gallery</option><option value="room" data-comp-light="room">Window</option><option value="neutral" data-comp-light="neutral">Neutral</option><option value="product" data-comp-light="product">Studio</option></select></label>
           </div>
         </div>
       </div>
@@ -238,8 +243,8 @@
     <div class="comp-study-intro">
       <div class="comp-study-kicker">02 / HUMAN PREFERENCE</div>
       <h3>Preferred,<br>head to head.</h3>
-      <p class="comp-study-summary" id="comp-study-summary" data-competition-chart-note aria-live="polite" aria-atomic="true">Preferred for visual quality in all five commercial comparisons.</p>
-      <div class="comp-study-scale"><div><strong>45</strong><span>real &amp; synthetic inputs</span></div><div><strong>512</strong><span>paired judgments<br>across all comparisons</span></div></div>
+      <p class="comp-study-summary" id="comp-study-summary" data-competition-chart-note aria-live="polite" aria-atomic="true">Preferred for visual quality in our five comparisons.</p>
+      <div class="comp-study-scale"><div><strong>45</strong><span>real &amp; synthetic inputs</span></div><div><strong>512</strong><span>paired evaluations</span></div></div>
       <a class="comp-study-link" href="#evidence-tab-human">View full study <span aria-hidden="true">↗</span></a>
     </div>
     <div class="comp-study-data">
@@ -251,29 +256,29 @@
       <div class="comp-chart" id="competition-chart" role="tabpanel" aria-labelledby="competition-metric-quality" aria-describedby="comp-study-summary" tabindex="0">
         <div class="comp-chart-key"><span><i aria-hidden="true"></i>SUPRA-Tex</span><span><i class="preference-rival-key" aria-hidden="true"></i>Selected system</span></div>
         <div class="preference-explorer">
-          <figure class="preference-dial" id="preference-dial" role="img" aria-label="Visual quality: 84.8% preferred SUPRA-Tex; 15.2% preferred Hunyuan3D 3.1.">
+          <figure class="preference-dial" id="preference-dial" role="img" aria-label="Visual quality, non-tied votes: 84.8% preferred SUPRA-Tex; 15.2% preferred Hunyuan3D 3.1.">
             <div class="preference-ring" aria-hidden="true">
               <svg viewBox="0 0 200 200"><circle class="preference-track" cx="100" cy="100" r="87"/><circle class="preference-inner" cx="100" cy="100" r="72"/><circle class="preference-arc" cx="100" cy="100" r="87" pathLength="100" stroke-dasharray="84.8 100"/><path class="preference-tick" d="M100 8v10M100 182v10"/></svg>
-              <div class="preference-center"><strong data-preference-value>84.8%</strong><span>prefer SUPRA-Tex</span></div>
+              <div class="preference-center"><strong data-preference-value>84.8%</strong><span>preferred SUPRA-Tex</span></div>
             </div>
             <figcaption aria-hidden="true"><strong data-preference-rival-value>15.2%</strong> preferred<br><span data-preference-rival>Hunyuan3D 3.1</span></figcaption>
           </figure>
           <div class="preference-comparisons">
             <div class="preference-list-head"><span>Comparison</span><span>Preference</span></div>
             <ul class="preference-list" aria-label="Compare human preference against each system">
-              <li><button class="preference-choice" type="button" data-preference-method="hunyuan" aria-pressed="true" aria-controls="preference-dial" style="--comp-score:84.8%" aria-label="Compared with Hunyuan3D 3.1: SUPRA-Tex preferred in 84.8% of decided visual-quality votes.">
+              <li><button class="preference-choice" type="button" data-preference-method="hunyuan" aria-pressed="true" aria-controls="preference-dial" style="--comp-score:84.8%" aria-label="Compared with Hunyuan3D 3.1: SUPRA-Tex preferred in 84.8% of non-tied visual-quality votes.">
                 <span class="preference-choice-name">Hunyuan3D 3.1</span><strong class="comp-supra-value">84.8%</strong><span class="preference-choice-arrow" aria-hidden="true">↗</span><span class="preference-mini-track" aria-hidden="true"></span>
               </button></li>
-              <li><button class="preference-choice" type="button" data-preference-method="rodin" aria-pressed="false" aria-controls="preference-dial" style="--comp-score:75.5%" aria-label="Compared with Rodin 2.5: SUPRA-Tex preferred in 75.5% of decided visual-quality votes.">
+              <li><button class="preference-choice" type="button" data-preference-method="rodin" aria-pressed="false" aria-controls="preference-dial" style="--comp-score:75.5%" aria-label="Compared with Rodin 2.5: SUPRA-Tex preferred in 75.5% of non-tied visual-quality votes.">
                 <span class="preference-choice-name">Rodin 2.5</span><strong class="comp-supra-value">75.5%</strong><span class="preference-choice-arrow" aria-hidden="true">↗</span><span class="preference-mini-track" aria-hidden="true"></span>
               </button></li>
-              <li><button class="preference-choice" type="button" data-preference-method="tripo" aria-pressed="false" aria-controls="preference-dial" style="--comp-score:67.8%" aria-label="Compared with Tripo H3.1: SUPRA-Tex preferred in 67.8% of decided visual-quality votes.">
+              <li><button class="preference-choice" type="button" data-preference-method="tripo" aria-pressed="false" aria-controls="preference-dial" style="--comp-score:67.8%" aria-label="Compared with Tripo H3.1: SUPRA-Tex preferred in 67.8% of non-tied visual-quality votes.">
                 <span class="preference-choice-name">Tripo H3.1</span><strong class="comp-supra-value">67.8%</strong><span class="preference-choice-arrow" aria-hidden="true">↗</span><span class="preference-mini-track" aria-hidden="true"></span>
               </button></li>
-              <li><button class="preference-choice" type="button" data-preference-method="meshy" aria-pressed="false" aria-controls="preference-dial" style="--comp-score:57.6%" aria-label="Compared with Meshy 7.1: SUPRA-Tex preferred in 57.6% of decided visual-quality votes.">
+              <li><button class="preference-choice" type="button" data-preference-method="meshy" aria-pressed="false" aria-controls="preference-dial" style="--comp-score:57.6%" aria-label="Compared with Meshy 7.1: SUPRA-Tex preferred in 57.6% of non-tied visual-quality votes.">
                 <span class="preference-choice-name">Meshy 7.1</span><strong class="comp-supra-value">57.6%</strong><span class="preference-choice-arrow" aria-hidden="true">↗</span><span class="preference-mini-track" aria-hidden="true"></span>
               </button></li>
-              <li><button class="preference-choice" type="button" data-preference-method="hi3d" aria-pressed="false" aria-controls="preference-dial" style="--comp-score:51.1%" aria-label="Compared with Hi3D 3.0: SUPRA-Tex preferred in 51.1% of decided visual-quality votes.">
+              <li><button class="preference-choice" type="button" data-preference-method="hi3d" aria-pressed="false" aria-controls="preference-dial" style="--comp-score:51.1%" aria-label="Compared with Hi3D 3.0: SUPRA-Tex preferred in 51.1% of non-tied visual-quality votes.">
                 <span class="preference-choice-name">Hi3D 3.0</span><strong class="comp-supra-value">51.1%</strong><span class="preference-choice-arrow" aria-hidden="true">↗</span><span class="preference-mini-track" aria-hidden="true"></span>
               </button></li>
             </ul>
@@ -285,10 +290,10 @@
 </section>
 
     <section id="embodied" class="embodied-section section-pad" aria-labelledby="embodied-heading">
-      <div class="section-index"><span>03</span> EMBODIED APPLICATIONS</div>
+      <div class="section-index"><span>03</span> REAL2SIM</div>
       <div class="embodied-heading chapter-heading">
-        <h2 id="embodied-heading">Real <span class="soft-gold">to Sim.</span></h2>
-        <p class="chapter-caption">Turn a single image into a 3D scene for robot interaction and relighting.</p>
+        <h2 id="embodied-heading">Real<span class="soft-gold">2Sim.</span></h2>
+        <p class="chapter-caption">Explore a 3D scene built from one image, with simulated robot interaction and relighting.</p>
       </div>
       <div class="embodied-workspace">
         <div class="embodied-player" data-embodied-player>
@@ -362,7 +367,7 @@
 <button class="asset-choice" data-asset="clamp" aria-pressed="false" title="夹持铁钳"><img src="assets/reference-clamp.png" alt="" loading="lazy"><span class="asset-choice-name">Mechanical clamp</span><span class="asset-arrow" aria-hidden="true">↗</span></button>
         </div>
         </div>
-        <div class="observatory-context"><p id="lab-asset-note">One reference image · provided geometry · PBR materials</p><details id="demo-notes" class="demo-notes"><summary>Demonstration conditions <span aria-hidden="true">+</span></summary><p>Showcases are separate from the benchmarks. The aircraft includes locally refined albedo and image-aligned postprocessing. Bottle and cinema: two reference views; the seven material examples: one.</p></details><button type="button" class="observatory-film-link" data-film="collection">Watch the collection film <span aria-hidden="true">↗</span></button></div>
+        <div class="observatory-context"><p id="lab-asset-note">One reference image · provided geometry · PBR materials</p><details id="demo-notes" class="demo-notes"><summary>Demonstration conditions <span aria-hidden="true">+</span></summary><p>These demonstrations are separate from the benchmark evaluations. The aircraft includes locally refined albedo and image-aligned postprocessing. In the interactive commercial comparisons, SUPRA-Tex uses one reference image for the aircraft and adds a synthesized back view for the other six cases; commercial systems use the reference image only. The seven material examples use one reference image and provided geometry.</p></details><button type="button" class="observatory-film-link" data-film="collection">Watch the collection film <span aria-hidden="true">↗</span></button></div>
         <div class="observatory-foot"><span id="lab-status" role="status">Loading 3D model…</span><button id="lab-retry" type="button" hidden>Retry materials <span aria-hidden="true">↻</span></button></div>
       </div>
     </section>
@@ -370,13 +375,13 @@
   <div class="section-index"><span>06</span> IMAGE-BASED CONTROL</div>
   <div class="control-heading chapter-heading">
     <h2 id="control-title">Make it yours.</h2>
-    <p class="chapter-caption">Choose a back-view image, then inspect the generated texture from three angles.</p>
+    <p class="chapter-caption">Choose a back-view design, then inspect the corresponding result from three angles.</p>
   </div>
   <div class="control-workspace">
     <figure class="control-reference">
       <figcaption class="control-label"><span>FRONT REFERENCE</span><span class="control-fixed-label">FIXED</span></figcaption>
       <div class="control-reference-image"><img src="assets/editing/front.webp" alt="Fixed front reference: a blue-and-white porcelain plate with a floral pattern" width="800" height="800" loading="lazy" decoding="async"></div>
-      <p>Front reference and source shape stay fixed.</p>
+      <p>The front reference and geometry stay fixed.</p>
       <span class="control-connector" aria-hidden="true">→</span>
     </figure>
     <div class="control-editor">
@@ -400,7 +405,7 @@
       <p class="control-live-message" role="status" aria-live="polite" aria-atomic="true" data-control-status></p>
     </div>
   </div>
-  <p class="control-note">Synthesized back-view images · supplied meshes with albedo reprojection.</p>
+  <p class="control-note">Synthesized back-view designs reprojected onto the supplied meshes as albedo.</p>
   <noscript><p class="control-note">Enable JavaScript to switch between designs and view angles. The crane design is shown above.</p></noscript>
 
   <dialog class="control-3d-dialog" data-control-dialog aria-labelledby="control-3d-title" aria-describedby="control-3d-note">
@@ -408,7 +413,7 @@
     <div class="control-3d-designs" role="group" aria-label="Choose a live 3D back design"><button type="button" data-control-3d-design="base" aria-pressed="false">Base</button><button type="button" data-control-3d-design="crane" aria-pressed="true">Crane &amp; peonies</button><button type="button" data-control-3d-design="geometric" aria-pressed="false">Geometric</button><button type="button" data-control-3d-design="koi" aria-pressed="false">Koi &amp; waves</button></div>
     <div class="control-3d-stage"><div data-control-3d-mount tabindex="0" role="group" aria-label="Interactive plate. Drag or use arrow keys to rotate. Pinch, scroll or use plus and minus to zoom." aria-busy="true"></div><p class="control-3d-loading" aria-hidden="true">Loading 3D model…</p><span class="control-3d-gesture" aria-hidden="true">Drag to rotate · scroll or pinch to zoom</span></div>
     <div class="control-3d-tools"><div role="group" aria-label="View presets"><button type="button" data-control-3d-view="front">Front</button><button type="button" data-control-3d-view="back">Back</button><button type="button" data-control-3d-reset>Reset ↺</button></div><div role="group" aria-label="Zoom"><button type="button" data-control-3d-zoom="1.13" aria-label="Zoom out">−</button><button type="button" data-control-3d-zoom="0.88" aria-label="Zoom in">+</button></div></div>
-    <div class="control-3d-footer"><p data-control-3d-status role="status" aria-live="polite"></p><p id="control-3d-note">Supplied refined meshes with albedo reprojection and live PBR lighting.</p></div>
+    <div class="control-3d-footer"><p data-control-3d-status role="status" aria-live="polite"></p><p id="control-3d-note">The supplied meshes use reprojected albedo with interactive PBR lighting.</p></div>
   </dialog>
 </section>
 
@@ -485,7 +490,7 @@
         <div class="step-number">01<span>ESTIMATE</span></div>
         <div class="method-picture"><img src="assets/research/material-estimate.webp" width="640" height="640" loading="lazy" alt="Estimated albedo of the reference mug"></div>
         <h3>Separate material from light.</h3>
-        <p>Use 2D generative priors to estimate albedo, metallic and roughness maps, separated from lighting.</p>
+        <p>Use 2D generative priors to estimate albedo, metallic and roughness maps from the reference image.</p>
       </article>
       <article class="reveal">
         <div class="step-number">02<span>ALIGN</span></div>
@@ -508,7 +513,7 @@
   <div class="section-index reveal"><span>09</span> MEASURED FIDELITY</div>
   <div class="section-heading chapter-heading reveal">
     <h2 id="evidence-heading">Same geometry.<br>Higher fidelity.</h2>
-    <p class="chapter-caption">SUPRA-Tex reproduces the ground-truth appearance more closely on both benchmarks, compared with Pixal3D*.</p>
+    <p class="chapter-caption">SUPRA-Tex achieves lower perceptual error than Pixal3D* on both benchmarks, with geometry held fixed within each comparison.</p>
   </div>
   <div class="fidelity-overview reveal" aria-label="Two controlled tests of texture fidelity">
     <div class="fidelity-comparison-key"><p><span>Compared on the same mesh</span> Pixal3D* <span class="fidelity-key-arrow" aria-hidden="true">→</span> <strong>SUPRA-Tex</strong></p><span>LPIPS measures perceptual error · lower is better</span></div>
@@ -531,7 +536,7 @@
         <button type="button" class="fidelity-results-link" data-evidence-open="given">Full benchmark <span aria-hidden="true">↗</span></button>
       </article>
       <article class="fidelity-finding" aria-labelledby="fidelity-end-title">
-        <header><div class="fidelity-finding-index">02 / PREDICTED GEOMETRY</div><h3 id="fidelity-end-title">The gain carries through.</h3><p>One image. A shared predicted mesh.<br>End-to-end LPIPS evaluated across 4 views.</p></header>
+        <header><div class="fidelity-finding-index">02 / PREDICTED GEOMETRY</div><h3 id="fidelity-end-title">Lower error on predicted meshes.</h3><p>One image. A shared predicted mesh.<br>End-to-end LPIPS evaluated across 4 views.</p></header>
         <div class="fidelity-scores" aria-label="End-to-end LPIPS results">
           <div class="fidelity-dataset">
             <div class="fidelity-dataset-name">DTC-Tex<small>100 assets</small></div>
@@ -548,7 +553,7 @@
         <button type="button" class="fidelity-results-link" data-evidence-open="end">Full benchmark <span aria-hidden="true">↗</span></button>
       </article>
     </div>
-    <p class="fidelity-footnote">* Pixal3D is the open-source TRELLIS.2-based variant used in this study. Given-geometry results use SUPRA-Tex‡ with Qwen-Image-2.1 for 2D material estimation. End-to-end results use the original configuration. Each reduction is relative to its own baseline; the two tests use separate scoring protocols.</p>
+    <p class="fidelity-footnote">* Pixal3D is the open-source TRELLIS.2-based variant used in this study. Given-geometry highlights use SUPRA-Tex‡ with Qwen-Image-2.1 for 2D material estimation.</p>
   </div>
   <div class="fidelity-film">
     <button class="fidelity-film-link" type="button" data-film="lettering" aria-label="Watch the 30-second mug comparison across eleven methods" aria-haspopup="dialog" aria-controls="film-dialog">
@@ -579,20 +584,20 @@
     </details>
   </div>
   <div id="evidence-panel-human" class="evidence-panel" role="tabpanel" aria-labelledby="evidence-tab-human" data-evidence-panel="human" tabindex="0" hidden>
-    <div class="evidence-panel-intro"><h3>SUPRA-Tex, preferred.</h3><p>51.1–84.8% of non-tied visual-quality votes across five commercial comparisons.</p></div>
+    <div class="evidence-panel-intro"><h3>Human preference results.</h3><p>51.1–84.8% of non-tied visual-quality votes across five commercial comparisons.</p></div>
     <div class="research-study-meta"><span>45 real and synthetic inputs</span><span>512 paired evaluations in total</span></div>
     <p class="evidence-protocol research-input-condition"><strong>Input condition.</strong> SUPRA-Tex receives the reference plus a synthesized back view; commercial services receive the reference only.</p>
-    <div class="evidence-table-scroll" tabindex="0" role="region" aria-label="SUPRA-Tex human-preference rate versus each system — ties excluded"><table class="evidence-table research-preference-table"><caption><strong>SUPRA-Tex win rate</strong><span>Share of non-tied votes · marker at 50%</span></caption><thead><tr><th scope="col">Compared with</th><th scope="col">Input alignment</th><th scope="col">PBR plausibility</th><th scope="col">Visual quality</th></tr></thead><tbody><tr><th scope="row">Hunyuan3D 3.1</th><td>84.7%</td><td>85.1%</td><td>84.8%</td></tr><tr><th scope="row">Rodin 2.5</th><td>75.8%</td><td>72.3%</td><td>75.5%</td></tr><tr><th scope="row">Tripo H3.1</th><td>71.6%</td><td>62.9%</td><td>67.8%</td></tr><tr><th scope="row">Meshy 7.1</th><td>60.8%</td><td>54.7%</td><td>57.6%</td></tr><tr><th scope="row">Hi3D 3.0</th><td>51.1%</td><td class="comparison-exception">44.9%</td><td>51.1%</td></tr></tbody></table></div>
+    <div class="evidence-table-scroll" tabindex="0" role="region" aria-label="SUPRA-Tex human-preference rate versus each system — ties excluded"><table class="evidence-table research-preference-table"><caption><strong>SUPRA-Tex preference share</strong><span>Share of non-tied votes · marker at 50%</span></caption><thead><tr><th scope="col">Compared with</th><th scope="col">Input alignment</th><th scope="col">PBR plausibility</th><th scope="col">Visual quality</th></tr></thead><tbody><tr><th scope="row">Hunyuan3D 3.1</th><td>84.7%</td><td>85.1%</td><td>84.8%</td></tr><tr><th scope="row">Rodin 2.5</th><td>75.8%</td><td>72.3%</td><td>75.5%</td></tr><tr><th scope="row">Tripo H3.1</th><td>71.6%</td><td>62.9%</td><td>67.8%</td></tr><tr><th scope="row">Meshy 7.1</th><td>60.8%</td><td>54.7%</td><td>57.6%</td></tr><tr><th scope="row">Hi3D 3.0</th><td>51.1%</td><td class="comparison-exception">44.9%</td><td>51.1%</td></tr></tbody></table></div>
     <p class="evidence-result-note">Preference varies by criterion: against Hi3D 3.0, SUPRA-Tex receives <strong>44.9%</strong> of non-tied PBR votes.</p>
-    <details class="evidence-details research-protocol-details"><summary>Study protocol<span aria-hidden="true">+</span></summary><p class="evidence-protocol">Each percentage is SUPRA-Tex wins divided by non-tied votes for that criterion and comparator. Versions tested after September 24, 2026; Rodin 2.5 uses the Extremely High configuration. These are observed study preferences, not significance estimates.</p></details>
+    <details class="evidence-details research-protocol-details"><summary>Study protocol<span aria-hidden="true">+</span></summary><p class="evidence-protocol">Each percentage is the share of non-tied votes favoring SUPRA-Tex for that criterion and comparator. The listed versions were evaluated after September 24, 2026; Rodin 2.5 used the Extremely High configuration. These percentages describe observed preferences; they do not establish statistical significance.</p></details>
   </div>
   <div id="evidence-panel-vlm" class="evidence-panel" role="tabpanel" aria-labelledby="evidence-tab-vlm" data-evidence-panel="vlm" tabindex="0" hidden>
-    <div class="evidence-panel-intro"><h3>Joint-highest PBR rating.</h3><p>8.67/10, tied with Hunyuan3D 3.1 and Hi3D 3.0.</p></div>
+    <div class="evidence-panel-intro"><h3>Joint-highest VLM PBR rating.</h3><p>8.67/10, tied with Hunyuan3D 3.1 and Hi3D 3.0 at the reported precision.</p></div>
     <div class="research-study-meta"><span>Qwen3.8-27B</span><span>Mean score out of 10</span><span>45 inputs</span></div>
     <p class="evidence-protocol research-input-condition"><strong>Input condition.</strong> SUPRA-Tex receives the reference plus a synthesized back view; commercial services receive the reference only.</p>
     <div class="evidence-table-scroll" tabindex="0" role="region" aria-label="VLM ratings — mean scores out of 10"><table class="evidence-table research-vlm-table"><caption><strong>VLM ratings</strong><span>Mean score out of 10 · higher is better</span></caption><thead><tr><th scope="col">Method</th><th scope="col">Input alignment ↑</th><th scope="col">PBR plausibility ↑</th><th scope="col">Visual quality ↑</th></tr></thead><tbody><tr><th scope="row">Hunyuan3D 3.1</th><td>6.77</td><td>8.67</td><td>8.32</td></tr><tr><th scope="row">Rodin 2.5</th><td>6.81</td><td>8.64</td><td>8.38</td></tr><tr><th scope="row">Tripo H3.1</th><td>7.71</td><td>8.53</td><td>8.28</td></tr><tr><th scope="row">Meshy 7.1</th><td>7.74</td><td>8.61</td><td>8.34</td></tr><tr><th scope="row">Hi3D 3.0</th><td>8.19</td><td>8.67</td><td>8.37</td></tr><tr class="is-ours"><th scope="row">SUPRA-Tex</th><td>8.08</td><td>8.67</td><td>8.34</td></tr></tbody></table></div>
     <p class="evidence-result-note">Hi3D 3.0 scores highest for alignment (<strong>8.19</strong>); Rodin 2.5 for visual quality (<strong>8.38</strong>).</p>
-    <details class="evidence-details research-protocol-details"><summary>Rating protocol<span aria-hidden="true">+</span></summary><p class="evidence-protocol">One-shot ratings, one call per criterion. Alignment compares the input with the same-camera result; PBR sees relit outputs and quality sees orbit views, both without the input image. PBR plausibility assesses rendered relighting appearance, not measured physical accuracy.</p></details>
+    <details class="evidence-details research-protocol-details"><summary>Rating protocol<span aria-hidden="true">+</span></summary><p class="evidence-protocol">The vision-language model rates each criterion in a single call. For input alignment, it compares the reference image with the result rendered from the same camera. For PBR plausibility, it sees relit outputs; for visual quality, it sees orbit views. Neither of the latter two includes the reference image. PBR plausibility concerns appearance under relighting rather than measured physical accuracy.</p></details>
   </div>
 </section>
 
@@ -601,7 +606,7 @@
       <div class="release-content reveal">
         <div class="release-story">
           <h2>Open by design.</h2>
-          <p class="release-statement">Built <strong>entirely on data from the open-source community</strong>, SUPRA-Tex is an open-source model preferred over all five commercial systems tested for input alignment and visual quality.</p>
+          <p class="release-statement">Built <strong>entirely on data from the open-source community</strong>, SUPRA-Tex is an open-source model whose results are comparable to, and in some cases better than, those of commercial systems in input alignment and visual quality.</p>
           <div class="release-resources">
             <div><h3><a href="https://supra-3d.github.io/supratex/" data-resource="paper" target="_blank" rel="noopener noreferrer"><span>arXiv</span><small>Paper</small><span class="release-resource-arrow" aria-hidden="true">↗</span></a></h3></div>
             <div><h3><a href="https://github.com/Supra-3D/supra-tex" data-resource="code" target="_blank" rel="noopener noreferrer"><span>GitHub</span><small>Code</small><span class="release-resource-arrow" aria-hidden="true">↗</span></a></h3></div>

@@ -2,7 +2,9 @@
 /* v104: all cases gain 12% vertical orbit room at the same screen-space scale. */
 #competition.comp-refined .comp-pair { height:clamp(403.2px,38.08vw,571.2px); }
 #competition.comp-refined .comp-case-tabs {
-  display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); align-items:stretch;
+  display:grid; grid-template-columns:repeat(7,minmax(160px,1fr)); align-items:stretch;
+  max-width:100%; overflow-x:auto; overscroll-behavior-x:contain;
+  scrollbar-width:thin; scrollbar-color:#d4bd8550 transparent;
   gap:8px; margin:0; padding:12px 16px; border-bottom:1px solid #c7b99522; background:#1b211c;
 }
 #competition.comp-refined .comp-case-tabs button {

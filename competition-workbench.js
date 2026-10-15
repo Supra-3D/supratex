@@ -2,9 +2,9 @@
   'use strict';
   const root=document.querySelector('#competition');if(!root||root.dataset.workbenchReady)return;root.dataset.workbenchReady='true';
   const one=s=>root.querySelector(s),all=s=>[...root.querySelectorAll(s)];
-  const base=new URL('assets/competition/aligned/',document.currentScript.src),bundle=new URL('competition-viewer.bundle.js?v=hosting-108',document.currentScript.src).href;
+  const base=new URL('assets/competition/aligned/',document.currentScript.src),bundle=new URL('competition-viewer.bundle.js?v=113',document.currentScript.src).href;
   const methods={hunyuan:'Hunyuan3D 3.1',rodin:'Rodin 2.5',tripo:'Tripo H3.1',meshy:'Meshy 7.1',hi3d:'Hi3D 3.0'};
-  const cases={fighter:{name:'Fighter',focus:'Lettering, insignia and surface detail. From one image.'},guanyu:{name:'Guan Yu',focus:'Armor motifs, cloth folds and metal edges.'},suitcase:{name:'Vintage suitcase',focus:'Label placement, worn leather and brass.'},cinema:{name:'Cinema signage',focus:'Letter shapes, sign placement and wall texture.'},tonic:{name:'Bottle label',focus:'Label typography, botanical detail and glass.'}};
+  const cases={fighter:{name:'Fighter',focus:'Lettering, insignia and surface detail. From one image.'},guanyu:{name:'Guan Yu',focus:'Armor motifs, cloth folds and metal edges.'},cinema:{name:'Cinema signage',focus:'Letter shapes, sign placement and wall texture.'},tonic:{name:'Bottle label',focus:'Label typography, botanical detail and glass.'},'carved-mask':{name:'Carved mask',focus:'Carved contours, painted motifs and wood grain.'},streetwear:{name:'Streetwear portrait',focus:'Shirt lettering, layered fabrics and facial detail.'},portrait:{name:'Monochrome portrait',focus:'Facial detail, hair and knit texture.'}};
   const transition=window.SupraTransitions,bench=one('[data-comp-workbench]'),pair=one('[data-comp-pair]'),leftMount=one('[data-competition-3d-mount]'),rightMount=one('[data-competition-3d-comparator-mount]');
   const methodButtons=all('[data-comp-method]'),lightSelect=one('[data-comp-light-select]'),surfaceSelect=one('[data-comp-surface-select]'),dialog=one('[data-comp-reference-dialog]'),inputDetails=one('.comp-input-details');
   const initialMethod=methodButtons.find(b=>b.getAttribute('aria-pressed')==='true')?.dataset.compMethod||'hunyuan';
@@ -13,7 +13,7 @@
   let selectedCase=initialCase,selectedMethod=initialMethod,displayedCase=initialCase,displayedMethod=initialMethod,version=0,viewerEpoch=0,lightEpoch=0,liveViewer=null,bundlePromise=null;
   let recoveryAttempts=0,recoveryTimer=0,contextRecoveries=0;
   let materialMode='pbr',lightingBusy=false;
-  let split=.5,inView=false,suspendedState=null,retireTimer=0,navigation=0,navigating=false,referencePrimed=false;
+  let split=.5,inView=false,starting=false,navigation=0,navigating=false,referencePrimed=false;
   const splitHandle=one('[data-comp-split-handle]');
   const mobileViewport=matchMedia('(max-width:959.98px)');
   let mobileInteracting=false;
@@ -24,7 +24,14 @@
   touchBar.append(touchHint,touchToggle);pair.before(touchBar);
   const loadReveal=window.SupraComparisonReveal.stage(pair,{enabled:()=>transition.enabled(),onChange:()=>{syncToolAvailability();syncMobileInteraction();}});
   const referenceReveal=window.SupraComparisonReveal.reference(one('[data-comp-reference-thumb]'),{enabled:()=>transition.enabled()});
-  const loadingLabel=()=>`Preparing ${cases[selectedCase].name} · ${methods[selectedMethod]}`;
+  const loadingLabel=()=>`Loading SUPRA-Tex and ${methods[selectedMethod]}…`;
+  function beginComparisonReveal(id=displayedCase,method=displayedMethod){
+    const previews=new URL('../previews/',base);
+    loadReveal.begin(`Loading SUPRA-Tex and ${methods[method]}…`,{preview:{
+      left:{url:new URL(`${id}-supra_tex.webp?v=115`,previews).href,label:'SUPRA-Tex'},
+      right:{url:new URL(`${id}-${method}.webp?v=115`,previews).href,label:methods[method]}
+    }});
+  }
   function settleReveals(){loadReveal.settle();referenceReveal.settle();}
   const revealMotion=matchMedia('(prefers-reduced-motion: reduce)');
   revealMotion.addEventListener('change',()=>{if(revealMotion.matches)settleReveals();});
@@ -65,7 +72,7 @@
     event.preventDefault();event.stopImmediatePropagation();endMobileInteraction();touchToggle.focus({preventScroll:true});
   },true);
   function revealMobileSelection(button){
-    if(!mobileViewport.matches||!button)return;
+    if(!button)return;
     const rail=button.parentElement,box=button.getBoundingClientRect(),bounds=rail.getBoundingClientRect();
     if(box.left<bounds.left+10||box.right>bounds.right-10)rail.scrollTo({left:Math.max(0,rail.scrollLeft+box.left-bounds.left-(rail.clientWidth-box.width)/2),behavior:'auto'});
   }
@@ -122,11 +129,14 @@
     const pane=one(`[data-comp-pane="${side}"]`),message=one(`[data-comp-status="${side}"]`),mount=side==='left'?leftMount:rightMount;
     pane.dataset.status=status;mount.inert=status!=='ready';mount.setAttribute('aria-busy',String(status==='loading'));
     message.hidden=presentation!=='3d'||status==='ready'||status==='idle';
-    message.querySelector('p').textContent=status==='error'?'3D could not be loaded.':status==='pending'?'3D asset unavailable.':'Loading 3D…';
+    const name=side==='left'?'SUPRA-Tex':methods[displayedMethod];
+    message.querySelector('p').textContent=status==='error'?`${name} could not be loaded.`:status==='pending'?`${name} 3D asset unavailable.`:`Loading ${name}…`;
     message.querySelector('button').hidden=status!=='error';message.title=error;
     if(side==='left')syncToolAvailability();
     syncMobileInteraction();
-    const states=['left','right'].map(key=>one(`[data-comp-pane="${key}"]`).dataset.status);
+    const statuses=['left','right'].map(key=>({label:key==='left'?'SUPRA-Tex':methods[displayedMethod],status:one(`[data-comp-pane="${key}"]`).dataset.status}));
+    loadReveal.statuses(statuses);
+    const states=statuses.map(item=>item.status);
     if(states.every(value=>value==='ready'))loadReveal.ready();
     else if(states.includes('error')||states.includes('pending'))loadReveal.failed();
   }
@@ -135,8 +145,8 @@
     bundlePromise=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=bundle;s.onload=()=>{s.remove();window.SupraCompetition3D?resolve():reject(Error('Viewer unavailable'));};s.onerror=()=>{s.remove();reject(Error('Viewer unavailable'));};document.head.append(s);}).catch(e=>{bundlePromise=null;throw e;});return bundlePromise;
   }
   async function start3D(restore=null){
-    if(loadReveal.state!=='waiting')loadReveal.begin(loadingLabel());
-    const epoch=++viewerEpoch;++lightEpoch;lightingBusy=false;slotStatus('left','loading');slotStatus('right','loading');updateMaterial('pbr');
+    if(loadReveal.state!=='waiting')beginComparisonReveal();
+    starting=true;const epoch=++viewerEpoch;++lightEpoch;lightingBusy=false;slotStatus('left','loading');slotStatus('right','loading');updateMaterial('pbr');
     let restoring=!!restore;
     try{
       await loadBundle();if(presentation!=='3d'||epoch!==viewerEpoch)return;
@@ -154,7 +164,7 @@
               viewer.dispose();liveViewer=null;start3D(s);
             },0);
           }
-        });liveViewer=viewer;viewer.setSplit(split);
+        });liveViewer=viewer;viewer.setSplit(split);viewer.setActive(inView&&!document.hidden);
       }
       const ready=await liveViewer.load(displayedCase,displayedMethod);if(epoch!==viewerEpoch||presentation!=='3d')return;
       if(!ready)slotStatus('left','error');
@@ -164,8 +174,9 @@
       }
       updateView();
     }catch(error){if(epoch===viewerEpoch&&presentation==='3d'){slotStatus('left','error',error.message);slotStatus('right','error',error.message);}}
+    finally{if(epoch===viewerEpoch)starting=false;}
   }
-  function stop3D(){++viewerEpoch;++lightEpoch;lightingBusy=false;clearTimeout(recoveryTimer);loadReveal.clear();liveViewer?.dispose();liveViewer=null;leftMount.replaceChildren();rightMount.replaceChildren();slotStatus('left','idle');slotStatus('right','idle');endMobileInteraction();}
+  function stop3D(){starting=false;++viewerEpoch;++lightEpoch;lightingBusy=false;clearTimeout(recoveryTimer);loadReveal.clear();liveViewer?.dispose();liveViewer=null;leftMount.replaceChildren();rightMount.replaceChildren();slotStatus('left','idle');slotStatus('right','idle');endMobileInteraction();}
   async function selectComparison(){
     const token=++version,id=selectedCase,method=selectedMethod;root.setAttribute('aria-busy','true');feedback();
     const reference={url:new URL(`${id}-reference.webp`,base).href,alt:`Original reference image: ${cases[id].name}`};
@@ -174,7 +185,7 @@
       if(id!==displayedCase||!referencePrimed)await transition.decode(reference.url);
       if(token!==version)return false;
       const changedCase=id!==displayedCase,changedMethod=method!==displayedMethod;
-      if((changedCase||changedMethod)&&(liveViewer||inView))loadReveal.begin(`Preparing ${cases[id].name} · ${methods[method]}`);
+      if(changedCase||changedMethod)beginComparisonReveal(id,method);
       if(changedCase||changedMethod)recoveryAttempts=0;
       const image=one('[data-comp-reference-image]');image.src=reference.url;image.alt=reference.alt;referencePrimed=true;
       if(changedCase)referenceReveal.replace(reference.url,reference.alt);
@@ -185,8 +196,8 @@
       if(!navigating){
         // The shared 4K ceiling bounds allocation size. Reuse the shared
         // renderer and unchanged left asset when only the method changes.
-        if(changedCase){suspendedState=null;if(liveViewer||inView)start3D();}
-        else if(changedMethod){suspendedState=null;liveViewer?.setComparator(displayedMethod).catch(()=>{});}
+        if(changedCase){if(liveViewer||inView)start3D();}
+        else if(changedMethod){liveViewer?.setComparator(displayedMethod).catch(()=>{});}
       }
       return true;
     }catch(_){if(token===version){selectedCase=displayedCase;selectedMethod=displayedMethod;syncSelection();feedback('This comparison could not be loaded. The previous result is still shown; try again.');}return false;}
@@ -211,7 +222,13 @@
   surfaceSelect.addEventListener('change',()=>{liveViewer?.setMode(surfaceSelect.value);updateMaterial(surfaceSelect.value);});
   all('[data-comp-view]').forEach(b=>b.addEventListener('click',()=>{liveViewer?.setView(b.dataset.compView);updateView();}));
   all('[data-comp-zoom]').forEach(b=>b.addEventListener('click',()=>{liveViewer?.zoom(Number(b.dataset.compZoom));updateView();}));
-  one('[data-comp-reset]').addEventListener('click',()=>{liveViewer?.reset();updateMaterial('pbr');updateView();});
+  one('[data-comp-reset]').addEventListener('click',async()=>{
+    const viewer=liveViewer,epoch=viewerEpoch,light=++lightEpoch;if(!viewer)return;
+    lightingBusy=true;feedback();updateMaterial('pbr');
+    try{await viewer.reset();}
+    catch(_){if(viewer===liveViewer&&epoch===viewerEpoch&&light===lightEpoch)feedback('The lighting could not be loaded. The previous light is still active.');}
+    finally{if(viewer===liveViewer&&epoch===viewerEpoch&&light===lightEpoch){lightingBusy=false;syncToolAvailability();updateView();}}
+  });
   for(const mount of [leftMount,rightMount])for(const event of ['pointerup','wheel','keydown'])mount.addEventListener(event,()=>requestAnimationFrame(updateView),{passive:true});
   lightSelect.addEventListener('change',async()=>{
     const viewer=liveViewer,epoch=viewerEpoch,light=++lightEpoch;if(!viewer)return;feedback();
@@ -231,37 +248,45 @@
   dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
   dialog.addEventListener('close',()=>one('[data-comp-reference-open]').focus({preventScroll:true}));
   function syncVisibility(){
-    clearTimeout(retireTimer);
     if(document.hidden&&mobileInteracting)endMobileInteraction();
     if(navigating)return;
-    if(inView&&!document.hidden){
+    const active=inView&&!document.hidden;
+    // Keep the current pair and camera in memory. Scrolling only pauses drawing;
+    // disposal would cancel downloads and force a full reload on every return.
+    liveViewer?.setActive(active);
+    if(active){
       if(!referencePrimed)selectComparison();
-      if(!liveViewer){const restore=suspendedState;suspendedState=null;start3D(restore);}
-    }else if(liveViewer){
-      retireTimer=setTimeout(()=>{if((!inView||document.hidden)&&liveViewer){suspendedState=liveViewer.state();stop3D();}},1200);
+      if(!liveViewer&&!starting)start3D();
     }
   }
   const visibilityObserver=new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;syncVisibility();},{rootMargin:'100px 0px'});visibilityObserver.observe(bench);
   document.addEventListener('visibilitychange',syncVisibility);
-  window.addEventListener('pagehide',()=>{visibilityObserver.disconnect();touchVisibility.disconnect();splitResize.disconnect();mobileViewport.removeEventListener('change',mobileViewportChanged);clearTimeout(retireTimer);referenceReveal.clear();stop3D();},{once:true});
+  window.addEventListener('pagehide',()=>{visibilityObserver.disconnect();touchVisibility.disconnect();splitResize.disconnect();mobileViewport.removeEventListener('change',mobileViewportChanged);referenceReveal.clear();stop3D();},{once:true});
   const smoothScroll=()=>matchMedia('(prefers-reduced-motion: reduce)').matches||document.body.classList.contains('motion-paused')?'auto':'smooth';
   async function openComparison({caseId='fighter',method='meshy',source='direct'}={}){
     if(!cases[caseId]||!methods[method])return false;
-    const request=++navigation;navigating=true;clearTimeout(retireTimer);
-    suspendedState=null;selectedCase=caseId;selectedMethod=method;
+    const request=++navigation;navigating=true;
+    selectedCase=caseId;selectedMethod=method;
     const committed=await selectComparison();if(request!==navigation)return false;navigating=false;
     const heading=one('#comparison-3d');heading.scrollIntoView({behavior:smoothScroll(),block:'start'});heading.focus({preventScroll:true});
     if(!committed){syncVisibility();return false;}
-    bench.dataset.entry=source;setSplit(.5);recoveryAttempts=0;start3D();
+    bench.dataset.entry=source;setSplit(.5);recoveryAttempts=0;
+    const current=liveViewer?.state();
+    if(current?.id!==displayedCase||current.method!==displayedMethod||current.contextLost||current.left.status==='error'||current.right.status==='error')start3D();
+    else syncVisibility();
     history.replaceState(null,'','#comparison-3d');return true;
   }
   one('[data-comp-back-flight]').addEventListener('click',()=>{
-    cancelNavigation();if(liveViewer)suspendedState=liveViewer.state();stop3D();
+    cancelNavigation();liveViewer?.setActive(false);endMobileInteraction();
     window.SupraHeroPlayback?.returnToFlight();
     document.querySelector('#top').scrollIntoView({behavior:smoothScroll(),block:'start'});
     document.querySelector('#hero-explore').focus({preventScroll:true});history.replaceState(null,'','#top');
   });
-  window.SupraCompetition={open:openComparison,state:()=>({caseId:displayedCase,method:displayedMethod,view:liveViewer?.state().view||'front',presentation,split,inView,navigating,suspended:!!suspendedState,contextRecoveries,mobileInteraction:{enabled:mobileViewport.matches,active:mobileInteracting},inspection:{open:!!liveViewer,method:displayedMethod,competitorAsset:liveViewer?.state().right.status||'idle',linked:true},viewer:liveViewer?.state()||{disposed:true,initialized:false}})};
+  window.SupraCompetition={open:openComparison,state:()=>({caseId:displayedCase,method:displayedMethod,view:liveViewer?.state().view||'front',presentation,split,inView,navigating,suspended:!!liveViewer&&!inView,contextRecoveries,mobileInteraction:{enabled:mobileViewport.matches,active:mobileInteracting},inspection:{open:!!liveViewer,method:displayedMethod,competitorAsset:liveViewer?.state().right.status||'idle',linked:true},viewer:liveViewer?.state()||{disposed:true,initialized:false}})};
   syncSelection();setSplit(.5);mobileViewportChanged();
+  // These two small images can arrive before the section is visible and before
+  // the viewer bundle or either large model starts downloading.
+  beginComparisonReveal();
+  loadReveal.statuses([{label:'SUPRA-Tex',status:'loading'},{label:methods[displayedMethod],status:'loading'}]);
   // Load only the live pair when this section approaches the viewport.
 })();

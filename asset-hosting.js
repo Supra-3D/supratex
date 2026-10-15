@@ -1,5 +1,5 @@
 window.SupraAssetHosting = {
-  "baseUrl": "https://huggingface.co/datasets/supra3d/supratex-web-assets/resolve/e7de1fbbfaaa3cafcf2edbc02bf088734a3869cc/",
+  "baseUrl": "https://huggingface.co/datasets/supra3d/supratex-web-assets/resolve/f34bd049fa7fa4491bfa6ef2d35ca2df2116610e/",
   "paths": {
     "assets/3d/bowl.js": {
       "callback": "SupraPayload",
@@ -28,6 +28,30 @@ window.SupraAssetHosting = {
     "assets/3d/mask.js": {
       "callback": "SupraPayload",
       "id": "mask"
+    },
+    "assets/competition/models/carved-mask/hi3d.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "carved-mask-hi3d"
+    },
+    "assets/competition/models/carved-mask/hunyuan.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "carved-mask-hunyuan"
+    },
+    "assets/competition/models/carved-mask/meshy.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "carved-mask-meshy"
+    },
+    "assets/competition/models/carved-mask/rodin.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "carved-mask-rodin"
+    },
+    "assets/competition/models/carved-mask/supra_tex.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "carved-mask-supra_tex"
+    },
+    "assets/competition/models/carved-mask/tripo.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "carved-mask-tripo"
     },
     "assets/competition/models/cinema-hunyuan.js": {
       "callback": "SupraCompetitionPayload",
@@ -92,6 +116,54 @@ window.SupraAssetHosting = {
     "assets/competition/models/guanyu.js": {
       "callback": "SupraCompetitionPayload",
       "id": "guanyu"
+    },
+    "assets/competition/models/portrait/hi3d.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "portrait-hi3d"
+    },
+    "assets/competition/models/portrait/hunyuan.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "portrait-hunyuan"
+    },
+    "assets/competition/models/portrait/meshy.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "portrait-meshy"
+    },
+    "assets/competition/models/portrait/rodin.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "portrait-rodin"
+    },
+    "assets/competition/models/portrait/supra_tex.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "portrait-supra_tex"
+    },
+    "assets/competition/models/portrait/tripo.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "portrait-tripo"
+    },
+    "assets/competition/models/streetwear/hi3d.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "streetwear-hi3d"
+    },
+    "assets/competition/models/streetwear/hunyuan.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "streetwear-hunyuan"
+    },
+    "assets/competition/models/streetwear/meshy.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "streetwear-meshy"
+    },
+    "assets/competition/models/streetwear/rodin.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "streetwear-rodin"
+    },
+    "assets/competition/models/streetwear/supra_tex.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "streetwear-supra_tex"
+    },
+    "assets/competition/models/streetwear/tripo.js": {
+      "callback": "SupraCompetitionPayload",
+      "id": "streetwear-tripo"
     },
     "assets/competition/models/suitcase-hunyuan.js": {
       "callback": "SupraCompetitionPayload",

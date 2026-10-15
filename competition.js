@@ -7,9 +7,9 @@
   // Reported SUPRA-Tex preference shares. Each denominator excludes tied votes.
   // The opposite share is 100 minus this value, not an inferred tie percentage.
   const scores = {
-    quality:{label:'visual quality',values:{hunyuan:84.8,rodin:75.5,tripo:67.8,meshy:57.6,hi3d:51.1},note:'Preferred for visual quality in all five commercial comparisons.'},
-    alignment:{label:'input alignment',values:{hunyuan:84.7,rodin:75.8,tripo:71.6,meshy:60.8,hi3d:51.1},note:'Preferred for input alignment in all five commercial comparisons.'},
-    pbr:{label:'PBR plausibility',values:{hunyuan:85.1,rodin:72.3,tripo:62.9,meshy:54.7,hi3d:44.9},note:'Preferred for PBR plausibility over four systems; Hi3D leads at 55.1%.'}
+    quality:{label:'visual quality',values:{hunyuan:84.8,rodin:75.5,tripo:67.8,meshy:57.6,hi3d:51.1},note:'Preferred for visual quality in our five comparisons.'},
+    alignment:{label:'input alignment',values:{hunyuan:84.7,rodin:75.8,tripo:71.6,meshy:60.8,hi3d:51.1},note:'Preferred for input alignment in our five comparisons.'},
+    pbr:{label:'PBR plausibility',values:{hunyuan:85.1,rodin:72.3,tripo:62.9,meshy:54.7,hi3d:44.9},note:'Preferred for PBR plausibility over four of five systems.'}
   };
   let selectedMetric = 'quality', selectedPreference = 'hunyuan';
   const all = selector => [...root.querySelectorAll(selector)];
@@ -84,7 +84,7 @@
       button.style.setProperty('--comp-score',`${value}%`);
       const number = button.querySelector('.comp-supra-value');
       revealText(number,() => {number.textContent = `${value.toFixed(1)}%`;});
-      button.setAttribute('aria-label',`Compared with ${methods[method]}: SUPRA-Tex preferred in ${value.toFixed(1)} percent of decided ${metric.label} votes.`);
+      button.setAttribute('aria-label',`Compared with ${methods[method]}: SUPRA-Tex preferred in ${value.toFixed(1)} percent of non-tied ${metric.label} votes.`);
     });
     renderPreference();
     const note = one('[data-competition-chart-note]');
@@ -100,7 +100,7 @@
       one('[data-preference-rival]').textContent = methods[selectedPreference];
     });
     one('.preference-arc').style.strokeDasharray = `${value} 100`;
-    one('#preference-dial').setAttribute('aria-label',`${metric.label}: ${value.toFixed(1)}% preferred SUPRA-Tex; ${rival.toFixed(1)}% preferred ${methods[selectedPreference]}.`);
+    one('#preference-dial').setAttribute('aria-label',`${metric.label}, non-tied votes: ${value.toFixed(1)}% preferred SUPRA-Tex; ${rival.toFixed(1)}% preferred ${methods[selectedPreference]}.`);
     positionIndicators();
   }
   const preferenceButtons = all('[data-preference-method]');
