@@ -83,8 +83,10 @@
       const method = button.dataset.preferenceMethod, value = metric.values[method];
       button.style.setProperty('--comp-score',`${value}%`);
       const number = button.querySelector('.comp-supra-value');
+      const rival = 100 - value, rivalNumber = button.querySelector('.comp-rival-value');
       revealText(number,() => {number.textContent = `${value.toFixed(1)}%`;});
-      button.setAttribute('aria-label',`Compared with ${methods[method]}: SUPRA-Tex preferred in ${value.toFixed(1)} percent of non-tied ${metric.label} votes.`);
+      revealText(rivalNumber,() => {rivalNumber.textContent = `${rival.toFixed(1)}%`;});
+      button.setAttribute('aria-label',`Non-tied ${metric.label} votes: ${value.toFixed(1)}% preferred SUPRA-Tex; ${rival.toFixed(1)}% preferred ${methods[method]}.`);
     });
     renderPreference();
     const note = one('[data-competition-chart-note]');

@@ -1367,8 +1367,8 @@
     },
     {
       "path": "competition.js",
-      "bytes": 8696,
-      "sha256": "e57280855b37e9d3864b1daed7f2521ec55871f4d94e72edaa5cdbb9e4dfd34c"
+      "bytes": 8882,
+      "sha256": "15280386a87912ca577105079cfa0e646b7448937d1901645fc11efd3c19b8fc"
     },
     {
       "path": "control-compact.css",
@@ -1497,8 +1497,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 85733,
-      "sha256": "4fcc8bb9e1f344788fd06cf91689d87e437e166c91691b4eab743a92667856ff"
+      "bytes": 86559,
+      "sha256": "9f0a9941df77e58825464f3fb34d31b63b8be9571c50d0610dd5f344ca3a79d4"
     },
     {
       "path": "interaction-74.css",
@@ -1552,8 +1552,8 @@
     },
     {
       "path": "preference.css",
-      "bytes": 8381,
-      "sha256": "4c3f3c308e068b554565ee61655a5d982f2e07fdaae8af0c0ecdde0ad6b7910e"
+      "bytes": 8471,
+      "sha256": "f210ad8d2c7989bc9ed118d4ee92708c87a6eed5524e042ca7882fce08036af5"
     },
     {
       "path": "readability-111.css",

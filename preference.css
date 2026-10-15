@@ -20,7 +20,7 @@
 #competition.comp-refined .preference-dial figcaption strong{font-weight:500;color:var(--comp-chalk);font-variant-numeric:tabular-nums}
 #competition.comp-refined .preference-list-head{display:flex;justify-content:space-between;gap:14px;font:9px Consolas,monospace;letter-spacing:.04em;color:var(--comp-muted);margin-bottom:8px}
 #competition.comp-refined .preference-list{list-style:none;display:grid;gap:4px;padding:0;margin:0}
-#competition.comp-refined .preference-choice{display:grid;grid-template-columns:minmax(0,1fr) auto 10px;align-items:center;gap:8px 10px;position:relative;text-align:left;width:100%;min-height:50px;padding:10px 12px;border:1px solid transparent;background:transparent;transition:background .2s,border-color .2s}
+#competition.comp-refined .preference-choice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:8px 10px;position:relative;text-align:left;width:100%;min-height:50px;padding:10px 12px;border:1px solid transparent;background:transparent;transition:background .2s,border-color .2s}
 #competition.comp-refined .preference-choice:before{content:'';position:absolute;inset:0;border:1px solid transparent;pointer-events:none;transition:border-color .2s}
 #competition.comp-refined .preference-choice:hover{background:#c7b99509}
 #competition.comp-refined .preference-choice[aria-pressed=true]{background:#c7b9950b}
@@ -28,9 +28,12 @@
 #competition.comp-refined .preference-choice-name{font-size:12px;line-height:1.4;color:var(--comp-muted)}
 #competition.comp-refined .preference-choice[aria-pressed=true] .preference-choice-name{color:var(--comp-chalk)}
 #competition.comp-refined .preference-choice strong{font-size:16px;font-weight:400;letter-spacing:-.025em;color:var(--comp-gold);font-variant-numeric:tabular-nums}
-#competition.comp-refined .preference-choice-arrow{color:var(--comp-gold);font-size:12px;opacity:0;transform:translateX(-3px);transition:opacity .2s,transform .2s}
-#competition.comp-refined .preference-choice[aria-pressed=true] .preference-choice-arrow,#competition.comp-refined .preference-choice:hover .preference-choice-arrow{opacity:1;transform:none}
-#competition.comp-refined .preference-mini-track{grid-column:1/-1;height:2px;background:#50585a66;position:relative;overflow:hidden}
+#competition.comp-refined .preference-choice-side{display:grid;gap:3px;min-width:0}
+#competition.comp-refined .preference-choice-rival{text-align:right}
+#competition.comp-refined .preference-choice-supra .preference-choice-name{color:var(--comp-gold)}
+#competition.comp-refined .preference-choice .comp-rival-value{color:var(--comp-muted)}
+#competition.comp-refined .preference-choice[aria-pressed=true] .comp-rival-value{color:var(--comp-chalk)}
+#competition.comp-refined .preference-mini-track{grid-column:1/-1;height:3px;background:#50585a;position:relative;overflow:hidden}
 #competition.comp-refined .preference-mini-track:before{content:'';position:absolute;inset:0 auto 0 0;width:var(--comp-score);background:var(--comp-gold);transition:width var(--preference-time) var(--preference-ease)}
 #competition.comp-refined .preference-mini-track:after{content:'';position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--comp-ink)}
 #competition.comp-refined .comp-chart-note{min-height:36px;margin-top:20px;font-size:11px}
