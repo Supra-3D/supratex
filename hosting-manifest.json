@@ -1507,13 +1507,13 @@
     },
     {
       "path": "hero-viewport-134.css",
-      "bytes": 903,
-      "sha256": "69b144cb13f3ee2541d53a3e13b1582ade4b15e324bfed3838a43a42a49231da"
+      "bytes": 1331,
+      "sha256": "255bd7af94adb19bc296f7665852e6357931b810400f18a72775b01e5bded536"
     },
     {
       "path": "index.html",
-      "bytes": 89476,
-      "sha256": "41ba74ea66fd5c85ab714e475228c22afa8837265f9ede3fb38175499fbe7eb9"
+      "bytes": 89943,
+      "sha256": "ee8702cc22082f79210a8fae574733ff2b3d778973e2a357a3ef4d663781ef5c"
     },
     {
       "path": "interaction-74.css",

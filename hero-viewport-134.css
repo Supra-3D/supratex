@@ -15,10 +15,17 @@
   #top #paper .paper-resources { margin-top:12px; }
 }
 
-@media (min-width:1240px) and (max-height:850px) {
+/* Compact resource links: one desktop row, or a balanced 3 + 2 layout. */
+#top #paper .paper-resources { max-width:540px; gap:6px; }
+#top #paper .paper-resource { justify-content:center; column-gap:6px; }
+@media (min-width:1240px) {
   #top #paper .paper-resources {
-    grid-template-columns:repeat(4,minmax(0,1fr));
-    max-width:496px;
+    grid-template-columns:repeat(5,auto);
   }
-  #top #paper .paper-resource { padding-inline:8px; }
+  #top #paper .paper-resource { padding-inline:5px; }
+}
+@media (max-width:1239.98px) {
+  #top #paper .paper-resources { grid-template-columns:repeat(6,minmax(0,1fr)); max-width:396px; }
+  #top #paper .paper-resource { grid-column:span 2; padding-inline:8px; }
+  #top #paper .paper-resource:nth-child(n+4) { grid-column:span 3; }
 }
