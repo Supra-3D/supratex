@@ -29,3 +29,60 @@
   #top #paper .paper-resource { grid-column:span 2; padding-inline:8px; }
   #top #paper .paper-resource:nth-child(n+4) { grid-column:span 3; }
 }
+
+/* Keep the new Studio entry with the existing Hero actions at every viewport.
+   The video uses a separate grid column, so these rules only redistribute the
+   buttons inside the text column and never change the film's 16:9 frame. */
+@media (min-width:1600px) {
+  #top.hero-video-only .hero-actions {
+    display:flex;
+    flex-wrap:nowrap;
+    width:auto;
+    gap:8px;
+  }
+  #top.hero-video-only .hero-actions .button {
+    width:auto;
+    flex:0 1 auto;
+    min-width:max-content;
+  }
+}
+
+@media (min-width:960px) and (max-width:1599.98px) {
+  #top.hero-video-only .hero-actions {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    width:100%;
+    gap:8px;
+  }
+  #top.hero-video-only .hero-actions .hero-competing-button {
+    grid-column:1/-1;
+  }
+  #top.hero-video-only .hero-actions .button {
+    width:100%;
+    min-width:0;
+    padding-inline:8px;
+  }
+}
+
+@media (max-width:959.98px) {
+  #top.hero-video-only .hero-actions {
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    width:100%;
+    max-width:680px;
+    gap:8px;
+  }
+  #top.hero-video-only .hero-actions .hero-competing-button {
+    grid-column:1/-1;
+  }
+  #top.hero-video-only .hero-actions .button {
+    width:100%;
+    min-width:0;
+    padding-inline:9px;
+  }
+}
+
+@media (max-width:380px) {
+  #top.hero-video-only .hero-actions {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
