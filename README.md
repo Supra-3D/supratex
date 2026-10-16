@@ -21,5 +21,5 @@ append `?assetSource=remote` to the URL so the viewer fetches the hosted models.
 The complete offline source package additionally contains the original model
 scripts and uses those files by default on localhost.
 
-The arXiv buttons temporarily link to the project website until its arXiv URL
-is available. See the website for authors, citation, and dependency attribution.
+The arXiv buttons link to https://arxiv.org/abs/2610.22352.
+See the website for authors, citation, and dependency attribution.

@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="site-refine.css?v=resources-107">
   <link rel="stylesheet" href="citation.css?v=release-compact-61">
   <link rel="stylesheet" href="embodied.css?v=137">
-  <link rel="stylesheet" href="desktop-layout-polish.css?v=resources-107">
+  <link rel="stylesheet" href="desktop-layout-polish.css?v=141">
   <link rel="stylesheet" href="hero-impact.css?v=69">
   <link rel="stylesheet" href="layout-70.css?v=132">
   <link rel="stylesheet" href="chapter-captions.css?v=73">
@@ -56,7 +56,7 @@
   <link rel="stylesheet" href="mobile-sections-102.css?v=134">
   <link rel="stylesheet" href="comparison-compact-103.css?v=113">
   <link rel="stylesheet" href="comparison-reveal-105.css?v=110">
-  <link rel="stylesheet" href="readability-111.css?v=139">
+  <link rel="stylesheet" href="readability-111.css?v=142">
   <link rel="stylesheet" href="hero-viewport-134.css?v=134">
   <link rel="stylesheet" href="texturing.css?v=134">
   <script defer src="asset-hosting.js?v=120"></script>
@@ -121,7 +121,7 @@
       </ol>
       <p class="paper-author-notes"><span><sup>*</sup> Equal contribution</span><span><sup>†</sup> Project lead</span><span><svg class="paper-corresponding-icon" viewBox="0 0 16 12" aria-hidden="true"><path d="M1 1h14v10H1zM1 1l7 5 7-5"/></svg> Corresponding authors</span></p>
       <div class="paper-resources" role="group" aria-label="Research resources">
-        <a class="paper-resource" href="https://supra-3d.github.io/supratex/" data-resource="paper" target="_blank" rel="noopener noreferrer" aria-label="arXiv paper">
+        <a class="paper-resource" href="https://arxiv.org/abs/2610.22352" data-resource="paper" target="_blank" rel="noopener noreferrer" aria-label="arXiv paper">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>
           <span class="paper-resource-name">arXiv</span>
         </a>
@@ -409,7 +409,7 @@
 <button class="asset-choice" data-asset="clamp" aria-pressed="false" title="Mechanical clamp"><img src="assets/reference-clamp.png" alt="" loading="lazy"><span class="asset-choice-name">Mechanical clamp</span><span class="asset-arrow" aria-hidden="true">↗</span></button>
         </div>
         </div>
-        <div class="observatory-context"><p id="lab-asset-note">One reference image · provided geometry · PBR materials</p><details id="demo-notes" class="demo-notes"><summary>Demonstration conditions <span aria-hidden="true">+</span></summary><p>These demonstrations are separate from the benchmark evaluations. The aircraft includes locally refined albedo and image-aligned postprocessing. In the interactive commercial comparisons, SUPRA-Tex uses one reference image for the aircraft and adds a synthesized back view for the other six cases; commercial systems use the reference image only. The seven material examples use one reference image and provided geometry.</p></details><button type="button" class="observatory-film-link" data-film="collection">Watch the collection film <span aria-hidden="true">↗</span></button></div>
+        <div class="observatory-context"><p id="lab-asset-note">One reference image · provided geometry · PBR materials</p></div>
         <div class="observatory-foot"><span id="lab-status" role="status">Loading 3D model…</span><button id="lab-retry" type="button" hidden>Retry materials <span aria-hidden="true">↻</span></button></div>
       </div>
     </section>
@@ -447,7 +447,7 @@
       <p class="control-live-message" role="status" aria-live="polite" aria-atomic="true" data-control-status></p>
     </div>
   </div>
-  <p class="control-note">Synthesized back-view designs reprojected onto the supplied meshes as albedo.</p>
+  <p class="control-note"><strong>More views. More control.</strong> Use additional views or edited images without retraining the 3D generator.</p>
   <noscript><p class="control-note">Enable JavaScript to switch between designs and view angles. The crane design is shown above.</p></noscript>
 
   <dialog class="control-3d-dialog" data-control-dialog aria-labelledby="control-3d-title" aria-describedby="control-3d-note">
@@ -548,7 +548,6 @@
       </article>
     </div>
   </div>
-  <div class="method-extension reveal"><span class="extension-mark" aria-hidden="true">+</span><p><strong>More views. More control.</strong> Use additional views or edited images without retraining the 3D generator.</p></div>
 </section>
 
 <section id="evaluation" class="evaluation-section section-pad research-refined research-evidence" aria-labelledby="evidence-heading">
@@ -648,9 +647,9 @@
       <div class="release-content reveal">
         <div class="release-story">
           <h2>Open by design.</h2>
-          <p class="release-statement">Built <strong>entirely on data from the open-source community</strong>, SUPRA-Tex is an open-source model whose results are comparable to, and in some cases better than, those of commercial systems in input alignment and visual quality.</p>
+          <p class="release-statement">Built on <strong>data and algorithms from the open-source community</strong>, SUPRA-Tex achieves results comparable to commercial systems in input alignment and visual quality. We are open-sourcing SUPRA-Tex to give back to the community that made this work possible.</p>
           <div class="release-resources">
-            <div><h3><a href="https://supra-3d.github.io/supratex/" data-resource="paper" target="_blank" rel="noopener noreferrer"><span>arXiv</span><small>Paper</small><span class="release-resource-arrow" aria-hidden="true">↗</span></a></h3></div>
+            <div><h3><a href="https://arxiv.org/abs/2610.22352" data-resource="paper" target="_blank" rel="noopener noreferrer"><span>arXiv</span><small>Paper</small><span class="release-resource-arrow" aria-hidden="true">↗</span></a></h3></div>
             <div><h3><a href="https://github.com/Supra-3D/supra-tex" data-resource="code" target="_blank" rel="noopener noreferrer"><span>GitHub</span><small>Code</small><span class="release-resource-arrow" aria-hidden="true">↗</span></a></h3></div>
             <div><h3><a href="https://huggingface.co/supra3d/supra-tex" data-resource="models" target="_blank" rel="noopener noreferrer"><span>Models</span><small>Hugging Face</small><span class="release-resource-arrow" aria-hidden="true">↗</span></a></h3></div>
             <div><h3><a href="https://huggingface.co/spaces/UniLat3D/Supra-Tex" data-resource="demo" target="_blank" rel="noopener noreferrer"><span>HF Demo</span><small>Try online</small><span class="release-resource-arrow" aria-hidden="true">↗</span></a></h3></div>
@@ -666,8 +665,9 @@
   title   = {{SUPRA-Tex}: 3D Generation with Super-Aligned Texture},
   author  = {Yang, Chen and Fang, Jiemin and Meng, Fanpeng and Huang, Zihao
              and Pang, Jichen and Wu, Guanjun and Bao, Zhikuan and Tian, Qi},
-  journal = {Tech report},
-  year    = {2026}
+  journal = {arXiv preprint arXiv:2610.22352},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2610.22352}
 }</code></pre>
         <p class="citation-status" role="status" aria-live="polite" aria-atomic="true" data-citation-status></p>
       </section>

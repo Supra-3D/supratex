@@ -12,8 +12,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1364,
-      "sha256": "c190586a14c35ed8992127756a4ab14704b2952b47c2c983e4bec1af870c5571"
+      "bytes": 1332,
+      "sha256": "5144e80f00bb08eee6b4dac50f64d777ebe6bbaf23fa30477546ea7fa3f9b10d"
     },
     {
       "path": "app.js",
@@ -1402,8 +1402,8 @@
     },
     {
       "path": "desktop-layout-polish.css",
-      "bytes": 2853,
-      "sha256": "70a505c4705229a8bae4dd13848129272012ce07214685ba6114bafe1be3183c"
+      "bytes": 2843,
+      "sha256": "c0d6f62e59172bafd95171b58a854c32315efca2ec67b65117f76c74ce67fb89"
     },
     {
       "path": "detail-evidence.css",
@@ -1512,8 +1512,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 90285,
-      "sha256": "022b19f63e55b9c9dd1eb3aeffa880303374be9ca524c781f5da68be8dac0325"
+      "bytes": 89476,
+      "sha256": "41ba74ea66fd5c85ab714e475228c22afa8837265f9ede3fb38175499fbe7eb9"
     },
     {
       "path": "interaction-74.css",
@@ -1572,8 +1572,8 @@
     },
     {
       "path": "readability-111.css",
-      "bytes": 11478,
-      "sha256": "99b66c0112d1972bc75fde0a263ee1644df6d2bd6668720df579ee06cd201d5a"
+      "bytes": 11566,
+      "sha256": "d0209590d9208c1a66d6f9bbfd577e100393ab9b2cd6af46d5e1721cc06e4b3b"
     },
     {
       "path": "readability-research.css",

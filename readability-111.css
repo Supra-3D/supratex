@@ -44,6 +44,7 @@ body { font-optical-sizing:auto; }
 #evaluation .evidence-protocol,
 #evaluation .evidence-table-key,
 #evaluation .evidence-result-note { font-size:var(--reading-note-size); line-height:1.7; }
+#control .control-note strong { color:var(--text); font-weight:500; margin-right:7px; }
 
 /* Supporting copy and compact controls. */
 .site-header #main-navigation a { font-size:16px; }
