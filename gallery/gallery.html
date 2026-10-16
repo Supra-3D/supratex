@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0e1011">
+  <title>SUPRA-Tex Studio — 3D Generation with Super-Aligned Texture</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%232e4944'/%3E%3Cpath d='M12 34V16l12-6 12 6v18M18 34V20h12v14' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./gallery.css">
+  <link rel="stylesheet" href="./gallery-theme.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js","three/addons/":"./vendor/three/addons/"}}</script>
+</head>
+<body>
+  <div id="viewport" aria-label="3D studio gallery"></div>
+  <header class="topbar">
+    <a class="brand" href="./gallery.html" aria-label="SUPRA-Tex Studio home"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 32V12L20 5l14 7v20M13 32V17h14v15M20 17v15"/></svg><span>SUPRA-Tex<small>STUDIO</small></span></a>
+    <div class="room-nav"><button id="prev-room" class="icon-button" aria-label="Previous gallery" hidden>←</button><div><span class="eyebrow" id="room-number" hidden></span><strong id="room-title">SUPRA-Tex Studio</strong></div><button id="next-room" class="icon-button" aria-label="Next gallery" hidden>→</button></div>
+    <nav class="header-actions">
+      <button id="collection-toggle" class="text-button" aria-expanded="false" aria-controls="collection-panel"><span class="grid-icon">⊞</span> Collection <span id="total-count" class="count">—</span></button><button id="help-toggle" class="icon-button" aria-label="View controls">?</button><button id="fullscreen" class="icon-button" aria-label="Enter fullscreen">⛶</button>
+    </nav>
+  </header>
+  <div class="scene-top"><span class="live-dot"></span><span id="scene-status" role="status" aria-live="polite">Preparing the studio</span><span class="scene-separator">/</span><span id="view-label">Entrance viewpoint</span></div>
+  <div id="loading-bar"><i></i></div>
+  <section class="intro" id="intro"><span class="eyebrow">SUPRA-Tex STUDIO</span><h1>SUPRA-Tex</h1><p>what you see is what you get<br>Eight objects. A closer look.</p><div class="intro-meta"><span id="hall-count" hidden>1 gallery</span></div></section>
+  <section id="exhibit-card" class="exhibit-card" hidden aria-label="Selected object"><div class="exhibit-heading"><span id="exhibit-number" class="eyebrow"></span><button id="close-exhibit" class="icon-button" aria-label="Back to studio">×</button></div><h2 id="exhibit-title"></h2><div id="exhibit-input" class="exhibit-input"><img id="exhibit-input-image" alt="" hidden></div><p id="exhibit-description">Click Inspect below to view details.</p><div id="exhibit-status" role="status" hidden></div><div class="exhibit-actions"><button id="inspect" class="primary-button">Inspect <span>↗</span></button><button id="retry-model" class="text-button" hidden>Retry</button></div><div class="exhibit-switch"><button id="prev-exhibit" aria-label="Previous object">← Previous</button><span id="exhibit-position"></span><button id="next-exhibit" aria-label="Next object">Next →</button></div></section>
+  <aside class="minimap" id="minimap"><div class="map-heading"><span class="eyebrow">Viewpoint</span><span id="map-room" hidden>01</span></div><svg id="floor-map" viewBox="0 0 180 200" aria-label="Select a numbered viewpoint"><path class="map-walls" d="M70 187H13V13H167V187H110"/><path class="map-entry" d="M75 187H105"/></svg><div class="map-key"><span></span> Select a number</div></aside>
+  <div class="bottom-hud"><div class="control-hint" id="control-hint">Drag to look <span>·</span> Scroll to zoom <span>·</span> Select a floor marker</div><div class="toolbar" role="toolbar" aria-label="View controls"><button id="overview" title="Return to the initial viewpoint (Esc)" aria-label="Start viewpoint: return to entrance"><svg viewBox="0 0 24 24"><path d="m3 11 9-8 9 8M6 10v10h12V10M10 20v-6h4v6"/></svg><span>Start</span></button><i></i><button id="zoom-out" aria-label="Zoom out" title="Zoom out (−)">−</button><span id="zoom-value">1.0×</span><button id="zoom-in" aria-label="Zoom in" title="Zoom in (+)">+</button><i></i><button id="reset-view" title="Reset view (R)"><svg viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></svg><span>Reset</span></button><button id="auto-rotate" aria-pressed="false" title="Auto-orbit object" hidden><svg viewBox="0 0 24 24"><path d="M19 8c-2-5-12-5-14 0M19 3v5h-5M5 16c2 5 12 5 14 0M5 21v-5h5"/></svg></button></div><span class="footer-caption">SUPRA-Tex <span> / </span> SELECTED OBJECTS</span></div>
+  <aside id="collection-panel" class="collection-panel" hidden aria-label="All objects"><div class="panel-header"><div><span class="eyebrow">THE COLLECTION</span><h2>Eight objects</h2></div><button id="collection-close" class="icon-button" aria-label="Close collection">×</button></div><label class="search"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input id="search" type="search" placeholder="Search objects…" aria-label="Search collection"></label><div id="room-tabs" class="room-tabs" hidden></div><p id="search-count" class="search-count"></p><div id="collection-list" class="collection-list"></div></aside>
+  <dialog id="help-dialog" aria-labelledby="help-title" aria-describedby="help-paper-title">
+    <button id="help-close" class="icon-button dialog-close" aria-label="Close">×</button>
+    <span class="eyebrow">STUDIO</span>
+    <h2 id="help-title">SUPRA-Tex</h2>
+    <p id="help-paper-title">3D Generation with Super-Aligned Texture</p>
+    <p class="help-slogan"><em>what you see is what you get</em></p>
+    <div class="help-controls">
+      <div class="help-row"><strong>Move</strong><p>Use WASD or click the floor or map.</p></div>
+      <div class="help-row"><strong>Look</strong><p>Drag to turn. Scroll or pinch to zoom.</p></div>
+      <div class="help-row"><strong>Inspect</strong><p>Select an object, then Inspect.</p></div>
+    </div>
+    <button id="help-done" class="primary-button">Back to studio <span aria-hidden="true">→</span></button>
+  </dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <section id="fatal-error" class="fatal-error" hidden><div><span class="eyebrow">SUPRA-Tex STUDIO</span><h1>The studio is unavailable</h1><p id="fatal-message"></p><button class="primary-button" onclick="location.reload()">Try again</button></div></section>
+  <noscript><div class="fatal-error"><div>Enable JavaScript to enter the 3D studio.</div></div></noscript>
+  <script>if(location.protocol==='file:'){document.getElementById('fatal-error').hidden=false;document.getElementById('fatal-message').textContent='Start the local server and open http://localhost:8088/gallery.html. 3D assets cannot be loaded directly from a file URL.';}</script>
+  <script type="module" src="./gallery.js"></script>
+</body>
+</html>

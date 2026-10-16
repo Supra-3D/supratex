@@ -1,0 +1,22 @@
+Gallery architectural materials
+Downloaded 2026-10-14. All files are local; no runtime CDN is required.
+
+FLOOR: ambientCG Concrete 034 (2K JPG)
+Asset: https://ambientcg.com/view?id=Concrete034
+Download: https://ambientcg.com/get?file=Concrete034_2K-JPG.zip
+License: CC0 1.0 Universal, https://docs.ambientcg.com/license/
+Approximate original physical area: 1.1 m x 0.55 m.
+floor-color.jpg = Concrete034_2K-JPG_Color.jpg
+floor-normal.jpg = Concrete034_2K-JPG_NormalGL.jpg
+floor-roughness.jpg = Concrete034_2K-JPG_Roughness.jpg
+Maps are unchanged, only filenames were shortened.
+
+PLASTER: Poly Haven White Plaster 02 (1K JPG)
+Artist: Rob Tuytel
+Asset: https://polyhaven.com/a/white_plaster_02
+License: CC0, https://polyhaven.com/license
+Original physical area: 1 m x 1 m.
+plaster-normal.jpg = white_plaster_02_nor_gl_1k.jpg
+Download: https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_plaster_02/white_plaster_02_nor_gl_1k.jpg
+Use this subtle normal map with a warm white base color; no diffuse image needed.
+

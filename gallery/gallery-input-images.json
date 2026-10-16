@@ -1,0 +1,226 @@
+{
+  "confirmed19-m02_v1": {
+    "src": "assets/inputs/bronze-ritual-vessel.png",
+    "width": 952,
+    "height": 952,
+    "bounds": [
+      40,
+      55,
+      873,
+      844
+    ],
+    "hasAlpha": true,
+    "background": {
+      "type": "transparent",
+      "color": null
+    },
+    "originalBytesIntact": true,
+    "exifOrientation": 1,
+    "sourceSha256": "0046ed6ce9076004393cb29a4895896f0c318f09289d481ee22409218006b36a"
+  },
+  "selected9_20261013/wildv1__botanical_plate": {
+    "src": "assets/inputs/botanical-plate.png",
+    "width": 1284,
+    "height": 1612,
+    "bounds": [
+      0,
+      0,
+      1284,
+      1612
+    ],
+    "hasAlpha": false,
+    "background": {
+      "type": "photograph",
+      "color": null
+    },
+    "originalBytesIntact": true,
+    "exifOrientation": 1,
+    "sourceSha256": "58caee9a51ca82fd5dac6336fed21e436f551142e94c5a2d6014eb882bb8eef7",
+    "foreground": {
+      "src": "assets/inputs/foreground/botanical-plate.png",
+      "width": 1024,
+      "height": 1024,
+      "bounds": [
+        45,
+        44,
+        934,
+        940
+      ],
+      "hasAlpha": true,
+      "background": {
+        "type": "transparent",
+        "color": null
+      },
+      "sourceType": "preprocessed-original-input",
+      "sourceSha256": "58caee9a51ca82fd5dac6336fed21e436f551142e94c5a2d6014eb882bb8eef7"
+    }
+  },
+  "userstudy4_20261014/03014460-bc08-4991-9f7a-27ee315ffb0a": {
+    "src": "assets/inputs/portrait-sculpture.jpg",
+    "width": 3024,
+    "height": 4032,
+    "bounds": [
+      0,
+      0,
+      3024,
+      4032
+    ],
+    "hasAlpha": false,
+    "background": {
+      "type": "photograph",
+      "color": null
+    },
+    "originalBytesIntact": true,
+    "exifOrientation": 6,
+    "sourceSha256": "42bff456026f737df5dfb40e3a04bfd06482dd5b0a7f90b6046f781cbb82208c",
+    "foreground": {
+      "src": "assets/inputs/foreground/portrait-sculpture.png",
+      "width": 1024,
+      "height": 1024,
+      "bounds": [
+        210,
+        44,
+        606,
+        938
+      ],
+      "hasAlpha": true,
+      "background": {
+        "type": "transparent",
+        "color": null
+      },
+      "sourceType": "preprocessed-original-input",
+      "sourceSha256": "42bff456026f737df5dfb40e3a04bfd06482dd5b0a7f90b6046f781cbb82208c"
+    }
+  },
+  "h27_carved_stone_lion_realistic20261008v1": {
+    "src": "assets/inputs/carved-stone-lion.png",
+    "width": 1024,
+    "height": 1024,
+    "bounds": [
+      226,
+      47,
+      575,
+      925
+    ],
+    "hasAlpha": false,
+    "background": {
+      "type": "opaque-black",
+      "color": "#000000"
+    },
+    "originalBytesIntact": true,
+    "exifOrientation": 1,
+    "sourceSha256": "c45e3d4200bca961ba664eeceb879094f774fbd419cb1d82c2f6c2aaf7310b8c"
+  },
+  "studio-m06_guanyu": {
+    "src": "assets/inputs/guan-yu-statue.png",
+    "width": 1092,
+    "height": 1092,
+    "bounds": [
+      173,
+      48,
+      746,
+      997
+    ],
+    "hasAlpha": true,
+    "background": {
+      "type": "transparent",
+      "color": null
+    },
+    "originalBytesIntact": true,
+    "exifOrientation": 1,
+    "sourceSha256": "68257544b5683c34eca444e4739ef918e16d214d0aa9e213e33497985b99454a"
+  },
+  "userstudy4_20261014/02-bronze-compass": {
+    "src": "assets/inputs/bronze-compass.png",
+    "width": 1254,
+    "height": 1254,
+    "bounds": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "hasAlpha": false,
+    "background": {
+      "type": "photograph",
+      "color": null
+    },
+    "originalBytesIntact": true,
+    "exifOrientation": 1,
+    "sourceSha256": "f8f3ae0d81d62a49d62c829f1af32cec9e91e3f1e5c82d8f6b89afd40ce9bd7e",
+    "foreground": {
+      "src": "assets/inputs/foreground/bronze-compass.png",
+      "width": 1024,
+      "height": 1024,
+      "bounds": [
+        44,
+        159,
+        936,
+        706
+      ],
+      "hasAlpha": true,
+      "background": {
+        "type": "transparent",
+        "color": null
+      },
+      "sourceType": "preprocessed-original-input",
+      "sourceSha256": "f8f3ae0d81d62a49d62c829f1af32cec9e91e3f1e5c82d8f6b89afd40ce9bd7e"
+    }
+  },
+  "h67_hammered_copper_kettle_realistic20261008v1": {
+    "src": "assets/inputs/hammered-copper-kettle.png",
+    "width": 1024,
+    "height": 1024,
+    "bounds": [
+      50,
+      60,
+      923,
+      907
+    ],
+    "hasAlpha": false,
+    "background": {
+      "type": "opaque-black",
+      "color": "#000000"
+    },
+    "originalBytesIntact": true,
+    "exifOrientation": 1,
+    "sourceSha256": "256a5fa3490d5fa3ea153feb9f5bee7ac69c1f57debf7656448f05ca7cc56115"
+  },
+  "studio-bridge-record-stele": {
+    "src": "assets/inputs/bridge-record-stele.png",
+    "width": 1024,
+    "height": 1536,
+    "bounds": [
+      0,
+      0,
+      1024,
+      1536
+    ],
+    "hasAlpha": false,
+    "background": {
+      "type": "photograph",
+      "color": null
+    },
+    "originalBytesIntact": true,
+    "exifOrientation": 1,
+    "sourceSha256": "39979b868af136377bdc86b25ecd1c6c837f967fa2c2f75594dc21c18c94b874",
+    "foreground": {
+      "src": "assets/inputs/foreground/bridge-record-stele.png",
+      "width": 1081,
+      "height": 1081,
+      "bounds": [
+        230,
+        45,
+        621,
+        989
+      ],
+      "hasAlpha": true,
+      "background": {
+        "type": "transparent",
+        "color": null
+      },
+      "sourceType": "preprocessed-original-input",
+      "sourceSha256": "39979b868af136377bdc86b25ecd1c6c837f967fa2c2f75594dc21c18c94b874"
+    }
+  }
+}

@@ -23,3 +23,8 @@ scripts and uses those files by default on localhost.
 
 The arXiv buttons link to https://arxiv.org/abs/2610.22352.
 See the website for authors, citation, and dependency attribution.
+
+The standalone SUPRA-Tex Studio is available at `gallery/gallery.html`.
+Its Three.js runtime, manifests, models, textures, fonts and input images are
+stored in the repository under `gallery/`, so the Studio is self-contained
+when served by GitHub Pages.

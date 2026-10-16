@@ -1,0 +1,85 @@
+{
+  "assets": [],
+  "details": {
+    "confirmed19-m02_v1": {
+      "detailGlb": "assets/models/bronze-ritual-vessel.glb",
+      "baseColorSize": 4096,
+      "materialMapSize": 1024,
+      "bytes": 39867180,
+      "triangles": 470690,
+      "geometryIntact": true,
+      "baseColorIntact": true,
+      "materialsIntact": true
+    },
+    "selected9_20261013/wildv1__botanical_plate": {
+      "detailGlb": "assets/models/botanical-plate.glb",
+      "baseColorSize": 4096,
+      "materialMapSize": 1024,
+      "bytes": 44865904,
+      "triangles": 484952,
+      "geometryIntact": true,
+      "baseColorIntact": true,
+      "materialsIntact": true
+    },
+    "userstudy4_20261014/03014460-bc08-4991-9f7a-27ee315ffb0a": {
+      "detailGlb": "assets/models/portrait-sculpture.glb",
+      "baseColorSize": 4096,
+      "materialMapSize": 1024,
+      "bytes": 40643032,
+      "triangles": 482435,
+      "geometryIntact": true,
+      "baseColorIntact": true,
+      "materialsIntact": true
+    },
+    "h27_carved_stone_lion_realistic20261008v1": {
+      "detailGlb": "assets/models/carved-stone-lion.glb",
+      "baseColorSize": 4096,
+      "materialMapSize": 1024,
+      "bytes": 42252368,
+      "triangles": 495669,
+      "geometryIntact": true,
+      "baseColorIntact": true,
+      "materialsIntact": true
+    },
+    "studio-m06_guanyu": {
+      "detailGlb": "assets/models/guan-yu-statue.glb",
+      "baseColorSize": 4096,
+      "materialMapSize": 1024,
+      "bytes": 46833132,
+      "triangles": 468217,
+      "geometryIntact": true,
+      "baseColorIntact": true,
+      "materialsIntact": true
+    },
+    "userstudy4_20261014/02-bronze-compass": {
+      "detailGlb": "assets/models/bronze-compass.glb",
+      "baseColorSize": 4096,
+      "materialMapSize": 1024,
+      "bytes": 47280752,
+      "triangles": 494926,
+      "geometryIntact": true,
+      "baseColorIntact": true,
+      "materialsIntact": true
+    },
+    "h67_hammered_copper_kettle_realistic20261008v1": {
+      "detailGlb": "assets/models/hammered-copper-kettle.glb",
+      "baseColorSize": 4096,
+      "materialMapSize": 1024,
+      "bytes": 40797088,
+      "triangles": 493131,
+      "geometryIntact": true,
+      "baseColorIntact": true,
+      "materialsIntact": true
+    },
+    "studio-bridge-record-stele": {
+      "detailGlb": "assets/models/bridge-record-stele.glb",
+      "baseColorSize": 4096,
+      "materialMapSize": 4096,
+      "bytes": 43926548,
+      "triangles": 488483,
+      "geometryIntact": true,
+      "baseColorIntact": true,
+      "materialsIntact": true
+    }
+  }
+}

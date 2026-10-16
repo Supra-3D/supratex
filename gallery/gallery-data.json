@@ -1,0 +1,134 @@
+{
+  "assets": [
+    {
+      "id": "confirmed19-m02_v1",
+      "title": "Bronze Ritual Vessel",
+      "name": "Bronze Ritual Vessel",
+      "category": "Studio Objects",
+      "glb": "assets/models/bronze-ritual-vessel.glb",
+      "input": "assets/inputs/bronze-ritual-vessel.png",
+      "preview": "assets/inputs/bronze-ritual-vessel.png",
+      "bytes": 39867180,
+      "restingAngles": [
+        -0.12918925644670554,
+        0.031360075999834106
+      ]
+    },
+    {
+      "id": "selected9_20261013/wildv1__botanical_plate",
+      "title": "Botanical Plate",
+      "name": "Botanical Plate",
+      "category": "Objects & Craft",
+      "glb": "assets/models/botanical-plate.glb",
+      "input": "assets/inputs/botanical-plate.png",
+      "preview": "assets/inputs/botanical-plate.png",
+      "bytes": 44865904,
+      "restingAngles": [
+        0,
+        0
+      ],
+      "displaySupport": "rear"
+    },
+    {
+      "id": "userstudy4_20261014/03014460-bc08-4991-9f7a-27ee315ffb0a",
+      "title": "Portrait Sculpture",
+      "name": "Portrait Sculpture",
+      "category": "Studio Objects",
+      "glb": "assets/models/portrait-sculpture.glb",
+      "input": "assets/inputs/portrait-sculpture.jpg",
+      "preview": "assets/inputs/portrait-sculpture.jpg",
+      "bytes": 40643032,
+      "restingAngles": [
+        0,
+        0
+      ],
+      "displaySupport": "rear"
+    },
+    {
+      "id": "h27_carved_stone_lion_realistic20261008v1",
+      "title": "Carved Stone Lion",
+      "name": "Carved Stone Lion",
+      "category": "Objects & Craft",
+      "glb": "assets/models/carved-stone-lion.glb",
+      "input": "assets/inputs/carved-stone-lion.png",
+      "preview": "assets/inputs/carved-stone-lion.png",
+      "bytes": 42252368,
+      "restingAngles": [
+        0.16830559042831716,
+        -1.407863586435776e-18
+      ]
+    },
+    {
+      "id": "studio-m06_guanyu",
+      "title": "Guan Yu Statue",
+      "name": "Guan Yu Statue",
+      "category": "Studio Objects",
+      "glb": "assets/models/guan-yu-statue.glb",
+      "input": "assets/inputs/guan-yu-statue.png",
+      "preview": "assets/inputs/guan-yu-statue.png",
+      "bytes": 46833132,
+      "restingAngles": [
+        0.24434609527920614,
+        0.006201403349531832
+      ],
+      "displaySupport": "none"
+    },
+    {
+      "id": "studio-bridge-record-stele",
+      "title": "Bridge Record Stele",
+      "name": "Bridge Record Stele",
+      "category": "Studio Objects",
+      "glb": "assets/models/bridge-record-stele.glb",
+      "input": "assets/inputs/bridge-record-stele.png",
+      "preview": "assets/inputs/bridge-record-stele.png",
+      "bytes": 43926548,
+      "restingAngles": [
+        -0.06383446633831064,
+        -0.007185061539436075
+      ],
+      "displaySupport": "none"
+    },
+    {
+      "id": "userstudy4_20261014/02-bronze-compass",
+      "title": "Bronze Compass",
+      "name": "Bronze Compass",
+      "category": "Studio Objects",
+      "glb": "assets/models/bronze-compass.glb",
+      "input": "assets/inputs/bronze-compass.png",
+      "preview": "assets/inputs/bronze-compass.png",
+      "bytes": 47280752,
+      "restingAngles": [
+        -0.7092313126427126,
+        0.0016615534478986002
+      ],
+      "meshCleanup": {
+        "originalTriangleCount": 494926,
+        "excludeTriangleRanges": [
+          [
+            333190,
+            962
+          ],
+          [
+            334578,
+            124
+          ]
+        ],
+        "reason": "Detached rear fragment; preserve the body, feet, pointer and surface details."
+      }
+    },
+    {
+      "id": "h67_hammered_copper_kettle_realistic20261008v1",
+      "title": "Hammered Copper Kettle",
+      "name": "Hammered Copper Kettle",
+      "category": "Objects & Craft",
+      "glb": "assets/models/hammered-copper-kettle.glb",
+      "input": "assets/inputs/hammered-copper-kettle.png",
+      "preview": "assets/inputs/hammered-copper-kettle.png",
+      "bytes": 40797088,
+      "restingAngles": [
+        -0.04146843691696507,
+        -0.0053197635600787194
+      ]
+    }
+  ]
+}
