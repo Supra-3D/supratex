@@ -16,27 +16,6 @@
 }
 
 /* Compact resource links: one desktop row, or a balanced 3 + 2 layout. */
-@media (min-width:600px) {
-  #top.hero-layout-77.hero-video-only .hero-actions {
-    display: flex;
-    flex-wrap: nowrap;
-    width: max-content;
-    gap: 8px;
-  }
-  #top.hero-layout-77.hero-video-only .hero-actions .button {
-    flex: 0 0 auto;
-  }
-  #top.hero-layout-77.hero-video-only .hero-actions .hero-competing-button {
-    grid-column: auto;
-    justify-content: center;
-  }
-}
-@media (min-width:1100px) {
-  #top.hero-layout-77.hero-video-only {
-    grid-template-columns: minmax(0,1.18fr) minmax(0,1fr);
-    column-gap: clamp(22px,2.5vw,40px);
-  }
-}
 #top #paper .paper-resources { max-width:540px; gap:6px; }
 #top #paper .paper-resource { justify-content:center; column-gap:6px; }
 @media (min-width:1240px) {
