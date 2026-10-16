@@ -1,4 +1,4 @@
-import { drawInputImage, inputDisplayKey, waitForInput } from './gallery-input-display.js';
+import { drawInputImage, inputDisplayKey, waitForInput } from './studio-input-display.js';
 
 const thumbnails = new Map();
 

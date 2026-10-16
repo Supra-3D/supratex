@@ -5,11 +5,11 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
-import { createStudio, createPlinth, studio } from './gallery-architecture.js';
-import { settleExhibit, createContactShadow } from './gallery-grounding.js';
-import { createInputTexture } from './gallery-input-image.js';
-import { createCollectionThumbnail } from './gallery-collection-image.js';
-import { createNavigator } from './gallery-navigation.js';
+import { createStudio, createPlinth, studio } from './studio-architecture.js';
+import { settleExhibit, createContactShadow } from './studio-grounding.js';
+import { createInputTexture } from './studio-input-image.js';
+import { createCollectionThumbnail } from './studio-collection-image.js';
+import { createNavigator } from './studio-navigation.js';
 
 const $ = id => document.getElementById(id);
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -43,7 +43,7 @@ function notify(text) {
 }
 function fail(error) {
   console.error(error);
-  $('fatal-message').textContent = location.protocol === 'file:' ? 'Start the local server and open http://localhost:8088/gallery.html to load the 3D assets.' : `Unable to enter the studio: ${error.message}. Enable hardware acceleration in your browser and reload.`;
+  $('fatal-message').textContent = location.protocol === 'file:' ? 'Start the local server and open http://localhost:8088/studio.html to load the 3D assets.' : `Unable to enter the studio: ${error.message}. Enable hardware acceleration in your browser and reload.`;
   $('fatal-error').hidden = false;
 }
 function canvasTexture(width, height, draw) {
@@ -250,7 +250,7 @@ async function loadRoom(index, chosenSlot = -1, savedView = null) {
   camera.fov = savedView?.fov || studio.fov; camera.position.copy(savedView?.position || entryPosition());
   if (savedView) camera.quaternion.copy(savedView.quaternion); else camera.lookAt(entryTarget());
   camera.updateProjectionMatrix(); syncAngles();
-  $('room-title').textContent = room.title; $('room-number').textContent = `GALLERY ${String(state.room + 1).padStart(2, '0')} / ${String(state.rooms.length).padStart(2, '0')}`;
+  $('room-title').textContent = room.title; $('room-number').textContent = `STUDIO ${String(state.room + 1).padStart(2, '0')} / ${String(state.rooms.length).padStart(2, '0')}`;
   $('map-room').textContent = String(state.room + 1).padStart(2, '0'); $('intro').hidden = false; $('exhibit-card').hidden = true; $('auto-rotate').hidden = true;
   $('total-count').textContent = slots.length;
   $('view-label').textContent = savedView ? 'Studio view' : 'Entrance viewpoint'; $('control-hint').innerHTML = hallHint();
@@ -744,11 +744,11 @@ function animate(now) {
 async function main() {
   if (location.protocol === 'file:') return;
   try {
-    const responses = await Promise.all([fetch('./gallery-data.json'), fetch('./gallery-detail-data.json'), fetch('./gallery-input-images.json')]);
+    const responses = await Promise.all([fetch('./studio-data.json'), fetch('./studio-detail-data.json'), fetch('./studio-input-images.json')]);
     if (responses.some(response => !response.ok)) throw new Error('Unable to load the collection');
     const [data, details, inputs] = await Promise.all(responses.map(response => response.json()));
     state.catalog = [...data.assets, ...details.assets].map(asset => ({ ...asset, ...details.details[asset.id], inputImage: inputs[asset.id] }));
-    state.rooms = makeRooms(state.catalog); state.assets = state.rooms.flatMap(room => room.assets); $('total-count').textContent = state.assets.length; $('hall-count').textContent = `${state.rooms.length} gallery`;
+    state.rooms = makeRooms(state.catalog); state.assets = state.rooms.flatMap(room => room.assets); $('total-count').textContent = state.assets.length; $('hall-count').textContent = `${state.rooms.length} studio`;
     initScene(); bindUI(); await loadRoom(0);
   } catch (error) { fail(error); }
 }

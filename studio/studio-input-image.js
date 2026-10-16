@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { drawInputImage } from './gallery-input-display.js';
+import { drawInputImage } from './studio-input-display.js';
 
 export async function createInputTexture(renderer, input, signal) {
   const { canvas, ...metadata } = await drawInputImage(input, 1536, signal);

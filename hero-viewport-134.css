@@ -16,6 +16,16 @@
 }
 
 /* Compact resource links: one desktop row, or a balanced 3 + 2 layout. */
+#top.hero-layout-77.hero-video-only .hero-actions {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  width: max-content;
+  gap: 8px;
+}
+#top.hero-layout-77.hero-video-only .hero-actions .hero-competing-button {
+  grid-column: 1 / -1;
+  justify-content: space-between;
+}
 #top #paper .paper-resources { max-width:540px; gap:6px; }
 #top #paper .paper-resource { justify-content:center; column-gap:6px; }
 @media (min-width:1240px) {

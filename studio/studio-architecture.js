@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { Reflector } from 'three/addons/objects/Reflector.js';
 import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
-import { createFrostedGlass } from './gallery-frosted-glass.js';
+import { createFrostedGlass } from './studio-frosted-glass.js';
 
 export const studio = {
   bounds: { min: new THREE.Vector3(-6.15, .18, -9), max: new THREE.Vector3(6.15, 4.4, 14) },

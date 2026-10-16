@@ -5,7 +5,7 @@ import { dirname, extname, isAbsolute, relative, resolve, sep } from 'node:path'
 import { fileURLToPath } from 'node:url';
 import { spawn } from 'node:child_process';
 
-// Run from any working directory: the gallery is served beside this script.
+// Run from any working directory: the studio is served beside this script.
 const root = await realpath(dirname(fileURLToPath(import.meta.url)));
 const args = process.argv.slice(2);
 let port = 8088;
@@ -16,7 +16,7 @@ for (let index = 0; index < args.length; index += 1) {
   else if (argument.startsWith('--port=')) port = Number(argument.slice(7));
   else if (argument === '--open') openBrowser = true;
   else if (argument === '--help' || argument === '-h') {
-    console.log('Usage: node start-gallery.mjs [--port 8088] [--open]');
+    console.log('Usage: node start-studio.mjs [--port 8088] [--open]');
     process.exit(0);
   } else {
     console.error(`Unknown argument: ${argument}`);
@@ -86,13 +86,13 @@ const server = http.createServer(async (request, response) => {
       respond(request, response, 400, 'Invalid path');
       return;
     }
-    if (pathname === '/') pathname = '/gallery.html';
+    if (pathname === '/') pathname = '/studio.html';
     const candidate = resolve(root, `.${pathname}`);
     if (!isInsideRoot(candidate)) {
       respond(request, response, 403, 'Forbidden');
       return;
     }
-    // Resolve symlinks before serving, so they cannot escape the gallery folder.
+    // Resolve symlinks before serving, so they cannot escape the studio folder.
     const filePath = await realpath(candidate);
     if (!isInsideRoot(filePath)) {
       respond(request, response, 403, 'Forbidden');
@@ -126,14 +126,14 @@ const server = http.createServer(async (request, response) => {
 
 server.on('error', (error) => {
   console.error(error.code === 'EADDRINUSE'
-    ? `Port ${port} is already in use. Try: node start-gallery.mjs --port ${port + 1}`
+    ? `Port ${port} is already in use. Try: node start-studio.mjs --port ${port + 1}`
     : `Server error: ${error.message}`);
   process.exitCode = 1;
 });
 
 server.listen(port, '127.0.0.1', () => {
-  const url = `http://localhost:${port}/gallery.html`;
-  console.log(`\nSupratex Gallery: ${url}\nPress Ctrl+C to stop the server.\n`);
+  const url = `http://localhost:${port}/studio.html`;
+  console.log(`\nSupratex Studio: ${url}\nPress Ctrl+C to stop the server.\n`);
   if (openBrowser) {
     const command = process.platform === 'win32' ? 'cmd.exe' : process.platform === 'darwin' ? 'open' : 'xdg-open';
     const parameters = process.platform === 'win32' ? ['/d', '/c', 'start', '""', url] : [url];

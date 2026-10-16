@@ -1,4 +1,4 @@
-// Eye-height routes through the gallery's open floor. Obstacles include a
+// Eye-height routes through the Studio's open floor. Obstacles include a
 // visitor-sized clearance, so a click across a plinth walks around its edges.
 export function createNavigator({ bounds, obstacles, clearance = .34, step = .25 }) {
   const area = { minX: bounds.min.x, maxX: bounds.max.x, minZ: bounds.min.z, maxZ: bounds.max.z };
