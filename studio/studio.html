@@ -7,16 +7,18 @@
   <title>SUPRA-Tex Studio — 3D Generation with Super-Aligned Texture</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%232e4944'/%3E%3Cpath d='M12 34V16l12-6 12 6v18M18 34V20h12v14' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="./studio.css">
-  <link rel="stylesheet" href="./studio-theme.css">
+  <link rel="stylesheet" href="./studio-theme.css?v=loading-1">
   <script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js","three/addons/":"./vendor/three/addons/"}}</script>
 </head>
 <body>
+  <div id="studio-content" inert aria-busy="true">
   <div id="viewport" aria-label="3D SUPRA-Tex Studio"></div>
   <header class="topbar">
+    <a class="back-home" href="../index.html" aria-label="Return to SUPRA-Tex homepage"><span aria-hidden="true">←</span><span>Back</span></a>
     <a class="brand" href="./studio.html" aria-label="SUPRA-Tex Studio home"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 32V12L20 5l14 7v20M13 32V17h14v15M20 17v15"/></svg><span>SUPRA-Tex<small>STUDIO</small></span></a>
     <div class="room-nav"><button id="prev-room" class="icon-button" aria-label="Previous studio" hidden>←</button><div><span class="eyebrow" id="room-number" hidden></span><strong id="room-title">SUPRA-Tex Studio</strong></div><button id="next-room" class="icon-button" aria-label="Next studio" hidden>→</button></div>
     <nav class="header-actions">
-      <a class="text-button home-button" href="../index.html" aria-label="Return to SUPRA-Tex home"><span class="home-icon" aria-hidden="true">⌂</span><span>Home</span></a><button id="collection-toggle" class="text-button" aria-expanded="false" aria-controls="collection-panel"><span class="grid-icon">⊞</span> Collection <span id="total-count" class="count">—</span></button><button id="help-toggle" class="icon-button" aria-label="View controls">?</button><button id="fullscreen" class="icon-button" aria-label="Enter fullscreen">⛶</button>
+      <button id="collection-toggle" class="text-button" aria-expanded="false" aria-controls="collection-panel"><span class="grid-icon">⊞</span> Collection <span id="total-count" class="count">—</span></button><button id="help-toggle" class="icon-button" aria-label="View controls">?</button><button id="fullscreen" class="icon-button" aria-label="Enter fullscreen">⛶</button>
     </nav>
   </header>
   <div class="scene-top"><span class="live-dot"></span><span id="scene-status" role="status" aria-live="polite">Preparing the studio</span><span class="scene-separator">/</span><span id="view-label">Entrance viewpoint</span></div>
@@ -41,8 +43,22 @@
   </dialog>
   <div id="toast" class="toast" role="status" hidden></div>
   <section id="fatal-error" class="fatal-error" hidden><div><span class="eyebrow">SUPRA-Tex STUDIO</span><h1>The studio is unavailable</h1><p id="fatal-message"></p><button class="primary-button" onclick="location.reload()">Try again</button></div></section>
-  <noscript><div class="fatal-error"><div>Enable JavaScript to enter the 3D studio.</div></div></noscript>
-  <script>if(location.protocol==='file:'){document.getElementById('fatal-error').hidden=false;document.getElementById('fatal-message').textContent='Start the local server and open http://localhost:8088/studio.html. 3D assets cannot be loaded directly from a file URL.';}</script>
-  <script type="module" src="./studio.js"></script>
+  </div>
+  <section id="studio-loading" class="studio-loading" aria-labelledby="studio-loading-title" tabindex="-1">
+    <div class="studio-loading-card">
+      <span class="eyebrow">SUPRA-Tex STUDIO</span>
+      <h1 id="studio-loading-title">Loading the studio</h1>
+      <p id="studio-loading-status" role="status">Preparing the collection…</p>
+      <div id="studio-loading-progress" class="studio-loading-progress" role="progressbar" aria-label="Studio loading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+      <div class="studio-loading-meta"><span>Please wait until loading is complete.</span><strong id="studio-loading-percent" aria-hidden="true">0%</strong></div>
+      <a class="loading-home" href="../index.html">← Back to homepage</a>
+    </div>
+  </section>
+  <noscript><style>.studio-loading{display:none}</style><div class="fatal-error"><div>Enable JavaScript to enter the 3D studio.</div></div></noscript>
+  <script>if(location.protocol==='file:'){document.getElementById('studio-loading').hidden=true;document.getElementById('studio-content').inert=false;document.getElementById('studio-content').setAttribute('aria-busy','false');document.getElementById('fatal-error').hidden=false;document.getElementById('fatal-message').textContent='Start the local server and open http://localhost:8088/studio.html. 3D assets cannot be loaded directly from a file URL.';}</script>
+  <script type="module">
+    import { loadingFailed } from './studio-loading.js?v=1';
+    import('./studio.js?v=loading-1').catch(loadingFailed);
+  </script>
 </body>
 </html>

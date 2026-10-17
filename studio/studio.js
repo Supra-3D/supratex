@@ -10,6 +10,7 @@ import { settleExhibit, createContactShadow } from './studio-grounding.js';
 import { createInputTexture } from './studio-input-image.js';
 import { createCollectionThumbnail } from './studio-collection-image.js';
 import { createNavigator } from './studio-navigation.js';
+import { beginLoading, setLoadingProgress, finishLoading } from './studio-loading.js?v=1';
 
 const $ = id => document.getElementById(id);
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -45,6 +46,8 @@ function fail(error) {
   console.error(error);
   $('fatal-message').textContent = location.protocol === 'file:' ? 'Start the local server and open http://localhost:8088/studio.html to load the 3D assets.' : `Unable to enter the studio: ${error.message}. Enable hardware acceleration in your browser and reload.`;
   $('fatal-error').hidden = false;
+  finishLoading();
+  $('fatal-error').querySelector('button').focus({ preventScroll: true });
 }
 function canvasTexture(width, height, draw) {
   const canvas = document.createElement('canvas'); canvas.width = width; canvas.height = height;
@@ -236,6 +239,7 @@ function makeSlot(asset, index) {
   return slot;
 }
 async function loadRoom(index, chosenSlot = -1, savedView = null) {
+  beginLoading(); movementKeys.clear(); pointers.clear(); pointerStart = null; pinchDistance = 0;
   state.epoch++; const epoch = state.epoch; state.room = (index + state.rooms.length) % state.rooms.length; state.loaded = state.failed = 0; state.selected = -1;
   requests.forEach(controller => controller.abort()); requests.clear(); releaseHigh(); transition = null; orbit.enabled = false; state.mode = 'hall';
   if (roomGroup) { slots.forEach(s => s.environmentTarget?.dispose()); scene.remove(roomGroup); dispose(roomGroup); }
@@ -266,7 +270,14 @@ async function loadRoom(index, chosenSlot = -1, savedView = null) {
     if (epoch !== state.epoch) return;
     await loadSlot(slot, epoch);
   }
-  if (darkMode() && epoch === state.epoch) { updateRoomEnvironment(); refreshLocalEnvironments(); }
+  if (epoch !== state.epoch) return;
+  setLoadingProgress(98, 'Preparing lighting and reflections…');
+  await new Promise(requestAnimationFrame);
+  if (epoch !== state.epoch) return;
+  if (darkMode()) { updateRoomEnvironment(); refreshLocalEnvironments(); }
+  composer.render(0);
+  await new Promise(requestAnimationFrame);
+  if (epoch === state.epoch) finishLoading();
 }
 async function fetchModel(url, controller, onProgress) {
   const response = await fetch(url, { signal: controller.signal });
@@ -399,9 +410,11 @@ function updateProgress() {
   const total = slots.length, done = state.loaded + state.failed;
   const partial = slots.filter(s => s.status === 'loading').reduce((n, s) => n + s.progress, 0);
   $('scene-status').textContent = done === total ? state.failed ? `${state.loaded} objects ready · ${state.failed} objects to retry` : `${total} objects · Studio ready` : `Loading collection ${state.loaded} / ${total}`;
-  $('loading-bar').firstElementChild.style.width = `${(done + partial) / total * 100}%`;
+  $('loading-bar').firstElementChild.style.width = `${total ? (done + partial) / total * 100 : 0}%`;
   $('loading-bar').firstElementChild.style.opacity = done === total ? '0' : '1';
   document.body.dataset.ready = done === total ? 'true' : 'loading';
+  setLoadingProgress(total ? (done + partial * .9) / total * 96 : 0,
+    done === total ? 'Preparing the final scene…' : `Loading objects · ${done} / ${total}`);
 }
 function buildMap() {
   const svg = $('floor-map'); svg.querySelectorAll('.map-point,.map-camera,.map-home').forEach(n => n.remove());
@@ -692,7 +705,20 @@ function bindUI() {
   $('zoom-in').onclick = () => zoom(.8); $('zoom-out').onclick = () => zoom(1.25);
   $('auto-rotate').onclick = () => setAutoRotate(!orbit.autoRotate);
   $('prev-exhibit').onclick = () => selectSlot((state.selected - 1 + slots.length) % slots.length); $('next-exhibit').onclick = () => selectSlot((state.selected + 1) % slots.length);
-  $('retry-model').onclick = () => { const slot = slots[state.selected]; if (slot?.status === 'error') { state.failed--; loadSlot(slot, state.epoch); } };
+  $('retry-model').onclick = async () => {
+    const slot = slots[state.selected];
+    if (slot?.status !== 'error') return;
+    beginLoading(); movementKeys.clear(); state.failed--;
+    try {
+      await loadSlot(slot, state.epoch);
+      setLoadingProgress(98, 'Preparing lighting and reflections…');
+      await new Promise(requestAnimationFrame);
+      if (darkMode()) { updateRoomEnvironment(); refreshLocalEnvironments(); }
+      composer.render(0);
+      await new Promise(requestAnimationFrame);
+      finishLoading();
+    } catch (error) { fail(error); }
+  };
   $('collection-toggle').onclick = () => toggleCollection(); $('collection-close').onclick = () => toggleCollection(false); $('search').oninput = renderCollection;
   $('help-toggle').onclick = () => $('help-dialog').showModal(); $('help-close').onclick = $('help-done').onclick = () => $('help-dialog').close();
   $('help-dialog').addEventListener('click', e => { if (e.target === $('help-dialog')) { const r = e.target.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) e.target.close(); } });
@@ -701,6 +727,7 @@ function bindUI() {
   const categories = ['all', ...new Set(state.assets.map(a => a.category))];
   categories.forEach(category => { const button = document.createElement('button'); button.textContent = category === 'all' ? 'All' : category; button.classList.toggle('active', category === 'all'); button.onclick = () => { state.filter = category; $('room-tabs').querySelectorAll('button').forEach(b => b.classList.toggle('active', b === button)); renderCollection(); }; $('room-tabs').append(button); });
   window.addEventListener('keydown', e => {
+    if ($('studio-content').inert) return;
     if ($('help-dialog').open) return;
     if (e.key === 'Escape') { if (!$('collection-panel').hidden) toggleCollection(false); else overview(); return; }
     if (/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;

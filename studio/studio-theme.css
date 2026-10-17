@@ -1,4 +1,22 @@
 /* Charcoal and champagne studio palette. */
+.back-home{display:inline-flex;align-items:center;gap:7px;flex:none;color:inherit;text-decoration:none;font-size:12px;white-space:nowrap;border:1px solid #c7b99540;border-radius:4px;padding:9px 11px}
+.back-home>span:first-child{font-size:20px;line-height:1}
+.back-home:hover{background:#c7b99514;color:#ead5a7}
+.topbar .brand{margin-right:auto}
+.studio-loading{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:24px;background:rgba(14,16,17,.6);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);touch-action:none;overscroll-behavior:contain;cursor:wait}
+#studio-content[inert]{pointer-events:none;user-select:none}
+.studio-loading-card{width:min(420px,100%);padding:32px;border:1px solid #c7b99540;border-radius:8px;background:#151819eb;color:#c7b995;box-shadow:0 20px 80px #0005}
+.studio-loading-card h1{font-size:24px;font-weight:500;letter-spacing:-.02em;line-height:1.25;margin:15px 0 12px}
+.studio-loading-card p{font-size:13px;line-height:1.6;color:#c8c6bd;margin:0 0 24px}
+.studio-loading-progress{height:6px;overflow:hidden;background:#c7b99526;border-radius:6px}
+.studio-loading-progress i{display:block;width:0;height:100%;background:#d4bd85;border-radius:inherit;transition:width .2s linear}
+.studio-loading-meta{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-top:12px;font-size:11px;line-height:1.5;color:#aaa9a3}
+.studio-loading-meta strong{color:#d4bd85;font-size:16px;font-weight:500;font-variant-numeric:tabular-nums}
+.loading-home{display:inline-block;margin-top:26px;font-size:12px;color:#c7b995;text-decoration:none;cursor:pointer}
+.loading-home:hover{text-decoration:underline}
+@media(max-width:760px){.topbar .back-home{padding:7px;gap:4px;font-size:10px}.topbar .brand{margin-right:auto}.studio-loading-card{padding:26px 22px}.studio-loading-card h1{font-size:22px}}
+@media(max-width:380px){.back-home>span:last-child{display:none}}
+@media(prefers-reduced-motion:reduce){.studio-loading-progress i{transition:none}}
 .home-button{color:inherit;text-decoration:none;white-space:nowrap}
 .home-button:hover{color:#8c6244}
 .home-icon{font-size:18px;line-height:1}
