@@ -1,0 +1,24 @@
+# SUPRA-Tex
+
+> SUPRA-Tex: 3D Generation with Super-Aligned Texture. A research project on reference-aligned 3D texture generation and relightable PBR materials for image-to-3D assets and existing meshes.
+
+Chen Yang, Jiemin Fang, Fanpeng Meng, Zihao Huang, Jichen Pang, Guanjun Wu, Zhikuan Bao and Qi Tian. arXiv:2610.22352, submitted 15 October 2026.
+
+SUPRA-Tex separates reference-view material estimation, surface alignment and observation-guided 3D completion. An Interleaved Flow Transformer preserves fixed observation latents while completing unseen regions. Alignment here means correspondence between an input image and a textured 3D surface. The geometry frontend is a separate component.
+
+## Paper and research
+
+- [Paper on arXiv](https://arxiv.org/abs/2610.22352): Original preprint, author list and publication history.
+- [Paper overview](https://supra-3d.github.io/supratex/paper.html): Static HTML with the abstract, method, task definitions, evaluation scope and citation.
+- [Paper overview in Markdown](https://supra-3d.github.io/supratex/paper.md): Text equivalent of the HTML overview.
+- [BibTeX](https://supra-3d.github.io/supratex/citation.bib): Citation for this preprint.
+
+## Implementation and demonstrations
+
+- [Code](https://github.com/Supra-3D/supra-tex): Inference workflows, setup and component licenses.
+- [Weights](https://huggingface.co/supra3d/supra-tex): Published model components and their terms.
+- [Demo](https://huggingface.co/spaces/UniLat3D/Supra-Tex): Interactive image-to-3D inference.
+- [Project page](https://supra-3d.github.io/supratex/): Interactive assets, reference alignment, mesh texturing and relighting examples.
+- [Evaluation](https://supra-3d.github.io/supratex/#evaluation): DTC-Tex and Complex-Tex tables with protocols; results vary by metric and input setup.
+- [Commercial comparison](https://supra-3d.github.io/supratex/#competition): Most cases use a reference plus a synthesized back view for SUPRA-Tex; Fighter uses one reference. Compared services receive the reference image.
+- [Real2Sim](https://supra-3d.github.io/supratex/#embodied): Demonstrations of textured assets in simulation.

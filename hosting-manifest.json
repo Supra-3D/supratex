@@ -1311,6 +1311,11 @@
       "sha256": "897e9043a51f37f4613513639fdea2236adea8a5575ace9b30e7eccdd4a28267"
     },
     {
+      "path": "citation.bib",
+      "bytes": 366,
+      "sha256": "e7b8a12562fafd137d3d8eb477896ad873d6849c2ab3f9b8596b285410543b2e"
+    },
+    {
       "path": "citation.css",
       "bytes": 2701,
       "sha256": "ab13812389b027f923adcb1661a789ae33cac3ec8f8d1967b99633a216c93aeb"
@@ -1512,8 +1517,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 91029,
-      "sha256": "6057e279e2da86049e94a3dff95465932e77810c263b8c004b6e86daa23f1cc8"
+      "bytes": 95499,
+      "sha256": "dd36c4e2d33c8e56fb0af97542dbd782c4f4512ef00e1f0a7eb59613a67c3678"
     },
     {
       "path": "interaction-74.css",
@@ -1524,6 +1529,11 @@
       "path": "layout-70.css",
       "bytes": 10687,
       "sha256": "f3829338e501ba7a75197adcc810ea28af9749d35d50c3b843762de19b102669"
+    },
+    {
+      "path": "llms.txt",
+      "bytes": 2149,
+      "sha256": "f2fd7bdcb8d1283ad4946c44e17eca642496bf78912750da35f2ee7d05712959"
     },
     {
       "path": "materials-rail.js",
@@ -1564,6 +1574,16 @@
       "path": "observatory.css",
       "bytes": 28297,
       "sha256": "ee44a9cd13d4140845b66b3d676e4180cd8f06980ef38275066bb4a29458066b"
+    },
+    {
+      "path": "paper.html",
+      "bytes": 16091,
+      "sha256": "3a7f89daaa026900bc1dddbe68c358c26d853ce4705aa86fb6fab946c859b857"
+    },
+    {
+      "path": "paper.md",
+      "bytes": 5438,
+      "sha256": "7665250857fc88392327af703c854d75d0faabb172122fb3ca0992a210f2a31f"
     },
     {
       "path": "preference.css",
@@ -1619,6 +1639,11 @@
       "path": "site-refine.css",
       "bytes": 7342,
       "sha256": "e0c11657403c3c52428c1132060d5ece91f758c69db796c768dfd5072684e9eb"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 242,
+      "sha256": "890ceb0dee6ada59e1d1ae456ffff5cc58e9e0a1a00540f1e20dbc14344c5357"
     },
     {
       "path": "story-75.css",
@@ -1951,7 +1976,7 @@
       "sha256": "06552c54e4071fbc7305117aafe6765d92c5d2a2a83507d4f05b9bf4f3d4d463"
     },
     {
-      "path": "studio/\u542f\u52a8\u5c55\u9986.cmd",
+      "path": "studio/启动展馆.cmd",
       "bytes": 497,
       "sha256": "256a1797272b1a80a328329e694dbbc66db1fc6d39f4c91fa8beb99611d88896"
     },
