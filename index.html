@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="readability-research.css">
   <link rel="stylesheet" href="readability.css">
   <link rel="stylesheet" href="chapter-rhythm.css?v=138">
-  <link rel="stylesheet" href="gallery-expansion.css">
+  <link rel="stylesheet" href="gallery-expansion.css?v=154">
   <link rel="stylesheet" href="detail-evidence.css?v=handle-38.1">
   <link rel="stylesheet" href="evaluation-focus.css?v=fidelity-film-55">
   <link rel="stylesheet" href="hero-controls.css?v=autoplay-60">
@@ -53,24 +53,26 @@
   <link rel="stylesheet" href="mobile-navigation-102.css?v=102">
   <link rel="stylesheet" href="mobile-hero-102.css?v=resources-107">
   <link rel="stylesheet" href="mobile-comparison-102.css?v=102">
-  <link rel="stylesheet" href="mobile-sections-102.css?v=134">
+  <link rel="stylesheet" href="mobile-sections-102.css?v=154">
   <link rel="stylesheet" href="comparison-compact-103.css?v=113">
   <link rel="stylesheet" href="comparison-reveal-105.css?v=110">
   <link rel="stylesheet" href="readability-111.css?v=142">
-  <link rel="stylesheet" href="hero-viewport-134.css?v=148">
+  <link rel="stylesheet" href="hero-viewport-134.css?v=156">
   <link rel="stylesheet" href="texturing.css?v=134">
+  <link rel="stylesheet" href="section-folds.css?v=153">
   <script defer src="asset-hosting.js?v=120"></script>
 <script defer src="asset-binaries.js?v=120"></script>
 <script defer src="asset-loader.js?v=120"></script>
+<script defer src="section-folds.js?v=153"></script>
 <script defer src="transitions.js"></script>
-  <script defer src="app.js?v=interaction-74"></script>
+  <script defer src="app.js?v=resources-149"></script>
   <script defer src="experience.js?v=texturing-131"></script>
   <script defer src="hero-motion.js"></script>
   <script defer src="hero-video-83.js?v=99"></script>
   <script defer src="observatory.bundle.js?v=110"></script>
-  <script defer src="editorial.js?v=fidelity-39"></script>
-  <script defer src="control.js?v=110"></script>
-  <script defer src="gallery.js?v=130"></script>
+  <script defer src="editorial.js?v=folds-153"></script>
+  <script defer src="control.js?v=folds-153"></script>
+  <script defer src="gallery.js?v=selected-154"></script>
   <script defer src="competition-models.js?v=115"></script>
   <script defer src="competition.js?v=copy-121"></script>
   <script defer src="comparison-reveal-105.js?v=110"></script>
@@ -98,7 +100,6 @@
         <div class="hero-intro">
         <h1 id="paper-title" class="reveal supra-title" aria-label="SUPRA-Tex: 3D Generation with Super-Aligned Texture"><span class="title-project">SUPRA-Tex</span><span class="title-research"><span>3D Generation with </span><span>Super-Aligned Texture</span></span></h1>
         <p class="hero-description reveal"><strong class="hero-promise">Built entirely on<br> open-source data.</strong></p>
-        <div class="hero-actions reveal"><a class="button hero-competing-button" href="#competition">Commercial comparisons <span aria-hidden="true">↗</span></a><a class="button button-light hero-embodied-button" href="#embodied">Real2Sim <span aria-hidden="true">↗</span></a><a class="button button-light hero-studio-button" href="studio/studio.html">🔥 Studio <span aria-hidden="true">↗</span></a></div>
         </div>
     <section id="paper" class="hero-paper" aria-labelledby="paper-resources-title" tabindex="-1">
       <div class="paper-identity">
@@ -120,27 +121,34 @@
         <li><sup>3</sup><span>Huazhong University of Science and Technology</span></li>
       </ol>
       <p class="paper-author-notes"><span><sup>*</sup> Equal contribution</span><span><sup>†</sup> Project lead</span><span><svg class="paper-corresponding-icon" viewBox="0 0 16 12" aria-hidden="true"><path d="M1 1h14v10H1zM1 1l7 5 7-5"/></svg> Corresponding authors</span></p>
-      <div class="paper-resources" role="group" aria-label="Research resources">
+      <div class="paper-resources" role="group" aria-label="Project links">
         <a class="paper-resource" href="https://arxiv.org/abs/2610.22352" data-resource="paper" target="_blank" rel="noopener noreferrer" aria-label="Read the SUPRA-Tex paper on arXiv">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>
           <span class="paper-resource-name">Paper</span>
-        </a>
-        <a class="paper-resource" href="https://youtu.be/3VoaL-YxLMc" data-resource="video" target="_blank" rel="noopener noreferrer" aria-label="Watch the SUPRA-Tex promotional video on YouTube">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 6 3-6 3z"/></svg>
-          <span class="paper-resource-name">Video</span>
-        </a>
-        <a class="paper-resource" href="https://huggingface.co/spaces/UniLat3D/Supra-Tex" data-resource="demo" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face online demo">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7zM4 5v14"/></svg>
-          <span class="paper-resource-name">Live Demo</span>
         </a>
         <a class="paper-resource" href="https://github.com/Supra-3D/supra-tex" data-resource="code" target="_blank" rel="noopener noreferrer" aria-label="SUPRA-Tex GitHub repository">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6M16 6l6 6-6 6M14 3l-4 18"/></svg>
           <span class="paper-resource-name">GitHub</span>
         </a>
-        <a class="paper-resource" href="https://huggingface.co/supra3d/supra-tex" data-resource="models" target="_blank" rel="noopener noreferrer" aria-label="SUPRA-Tex model weights on Hugging Face">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7zm0 10 9-5M12 12 3 7M12 12v10M7.5 4.5l9 5"/></svg>
-          <span class="paper-resource-name">Weights</span>
+        <a class="paper-resource" href="https://huggingface.co/spaces/UniLat3D/Supra-Tex" data-resource="demo" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face online demo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7zM4 5v14"/></svg>
+          <span class="paper-resource-name">Demo</span>
         </a>
+        <a class="paper-resource hero-embodied-button" href="#embodied"><svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h12l-2-4H5zM8 17 5 9M7 7h8M17 9v3m0 0-3 3m3-3 3 3"/><circle cx="5" cy="7" r="2"/><circle cx="17" cy="7" r="2"/></svg><span class="paper-resource-name">Real2Sim</span></a>
+        <a class="paper-resource hero-studio-button" href="studio/studio.html"><span class="paper-resource-name">🔥 Studio</span><span aria-hidden="true">↗</span></a>
+        <details class="paper-more">
+          <summary class="paper-resource paper-more-toggle">More <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></summary>
+          <div class="paper-more-menu" role="group" aria-label="More project resources">
+            <a class="paper-resource" href="https://youtu.be/3VoaL-YxLMc" data-resource="video" target="_blank" rel="noopener noreferrer" aria-label="Watch the SUPRA-Tex promotional video on YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 6 3-6 3z"/></svg>
+              <span class="paper-resource-name">Video</span>
+            </a>
+            <a class="paper-resource" href="https://huggingface.co/supra3d/supra-tex" data-resource="models" target="_blank" rel="noopener noreferrer" aria-label="SUPRA-Tex model weights on Hugging Face">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7zm0 10 9-5M12 12 3 7M12 12v10M7.5 4.5l9 5"/></svg>
+              <span class="paper-resource-name">Weights</span>
+            </a>
+          </div>
+        </details>
       </div>
     </section>
       </div>
@@ -377,7 +385,7 @@
       <p class="evidence-note">One reference image · matched camera · different lighting.</p>
     </section>
 
-    <section id="materials" class="materials-section section-pad">
+    <section id="materials" class="materials-section section-pad" data-section-fold="Relightable materials">
       <div class="section-index reveal"><span>06</span> RELIGHTABLE MATERIALS</div>
       <div class="section-heading chapter-heading reveal"><h2>Hold the shape.<br><span class="soft-gold">Change the light.</span></h2><p class="chapter-caption">Explore seven models under changing light.<br>Inspect their albedo, roughness and metallic maps.</p></div>
       <div class="observatory reveal" data-environment="sunset" data-channel="pbr" aria-busy="true">
@@ -417,7 +425,7 @@
         <div class="observatory-foot"><span id="lab-status" role="status">Loading 3D model…</span><button id="lab-retry" type="button" hidden>Retry materials <span aria-hidden="true">↻</span></button></div>
       </div>
     </section>
-<section id="control" class="control-section section-pad" aria-labelledby="control-title" data-editing-demo>
+<section id="control" class="control-section section-pad" aria-labelledby="control-title" data-editing-demo data-section-fold="Image-based control">
   <div class="section-index"><span>07</span> IMAGE-BASED CONTROL</div>
   <div class="control-heading chapter-heading">
     <h2 id="control-title">Make it yours.</h2>
@@ -468,10 +476,14 @@
     <section id="gallery" class="supra-gallery" aria-labelledby="gallery-heading">
   <div class="gallery-inner">
     <div class="gallery-heading chapter-heading">
-      <div><p class="gallery-kicker">08 / SELECTED RESULTS · 14 CASES</p><h2 id="gallery-heading">Look closer.</h2></div>
+      <div><p class="gallery-kicker">08 / SELECTED RESULTS</p><h2 id="gallery-heading">Look closer.</h2></div>
       <p class="chapter-caption">Compare each result with its reference.<br>Rotate the model to inspect the full surface.</p>
     </div>
     <div class="gallery-grid" data-gallery-grid></div>
+    <details class="gallery-more" data-gallery-more hidden>
+      <summary aria-controls="gallery-more-cases"><span data-gallery-more-label>More</span><span class="gallery-more-count">8 cases</span><span class="gallery-more-icon" aria-hidden="true">+</span></summary>
+      <div class="gallery-grid" id="gallery-more-cases" data-gallery-more-grid></div>
+    </details>
     <noscript><p class="gallery-note">Enable JavaScript to browse the interactive case gallery.</p></noscript>
   </div>
 </section>
@@ -513,7 +525,7 @@
   </div>
 </dialog>
 
-<section id="method" class="method-section section-pad research-refined research-method" aria-labelledby="method-heading">
+<section id="method" class="method-section section-pad research-refined research-method" aria-labelledby="method-heading" data-section-fold="Research method">
   <div class="section-index reveal"><span>09</span> THE RESEARCH</div>
   <div class="method-intro chapter-heading reveal">
     <h2 id="method-heading">Observe first.<br>Generate in 3D.</h2>
@@ -554,7 +566,7 @@
   </div>
 </section>
 
-<section id="evaluation" class="evaluation-section section-pad research-refined research-evidence" aria-labelledby="evidence-heading">
+<section id="evaluation" class="evaluation-section section-pad research-refined research-evidence" aria-labelledby="evidence-heading" data-section-fold="Evaluation">
   <div class="section-index reveal"><span>10</span> MEASURED FIDELITY</div>
   <div class="section-heading chapter-heading reveal">
     <h2 id="evidence-heading">Same geometry.<br>Higher fidelity.</h2>

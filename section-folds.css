@@ -1,0 +1,103 @@
+/* Secondary chapters stay discoverable without interrupting the main results. */
+:is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold {
+  min-height: 0;
+  padding-block: 26px;
+  background: #111413;
+}
+:is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: var(--page);
+  right: var(--page);
+  height: 1px;
+  border: 0;
+  background: #c7b99529;
+}
+:is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold .section-index {
+  margin: 0 0 9px;
+  font-size: 12px;
+  line-height: 1.5;
+  gap: 12px;
+  opacity: 1;
+  transform: none;
+}
+:is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold .chapter-heading {
+  display: grid;
+  grid-template-columns: minmax(0,1.05fr) minmax(0,1fr) auto;
+  align-items: center;
+  gap: 20px 32px;
+  margin: 0;
+  opacity: 1;
+  transform: none;
+}
+:is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold .chapter-heading h2 {
+  margin: 0;
+  max-width: none;
+  font-size: clamp(24px,2.1vw,30px);
+  line-height: 1.2;
+  letter-spacing: -.03em;
+  text-wrap: pretty;
+}
+:is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold .chapter-heading > .chapter-caption {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  color: #aeb4ac;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+  text-wrap: pretty;
+}
+.section-fold-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 44px;
+  min-width: 112px;
+  padding: 10px 14px;
+  border: 1px solid #c7b99555;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--gold);
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.section-fold-toggle:hover { background: #c7b99512; border-color: var(--gold); }
+.section-fold-toggle:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.section-fold-icon { position: relative; width: 12px; height: 12px; }
+.section-fold-icon::before,.section-fold-icon::after {
+  content: ''; position: absolute; background: currentColor;
+}
+.section-fold-icon::before { width: 12px; height: 1px; left: 0; top: 5.5px; }
+.section-fold-icon::after { width: 1px; height: 12px; left: 5.5px; top: 0; }
+[aria-expanded="true"] > .section-fold-icon::after { display: none; }
+.section-fold-body { min-width: 0; margin-top: 28px; }
+.section-fold-body[hidden] { display: none !important; }
+:is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold.is-expanded { padding-bottom: 44px; }
+
+@media (max-width: 959.98px) {
+  :is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold .chapter-heading {
+    grid-template-columns: minmax(0,1fr) auto;
+    gap: 10px 18px;
+  }
+  :is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold .chapter-heading > .chapter-caption {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    max-width: 58ch;
+  }
+  .section-fold-toggle { grid-column: 2; grid-row: 1; }
+}
+@media (max-width: 480px) {
+  :is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold { padding-block: 22px; }
+  :is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold .chapter-heading { gap: 10px 12px; }
+  :is(#embodied,#details,#materials,#control,#method,#evaluation).section-fold .chapter-heading h2 { font-size: 23px; }
+  .section-fold-toggle { min-width: 96px; gap: 10px; padding-inline: 10px; font-size: 13px; }
+}

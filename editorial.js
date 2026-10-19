@@ -16,6 +16,7 @@
   });});
   const benchmarkTab=tabs.find(tab=>tab.dataset.evidenceTab==='benchmarks');
   function revealTarget(target){
+    window.SupraSections?.reveal(target);
     target.focus({preventScroll:true});
     target.scrollIntoView({block:'start',behavior:window.SupraTransitions.enabled()?'smooth':'instant'});
   }
@@ -36,6 +37,14 @@
     revealTarget(tab);
   }
   window.addEventListener('hashchange',selectLinkedTab);
+  // A study link may be clicked again after switching tabs without changing the hash.
+  document.querySelectorAll('a[href^="#evidence-tab-"]').forEach(link=>{
+    link.addEventListener('click',event=>{
+      if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+      const tab=tabs.find(item=>`#${item.id}`===link.getAttribute('href'));
+      if(tab){select(tab);revealTarget(tab);}
+    });
+  });
   selectLinkedTab();
   // Add a visual scale to preference scores while keeping the exact values readable.
   document.querySelectorAll('#evidence-panel-human tbody td').forEach(cell=>{

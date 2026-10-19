@@ -198,7 +198,7 @@
             observer.disconnect();
           }
         }, { rootMargin: '300px' });
-        observer.observe(section);
+        observer.observe(panel);
       }
     });
   }

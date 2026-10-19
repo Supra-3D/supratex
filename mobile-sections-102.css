@@ -372,7 +372,7 @@
   #materials .lab-bottom-controls { grid-column: 1/-1; }
   #materials .environment-buttons { grid-template-columns: repeat(4,minmax(0,1fr)); }
   #materials .channel-buttons { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  #gallery .gallery-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  #gallery .gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   #gallery .gallery-card.is-featured { grid-column: 1/-1; }
   #method .method-steps article,#method .method-steps article:last-child { grid-template-columns: 150px minmax(0,1fr); column-gap: 24px; }
   #method .method-steps .method-picture { width: 150px; height: 150px; }

@@ -70,3 +70,20 @@
   #gallery .gallery-card-caption{padding-top:12px}
   #gallery .gallery-card:not(.is-featured):not(.is-spotlight) .gallery-card-media{height:auto;aspect-ratio:4/3;background:#252b30}
 }
+
+/* Four supporting highlights stay visible; additional cases are opt-in. */
+#gallery .gallery-more { margin-top: 30px; text-align: center; }
+#gallery .gallery-more[hidden] { display: none; }
+#gallery .gallery-more > summary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  min-height: 44px; padding: 10px 18px;
+  border: 1px solid #c7b99555; border-radius: 4px;
+  background: #c7b9950a; color: var(--g-gold);
+  font-size: 15px; line-height: 1.5; cursor: pointer; list-style: none;
+}
+#gallery .gallery-more > summary::-webkit-details-marker { display: none; }
+#gallery .gallery-more > summary:hover { background: #c7b99515; border-color: var(--g-gold); }
+#gallery .gallery-more > summary:focus-visible { outline: 2px solid var(--g-gold); outline-offset: 4px; }
+#gallery .gallery-more-count { color: var(--g-muted); font-size: 13px; }
+#gallery .gallery-more-icon { min-width: 12px; font-size: 19px; line-height: 1; }
+#gallery .gallery-more > .gallery-grid { margin-top: 28px; text-align: left; }

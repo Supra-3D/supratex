@@ -12,13 +12,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 1332,
-      "sha256": "5144e80f00bb08eee6b4dac50f64d777ebe6bbaf23fa30477546ea7fa3f9b10d"
+      "bytes": 1584,
+      "sha256": "e931501963b6b64715f567505ec69b1bd6bdc8d4f5abe51342b2dee807d85d95"
     },
     {
       "path": "app.js",
-      "bytes": 6545,
-      "sha256": "51d0c667a3a5f041f271eb2d37d94ea486d4aa99397308abb4520e5815a07943"
+      "bytes": 7206,
+      "sha256": "5dcda1f7710ddaf05af2c697f668140a5f9745265236ab55d25acecc832e1a15"
     },
     {
       "path": "asset-binaries.js",
@@ -1397,8 +1397,8 @@
     },
     {
       "path": "control.js",
-      "bytes": 12015,
-      "sha256": "c6db29839abc4e22ce009c73be944d45beb63f7997ec261794af985aeff8b060"
+      "bytes": 12013,
+      "sha256": "abc8d61a6d31080836edf548371322424e4303d6477d1392cf9b29cc1b0f8198"
     },
     {
       "path": "desktop-layout-polish.css",
@@ -1412,8 +1412,8 @@
     },
     {
       "path": "editorial.js",
-      "bytes": 2231,
-      "sha256": "cdeb9415790244d8fe4ac231bf4408fb72925e39b54318aa74af0beb23d2f4f1"
+      "bytes": 2730,
+      "sha256": "8370af698c7bd476ac8891a0d801a56c226db6dd6f9500c0e97c5a70cd160396"
     },
     {
       "path": "embodied.css",
@@ -1452,8 +1452,8 @@
     },
     {
       "path": "gallery-expansion.css",
-      "bytes": 5349,
-      "sha256": "96ccd3d1476270db976c781ec46109faaf80554539cab125b4a47f9f2750d023"
+      "bytes": 6380,
+      "sha256": "64b1557c6e7b6802f2d2d6e7ec30e561b1ea3a027c2fbe8b46fa1dd352a36ed8"
     },
     {
       "path": "gallery-viewer.bundle.js",
@@ -1467,8 +1467,8 @@
     },
     {
       "path": "gallery.js",
-      "bytes": 35153,
-      "sha256": "ac62120ed9595724621fd2e3ccba8d7b74e151c8bd99fce692ecf32c3728a0b2"
+      "bytes": 36239,
+      "sha256": "51a6b80d2bef4ac80308f3367d54c56a0684636d5bbdec90655b6ce6e59f487a"
     },
     {
       "path": "hero-controls.css",
@@ -1507,13 +1507,13 @@
     },
     {
       "path": "hero-viewport-134.css",
-      "bytes": 1331,
-      "sha256": "255bd7af94adb19bc296f7665852e6357931b810400f18a72775b01e5bded536"
+      "bytes": 6484,
+      "sha256": "8054d5b6a6eafe7f433886deaf8e47df63f54bb1606aac23269d23e4fa293b44"
     },
     {
       "path": "index.html",
-      "bytes": 89943,
-      "sha256": "ee8702cc22082f79210a8fae574733ff2b3d778973e2a357a3ef4d663781ef5c"
+      "bytes": 91029,
+      "sha256": "6057e279e2da86049e94a3dff95465932e77810c263b8c004b6e86daa23f1cc8"
     },
     {
       "path": "interaction-74.css",
@@ -1553,7 +1553,7 @@
     {
       "path": "mobile-sections-102.css",
       "bytes": 30286,
-      "sha256": "a3d73c0990b4155ba826a53588731c40a565e9c816909c30395bcdb0b8c9989c"
+      "sha256": "12fec9481f002a02d869c75793007142fe56d1e6e9707c0054bc54fbdd043239"
     },
     {
       "path": "observatory.bundle.js",
@@ -1601,6 +1601,16 @@
       "sha256": "9cec3e0c428614e5984f4305504a12c9ea917bf0a0a3d8c2123e9f40746ecdbe"
     },
     {
+      "path": "section-folds.css",
+      "bytes": 3569,
+      "sha256": "d84af62d45e229ffbb6d4100a896e98d5840e1d47906f234281c57f90f1f42a7"
+    },
+    {
+      "path": "section-folds.js",
+      "bytes": 3451,
+      "sha256": "7530e3dfbb922724bb0b586b009fa04e65729c7f3edb55fc2ef3867e4a42813d"
+    },
+    {
       "path": "showcase-polish.css",
       "bytes": 1836,
       "sha256": "96a991e53359f2794e4ba6060fc5dd28e9d637a90d314d2c204b2f2fab96f969"
@@ -1614,6 +1624,336 @@
       "path": "story-75.css",
       "bytes": 5720,
       "sha256": "a9caaae1759811b03f2f23ab3dc2e3a3a12a3667122807a7a4bd74f19eac3338"
+    },
+    {
+      "path": "studio/README.txt",
+      "bytes": 3244,
+      "sha256": "77fee4b35cabbab79cd8530d6b2ac9f53675412070157dc122f6b3c584c1e093"
+    },
+    {
+      "path": "studio/assets/fonts/LICENSE.txt",
+      "bytes": 14716,
+      "sha256": "5bb218343ded506b258d86186d460fc47d9b6b28f0e642cf32676c396b7df763"
+    },
+    {
+      "path": "studio/assets/fonts/studio.woff2",
+      "bytes": 203236,
+      "sha256": "2635e894931ed40e7c5cc14f29027bc904ba1e778cdb9b796d0abb4af2fcd071"
+    },
+    {
+      "path": "studio/assets/inputs/botanical-plate.png",
+      "bytes": 3816669,
+      "sha256": "58caee9a51ca82fd5dac6336fed21e436f551142e94c5a2d6014eb882bb8eef7"
+    },
+    {
+      "path": "studio/assets/inputs/bridge-record-stele.png",
+      "bytes": 3344635,
+      "sha256": "39979b868af136377bdc86b25ecd1c6c837f967fa2c2f75594dc21c18c94b874"
+    },
+    {
+      "path": "studio/assets/inputs/bronze-compass.png",
+      "bytes": 2455788,
+      "sha256": "f8f3ae0d81d62a49d62c829f1af32cec9e91e3f1e5c82d8f6b89afd40ce9bd7e"
+    },
+    {
+      "path": "studio/assets/inputs/bronze-ritual-vessel.png",
+      "bytes": 1120644,
+      "sha256": "0046ed6ce9076004393cb29a4895896f0c318f09289d481ee22409218006b36a"
+    },
+    {
+      "path": "studio/assets/inputs/carved-stone-lion.png",
+      "bytes": 806047,
+      "sha256": "c45e3d4200bca961ba664eeceb879094f774fbd419cb1d82c2f6c2aaf7310b8c"
+    },
+    {
+      "path": "studio/assets/inputs/foreground/botanical-plate.png",
+      "bytes": 1549968,
+      "sha256": "c800c713e62d6a3175cef862d99a7f01710702b824f4d9cffd9772921aad6965"
+    },
+    {
+      "path": "studio/assets/inputs/foreground/bridge-record-stele.png",
+      "bytes": 1568582,
+      "sha256": "38183f46e95745d4864808c20383caa98ba13cbf0f4ed3a5536c1a749db28586"
+    },
+    {
+      "path": "studio/assets/inputs/foreground/bronze-compass.png",
+      "bytes": 1387630,
+      "sha256": "26e0363e2ecfa2fe2a9c799430efc8a44444ebc61051c401bc0958dca429df2e"
+    },
+    {
+      "path": "studio/assets/inputs/foreground/portrait-sculpture.png",
+      "bytes": 968009,
+      "sha256": "b0605f246f20d38b23fffb85254f9b2d835d76080cabbe6342249d3a7b672185"
+    },
+    {
+      "path": "studio/assets/inputs/guan-yu-statue.png",
+      "bytes": 1166671,
+      "sha256": "68257544b5683c34eca444e4739ef918e16d214d0aa9e213e33497985b99454a"
+    },
+    {
+      "path": "studio/assets/inputs/hammered-copper-kettle.png",
+      "bytes": 874903,
+      "sha256": "256a5fa3490d5fa3ea153feb9f5bee7ac69c1f57debf7656448f05ca7cc56115"
+    },
+    {
+      "path": "studio/assets/inputs/portrait-sculpture.jpg",
+      "bytes": 2998233,
+      "sha256": "42bff456026f737df5dfb40e3a04bfd06482dd5b0a7f90b6046f781cbb82208c"
+    },
+    {
+      "path": "studio/assets/materials/SOURCES.txt",
+      "bytes": 1018,
+      "sha256": "55ae3f343607d64884daa913cfb6f42827bdb4db7661c392a3b258fa3b000e53"
+    },
+    {
+      "path": "studio/assets/materials/floor-color.jpg",
+      "bytes": 1156573,
+      "sha256": "fa27982687596d7aa080db1e9b88c30f48a3c32eb3e50b27a2ea27c431e4cde9"
+    },
+    {
+      "path": "studio/assets/materials/floor-normal.jpg",
+      "bytes": 3325261,
+      "sha256": "b077dfe6b3b8fbe794d82b9014d030fa01984a25ab67d2e21310995e6ea5b881"
+    },
+    {
+      "path": "studio/assets/materials/floor-roughness.jpg",
+      "bytes": 879275,
+      "sha256": "fd39973b8ef8212d1c99d18b6665595db3ab96f1c124e062fea52b9bda4ffa63"
+    },
+    {
+      "path": "studio/assets/materials/plaster-normal.jpg",
+      "bytes": 652310,
+      "sha256": "eb572ca3630d5bfde72e2601b1f02412da23ca005cd19384dced8690be4cb783"
+    },
+    {
+      "path": "studio/assets/models/botanical-plate.glb",
+      "bytes": 44865904,
+      "sha256": "6f67588a0042b274d37355e76630c326c2cf97d6c174f59bef7f5e3197030ceb"
+    },
+    {
+      "path": "studio/assets/models/bridge-record-stele.glb",
+      "bytes": 43926548,
+      "sha256": "9c45949b02ab068b443525d756935ea984c4860637394bcd1b5e36c887413102"
+    },
+    {
+      "path": "studio/assets/models/bronze-compass.glb",
+      "bytes": 47280752,
+      "sha256": "d3e54eba588a08cc51b5cf8ab45479b2bdf1a5d181c51f9df49c5cf9ab51645d"
+    },
+    {
+      "path": "studio/assets/models/bronze-ritual-vessel.glb",
+      "bytes": 39867180,
+      "sha256": "95fd821ad4d61153478da529f4238cc1b2fbe0b94a8972c2fb13d3069918be28"
+    },
+    {
+      "path": "studio/assets/models/carved-stone-lion.glb",
+      "bytes": 42252368,
+      "sha256": "f110b8bb585771f2feaaf4698917fc095390cef3550b92749ee6413da38a887f"
+    },
+    {
+      "path": "studio/assets/models/guan-yu-statue.glb",
+      "bytes": 46833132,
+      "sha256": "83b8087c1848c24693da9939ac3c073fe4b15051c58eaa9fb10b99bc2a5dbf6a"
+    },
+    {
+      "path": "studio/assets/models/hammered-copper-kettle.glb",
+      "bytes": 40797088,
+      "sha256": "453a77f6e766640ed4feba8b9eaa9c8f9a3c8b459eb83c9d2ab2f85bad0c880c"
+    },
+    {
+      "path": "studio/assets/models/portrait-sculpture.glb",
+      "bytes": 40643032,
+      "sha256": "0a72023f051aa7f9618ca8858cd90d9ae223d0fd1eec0d0a1ac25de8beb62dea"
+    },
+    {
+      "path": "studio/start-studio.mjs",
+      "bytes": 5312,
+      "sha256": "11586adbefc9d46a6ab6f2010c9adc8bebd8bbf2b5f0f2be05b1c06aaa7b54ef"
+    },
+    {
+      "path": "studio/studio-architecture.js",
+      "bytes": 26828,
+      "sha256": "b64eac65cf1d2e4fe5db18bd371631eb1c80f6ae50b727ac23ae4ffc20272469"
+    },
+    {
+      "path": "studio/studio-collection-image.js",
+      "bytes": 747,
+      "sha256": "5f557043f557833ffd2655539d2c67549280bb73fafd2d4620440cd58a2b8674"
+    },
+    {
+      "path": "studio/studio-data.json",
+      "bytes": 4035,
+      "sha256": "df9d33d73a733e05a343c45a4a5a02838fa3f67b693ad805e54a5669765edd08"
+    },
+    {
+      "path": "studio/studio-detail-data.json",
+      "bytes": 2548,
+      "sha256": "4d8ea84b0caccdac1b1bc9ae5feff70b97c47b555c225021ddb5ade667b4025c"
+    },
+    {
+      "path": "studio/studio-frosted-glass.js",
+      "bytes": 3862,
+      "sha256": "26b2f1ac202bd15e03c1414f9efd341d8d7795885ac48917d46ac3647de4a2ce"
+    },
+    {
+      "path": "studio/studio-grounding.js",
+      "bytes": 10534,
+      "sha256": "27a5c182cbebb5ca56ff01ea4013ffeaabbd3d1d2ae868bc3f6566aa56713a3f"
+    },
+    {
+      "path": "studio/studio-input-display.js",
+      "bytes": 5244,
+      "sha256": "be58c03c5f9c9355dca37b76ca8446f1ecd2fc20b7ed97cd5fcd60680a6dd471"
+    },
+    {
+      "path": "studio/studio-input-image.js",
+      "bytes": 503,
+      "sha256": "53044a27f98aaa374231c4cd98deac57fa0cd020aaaa1e9942f6984fee34b9b6"
+    },
+    {
+      "path": "studio/studio-input-images.json",
+      "bytes": 5412,
+      "sha256": "d673338fecacc545bebe85d25a9f3add74d28f080760e1c9c36ba83831caa3b9"
+    },
+    {
+      "path": "studio/studio-loading.js",
+      "bytes": 1790,
+      "sha256": "482796c10e0513280616f9278a2c3701eafedde26b0cfa9edeb419d3026ecb2d"
+    },
+    {
+      "path": "studio/studio-navigation.js",
+      "bytes": 5076,
+      "sha256": "50df02d7b049eb88048db3f8cd88fb48975f2aa04bc0a5321961fc2fb5dfb13e"
+    },
+    {
+      "path": "studio/studio-theme.css",
+      "bytes": 8085,
+      "sha256": "fc30782c8234eeca78bb831cea28976e51cc67d6f1e8fb5d6ffd16315503552c"
+    },
+    {
+      "path": "studio/studio.css",
+      "bytes": 22339,
+      "sha256": "3537870d417b4e1ac404681e29e1cd0ca846a531d1027600c71b1898edc8c0d3"
+    },
+    {
+      "path": "studio/studio.html",
+      "bytes": 8447,
+      "sha256": "e5e059e03cec6d79b327d707b84cea1e8786e6272755c3e12cf5337cb6176872"
+    },
+    {
+      "path": "studio/studio.js",
+      "bytes": 56573,
+      "sha256": "7b81565a1dfe6003f16068dc59f5b258663c0253e98b3546c46ab707075d55e9"
+    },
+    {
+      "path": "studio/vendor/three/LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "studio/vendor/three/addons/controls/OrbitControls.js",
+      "bytes": 38703,
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c"
+    },
+    {
+      "path": "studio/vendor/three/addons/geometries/RoundedBoxGeometry.js",
+      "bytes": 6476,
+      "sha256": "c1b7c9bd2cddff2e3f3a0723f618a3d364a47450e3d25771d21faed88410bec8"
+    },
+    {
+      "path": "studio/vendor/three/addons/lights/RectAreaLightTexturesLib.js",
+      "bytes": 314770,
+      "sha256": "8acc50043aebc3ff0f63e21607ef2394cda41d634f92093bcb7ad6f1d1e2eb11"
+    },
+    {
+      "path": "studio/vendor/three/addons/lights/RectAreaLightUniformsLib.js",
+      "bytes": 1014,
+      "sha256": "494fef2d731ff1689050cc6040ad78d927c22b9125a12f532beb0374c2811c6e"
+    },
+    {
+      "path": "studio/vendor/three/addons/loaders/GLTFLoader.js",
+      "bytes": 114649,
+      "sha256": "caba6c51cfd8c7d5313bd7705a54b76bc0a7199d9822ecc497c5311eaffe8e5e"
+    },
+    {
+      "path": "studio/vendor/three/addons/math/SimplexNoise.js",
+      "bytes": 15154,
+      "sha256": "dd1f3c42c1bc9fa1b76c1c0796d352521accf0a3a95cc7d0caf479abc5a444a2"
+    },
+    {
+      "path": "studio/vendor/three/addons/objects/Reflector.js",
+      "bytes": 9476,
+      "sha256": "0908d87a7251268dd6d12310b9633f08fd3be9c6faf2e2a4076fce0e87bdd26d"
+    },
+    {
+      "path": "studio/vendor/three/addons/postprocessing/EffectComposer.js",
+      "bytes": 8477,
+      "sha256": "4b8c855f28eed2570bed898adc0ab89c585a8a281ecb6d905c09d00697f9f50a"
+    },
+    {
+      "path": "studio/vendor/three/addons/postprocessing/MaskPass.js",
+      "bytes": 4694,
+      "sha256": "7cd08eee9d5d6f5578beaddbdcbe9c384f6873810af27f22ab7db3ceeb127aa3"
+    },
+    {
+      "path": "studio/vendor/three/addons/postprocessing/OutputPass.js",
+      "bytes": 4029,
+      "sha256": "f5b81c96e76b6b28b4b3ba8c41c4aeb982b1e03f3d82883242d951b2ab082fa2"
+    },
+    {
+      "path": "studio/vendor/three/addons/postprocessing/Pass.js",
+      "bytes": 4218,
+      "sha256": "444b409c235ead986893c472e720da1b779a56985c7d10b279c7944b52bd61c5"
+    },
+    {
+      "path": "studio/vendor/three/addons/postprocessing/RenderPass.js",
+      "bytes": 4112,
+      "sha256": "fd91229aacc5830e3984b0f2bdefcf566163ea028f4c1f1ab233fa6665a133ac"
+    },
+    {
+      "path": "studio/vendor/three/addons/postprocessing/SSAOPass.js",
+      "bytes": 13443,
+      "sha256": "59944f833d10330f6bdd205260ad06a8ef2bd12a115e4101d81578b249627e3f"
+    },
+    {
+      "path": "studio/vendor/three/addons/postprocessing/ShaderPass.js",
+      "bytes": 3228,
+      "sha256": "e2500a5913b26bbf5148ceaae644c6edcff06a18b01494ee37bf856353d2ab9d"
+    },
+    {
+      "path": "studio/vendor/three/addons/shaders/CopyShader.js",
+      "bytes": 729,
+      "sha256": "a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718"
+    },
+    {
+      "path": "studio/vendor/three/addons/shaders/OutputShader.js",
+      "bytes": 1876,
+      "sha256": "353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2"
+    },
+    {
+      "path": "studio/vendor/three/addons/shaders/SSAOShader.js",
+      "bytes": 6826,
+      "sha256": "57ec7cc10ad3b6a8aafa97be21eca12972c5597ebc3023de1b37102a56c6b23b"
+    },
+    {
+      "path": "studio/vendor/three/addons/utils/BufferGeometryUtils.js",
+      "bytes": 35538,
+      "sha256": "cbcfe1864abedcc0122cb893373918fe14469491717a34ca6efcc38551805765"
+    },
+    {
+      "path": "studio/vendor/three/three.core.min.js",
+      "bytes": 380374,
+      "sha256": "79f2b4f58d3e99a9948a4d3b7f6d5c2daf705bdefe9fb82ebec715623966551c"
+    },
+    {
+      "path": "studio/vendor/three/three.module.min.js",
+      "bytes": 338836,
+      "sha256": "06552c54e4071fbc7305117aafe6765d92c5d2a2a83507d4f05b9bf4f3d4d463"
+    },
+    {
+      "path": "studio/\u542f\u52a8\u5c55\u9986.cmd",
+      "bytes": 497,
+      "sha256": "256a1797272b1a80a328329e694dbbc66db1fc6d39f4c91fa8beb99611d88896"
     },
     {
       "path": "styles.css",

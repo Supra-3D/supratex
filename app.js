@@ -58,3 +58,22 @@ document.getElementById('close-film').addEventListener('click',closeFilm);dialog
 dialog.addEventListener('close',()=>{film.pause();film.removeAttribute('src');film.load();document.body.classList.remove('dialog-open');lastTrigger?.focus();});
 if('IntersectionObserver'in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.body.classList.add('motion-ready');const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}})},{threshold:.06});document.querySelectorAll('.reveal').forEach((element,i)=>{if(element.closest('.hero'))element.style.transitionDelay=`${i*90}ms`;observer.observe(element);});}
 updateCompare();
+
+// Keep the native resource disclosure usable by keyboard and dismissible.
+(() => {
+  const more = document.querySelector('#paper .paper-more');
+  if (!more) return;
+  const summary = more.querySelector('summary');
+  document.addEventListener('click', event => {
+    if (!more.contains(event.target) || event.target.closest('a')) more.open = false;
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape' || !more.open) return;
+    event.preventDefault();
+    more.open = false;
+    summary.focus();
+  });
+  more.addEventListener('focusout', event => {
+    if (!more.contains(event.relatedTarget)) more.open = false;
+  });
+})();

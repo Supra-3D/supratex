@@ -192,6 +192,23 @@
       card.addEventListener('pointerleave',()=>{if(hovered===card)hovered=null;if(playing===card)stopPreview();},{passive:true});
       card.querySelector('button').addEventListener('click',event=>open(card.dataset.galleryCard,event.currentTarget,event.currentTarget.dataset.galleryStartMode));
     });
+    const more=document.querySelector('[data-gallery-more]'),moreGrid=document.querySelector('[data-gallery-more-grid]');
+    if(more&&moreGrid){
+      const selected=['G1','G2','G3','G13','G8','G11'];
+      // Move the existing cards so every comparison, preview and viewer keeps its handlers.
+      selected.forEach(id=>grid.append(cards.get(id)));
+      cases.filter(item=>!selected.includes(item.id)).forEach(item=>moreGrid.append(cards.get(item.id)));
+      more.hidden=false;
+      more.addEventListener('toggle',()=>{
+        more.querySelector('[data-gallery-more-label]').textContent=more.open?'Less':'More';
+        more.querySelector('.gallery-more-icon').textContent=more.open?'−':'+';
+        if(!more.open){
+          if(playing&&moreGrid.contains(playing))stopPreview();
+          if(hovered&&moreGrid.contains(hovered))hovered=null;
+          if(moreGrid.contains(document.activeElement))more.querySelector('summary').focus({preventScroll:true});
+        }
+      });
+    }
     function setStatus(text=''){$('[data-gallery-status]').textContent=text;}
     function loadViewerLibrary(){
       if(window.SupraGallery3D?.create)return Promise.resolve();
@@ -437,7 +454,10 @@
     $('[data-gallery-live]').addEventListener('click',()=>{
       if(!current?.live)return;
       if(typeof window.Supra3D?.openAsset!=='function'){setStatus('The live viewer is still loading. Please try again.');return;}
-      const key=current.live;close();requestAnimationFrame(()=>window.Supra3D.openAsset(key));
+      const key=current.live;close();requestAnimationFrame(()=>{
+        window.SupraSections?.reveal(document.getElementById('materials'));
+        window.Supra3D.openAsset(key);
+      });
     });
     function stopAll(){stopPreview();stopOrbit();settleTransition();}
     window.addEventListener('supra:motion',event=>{paused=!!event.detail?.paused;stopAll();});
