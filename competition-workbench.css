@@ -47,6 +47,7 @@
 #competition.comp-refined [data-detail=true] .comp-render{transform:scale(2);transform-origin:var(--comp-detail-x,50%) var(--comp-detail-y,50%);will-change:transform}
 #competition.comp-refined [data-detail=true] .comp-pane{cursor:crosshair}
 #competition.comp-refined [data-detail=true] .comp-pane:focus-visible{outline:2px solid #80704d;outline-offset:-3px}
+#competition.comp-refined .comp-pair{-webkit-user-select:none;user-select:none;-webkit-user-drag:none}
 #competition.comp-refined .comp-live-mount{position:absolute;inset:0;touch-action:none;cursor:grab}
 #competition.comp-refined .comp-live-mount:active{cursor:grabbing}
 #competition.comp-refined .comp-live-mount:focus-visible{outline:2px solid #80704d;outline-offset:-3px}

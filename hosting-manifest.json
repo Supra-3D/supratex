@@ -1367,13 +1367,13 @@
     },
     {
       "path": "competition-workbench.css",
-      "bytes": 12874,
-      "sha256": "8727cc7dadfe61a58e456553cda82b9aec8f4846f64a59c2294d82be244de9ad"
+      "bytes": 12977,
+      "sha256": "8630a4671a5631f52d43467c6db1f531702ee3137c2fd502f902029f9b7dcebb"
     },
     {
       "path": "competition-workbench.js",
-      "bytes": 25974,
-      "sha256": "198045d49d2e70b0fe0b513971c97fc0cbb0f69188b75eea79fff575cc7b2ef2"
+      "bytes": 26317,
+      "sha256": "37561a02fd63882a3ca7ba548f9154bd16afd023ca76d3d9bbaa6b495f8d7aeb"
     },
     {
       "path": "competition.css",
@@ -1518,7 +1518,7 @@
     {
       "path": "index.html",
       "bytes": 95667,
-      "sha256": "0e1d82fe7a7933756c290e90b2c0b2f7cc08899b6565e27bbce2bf0a0d428022"
+      "sha256": "772e9c279d469846c220504f67399777ba61c95f21a3c1482a3ef29f30ac674a"
     },
     {
       "path": "interaction-74.css",
@@ -1976,7 +1976,7 @@
       "sha256": "06552c54e4071fbc7305117aafe6765d92c5d2a2a83507d4f05b9bf4f3d4d463"
     },
     {
-      "path": "studio/启动展馆.cmd",
+      "path": "studio/\u542f\u52a8\u5c55\u9986.cmd",
       "bytes": 497,
       "sha256": "256a1797272b1a80a328329e694dbbc66db1fc6d39f4c91fa8beb99611d88896"
     },

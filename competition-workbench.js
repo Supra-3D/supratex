@@ -67,6 +67,10 @@
   }
   pair.addEventListener('pointerdown',gateMobilePointer,true);
   pair.addEventListener('wheel',gateMobilePointer,{capture:true,passive:true});
+  // Rotating sweeps the pointer across the stage labels. If that leaves a text
+  // selection, the next drag starting inside it becomes a native text drag: a
+  // no-drop cursor plus a pointercancel that stops OrbitControls mid-rotation.
+  ['selectstart','dragstart'].forEach(type=>pair.addEventListener(type,event=>event.preventDefault()));
   bench.addEventListener('keydown',event=>{
     if(!mobileViewport.matches||event.key!=='Escape'||!mobileInteracting||dialog.open||inputDetails.open)return;
     event.preventDefault();event.stopImmediatePropagation();endMobileInteraction();touchToggle.focus({preventScroll:true});
