@@ -1462,8 +1462,8 @@
     },
     {
       "path": "gallery-viewer.bundle.js",
-      "bytes": 608039,
-      "sha256": "5bbbdb58f4298c6ab6d3c1e3ddb86608be9c8211b8f6ae74f390e86cfe7384ae"
+      "bytes": 608044,
+      "sha256": "6697ec23490172c92ff23bbdb209b83e16328b29eaf9377cb5fb603457c7282b"
     },
     {
       "path": "gallery.css",
@@ -1472,8 +1472,8 @@
     },
     {
       "path": "gallery.js",
-      "bytes": 36239,
-      "sha256": "51a6b80d2bef4ac80308f3367d54c56a0684636d5bbdec90655b6ce6e59f487a"
+      "bytes": 36245,
+      "sha256": "0964cbf658145bd140d9471563a55221d0e882d26d4fd7a0dc75c1991f3c6334"
     },
     {
       "path": "hero-controls.css",
@@ -1517,8 +1517,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 95667,
-      "sha256": "772e9c279d469846c220504f67399777ba61c95f21a3c1482a3ef29f30ac674a"
+      "bytes": 95664,
+      "sha256": "9ac723d5fe37d4e7fcd37ca6b9bf51c49cae6680151f777923ea0bd6ab6ae954"
     },
     {
       "path": "interaction-74.css",

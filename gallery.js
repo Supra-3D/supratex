@@ -214,7 +214,7 @@
       if(window.SupraGallery3D?.create)return Promise.resolve();
       if(viewerLibrary)return viewerLibrary;
       viewerLibrary=new Promise((resolve,reject)=>{
-        const script=document.createElement('script');script.src='gallery-viewer.bundle.js?v=110';script.async=true;
+        const script=document.createElement('script');script.src='gallery-viewer.bundle.js?v=light-156';script.async=true;
         const timeout=setTimeout(()=>finish(new Error('3D viewer loading timed out.')),20000);
         function finish(error){
           clearTimeout(timeout);script.onload=null;script.onerror=null;
