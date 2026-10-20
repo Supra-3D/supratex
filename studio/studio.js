@@ -229,7 +229,7 @@ function makeSlot(asset, index) {
   if (darkMode()) {
     const caption = canvasTexture(768, 96, ctx => {
       ctx.fillStyle = '#c7b995'; ctx.font = '25px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillText(`${String(index + 1).padStart(2, '0')}  /  INPUT IMAGE`, 384, 48);
+      ctx.fillText(`${String(index + 1).padStart(2, '0')}  /  ${asset.title}`, 384, 48, 720);
     });
     const label = surface(1.18, .1475, caption, 0, -.77, .044, 0, artwork);
     label.material.transparent = true; label.userData.slot = index; pickables.push(label);
